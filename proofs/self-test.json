@@ -1,0 +1,138 @@
+{
+  "version": "0.1.0",
+  "passed": 26,
+  "failed": 0,
+  "total": 26,
+  "groups": [
+    {
+      "name": "Physical deck and shoe",
+      "tests": [
+        {
+          "name": "standard deck has 52 cards",
+          "pass": true
+        },
+        {
+          "name": "six-deck shoe has 312 unique physical serials",
+          "pass": true
+        },
+        {
+          "name": "shuffle preserves cards and seeded order is reproducible",
+          "pass": true
+        },
+        {
+          "name": "draw removes actual cards and audit accounts for all",
+          "pass": true
+        },
+        {
+          "name": "audit detects a missing physical card",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "Bankroll and progression",
+      "tests": [
+        {
+          "name": "debit never creates a negative balance",
+          "pass": true
+        },
+        {
+          "name": "bankruptcy grants exactly 100 before a wager",
+          "pass": true
+        },
+        {
+          "name": "progression unlocks by game wins",
+          "pass": true
+        },
+        {
+          "name": "payout math credits exact amounts",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "Blackjack engine",
+      "tests": [
+        {
+          "name": "ace totals switch from soft to hard",
+          "pass": true
+        },
+        {
+          "name": "natural blackjack pays 3:2 from physical deal",
+          "pass": true
+        },
+        {
+          "name": "dealer stands on soft 17",
+          "pass": true
+        },
+        {
+          "name": "double doubles wager and draws exactly one card",
+          "pass": true
+        },
+        {
+          "name": "split creates two physical hands and two draw cards",
+          "pass": true
+        },
+        {
+          "name": "insurance pays 2:1 on dealer natural",
+          "pass": true
+        },
+        {
+          "name": "shoe does not repeat a serial across draw and discard",
+          "pass": true
+        },
+        {
+          "name": "shoe reshuffles the complete physical shoe at penetration",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "Durak engine",
+      "tests": [
+        {
+          "name": "36-card deal has six cards each and a real trump",
+          "pass": true
+        },
+        {
+          "name": "beat matrix follows suit and trump",
+          "pass": true
+        },
+        {
+          "name": "throw-in only uses ranks on the table",
+          "pass": true
+        },
+        {
+          "name": "attack limit stops at defender hand capacity",
+          "pass": true
+        },
+        {
+          "name": "take preserves every table card in defender hand",
+          "pass": true
+        },
+        {
+          "name": "autonomous seeded match terminates with legal actions",
+          "pass": true
+        },
+        {
+          "name": "autonomous match keeps all physical cards accounted for",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "name": "Persistence and UI helpers",
+      "tests": [
+        {
+          "name": "save schema round-trips without active game data",
+          "pass": true
+        },
+        {
+          "name": "card markup contains accessible physical labels",
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "timestamp": "2026-11-23T17:20:48.027Z"
+}

@@ -1,0 +1,13 @@
+CardForge static audit
+file_bytes= 97967
+html_lines= 1071
+inline_scripts= 1
+external_assets= none
+duplicate_ids= none
+missing_dollar_refs= none
+inline_onclick= False
+buttons= 30
+crypto_random= True
+physical_draw= True
+local_storage= True
+syntax_check= node --check /tmp/cardforge-check.js (PASS)
