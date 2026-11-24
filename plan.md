@@ -360,15 +360,15 @@ Record actual counts and measurements only: engine assertion total, browser erro
 - **Limits:** Physical iPhone/iPad Safari and hardware audio were not tested; layout used Chromium emulation and drag integration used synthetic touch `PointerEvent`s. Release publication/Pages read-back is recorded in the final handoff.
 - **Release artifacts:** `VERSION` / `APP_VERSION` `0.2.6.2`; notes `RELEASE_NOTES_0.2.6.2.md`; archive `releases/DeckForge-0.2.6.2.zip`; tag `v0.2.6.2`. Post-publish read-back gate: verify the tag/asset, Pages deploy/build, public runtime bytes/version, and clean worktree before handoff.
 
-### DeckForge 0.0.0.1 — mobile setup progressive disclosure
+### DeckForge 0.2.6.3 — mobile setup progressive disclosure
 
-- **Requested version:** Use the literal version string `0.0.0.1`; tag convention is `v0.0.0.1`.
+- **Requested version:** The clarification was to increment the final component of `0.2.6.2` by one, yielding `0.2.6.3`; tag `v0.2.6.3`. The earlier mistaken `v0.0.0.1` publication is superseded and retained for history.
 - **Mobile:** At widths `≤760px`, start both game lobbies with table settings collapsed behind `Customize`. Keep a concise selected-rules summary visible; leave wager and primary start controls outside the hidden settings panel. At `390×844`, wager/start stay above the fold; at `375×667`, vertical scroll remains but there is no horizontal overflow.
 - **Interaction:** Customize exposes all seat/rule options. Changing seats/rules preserves the open state; Hide closes it; Home/re-enter restores mobile collapse. With no explicit override, resizing to desktop opens the settings, and resizing back to mobile closes them.
 - **Desktop:** `1024×768` lobby defaults to expanded settings and can still collapse.
 - **Diagnostics/stress:** `76/76` in-app assertions; Durak stress `168/168` seeded matches across 14 2–4-seat throw-in/push variants; zero failures and browser errors.
-- **Rendered flows:** 3-seat Blackjack → deal → Stand → settled payout; 4-seat Durak/all-player → legal Take cards action. Both deck audits passed. `proofs/blackjack-ui-flow-0.0.0.1.json` and `proofs/durak-ui-flow-0.0.0.1.json`.
-- **Disclosure/touch:** Customize, settings rerender, Hide, Home/re-entry reset, and auto-resize defaults passed in `proofs/setup-disclosure-0.0.0.1.json`. Synthetic touch-pointer input hit-tested and opened the actual Customize control; physical Safari not tested.
+- **Rendered flows:** 3-seat Blackjack → deal → Stand → settled payout; 4-seat Durak/all-player → legal Take cards action. Both deck audits passed. `proofs/blackjack-ui-flow-0.2.6.3.json` and `proofs/durak-ui-flow-0.2.6.3.json`.
+- **Disclosure/touch:** Customize, settings rerender, Hide, Home/re-entry reset, and auto-resize defaults passed in `proofs/setup-disclosure-0.2.6.3.json`. Synthetic touch-pointer input hit-tested and opened the actual Customize control; physical Safari not tested.
 - **Vision:** Collapsed/expanded mobile lobbies reviewed for both games at `390×844`, Blackjack at `375×667`, and expanded desktop Blackjack at `1024×768`. Desktop has no horizontal overflow, but the lower wager/Deal controls are below the fold (document height `1143px`) and require vertical scroll.
 - **Static:** `node --check`, static audit (`266305` bytes, `2009` lines, 51 unique IDs, no external assets/URLs, duplicate IDs, missing references, or inline event attributes), JSON validation, and `git diff --check` pass.
-- **Release artifacts:** `VERSION` / `APP_VERSION` `0.0.0.1`; notes `RELEASE_NOTES_0.0.0.1.md`; archive `releases/DeckForge-0.0.0.1.zip`; tag `v0.0.0.1`. Verify tag/asset, Pages deployment/build, live runtime bytes, and clean worktree before handoff.
+- **Release artifacts:** `VERSION` / `APP_VERSION` `0.2.6.3`; notes `RELEASE_NOTES_0.2.6.3.md`; archive `releases/DeckForge-0.2.6.3.zip`; tag `v0.2.6.3`. Verify tag/asset, Pages deployment/build, live runtime bytes, and clean worktree before handoff.

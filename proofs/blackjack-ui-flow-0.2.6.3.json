@@ -1,0 +1,43 @@
+{
+  "version": "0.2.6.3",
+  "viewport": [
+    390,
+    844
+  ],
+  "homeBadge": "v0.2.6.3",
+  "defaultLobby": {
+    "expanded": "false",
+    "hidden": true,
+    "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on"
+  },
+  "configured": {
+    "players": 3,
+    "expanded": "true",
+    "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on"
+  },
+  "phaseAfterDeal": "player",
+  "configInEngine": 3,
+  "participantsBeforeAction": 3,
+  "activeBadge": "v0.2.6.3",
+  "screenshots": {
+    "blackjackLive": "deckforge-0.2.6.3-iphone-390-blackjack-live.png",
+    "blackjackSettlement": "deckforge-0.2.6.3-iphone-390-blackjack-settlement.png"
+  },
+  "humanAction": "Stand",
+  "settlement": {
+    "phase": "settled",
+    "outcome": "CLEAN FINISH\nYou win\nYour total finished ahead of the dealer.\n+$10\n$20 returned",
+    "balance": "$\n260",
+    "audit": true,
+    "viewport": [
+      390,
+      844
+    ],
+    "document": [
+      390,
+      844
+    ],
+    "errors": []
+  },
+  "completed": true
+}

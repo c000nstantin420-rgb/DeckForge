@@ -23,7 +23,7 @@ Make the mobile lobby feel simple at first glance while preserving the full Blac
 
 ## Release authorization
 
-The user requested a release/deploy using the literal version string `0.0.0.1`; use the repository's `v` tag convention as `v0.0.0.1`. Do not normalize it to another version.
+The user clarified that `0.0.0.1` meant increment the current `0.2.6.2` version by one in its final component: publish `0.2.6.3` with tag `v0.2.6.3`. The earlier `v0.0.0.1` publication was a misunderstanding; preserve it for history but mark it superseded. Do not move or reuse its tag.
 
 ## Completed verification
 
@@ -35,4 +35,4 @@ The user requested a release/deploy using the literal version string `0.0.0.1`; 
 - **Touch integration:** A touch-pointer sequence hit-tested the actual `Customize` button and opened the panel; synthetic Chromium input only, not physical Safari.
 - **Vision:** Fresh 390px Blackjack collapsed/expanded, Durak collapsed/expanded, and 375px Blackjack collapsed screens passed. On 1024×768, the desktop panel starts expanded with no horizontal overflow; the lower wager/start controls require page scroll (document height 1143px).
 - **Static checks:** `node --check`, static audit (`266305` bytes, `2009` lines, 51 unique IDs, no duplicate/missing references or external assets), JSON validation, and `git diff --check` pass.
-- **Release:** Requested literal `VERSION`/`APP_VERSION` `0.0.0.1`, tag `v0.0.0.1`, notes `RELEASE_NOTES_0.0.0.1.md`, archive `releases/DeckForge-0.0.0.1.zip`. Final gate: read back the published asset, successful Pages build, and byte-matched live runtime.
+- **Release:** Correct version increment `0.2.6.2` → `0.2.6.3`; `VERSION`/`APP_VERSION` `0.2.6.3`, tag `v0.2.6.3`, notes `RELEASE_NOTES_0.2.6.3.md`, archive `releases/DeckForge-0.2.6.3.zip`. Preserve and mark the mistaken `v0.0.0.1` release superseded; verify the corrected release and Pages read-back.

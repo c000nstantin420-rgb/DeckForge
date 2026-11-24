@@ -1,0 +1,2378 @@
+{
+  "version": "0.2.6.3",
+  "policy": "After every action, audit all physical cards; require legal terminal winner and <1200 steps.",
+  "seedStart": 330301,
+  "matches": 168,
+  "groups": [
+    {
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": false
+      },
+      "requested": 12,
+      "passed": 12,
+      "failed": 0,
+      "stalemates": 0,
+      "minSteps": 36,
+      "maxSteps": 46
+    },
+    {
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": true
+      },
+      "requested": 12,
+      "passed": 12,
+      "failed": 0,
+      "stalemates": 0,
+      "minSteps": 34,
+      "maxSteps": 38
+    },
+    {
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "requested": 12,
+      "passed": 12,
+      "failed": 0,
+      "stalemates": 0,
+      "minSteps": 36,
+      "maxSteps": 38
+    },
+    {
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "requested": 12,
+      "passed": 12,
+      "failed": 0,
+      "stalemates": 0,
+      "minSteps": 36,
+      "maxSteps": 38
+    },
+    {
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": false
+      },
+      "requested": 12,
+      "passed": 12,
+      "failed": 0,
+      "stalemates": 0,
+      "minSteps": 36,
+      "maxSteps": 46
+    },
+    {
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": true
+      },
+      "requested": 12,
+      "passed": 12,
+      "failed": 0,
+      "stalemates": 0,
+      "minSteps": 36,
+      "maxSteps": 42
+    },
+    {
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "requested": 12,
+      "passed": 12,
+      "failed": 0,
+      "stalemates": 0,
+      "minSteps": 38,
+      "maxSteps": 56
+    },
+    {
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "requested": 12,
+      "passed": 12,
+      "failed": 0,
+      "stalemates": 0,
+      "minSteps": 37,
+      "maxSteps": 57
+    },
+    {
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": false
+      },
+      "requested": 12,
+      "passed": 12,
+      "failed": 0,
+      "stalemates": 0,
+      "minSteps": 36,
+      "maxSteps": 50
+    },
+    {
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": true
+      },
+      "requested": 12,
+      "passed": 12,
+      "failed": 0,
+      "stalemates": 0,
+      "minSteps": 35,
+      "maxSteps": 44
+    },
+    {
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "requested": 12,
+      "passed": 12,
+      "failed": 0,
+      "stalemates": 0,
+      "minSteps": 37,
+      "maxSteps": 64
+    },
+    {
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "requested": 12,
+      "passed": 12,
+      "failed": 0,
+      "stalemates": 0,
+      "minSteps": 37,
+      "maxSteps": 65
+    },
+    {
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": false
+      },
+      "requested": 12,
+      "passed": 12,
+      "failed": 0,
+      "stalemates": 0,
+      "minSteps": 43,
+      "maxSteps": 63
+    },
+    {
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": true
+      },
+      "requested": 12,
+      "passed": 12,
+      "failed": 0,
+      "stalemates": 0,
+      "minSteps": 40,
+      "maxSteps": 80
+    }
+  ],
+  "rows": [
+    {
+      "seed": 330301,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 42,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330302,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330303,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330304,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330305,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330306,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330307,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 38,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330308,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330309,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330310,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330311,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330312,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 46,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330313,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330314,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 34,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330315,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330316,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330317,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330318,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330319,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330320,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330321,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 38,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330322,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330323,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330324,
+      "config": {
+        "players": 2,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330325,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330326,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330327,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 36,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330328,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 36,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330329,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330330,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 36,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330331,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330332,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330333,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330334,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330335,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 38,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330336,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 36,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330337,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 38,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330338,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330339,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330340,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330341,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330342,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 36,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330343,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 36,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330344,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330345,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330346,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330347,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330348,
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 36,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330349,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330350,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330351,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330352,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 38,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330353,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330354,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330355,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 38,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330356,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 46,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330357,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330358,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330359,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330360,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 42,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330361,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330362,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 42,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330363,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330364,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330365,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330366,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330367,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330368,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 39,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330369,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 39,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330370,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 40,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330371,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 39,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330372,
+      "config": {
+        "players": 3,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 40,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330373,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 38,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330374,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 44,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330375,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 42,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330376,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 44,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330377,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 49,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330378,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 41,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330379,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 50,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330380,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 44,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330381,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 39,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330382,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 40,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330383,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 56,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330384,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 45,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330385,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 48,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330386,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 46,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330387,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 41,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330388,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 37,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330389,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 41,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330390,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 40,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330391,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 47,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330392,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 55,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330393,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 57,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330394,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 53,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330395,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 41,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330396,
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 46,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330397,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 40,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330398,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 40,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330399,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 38,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330400,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 38,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330401,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 38,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330402,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330403,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330404,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 40,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330405,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330406,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 40,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330407,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330408,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": false
+      },
+      "steps": 50,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330409,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 35,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330410,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330411,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 44,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330412,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 35,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330413,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 40,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330414,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 44,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330415,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 41,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330416,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 42,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330417,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 44,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330418,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 40,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330419,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 42,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330420,
+      "config": {
+        "players": 4,
+        "throwIn": "off",
+        "push": true
+      },
+      "steps": 36,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330421,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 45,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330422,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 61,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330423,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 50,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330424,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 45,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330425,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 49,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330426,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 41,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330427,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 64,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330428,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 40,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330429,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 59,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330430,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 46,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330431,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 37,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330432,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 55,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330433,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 48,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330434,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 52,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330435,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 37,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330436,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 51,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330437,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 65,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330438,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 38,
+      "winner": "draw",
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330439,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 54,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330440,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 51,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330441,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 41,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330442,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 55,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330443,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 43,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330444,
+      "config": {
+        "players": 4,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 41,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330445,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": false
+      },
+      "steps": 44,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330446,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": false
+      },
+      "steps": 59,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330447,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": false
+      },
+      "steps": 55,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330448,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": false
+      },
+      "steps": 47,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330449,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": false
+      },
+      "steps": 49,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330450,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": false
+      },
+      "steps": 49,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330451,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": false
+      },
+      "steps": 62,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330452,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": false
+      },
+      "steps": 57,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330453,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": false
+      },
+      "steps": 63,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330454,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": false
+      },
+      "steps": 43,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330455,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": false
+      },
+      "steps": 52,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330456,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": false
+      },
+      "steps": 45,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330457,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": true
+      },
+      "steps": 70,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330458,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": true
+      },
+      "steps": 52,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330459,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": true
+      },
+      "steps": 50,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330460,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": true
+      },
+      "steps": 43,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330461,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": true
+      },
+      "steps": 40,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330462,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": true
+      },
+      "steps": 55,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330463,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": true
+      },
+      "steps": 47,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330464,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": true
+      },
+      "steps": 48,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330465,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": true
+      },
+      "steps": 56,
+      "winner": 1,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330466,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": true
+      },
+      "steps": 54,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330467,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": true
+      },
+      "steps": 55,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    },
+    {
+      "seed": 330468,
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": true
+      },
+      "steps": 80,
+      "winner": 0,
+      "stalemate": false,
+      "audit": true,
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "errors": []
+}

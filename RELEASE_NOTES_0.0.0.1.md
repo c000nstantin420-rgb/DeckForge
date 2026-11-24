@@ -1,8 +1,10 @@
 # DeckForge 0.0.0.1
 
+> **Superseded:** This release used the wrong version string. The correct follow-up is `v0.2.6.3`; use that release instead.
+
 - **Tag:** `v0.0.0.1`
 - **Type:** Mobile lobby progressive disclosure
-- **Version label:** `0.0.0.1` is used exactly as requested.
+- **Version label:** Superseded; this publication used the wrong version string. The correct follow-up is `v0.2.6.3`.
 
 ## Changes since v0.2.6.2
 

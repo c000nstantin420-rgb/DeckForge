@@ -17,7 +17,7 @@ Open `deckforge.html` directly in a browser. No server, install, build, font, im
 
 ## Release and verification
 
-Current release: **0.0.0.1** (`v0.0.0.1`). The version is visible in the site header on the home screen and both game screens.
+Current release: **0.2.6.3** (`v0.2.6.3`). The version is visible in the site header on the home screen and both game screens. The earlier mistaken `v0.0.0.1` release is superseded; this continues `v0.2.6.2`.
 
 - In-app diagnostics: **76 passed / 0 failed**.
 - Durak stress: **168 seeded matches** across 14 valid 2–4-seat throw-in/push configurations; every move preserved the 36-card audit and each match reached a legal terminal result.
@@ -28,6 +28,6 @@ Current release: **0.0.0.1** (`v0.0.0.1`). The version is visible in the site he
 - Vision reviewed collapsed/expanded Blackjack and Durak lobbies at `390×844`, Blackjack at `375×667`, and desktop Blackjack at `1024×768`.
 - Desktop limit: at `1024×768`, the expanded lobby has no horizontal overflow but its lower wager/Deal controls are below the fold; page height is `1143px`, so vertical scroll is needed.
 - `node --check`, JSON validation, static audit, and `git diff --check`: **PASS**.
-- Evidence: `proofs/self-test-0.0.0.1.json`, `proofs/durak-0.0.0.1-stress.json`, `proofs/browser-qa-0.0.0.1.json`, `proofs/setup-disclosure-0.0.0.1.json`, `proofs/blackjack-ui-flow-0.0.0.1.json`, `proofs/durak-ui-flow-0.0.0.1.json`, `proofs/touch-qa-0.0.0.1.json`, and `proofs/deckforge-0.0.0.1-*.png`.
+- Evidence: `proofs/self-test-0.2.6.3.json`, `proofs/durak-0.2.6.3-stress.json`, `proofs/browser-qa-0.2.6.3.json`, `proofs/setup-disclosure-0.2.6.3.json`, `proofs/blackjack-ui-flow-0.2.6.3.json`, `proofs/durak-ui-flow-0.2.6.3.json`, `proofs/touch-qa-0.2.6.3.json`, and `proofs/deckforge-0.2.6.3-*.png`.
 
 `plan.md` records implementation and measured acceptance evidence. Currency is fictional and local-only. Physical iPhone/iPad Safari and real audio were not tested; layout checks used Chromium emulation and the touch proof used synthetic pointer input.

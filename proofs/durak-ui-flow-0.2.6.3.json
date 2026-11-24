@@ -1,0 +1,41 @@
+{
+  "version": "0.2.6.3",
+  "browser": "Chromium 390x844 mobile emulation; not physical Safari",
+  "defaultLobby": {
+    "expanded": "false",
+    "hidden": true,
+    "summary": "2 seats · Neighbors · Push off"
+  },
+  "configured": {
+    "players": 4,
+    "throwIn": "all",
+    "expanded": "true",
+    "summary": "4 seats · All throw-in · Push off"
+  },
+  "start": {
+    "phase": "attack",
+    "turn": 0,
+    "attacker": 0,
+    "defender": 1,
+    "players": 4,
+    "throwIn": "all",
+    "push": false,
+    "audit": true,
+    "version": "v0.2.6.3"
+  },
+  "screenshots": {
+    "durakLive": "deckforge-0.2.6.3-iphone-390-durak-live.png"
+  },
+  "humanAction": {
+    "kind": "attack",
+    "text": "Attack J♣"
+  },
+  "afterAction": {
+    "phase": "defense",
+    "turn": 1,
+    "tableCards": 1,
+    "humanCards": 5,
+    "audit": true,
+    "errors": []
+  }
+}

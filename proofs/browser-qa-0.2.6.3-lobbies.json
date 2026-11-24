@@ -1,0 +1,134 @@
+{
+  "version": "v0.2.6.3",
+  "screenshots": {
+    "blackjack390Collapsed": "deckforge-0.2.6.3-iphone-390-blackjack-collapsed.png",
+    "blackjack390Expanded": "deckforge-0.2.6.3-iphone-390-blackjack-expanded.png",
+    "durak390Collapsed": "deckforge-0.2.6.3-iphone-390-durak-collapsed.png",
+    "durak390Expanded": "deckforge-0.2.6.3-iphone-390-durak-expanded.png",
+    "blackjack375Collapsed": "deckforge-0.2.6.3-iphone-375-blackjack-collapsed.png",
+    "blackjackDesktop1024": "deckforge-0.2.6.3-desktop-1024-blackjack-expanded.png"
+  },
+  "states": {
+    "blackjack390Collapsed": {
+      "viewport": [
+        390,
+        844
+      ],
+      "game": "blackjack",
+      "stored": null,
+      "expanded": "false",
+      "hidden": true,
+      "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on",
+      "detailsButtons": 17,
+      "startInViewport": true,
+      "wagerVisible": true,
+      "document": [
+        390,
+        1241
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    "blackjack390Expanded": {
+      "viewport": [
+        390,
+        844
+      ],
+      "game": "blackjack",
+      "stored": true,
+      "expanded": "true",
+      "hidden": false,
+      "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on",
+      "detailsButtons": 17,
+      "startInViewport": false,
+      "wagerVisible": true,
+      "document": [
+        390,
+        1513
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    "durak390Collapsed": {
+      "viewport": [
+        390,
+        844
+      ],
+      "game": "durak",
+      "stored": null,
+      "expanded": "false",
+      "hidden": true,
+      "summary": "2 seats · Neighbors · Push off",
+      "detailsButtons": 11,
+      "startInViewport": true,
+      "wagerVisible": true,
+      "document": [
+        390,
+        1263
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    "durak390Expanded": {
+      "viewport": [
+        390,
+        844
+      ],
+      "game": "durak",
+      "stored": true,
+      "expanded": "true",
+      "hidden": false,
+      "summary": "2 seats · Neighbors · Push off",
+      "detailsButtons": 11,
+      "startInViewport": false,
+      "wagerVisible": true,
+      "document": [
+        390,
+        1427
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    "blackjack375Collapsed": {
+      "viewport": [
+        375,
+        667
+      ],
+      "game": "blackjack",
+      "stored": null,
+      "expanded": "false",
+      "hidden": true,
+      "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on",
+      "detailsButtons": 17,
+      "startInViewport": false,
+      "wagerVisible": true,
+      "document": [
+        375,
+        1259
+      ],
+      "overflow": false,
+      "errors": []
+    },
+    "blackjackDesktop1024": {
+      "viewport": [
+        1024,
+        768
+      ],
+      "game": "blackjack",
+      "stored": null,
+      "expanded": "true",
+      "hidden": false,
+      "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on",
+      "detailsButtons": 17,
+      "startInViewport": false,
+      "wagerVisible": true,
+      "document": [
+        1009,
+        1143
+      ],
+      "overflow": false,
+      "errors": []
+    }
+  },
+  "errors": []
+}

@@ -1,0 +1,3 @@
+node --check: PASS
+inline scripts: 1
+probe: /home/constantin/.hermes/cache/scratch/deckforge-0.2.6.3-check.js

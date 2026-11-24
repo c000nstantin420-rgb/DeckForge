@@ -1,0 +1,126 @@
+{
+  "version": "0.2.6.3",
+  "viewportTransitions": [
+    {
+      "label": "fresh mobile",
+      "viewport": [
+        390,
+        844
+      ],
+      "game": "blackjack",
+      "stored": null,
+      "expanded": "false",
+      "hidden": true,
+      "players": 1,
+      "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "Customize",
+      "viewport": [
+        390,
+        844
+      ],
+      "game": "blackjack",
+      "stored": true,
+      "expanded": "true",
+      "hidden": false,
+      "players": 1,
+      "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "change setting",
+      "viewport": [
+        390,
+        844
+      ],
+      "game": "blackjack",
+      "stored": true,
+      "expanded": "true",
+      "hidden": false,
+      "players": 3,
+      "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "Hide",
+      "viewport": [
+        390,
+        844
+      ],
+      "game": "blackjack",
+      "stored": false,
+      "expanded": "false",
+      "hidden": true,
+      "players": 3,
+      "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "reopen",
+      "viewport": [
+        390,
+        844
+      ],
+      "game": "blackjack",
+      "stored": true,
+      "expanded": "true",
+      "hidden": false,
+      "players": 3,
+      "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "Home/re-entry",
+      "viewport": [
+        390,
+        844
+      ],
+      "game": "blackjack",
+      "stored": null,
+      "expanded": "false",
+      "hidden": true,
+      "players": 3,
+      "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "resize desktop",
+      "viewport": [
+        1024,
+        768
+      ],
+      "game": "blackjack",
+      "stored": null,
+      "expanded": "true",
+      "hidden": false,
+      "players": 3,
+      "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on",
+      "overflow": false,
+      "errors": []
+    },
+    {
+      "label": "resize mobile",
+      "viewport": [
+        390,
+        844
+      ],
+      "game": "blackjack",
+      "stored": null,
+      "expanded": "false",
+      "hidden": true,
+      "players": 3,
+      "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on",
+      "overflow": false,
+      "errors": []
+    }
+  ],
+  "passed": true
+}

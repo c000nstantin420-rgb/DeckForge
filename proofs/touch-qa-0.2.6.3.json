@@ -1,0 +1,40 @@
+{
+  "version": "0.2.6.3",
+  "method": "Synthetic touch PointerEvent pointerdown/up plus click in Chromium 390x844 emulation; not physical Safari",
+  "target": "Blackjack Customize",
+  "before": {
+    "version": "v0.2.6.3",
+    "viewport": [
+      390,
+      844
+    ],
+    "xy": [
+      311.7109375,
+      421.5
+    ],
+    "hitTarget": true,
+    "expanded": "false"
+  },
+  "eventSequence": [
+    {
+      "type": "pointerdown",
+      "pointerType": "touch"
+    },
+    {
+      "type": "pointerup",
+      "pointerType": "touch"
+    },
+    {
+      "type": "click",
+      "pointerType": null
+    }
+  ],
+  "after": {
+    "expanded": "true",
+    "hidden": false,
+    "stored": true,
+    "hit": true,
+    "errors": []
+  },
+  "passed": true
+}
