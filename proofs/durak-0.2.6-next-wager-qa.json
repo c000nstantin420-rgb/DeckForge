@@ -1,0 +1,24 @@
+{
+  "version": "0.2.6",
+  "blackjack": {
+    "flow": "home -> lobby -> deal -> stand -> settlement -> change next stake -> deal next hand",
+    "initialWager": 10,
+    "settledRound": 1,
+    "settlementBalance": 260,
+    "nextStakeOptions": [10, 20, 50, 100],
+    "selectedNextStake": 20,
+    "buttonLabel": "Deal next hand · $20",
+    "nextRound": { "roundNumber": 2, "wager": 20, "balance": 240, "phase": "player" },
+    "errors": []
+  },
+  "durak": {
+    "completedGameWager": 10,
+    "completedPayoutBeforeChange": "MATCH COMPLETE\\nYou escaped\\nPlayer 2 is the Durak.\\n+$10\\n$20 returned",
+    "selectedNextStake": 20,
+    "payoutAfterForcedRerender": "MATCH COMPLETE\\nYou escaped\\nPlayer 2 is the Durak.\\n+$10\\n$20 returned",
+    "nextButtonLabel": "New duel · $20",
+    "newDuel": { "wager": 20, "balance": 230, "phase": "attack", "audit": true },
+    "errors": []
+  },
+  "selectorLayout": { "viewports": 5, "allControlsInside": true, "dockInside": true, "documentOverflow": false }
+}

@@ -1,100 +1,47 @@
 {
-  "version": "0.2.5",
-  "kind": "DeckForge 0.2.5 release browser QA",
-  "engine": {
-    "passed": 60,
-    "failed": 0,
-    "total": 60,
-    "groups": {
-      "Physical deck and shoe": {"passed": 5, "total": 5},
-      "Bankroll and progression": {"passed": 4, "total": 4},
-      "Blackjack engine": {"passed": 12, "total": 12},
-      "Durak engine": {"passed": 7, "total": 7},
-      "Persistence and UI helpers": {"passed": 2, "total": 2},
-      "Table configuration and variants": {"passed": 10, "total": 10},
-      "Table feel and touch helpers": {"passed": 5, "total": 5},
-      "Multiplayer correctness and presentation": {"passed": 15, "total": 15}
-    },
-    "timestamp": "2026-11-24T09:31:11.004Z"
-  },
+  "version": "0.2.6",
+  "kind": "DeckForge 0.2.6 release browser QA",
+  "engine": { "passed": 69, "failed": 0, "total": 69, "proof": "self-test.json" },
   "versionBadge": {
-    "home390": {"visible": true, "text": "v0.2.5", "ariaLabel": "Go to DeckForge home. Version 0.2.5", "documentWidth": 390},
-    "activeDurak390": {"visible": true, "text": "v0.2.5", "document": [390, 844], "errors": []},
-    "activeBlackjack390": {"visible": true, "text": "v0.2.5", "document": [390, 844], "errors": []}
+    "home390": { "visible": true, "text": "v0.2.6", "ariaLabel": "Go to DeckForge home. Version 0.2.6", "documentWidth": 390 },
+    "activeBlackjack390": { "visible": true, "text": "v0.2.6", "phase": "settled", "document": [390, 844] },
+    "activeDurak390": { "visible": true, "text": "v0.2.6", "document": [390, 844], "errors": [] },
+    "activeDurakLandscape": { "visible": true, "text": "v0.2.6", "document": [1194, 834] }
   },
-  "blackjack": {
-    "threeSeatInsuranceDeclined": {
-      "afterDecision": {"phase": "ai", "timerPending": true},
-      "afterAI": {"phase": "player", "aiParticipantIndex": 3, "handTotals": [16, 17, 17], "humanActionVisible": true},
-      "settlement": {"phase": "settled", "outcomeBanners": 1, "audit": true, "errors": []}
-    },
-    "threeSeatInsuranceTaken": {
-      "afterDecision": {"phase": "ai", "timerPending": true, "insuranceStake": 5},
-      "afterAI": {"phase": "player", "aiParticipantIndex": 3, "handTotals": [16, 17, 17], "humanActionVisible": true},
-      "settlement": {"phase": "settled", "outcomeBanners": 1, "audit": true, "errors": []}
-    },
-    "fourSeatInsuranceDeclined": {
-      "initialPhase": "insurance",
-      "participantHands": [["9♠", "8♦"], ["10♣", "7♣"], ["10♦", "7♦"], ["10♥", "7♥"]],
-      "dealer": ["A♥", "9♥"],
-      "aiCallbackOffsetsMs": [0, 542, 1084],
-      "afterAI": {"phase": "player", "aiParticipantIndex": 4, "humanActionVisible": true, "audit": true, "errors": []},
-      "afterHumanStand": {"phase": "settled", "humanOutcome": "lose", "audit": true, "errors": []}
-    }
+  "durakStress": { "matches": 168, "configurations": 14, "passed": 168, "failed": 0, "auditEveryAction": true, "terminalStateValidated": true, "proof": "durak-0.2.6-stress.json" },
+  "renderedDurakMatches": [
+    { "players": 2, "throwIn": "neighbors", "push": false, "steps": 27, "phase": "finished", "winner": 1, "audit": true, "stakeControl": true },
+    { "players": 3, "throwIn": "neighbors", "push": true, "steps": 32, "phase": "finished", "winner": 1, "audit": true, "stakeControl": true },
+    { "players": 4, "throwIn": "all", "push": true, "steps": 22, "phase": "finished", "winner": 0, "audit": true, "stakeControl": true }
+  ],
+  "durakActions": {
+    "targetedQueuedThrowIn": "durak-0.2.6-throw-in-qa.json",
+    "touchPointerThrowInDrag": "durak-0.2.6-throw-in-qa.json",
+    "staleQueueInvalidation": "durak-0.2.6-throw-in-qa.json",
+    "optionalPushWithoutSelection": "durak-0.2.6-push-qa.json",
+    "continueAndTimeout": "durak-0.2.6-ai-timing.json"
   },
-  "durak": {
-    "autonomousStress": {
-      "matches": 100,
-      "failures": 0,
-      "auditEveryStep": true,
-      "variants": [
-        {"name": "2-seat-neighbors-push", "matches": 20, "maxSteps": 38, "averageSteps": 35.6},
-        {"name": "2-seat-no-push", "matches": 20, "maxSteps": 40, "averageSteps": 36.7},
-        {"name": "3-seat-neighbors-push", "matches": 20, "maxSteps": 68, "averageSteps": 47.8},
-        {"name": "4-seat-neighbors-push", "matches": 20, "maxSteps": 69, "averageSteps": 49.5},
-        {"name": "4-seat-all-push", "matches": 20, "maxSteps": 75, "averageSteps": 54.4}
-      ]
-    },
-    "fullRenderedUiMatches": [
-      {"players": 2, "throwIn": "neighbors", "push": true, "phase": "finished", "winner": 0, "durakLoserIndex": 1, "round": 18, "humanMoves": 18, "aiSteps": 18, "auditChecks": 46, "audit": true, "failures": [], "errors": []},
-      {"players": 3, "throwIn": "neighbors", "push": true, "phase": "finished", "winner": 0, "durakLoserIndex": 1, "round": 12, "humanMoves": 13, "aiSteps": 27, "auditChecks": 51, "audit": true, "failures": [], "errors": []},
-      {"players": 4, "throwIn": "all", "push": true, "phase": "finished", "winner": 0, "durakLoserIndex": 1, "round": 20, "humanMoves": 10, "aiSteps": 61, "auditChecks": 81, "audit": true, "failures": [], "errors": []}
-    ],
-    "uiActions": {
-      "humanLossTerminal": {"phase": "finished", "winner": 1, "durakLoserIndex": 0, "pendingResult": true, "balance": 240, "headline": "You are the Durak", "tablePairs": 0, "audit": true, "errors": []},
-      "take": {"phase": "attack", "attacker": 1, "defender": 2, "tablePairs": 0, "humanHand": 9, "audit": true, "errors": []},
-      "push": {"phase": "defense", "attacker": 0, "defender": 1, "tablePairs": 2, "pushUsed": true, "audit": true, "errors": []},
-      "throwIn": {"phase": "defense", "turn": 1, "table": [["8♣", "10♣"], ["8♠", null]], "audit": true, "errors": []},
-      "validTouchPointerDrop": {"targetIndex": 1, "highlightedTarget": "1", "phaseAfter": "attack", "tablePairsAfter": 0, "humanHandAfter": 6, "audit": true, "errors": []},
-      "invalidTouchPointerDrop": {"targetIndex": 0, "stateUnchanged": true, "toast": "That defense is not legal", "audit": true, "errors": []},
-      "noOpGuard": {"phase": "defense", "turn": 1, "aiStalled": true, "timerPending": false, "status": "AI paused", "action": "Leave table", "audit": true, "errors": []}
-    },
-    "reactionTiming": {
-      "scheduledDelayRangeMs": [320, 760],
-      "measurement": "from immediately before the player action click to the first AI callback; browser/timer dispatch overhead included",
-      "endToEndMs": {"low": 328, "midSeat3": 546, "midSeat4": 547, "high": 775}
-    },
-    "mobile390": {
-      "twoSeats": {"document": [390, 844], "sixPairsVisible": true, "table": [321, 501], "hand": [508, 609], "trump": [248, 314], "dock": [685, 835], "buttonsInsideViewport": true},
-      "threeSeats": {"document": [390, 844], "sixPairsVisible": true, "table": [367, 547], "hand": [554, 655], "trump": [294, 360], "dock": [685, 835], "buttonsInsideViewport": true},
-      "fourSeats": {"document": [390, 844], "sixPairsVisible": true, "table": [413, 569], "hand": [576, 677], "trump": [340, 406], "dock": [685, 835], "buttonsInsideViewport": true}
-    },
-    "tablet1024": {
-      "twoSeats": {"document": [1024, 768], "sixPairsVisible": true, "pairBounds": true, "table": [32, 314, 740, 506], "dock": [22, 656, 1002, 752], "buttonBottomMax": 716},
-      "threeSeats": {"document": [1024, 768], "sixPairsVisible": true, "pairBounds": true, "table": [32, 314, 740, 506], "dock": [22, 656, 1002, 752], "buttonBottomMax": 716},
-      "fourSeats": {"document": [1024, 768], "sixPairsVisible": true, "pairBounds": true, "table": [32, 305, 740, 497], "dock": [22, 656, 1002, 752], "buttonBottomMax": 716}
-    }
+  "stalemateDraw": { "seed": 261201, "steps": 77, "winner": "draw", "stalemate": true, "handsRemain": [2, 1, 2, 0], "stakeReturn": { "before": 250, "after": 260, "label": "Durak stalemate return" }, "audit": true, "proof": "durak-0.2.6-stalemate.json" },
+  "nextRoundStake": {
+    "blackjack": { "originalWager": 10, "nextWager": 20, "nextRound": 2, "balanceBeforeNext": 260, "balanceAfterNext": 240 },
+    "durak": { "completedWager": 10, "completedReturn": 20, "nextWager": 20, "newDuelWager": 20, "balanceAfterNext": 230, "oldResultUnchangedAfterRerender": true },
+    "proof": "durak-0.2.6-next-wager-qa.json",
+    "layoutProof": "durak-0.2.6-next-wager-layout.json"
   },
-  "diagnosticsScreen": {"open": true, "summary": "60 assertions; 0 failures", "errors": []},
+  "responsive": { "activeSixPairViewports": 7, "allActionButtonsInside": true, "handAboveDock": true, "noDocumentOverflow": true, "proof": "durak-0.2.6-layout.json" },
+  "aiTiming": { "throwInWindowMs": [1400, 2200], "queuedNextStepMs": [320, 760], "proof": "durak-0.2.6-ai-timing.json" },
+  "staticAudit": { "inlineScripts": 1, "nodeCheck": "PASS", "duplicateIds": [], "missingDomRefs": [], "inlineHandlers": 0, "externalAssets": false },
+  "browserErrors": [],
   "screenshots": [
-    "proofs/deckforge-0.2.5-home-390.png",
-    "proofs/deckforge-0.2.5-blackjack-390.png",
-    "proofs/deckforge-0.2.5-durak-390.png",
-    "proofs/deckforge-0.2.5-diagnostics-390.png",
-    "proofs/deckforge-0.2.5-durak-tablet-1024.png"
+    "deckforge-0.2.6-home-390.png",
+    "deckforge-0.2.6-blackjack-390.png",
+    "deckforge-0.2.6-durak-390.png",
+    "deckforge-0.2.6-diagnostics-390.png",
+    "deckforge-0.2.6-durak-tablet-1194.png",
+    "deckforge-0.2.6-next-wager-1194.png"
   ],
   "limits": [
-    "Physical iPhone/iPad Safari and real audio hardware were not tested.",
-    "CDP hardware-touch dispatch timed out; the rendered PointerEvent handler was tested with pointerType=touch."
+    "Physical iPad Safari and real audio hardware were not tested.",
+    "Touch-drag was tested with synthetic PointerEvent objects using pointerType=touch, not hardware touch dispatch."
   ]
 }

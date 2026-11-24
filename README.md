@@ -17,15 +17,16 @@ Open `deckforge.html` directly in a browser. No server, install, build, font, im
 
 ## Release and verification
 
-Current release: **0.2.5** (`v0.2.5`). The version is visible in the site header on the home screen and both game screens.
+Current release: **0.2.6** (`v0.2.6`). The version is visible in the site header on the home screen and both game screens.
 
-- In-app diagnostics: **60 passed / 0 failed**.
-- Durak stress: **100 seeded matches** across five 2–4-seat rule configurations; all matches terminated and every step preserved the 36-card audit.
-- Full rendered-UI Durak matches completed for 2, 3 and 4 seats. Separate flows exercised attack, throw-in, defense, push, take, a human-loss terminal result, a valid touch-pointer drag and an invalid drop.
-- Blackjack insurance was tested with both choices in 3-seat play and through all three AI turns in a 4-seat game; the human action and settlement completed.
-- Responsive Durak geometry passed at 390×844 and 1024×768 with six table pairs; action controls remained inside the viewport.
-- Static audit: one inline script, no external assets, duplicate IDs, missing DOM references or inline event attributes; `node --check` passes.
-- Structured evidence: `proofs/self-test.json`, `proofs/browser-qa.json`, `proofs/static-audit.txt`, and `proofs/deckforge-0.2.5-*.png`.
+- In-app diagnostics: **69 passed / 0 failed**.
+- Durak stress: **168 seeded matches** across 14 valid 2–4-seat throw-in/push configurations; every move preserved the 36-card audit and every match reached a legal terminal result. A repeated full position is resolved as a visible stalemate draw with the duel stake returned.
+- Rendered UI: complete 2-, 3- and 4-seat Durak matches; targeted throw-in queued while an AI acted and executed only when the human turn arrived; optional push, defense and take; stale queue invalidation; Continue AI and timeout resume.
+- Durak landscape geometry: six-pair/four-seat table checked at **390×844, 1024×768, 1024×600, 1194×834, 1194×700, 1366×768 and 1366×600**. Every action button and the full dock stayed inside the visual viewport; hand stayed above the dock; no document overflow.
+- Next-round wager selector was exercised from settled Blackjack and Durak screens. A new stake debited correctly, while the completed Durak payout display remained tied to its original wager.
+- AI timing: throw-in planning extends the scheduled response to **1.4–2.2s**; after a choice is queued, AI returns to **320–760ms**. The 12-second planning timeout and manual Continue AI path both resume safely.
+- Static audit: one inline script, `node --check` PASS, no external assets, duplicate IDs, missing DOM references or inline event attributes.
+- Evidence: `proofs/self-test.json`, `proofs/browser-qa.json`, `proofs/static-audit.txt`, `proofs/deckforge-0.2.6-*.png`, plus layout and stress JSON proofs.
 - Historical Blackjack split/double evidence remains in `proofs/blackjack-split-double-qa.json`; previous release notes and artifacts are retained.
 
 `plan.md` records the implementation plan and measured acceptance evidence. Currency is fictional and local-only. Physical iPhone/iPad Safari and real audio were not tested; Chromium mobile emulation and synthetic `PointerEvent` touch-pointer flows were used.

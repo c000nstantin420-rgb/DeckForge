@@ -1,0 +1,15 @@
+{
+  "version": "0.2.6",
+  "planningWindow": {
+    "initial": { "phase": "attack", "turn": 1, "humanCardCount": 6, "tablePairs": 2, "legalHumanThrowIns": ["8♠"], "audit": true },
+    "actionNote": "Throw-in window: choose a matching card and pile while Player 2 acts.",
+    "literalTemplateTextPresent": false
+  },
+  "queuedTapFlow": {
+    "afterQueue": { "turn": 1, "phase": "attack", "tablePairs": 2, "humanCardCount": 6, "plan": { "cardSerial": "durak-0-2", "targetAttackSerial": "durak-0-29" }, "audit": true },
+    "afterAIPass": { "turn": 0, "phase": "attack", "tablePairs": 2, "planPreserved": true, "throwButton": "Throw in 8♠ on 8♣", "enabled": true, "audit": true },
+    "afterThrow": { "turn": 2, "phase": "defense", "table": [{ "attack": "8♣", "throwInTargetSerial": null }, { "attack": "8♠", "throwInTargetSerial": "durak-0-29" }, { "attack": "Q♦", "throwInTargetSerial": null }], "planCleared": true, "audit": { "ok": true, "total": 36, "accounted": 36, "unique": 36, "duplicates": 0, "missing": [], "unknown": [] }, "errors": [] }
+  },
+  "touchPointerDrag": { "pointerType": "touch", "targetIndex": 0, "turn": 1, "phase": "attack", "tablePairs": 2, "humanCardCount": 6, "planCreated": true, "reactionPaused": false, "audit": true, "errors": [] },
+  "stalePileInvalidation": { "planBefore": true, "planAfter": null, "humanCardCountBefore": 6, "humanCardCountAfter": 6, "tablePairsAfter": 1, "audit": { "ok": true, "total": 36, "accounted": 36, "unique": 36, "duplicates": 0, "missing": [], "unknown": [] }, "toast": "Queued throw-in is no longer legal. Choose another card or pile.", "errors": [] }
+}

@@ -1,0 +1,38 @@
+{
+  "version": "v0.2.6",
+  "steps": 77,
+  "phase": "finished",
+  "winner": "draw",
+  "stalemate": true,
+  "handSizes": [
+    2,
+    1,
+    2,
+    0
+  ],
+  "audit": {
+    "ok": true,
+    "total": 36,
+    "accounted": 36,
+    "unique": 36,
+    "duplicates": 0,
+    "missing": [],
+    "unknown": []
+  },
+  "balance": 260,
+  "transaction": {
+    "type": "credit",
+    "amount": 10,
+    "label": "Durak stalemate return",
+    "before": 250,
+    "after": 260,
+    "at": 1795519711625
+  },
+  "outcome": "Match completeStalemate drawThe same complete position repeated, so no cards could move forward.+$0$10 returned",
+  "buttons": [
+    "New duel · $10",
+    "Choose another table"
+  ],
+  "toast": "Stalemate — stake returned.",
+  "errors": []
+}

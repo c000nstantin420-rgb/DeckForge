@@ -1,0 +1,23 @@
+{
+  "version": "0.2.6",
+  "fixture": { "players": 3, "throwIn": "neighbors", "push": true, "humanHand": ["9♣", "10♥", "6♣", "7♣", "8♣", "J♣"], "attack": "9♥", "audit": true },
+  "beforeSelection": {
+    "buttons": [
+      { "text": "Beat card", "disabled": true },
+      { "text": "Push onward 9♣", "disabled": false, "cardSerial": "durak-0-30" },
+      { "text": "Take cards", "disabled": false }
+    ],
+    "viewport": [1194, 700],
+    "dock": [622, 693]
+  },
+  "afterSelectingDefense": {
+    "selected": "10♥",
+    "target": "9♥",
+    "buttons": [
+      { "text": "Beat 10♥", "disabled": false },
+      { "text": "Push onward 9♣", "disabled": false },
+      { "text": "Take cards", "disabled": false }
+    ]
+  },
+  "afterPush": { "phase": "defense", "turn": 1, "attacker": 0, "defender": 1, "table": ["9♥", "9♣"], "pushUsed": true, "humanStillHasPushCard": false, "audit": true, "errors": [] }
+}

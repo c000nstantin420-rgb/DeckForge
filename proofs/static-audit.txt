@@ -1,20 +1,15 @@
-DeckForge 0.2.5 static audit
+DeckForge 0.2.6 static audit
 runtime_file=deckforge.html
-file_bytes=199731
-html_lines=1734
+file_bytes=230717
+html_lines=1915
 inline_scripts=1
 node_check=PASS (inline script extracted under $TMPDIR)
-external_resource_refs=none
+external_asset_refs=none
 network_url_literals=0
 duplicate_ids=none
-literal_getElementById_refs=67
-missing_getElementById_refs=none (includes IDs in runtime-generated markup)
+unique_ids=50
+missing_static_dom_refs=none
 inline_event_attributes=0
-button_markup_occurrences=37
-APP_VERSION=0.2.5
-header_badge=v0.2.5
-crypto.getRandomValues=present
-physical_draw_pop=present
-localStorage=present
-proof_json=self-test.json and browser-qa.json valid
+APP_VERSION=0.2.6
+header_badge=v0.2.6
 final_git_diff_check=PASS

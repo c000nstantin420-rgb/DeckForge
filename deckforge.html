@@ -156,6 +156,7 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 .action-dock{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;padding:13px 0 max(0px,env(safe-area-inset-bottom));border-top:1px solid rgba(232,232,236,.08)}
 .action-dock .primary-btn,.action-dock .secondary-btn,.action-dock .danger-btn{min-width:112px}
 .action-dock .action-note{width:100%;text-align:center;color:var(--muted);font-size:12px;min-height:18px}
+.next-round-wager{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:5px 9px;border:1px solid rgba(232,232,236,.12);border-radius:10px;background:rgba(30,30,42,.72);color:var(--muted);font-size:11px;font-weight:800;white-space:nowrap}.next-round-wager select{width:100px;min-height:34px;padding:5px 8px;border:1px solid #454554;border-radius:8px;background:var(--card2);color:var(--fg);font:inherit;font-size:12px;font-weight:750}.next-round-wager select:focus-visible{outline:2px solid var(--ac);outline-offset:2px}.next-round-wager select option{background:#1e1e2a;color:var(--fg)}
 .drag-hint{display:inline-flex;align-items:center;gap:6px;color:var(--muted);font-size:11px}.drag-hint strong{color:var(--fg)}
 .durak-draggable{touch-action:none}.playing-card.dragging{opacity:.28;transform:scale(.96)}
 .drag-ghost{position:fixed;z-index:120;pointer-events:none;transform:translate(-50%,-65%) rotate(4deg) scale(1.04);filter:drop-shadow(0 14px 20px rgba(0,0,0,.45))}
@@ -169,7 +170,7 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 .trump-suit{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:800}.trump-suit .suit-large{font-size:32px}.trump-tile .talon-visual .playing-card{width:46px;height:64px;min-height:0;aspect-ratio:auto;padding:4px;border-radius:7px;cursor:default;box-shadow:0 5px 10px rgba(0,0,0,.25)}.trump-tile .talon-visual .playing-card .corner{font-size:11px;line-height:.84}.trump-tile .talon-visual .playing-card .pip{font-size:21px}.trump-tile .talon-visual .playing-card.face-down.mini-card{border-width:3px}.suit-red{color:#d33b4b}.suit-black{color:#e8e8ec}
 .talon-stack{display:flex;align-items:center;gap:9px}.talon-visual{position:relative;width:84px;height:70px;flex:0 0 84px}.talon-visual .talon-back,.talon-visual .talon-front{position:absolute;top:3px}.talon-visual .back-two{left:36px;top:0;z-index:0}.talon-visual .back-one{left:29px;top:2px;z-index:1}.talon-visual .talon-front{left:0;top:4px;z-index:2}.talon-empty{width:46px;height:64px;display:grid;place-items:center;border:1px dashed rgba(232,232,236,.25);border-radius:7px;color:var(--muted);font:800 8px system-ui;letter-spacing:.3px}.talon-count{font-size:12px;color:var(--muted);line-height:1.35}.talon-count strong{color:var(--fg);font-size:20px;display:block}
 .table-cards{display:flex;align-items:center;justify-content:center;gap:11px;flex-wrap:wrap;min-height:155px;padding:12px;border-radius:14px;background:rgba(13,13,18,.20);border:1px dashed rgba(232,232,236,.10)}
-.attack-pair{display:grid;grid-template-columns:repeat(2,46px);align-items:center;gap:5px;min-width:102px;min-height:74px;padding:4px;border:1px solid rgba(232,232,236,.12);border-radius:10px;background:rgba(13,13,18,.34);transition:border-color .14s ease,background .14s ease,box-shadow .14s ease}.attack-pair.uncovered{border-color:rgba(255,159,10,.28)}.attack-pair.drop-active{border-color:rgba(255,159,10,.62);background:rgba(255,159,10,.08)}.attack-pair.target-outline{outline:2px solid var(--warn);outline-offset:1px;box-shadow:0 0 16px rgba(255,159,10,.18)}.attack-pair .table-card{width:46px;height:64px;aspect-ratio:auto;padding:4px;border-radius:7px;cursor:default;box-shadow:0 4px 9px rgba(0,0,0,.28)}.attack-pair .attack-card{cursor:pointer}.attack-pair .table-card .corner{font-size:12px;line-height:.86}.attack-pair .table-card .pip{font-size:22px}.defense-drop-slot{width:46px;height:64px;display:grid;place-items:center;border:1px dashed rgba(255,159,10,.44);border-radius:7px;color:rgba(255,209,138,.82);font:800 8px system-ui;letter-spacing:.35px;background:rgba(255,159,10,.06)}
+.attack-pair{position:relative;display:grid;grid-template-columns:repeat(2,46px);align-items:center;gap:5px;min-width:102px;min-height:74px;padding:4px;border:1px solid rgba(232,232,236,.12);border-radius:10px;background:rgba(13,13,18,.34);transition:border-color .14s ease,background .14s ease,box-shadow .14s ease}.attack-pair.throw-in-pair{border-color:rgba(10,132,255,.42)}.throw-in-link{position:absolute;z-index:5;top:-8px;left:7px;padding:2px 5px;border:1px solid rgba(10,132,255,.32);border-radius:99px;background:#151a27;color:#a9d4ff;font:800 7px system-ui;letter-spacing:.35px;white-space:nowrap}.attack-pair.uncovered{border-color:rgba(255,159,10,.28)}.attack-pair.drop-active{border-color:rgba(255,159,10,.62);background:rgba(255,159,10,.08)}.attack-pair.target-outline{outline:2px solid var(--warn);outline-offset:1px;box-shadow:0 0 16px rgba(255,159,10,.18)}.attack-pair .table-card{width:46px;height:64px;aspect-ratio:auto;padding:4px;border-radius:7px;cursor:default;box-shadow:0 4px 9px rgba(0,0,0,.28)}.attack-pair .attack-card{cursor:pointer}.attack-pair .table-card .corner{font-size:12px;line-height:.86}.attack-pair .table-card .pip{font-size:22px}.defense-drop-slot{width:46px;height:64px;display:grid;place-items:center;border:1px dashed rgba(255,159,10,.44);border-radius:7px;color:rgba(255,209,138,.82);font:800 8px system-ui;letter-spacing:.35px;background:rgba(255,159,10,.06)}
 .log-lines{display:flex;flex-direction:column;gap:7px;max-height:190px;overflow:auto}.log-line{font-size:11px;color:var(--muted);line-height:1.3;padding-bottom:7px;border-bottom:1px solid rgba(232,232,236,.06)}.log-line strong{color:var(--fg)}
 .notice{display:flex;align-items:flex-start;gap:9px;border:1px solid var(--card2);border-radius:var(--rs);padding:11px 12px;background:rgba(30,30,42,.45);font-size:12px;line-height:1.45;color:var(--muted)}
 .notice strong{color:var(--fg)}
@@ -202,7 +203,7 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
  .game-active .game-header{gap:8px}.game-active .game-header .back-btn{flex:0 0 34px;width:34px;overflow:hidden;font-size:0;padding:0;display:grid;place-items:center}.game-active .game-header .back-btn:before{content:"‹";font-size:25px;line-height:1}.game-active .game-header-copy{min-width:0;flex:1}.game-active .game-header-copy h1{font-size:23px}.game-active .game-header-copy p{display:none}.game-active .game-header-actions{flex:0 0 auto}.game-active .game-header-actions .small-btn{font-size:11px;padding:5px 8px}
  .game-active .table-content{gap:8px;padding:6px 5px 0}.game-active .table-zone{gap:8px;justify-content:space-evenly}.game-active .hand-zone{gap:5px}.game-active .hand-label{padding:0 2px;font-size:11px}.game-active .hand-label strong{font-size:14px}.game-active .table-title{gap:6px}.game-active .table-title>span{font-size:10px}.game-active .deck-pills{gap:4px}.game-active .deck-pill{padding:5px 7px;font-size:10px}
  .game-active .bj-dealer-zone,.game-active .bj-player-zone{padding:6px 6px 3px}.game-active .bj-dealer-zone .card-row,.game-active .bj-player-zone .card-row{min-height:105px;gap:9px;padding:4px 2px 7px}.game-active .playing-card{width:clamp(64px,18vw,74px);border-radius:12px;padding:8px}.game-active .playing-card .corner{font-size:clamp(18px,4.8vw,23px);line-height:.88}.game-active .playing-card .pip{font-size:clamp(30px,8vw,40px);opacity:.82}.game-active .bj-zone-note{font-size:10px;gap:6px}.game-active .bj-zone-note .badge{font-size:9px;padding:4px 7px}
- .game-active .action-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;line-height:1.02}.game-active .action-btn small{font-size:10px;font-weight:600;opacity:.72}.game-active .action-dock .stand-action{background:linear-gradient(145deg,#2b3542,#232a35);border-color:rgba(255,255,255,.2);box-shadow:0 8px 16px rgba(0,0,0,.16)}.game-active .action-dock .action-note{font-size:11px;min-height:14px}
+ .game-active .action-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;line-height:1.02}.game-active .action-btn small{font-size:10px;font-weight:600;opacity:.72}.game-active .action-dock .next-round-wager{flex:1 1 100%;min-height:38px}.game-active .action-dock .next-round-wager select{width:min(150px,45vw);min-height:32px}.game-active .action-dock .stand-action{background:linear-gradient(145deg,#2b3542,#232a35);border-color:rgba(255,255,255,.2);box-shadow:0 8px 16px rgba(0,0,0,.16)}.game-active .action-dock .action-note{font-size:11px;min-height:14px}
  .game-active #durakContent .table-title{align-items:center;flex-wrap:wrap;gap:5px}.game-active #durakContent .turn-state{font-size:11px!important;padding:5px 8px}.game-active #durakContent .table-rules-badge{display:none}.game-active #durakContent .deck-pills .deck-pill:first-child,.game-active #durakContent .deck-pills .deck-pill:nth-child(2){display:none}.game-active #durakContent .durak-layout{display:flex;flex-direction:column;gap:7px}.game-active #durakContent .durak-board,.game-active #durakContent .durak-side{display:contents}.game-active #durakContent .durak-opponents{order:1;display:block}.game-active #durakContent .durak-opponent{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:5px 8px;min-height:44px;border-color:rgba(10,132,255,.18);background:linear-gradient(145deg,rgba(10,132,255,.08),rgba(13,13,18,.22))}.game-active #durakContent .durak-seat-head{display:flex;flex:1;align-items:center;gap:7px}.game-active #durakContent .durak-opponent-hand{min-height:28px;gap:5px}.game-active #durakContent .durak-opponent .playing-card{width:24px;height:34px;aspect-ratio:auto}.game-active #durakContent .durak-opponent .face-down.mini-card{border-width:2px}.game-active #durakContent .opponent-count{font-size:11px}.game-active #durakContent .trump-tile{order:2;display:flex;align-items:center;gap:7px;min-height:52px;padding:5px 7px}.game-active #durakContent .trump-tile h3{width:auto;margin:0;font-size:9px;white-space:nowrap;letter-spacing:.45px;writing-mode:horizontal-tb;transform:none}.game-active #durakContent .trump-suit{flex:1;gap:5px;font-size:12px}.game-active #durakContent .trump-suit .suit-large{font-size:25px}.game-active #durakContent .talon-stack{gap:6px}.game-active #durakContent .talon-stack .playing-card{width:38px}.game-active #durakContent .talon-count strong{font-size:16px}.game-active #durakContent .table-cards{order:3;flex:1 1 auto;min-height:78px;max-height:min(24dvh,180px);overflow:auto;align-content:flex-start;padding:7px;border-radius:15px}.game-active #durakContent .durak-empty-table{min-height:82px}.game-active #durakContent .attack-pair{grid-template-columns:repeat(2,38px);gap:3px;min-width:86px;min-height:60px;padding:3px}.game-active #durakContent .attack-pair .table-card,.game-active #durakContent .defense-drop-slot{width:38px;height:54px;padding:3px;border-radius:6px}.game-active #durakContent .attack-pair .table-card .corner{font-size:10px}.game-active #durakContent .attack-pair .table-card .pip{font-size:18px}.game-active #durakContent .talon-visual{width:72px;height:54px;flex-basis:72px}.game-active #durakContent .talon-visual .playing-card{width:38px;height:52px;padding:3px}.game-active #durakContent .talon-visual .playing-card .corner{font-size:9px}.game-active #durakContent .talon-visual .playing-card .pip{font-size:16px}.game-active #durakContent .talon-empty{width:38px;height:52px;font-size:7px}.game-active #durakContent .durak-player-zone{order:4;padding:7px 7px 3px}.game-active #durakContent .durak-player-zone .card-row{justify-content:center;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;min-height:68px;gap:0;padding:3px 8px 5px;scrollbar-width:none;-webkit-overflow-scrolling:touch}.game-active #durakContent .durak-player-zone .card-row::-webkit-scrollbar{display:none}.game-active #durakContent .durak-player-zone .playing-card{width:46px;min-width:46px;height:60px;aspect-ratio:auto;padding:4px;margin-left:-5px;border-radius:8px}.game-active #durakContent .durak-player-zone .playing-card .corner{font-size:clamp(12px,3.3vw,15px);line-height:.86}.game-active #durakContent .durak-player-zone .playing-card .pip{font-size:clamp(18px,5vw,21px)}.game-active #durakContent .durak-player-zone .playing-card:first-child{margin-left:0}.game-active #durakContent .notice,.game-active #durakContent .log-panel{display:none}.game-active #durakContent .action-dock .action-btn{min-height:48px}.game-active #durakContent .action-dock .durak-primary-action{background:linear-gradient(145deg,#0a84ff,#1769d2);box-shadow:0 9px 20px rgba(10,132,255,.22)}
 }
 @media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
@@ -217,6 +218,14 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
  .game-active .table-zone.split-mode .playing-card.mini-card{width:24px;padding:3px}
  .game-active .table-zone.split-mode .playing-card.mini-card .corner{font-size:8px}
  .game-active .table-zone.split-mode .playing-card.mini-card .pip{font-size:13px}
+}
+@media (min-width:761px) and (max-height:900px){
+ .game-active main{padding:4px 10px 0}.game-active .game-header{margin:0 0 4px;gap:8px}.game-active .game-header h1{font-size:22px}.game-active .game-header-copy p{display:none}.game-active .game-header-actions{gap:4px}.game-active .game-header-actions .small-btn{min-height:32px;padding:4px 7px}
+ .game-active .table-shell{padding:6px;border-radius:14px}.game-active #durakContent{gap:4px;padding:4px 6px 0}.game-active #durakContent .table-topline{gap:6px;font-size:10px}.game-active #durakContent .table-title{gap:5px}.game-active #durakContent .table-rules-badge{display:none}.game-active #durakContent .deck-pills{gap:4px}.game-active #durakContent .deck-pill{padding:4px 6px;font-size:9px}
+ .game-active #durakContent .durak-layout{grid-template-columns:minmax(0,1fr) 160px;gap:7px;flex:1 1 0;min-height:0;overflow:hidden}.game-active #durakContent .durak-board{gap:4px;min-height:0;overflow:hidden}.game-active #durakContent .durak-opponents{gap:3px}.game-active #durakContent .durak-opponent{padding:3px 4px}.game-active #durakContent .durak-seat-head{font-size:8px}.game-active #durakContent .seat-role{font-size:7px;padding:2px 4px}.game-active #durakContent .durak-opponent-hand{min-height:25px}.game-active #durakContent .durak-opponent .playing-card{width:21px;height:29px}
+ .game-active #durakContent .table-cards{flex:1 1 0;min-height:60px;max-height:28dvh;overflow:auto;align-content:flex-start;padding:8px;gap:7px}.game-active #durakContent .attack-pair{grid-template-columns:repeat(2,40px);min-width:90px;min-height:62px;gap:4px;padding:3px}.game-active #durakContent .attack-pair .table-card,.game-active #durakContent .defense-drop-slot{width:40px;height:56px}.game-active #durakContent .attack-pair .table-card .corner{font-size:10px}.game-active #durakContent .attack-pair .table-card .pip{font-size:18px}.game-active #durakContent .durak-player-zone{gap:3px;padding:4px}.game-active #durakContent .durak-player-zone .card-row{min-height:54px;padding:0 2px 2px;gap:4px}.game-active #durakContent .durak-player-zone .playing-card{width:40px}
+ .game-active #durakContent .durak-side{min-height:0;overflow:hidden;gap:5px}.game-active #durakContent .durak-side .notice,.game-active #durakContent .durak-side .log-panel{display:none}.game-active #durakContent .trump-tile{padding:6px;gap:4px}.game-active #durakContent .trump-tile h3{margin-bottom:3px;font-size:9px}.game-active #durakContent .trump-suit{font-size:11px}.game-active #durakContent .trump-suit .suit-large{font-size:23px}.game-active #durakContent .talon-stack{gap:4px}.game-active #durakContent .talon-visual{transform:scale(.74);transform-origin:left center;width:62px;flex-basis:62px}.game-active #durakContent .talon-count strong{font-size:15px}
+ .game-active #durakContent .action-dock{flex:0 0 auto;position:relative;left:auto;right:auto;bottom:auto;width:auto;transform:none;margin:0 -6px;padding:6px 7px max(7px,env(safe-area-inset-bottom));gap:5px;flex-wrap:wrap}.game-active #durakContent .action-dock .primary-btn,.game-active #durakContent .action-dock .secondary-btn,.game-active #durakContent .action-dock .danger-btn{flex:1 1 130px;min-width:120px;min-height:40px;padding:7px 9px;font-size:12px}.game-active .action-dock .next-round-wager{min-height:34px;padding:3px 6px;font-size:10px}.game-active .action-dock .next-round-wager select{width:88px;min-height:30px;padding:3px 6px;font-size:11px}.game-active #durakContent .action-dock .action-note{width:100%;min-height:12px;font-size:10px}
 }
 @media (max-width:760px){
  .game-active .table-zone.split-mode{gap:6px}
@@ -239,7 +248,7 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 <body>
 <div class="app-shell" id="app">
 <header class="topbar" id="topbar">
-  <button class="brand-button" id="brandBtn" aria-label="Go to DeckForge home"><span class="brand-mark">♠</span><span class="brand-name">DeckForge</span><span class="brand-version" id="appVersion">v0.2.5</span></button>
+  <button class="brand-button" id="brandBtn" aria-label="Go to DeckForge home"><span class="brand-mark">♠</span><span class="brand-name">DeckForge</span><span class="brand-version" id="appVersion">v0.2.6</span></button>
   <nav class="top-tabs" aria-label="Games">
     <button class="tab active" id="tabHome" data-game="home"><span class="tab-full">Home</span><span class="tab-short">⌂</span></button>
     <button class="tab" id="tabBlackjack" data-game="blackjack"><span class="tab-full">Blackjack</span><span class="tab-short">BJ</span></button>
@@ -285,7 +294,7 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 (() => {
 'use strict';
 
-const APP_VERSION = '0.2.5';
+const APP_VERSION = '0.2.6';
 const STORAGE_KEY = 'deckforge-save-v1';
 const STORAGE_RESET_KEY = 'deckforge-brand-reset-v1';
 const $ = (id) => document.getElementById(id);
@@ -971,7 +980,7 @@ DurakGame = class ConfiguredDurakGame extends LegacyDurakGame {
     super(options);
     this.config = normalizeDurakConfig(options.config);
     this.players = Array.from({length:this.config.players}, () => ({hand:[]}));
-    this.throwersUsed = new Set(); this.lastThrower = null; this.pushUsed = false; this.durakLoserIndex = null; this.aiStalled = false;
+    this.throwersUsed = new Set(); this.lastThrower = null; this.pushUsed = false; this.durakLoserIndex = null; this.aiStalled = false; this.stalemate = false; this.aiSeenStates = new Set();
   }
   nextPlayer(index) { return (Number(index) + 1) % this.players.length; }
   previousPlayer(index) { return (Number(index) - 1 + this.players.length) % this.players.length; }
@@ -989,10 +998,12 @@ DurakGame = class ConfiguredDurakGame extends LegacyDurakGame {
     return null;
   }
   audit() { return this.shoe.audit([...this.players.map((player) => player.hand), this.table.flatMap((pair) => [pair.attack, pair.defense].filter(Boolean))]); }
+  repetitionSignature() { return JSON.stringify([this.phase,this.turn,this.attacker,this.defender,this.winner,this.pushUsed,[...this.throwersUsed].sort((a,b)=>a-b),this.lastThrower,this.shoe.cards.map((card)=>card.serial),this.shoe.discard.map((card)=>card.serial),this.players.map((player)=>player.hand.map((card)=>card.serial)),this.table.map((pair)=>[pair.attack.serial,pair.defense?.serial||null,pair.throwInTargetSerial||null])]); }
+  finishStalemateDraw() { this.stalemate=true; this.winner='draw'; this.durakLoserIndex=null; this.phase='finished'; this.turn=null; this.aiStalled=false; this.addLog('The duel ends in a draw: the same full position repeated.'); return this.state(); }
   startMatch() {
     this.config = normalizeDurakConfig(this.config);
     if (this.phase === 'finished') { this.shoe.cards = this.shoe.allCards.slice(); this.shoe.discard = []; shuffle(this.shoe.cards, this.rng); }
-    this.players = Array.from({length:this.config.players}, () => ({hand:[]})); this.table = []; this.log = []; this.winner = null; this.durakLoserIndex = null; this.round = 0; this.throwersUsed = new Set(); this.lastThrower = null; this.pushUsed = false; this.aiStalled = false;
+    this.players = Array.from({length:this.config.players}, () => ({hand:[]})); this.table = []; this.log = []; this.winner = null; this.durakLoserIndex = null; this.stalemate = false; this.aiSeenStates = new Set(); this.round = 0; this.throwersUsed = new Set(); this.lastThrower = null; this.pushUsed = false; this.aiStalled = false;
     for (let cardRound = 0; cardRound < 6; cardRound += 1) for (const player of this.players) player.hand.push(this.shoe.draw());
     this.trumpCard = this.shoe.peekBottom(); this.trump = this.trumpCard.suit;
     const trumps = this.players.flatMap((player, index) => player.hand.filter((card) => isTrump(card, this.trump)).map((card) => ({player:index, card})));
@@ -1007,16 +1018,30 @@ DurakGame = class ConfiguredDurakGame extends LegacyDurakGame {
     if (limit <= 0 || (this.table.length === 0 && player !== this.attacker)) return [];
     return this.players[player].hand.filter((card) => this.table.length === 0 || ranks.has(card.rank));
   }
-  canAttack(player, serial) {
-    if (this.phase !== 'attack' || player !== this.turn) return false;
-    if (this.table.length === 0) return player === this.attacker && Boolean(this.cardBySerial(player, serial));
-    return this.legalThrowIns(player).some((card) => card.serial === serial) && this.table.every((pair) => pair.defense);
+  legalThrowTargets(player, serial) {
+    if (this.phase !== 'attack' || this.table.length === 0 || !this.table.every((pair) => pair.defense)) return [];
+    const card = this.cardBySerial(player, serial);
+    if (!card || !this.legalThrowIns(player).some((entry) => entry.serial === serial)) return [];
+    return this.table.filter((pair) => pair.attack.rank === card.rank || pair.defense?.rank === card.rank).map((pair) => pair.attack.serial);
   }
-  attackCard(player, serial) {
-    if (!this.canAttack(player, serial)) throw new Error('That attack is not legal');
-    const wasThrowIn = this.table.length > 0; const card = this.removeCard(player, serial); this.table.push({attack:card, defense:null}); this.lastThrower = player; this.throwersUsed.add(player); this.phase = 'defense'; this.turn = this.defender;
+  chooseThrowTarget(player, serial) { return this.legalThrowTargets(player, serial)[0] || null; }
+  canAttack(player, serial, targetAttackSerial = null) {
+    if (this.phase !== 'attack' || player !== this.turn) return false;
+    if (this.table.length === 0) return player === this.attacker && targetAttackSerial === null && Boolean(this.cardBySerial(player, serial));
+    return this.legalThrowTargets(player, serial).includes(targetAttackSerial);
+  }
+  attackCard(player, serial, targetAttackSerial = null) {
+    if (!this.canAttack(player, serial, targetAttackSerial)) throw new Error('That attack or target pile is not legal');
+    const wasThrowIn = this.table.length > 0; const card = this.removeCard(player, serial); const entry = {attack:card, defense:null};
+    if (wasThrowIn) {
+      const targetIndex = this.table.findIndex((pair) => pair.attack.serial === targetAttackSerial); let insertIndex = targetIndex + 1;
+      while (insertIndex < this.table.length && this.table[insertIndex].throwInTargetSerial === targetAttackSerial) insertIndex += 1;
+      entry.throwInTargetSerial = targetAttackSerial; this.table.splice(insertIndex, 0, entry);
+    } else this.table.push(entry);
+    this.lastThrower = player; this.throwersUsed.add(player); this.phase = 'defense'; this.turn = this.defender;
     const subject = player === 0 ? 'You' : `Player ${player + 1}`; const verb = player === 0 ? (wasThrowIn ? 'throw in' : 'attack') : (wasThrowIn ? 'throws in' : 'attacks');
-    this.addLog(`${subject} ${verb} ${card.label}.`); return this.state();
+    const target = wasThrowIn ? this.table.find((pair) => pair.attack.serial === targetAttackSerial)?.attack : null;
+    this.addLog(wasThrowIn ? `${subject} ${verb} ${card.label} on ${target?.label || 'the selected pile'}.` : `${subject} ${verb} ${card.label}.`); return this.state();
   }
   beatCard(player, serial, targetIndex = null) {
     if (!this.canDefend(player, serial, targetIndex)) throw new Error('That defense is not legal');
@@ -1078,6 +1103,7 @@ DurakGame = class ConfiguredDurakGame extends LegacyDurakGame {
   aiStep(force = false) {
     if (this.phase === 'finished' || this.turn === null) return this.state();
     const actor = this.turn; if (!force && actor === 0) return this.state();
+    const signature=this.repetitionSignature(); if (this.aiSeenStates.has(signature)) return this.finishStalemateDraw(); this.aiSeenStates.add(signature);
     if (this.phase === 'attack' && this.table.length === 0) {
       if (actor !== this.attacker) { this.turn = this.attacker; return this.state(); }
       if (!this.players[actor]?.hand.length) {
@@ -1101,8 +1127,8 @@ DurakGame = class ConfiguredDurakGame extends LegacyDurakGame {
         else { this.phase = 'defense'; this.turn = this.defender; }
         return this.state();
       }
-      const card = this.chooseThrow(actor);
-      if (card && this.canAttack(actor, card.serial)) this.attackCard(actor, card.serial);
+      const card = this.chooseThrow(actor); const targetSerial = card ? this.chooseThrowTarget(actor, card.serial) : null;
+      if (card && this.canAttack(actor, card.serial, targetSerial)) this.attackCard(actor, card.serial, targetSerial);
       else if (this.table.every((pair) => pair.defense)) this.endAttack(actor);
       else { this.phase = 'defense'; this.turn = this.defender; }
       return this.state();
@@ -1115,7 +1141,7 @@ DurakGame = class ConfiguredDurakGame extends LegacyDurakGame {
     }
     return this.state();
   }
-  state() { return {phase:this.phase, players:this.players, config:this.config, trump:this.trump, trumpCard:this.trumpCard, attacker:this.attacker, defender:this.defender, turn:this.turn, table:this.table, talonCount:this.talonCount, winner:this.winner, durakLoserIndex:this.durakLoserIndex, round:this.round, pushUsed:this.pushUsed, aiStalled:this.aiStalled, activeSeats:this.activeSeats()}; }
+  state() { return {phase:this.phase, players:this.players, config:this.config, trump:this.trump, trumpCard:this.trumpCard, attacker:this.attacker, defender:this.defender, turn:this.turn, table:this.table, talonCount:this.talonCount, winner:this.winner, durakLoserIndex:this.durakLoserIndex, round:this.round, pushUsed:this.pushUsed, aiStalled:this.aiStalled, stalemate:this.stalemate, activeSeats:this.activeSeats()}; }
 };
 
 function defaultTableSettings() { return {blackjack:normalizeBlackjackConfig(), durak:normalizeDurakConfig()}; }
@@ -1136,7 +1162,7 @@ const bankroll = new Bankroll(loadSave().bankroll);
 const loaded = loadSave();
 const progression = new Progression(loaded.progression);
 const settings = {sound: loaded.settings?.sound !== false, tables:{blackjack:normalizeBlackjackConfig(loaded.settings?.tables?.blackjack), durak:normalizeDurakConfig(loaded.settings?.tables?.durak)}};
-const appState = {screen:'home', game:'home', modeIndex:0, stake:10, tableConfig:null, bj:null, durak:null, selectedDurak:null, selectedTarget:null, aiTimer:null, blackjackTimer:null, blackjackAiTimer:null, blackjackSettling:false, pendingResult:false};
+const appState = {screen:'home', game:'home', modeIndex:0, stake:10, tableConfig:null, bj:null, durak:null, selectedDurak:null, selectedTarget:null, selectedTargetSerial:null, durakQueuedThrowIn:null, durakReactionPaused:false, durakPauseTimer:null, aiTimer:null, blackjackTimer:null, blackjackAiTimer:null, blackjackSettling:false, pendingResult:false};
 const durakDrag = {active:false, serial:null, pointerId:null, source:null, ghost:null, target:null, startX:0, startY:0, moved:false, ignoreClick:false};
 let audioContext = null;
 
@@ -1171,6 +1197,31 @@ function clearDurakDrag() {
   durakDrag.active = false; durakDrag.serial = null; durakDrag.pointerId = null; durakDrag.source = null; durakDrag.ghost = null; durakDrag.target = null; durakDrag.moved = false;
 }
 function randomReactionDelay(min = 320, max = 760) { return Math.floor(min + Math.random() * (max - min + 1)); }
+function canPlanDurakThrowIn(game) { return Boolean(game && game.phase === 'attack' && game.turn !== 0 && game.table.length > 0 && game.table.every((pair) => pair.defense) && game.canThrowInPlayer(0) && !game.throwersUsed.has(0) && game.legalThrowIns(0).length); }
+function durakAIReactionDelayRange(game, queuedThrowIn = false) { return canPlanDurakThrowIn(game) && !queuedThrowIn ? [1400,2200] : [320,760]; }
+function chooseHumanPushCard(game, selectedSerial = null) { const selected = selectedSerial ? game?.cardBySerial(0,selectedSerial) : null; return selected && game.canPush(0,selected.serial) ? selected : game?.choosePush(0) || null; }
+function isDurakThrowInPlanValid(game, plan) {
+  if (!game || !plan || game.phase === 'finished' || !game.table.length || game.table.length >= game.attackLimit || !game.canThrowInPlayer(0) || game.throwersUsed.has(0)) return false;
+  const card = game.cardBySerial(0,plan.cardSerial); const target = game.table.find((pair) => pair.attack.serial === plan.targetAttackSerial);
+  return Boolean(card && target && (target.attack.rank === card.rank || target.defense?.rank === card.rank));
+}
+function clearDurakTarget() { appState.selectedTarget = null; appState.selectedTargetSerial = null; }
+function clearDurakPlanning() {
+  if (appState.durakPauseTimer) clearTimeout(appState.durakPauseTimer);
+  appState.durakPauseTimer = null; appState.durakReactionPaused = false; appState.durakQueuedThrowIn = null; appState.selectedDurak = null; clearDurakTarget();
+}
+function currentDurakTargetIndex(game = appState.durak) {
+  if (!game || !appState.selectedTargetSerial) { appState.selectedTarget = null; return null; }
+  const index = game.table.findIndex((pair) => pair.attack.serial === appState.selectedTargetSerial);
+  appState.selectedTarget = index >= 0 ? index : null;
+  if (index < 0) appState.selectedTargetSerial = null;
+  return index >= 0 ? index : null;
+}
+function reconcileDurakQueuedThrowIn(game = appState.durak) {
+  if (!appState.durakQueuedThrowIn) return true;
+  if (isDurakThrowInPlanValid(game,appState.durakQueuedThrowIn)) return true;
+  appState.durakQueuedThrowIn = null; return false;
+}
 function clearBlackjackTimer(settle = true) {
   if (appState.blackjackTimer) { clearTimeout(appState.blackjackTimer); appState.blackjackTimer = null; }
   if (appState.blackjackAiTimer) { clearTimeout(appState.blackjackAiTimer); appState.blackjackAiTimer = null; }
@@ -1229,6 +1280,14 @@ function blackjackHandStatus(hand, {isActive = false, phase = 'player', settled 
 }
 function modesForGame(game) { return game === 'blackjack' ? BJ_MODES : DURAK_MODES; }
 function selectedMode() { return modesForGame(appState.game)[appState.modeIndex]; }
+function nextRoundStakeOptions() {
+  const mode=selectedMode(); const presets=[mode.min,mode.min*2,mode.min*5,Math.min(mode.max,mode.min*10),mode.max,Number(appState.stake)];
+  return [...new Set(presets.filter((value)=>Number.isSafeInteger(value)&&value>=mode.min&&value<=mode.max))].sort((a,b)=>a-b).map((value)=>({value,affordable:bankroll.balance===0?value<=100:bankroll.balance>=value}));
+}
+function canStartAnotherRound() { const mode=selectedMode(); return appState.stake>=mode.min&&appState.stake<=mode.max&&(bankroll.balance>=appState.stake||(bankroll.balance===0&&appState.stake<=100)); }
+function nextRoundStakeControlMarkup() {
+  const options=nextRoundStakeOptions(); return `<label class="next-round-wager"><span>Next bet</span><select data-next-round-stake aria-label="Next round stake">${options.map(({value,affordable})=>`<option value="${value}" ${value===appState.stake?'selected':''} ${affordable?'':'disabled'}>${intMoney(value)}${affordable?'':' · not available'}</option>`).join('')}</select></label>`;
+}
 function gameWins(game) { return progression.wins[game]; }
 function setActiveTab() {
   $$('.tab').forEach((tab) => tab.classList.toggle('active', tab.dataset.game === appState.game));
@@ -1260,10 +1319,10 @@ function cancelActiveRound(reason = 'Unfinished round returned') {
 function openGame(game) {
   cancelActiveRound('Table switch');
   if (appState.aiTimer) { clearTimeout(appState.aiTimer); appState.aiTimer = null; }
-  clearBlackjackTimer();
-  appState.game = game; appState.tableConfig = game === 'blackjack' ? {...settings.tables.blackjack} : {...settings.tables.durak}; appState.screen = 'game'; appState.modeIndex = progression.unlockedIndex(game); appState.stake = modesForGame(game)[appState.modeIndex].min; appState.bj = null; appState.durak = null; appState.selectedDurak = null; appState.selectedTarget = null; appState.pendingResult = false; renderGame(); beep('tap');
+  clearBlackjackTimer(); clearDurakPlanning();
+  appState.game = game; appState.tableConfig = game === 'blackjack' ? {...settings.tables.blackjack} : {...settings.tables.durak}; appState.screen = 'game'; appState.modeIndex = progression.unlockedIndex(game); appState.stake = modesForGame(game)[appState.modeIndex].min; appState.bj = null; appState.durak = null; appState.pendingResult = false; renderGame(); beep('tap');
 }
-function goHome() { cancelActiveRound('Table left'); if (appState.aiTimer) clearTimeout(appState.aiTimer); clearBlackjackTimer(); clearDurakDrag(); appState.screen = 'home'; appState.game = 'home'; appState.tableConfig = null; appState.bj = null; appState.durak = null; renderHome(); }
+function goHome() { cancelActiveRound('Table left'); if (appState.aiTimer) { clearTimeout(appState.aiTimer); appState.aiTimer = null; } clearBlackjackTimer(); clearDurakPlanning(); clearDurakDrag(); appState.screen = 'home'; appState.game = 'home'; appState.tableConfig = null; appState.bj = null; appState.durak = null; renderHome(); }
 function renderGame() {
   setActiveTab(); renderTop();
   const bj = appState.game === 'blackjack';
@@ -1328,10 +1387,10 @@ function startSelectedGame() {
   const funds = bankroll.ensureFunds(appState.stake);
   if (funds.granted) showToast('Bankruptcy grant: +$100 added.', 'good');
   if (!funds.ok) { showToast(`Need ${intMoney(appState.stake - bankroll.balance)} more.`, 'bad'); renderGame(); return; }
-  bankroll.debit(appState.stake, `${mode.name} stake`); saveState();
+  bankroll.debit(appState.stake, `${mode.name} stake`); saveState(); clearDurakPlanning();
   try {
     if (appState.game === 'blackjack') { appState.bj = new BlackjackGame({config:appState.tableConfig}); appState.bj.startRound(appState.stake); if (appState.bj.phase === 'ai') { scheduleBlackjackAI(); renderGame(); } else if (appState.bj.phase === 'settled') queueBlackjackSettlement(); else renderGame(); beep('card'); }
-    else { appState.durak = new DurakGame({config:appState.tableConfig}); appState.durak.startMatch(); beep('card'); scheduleAI(); renderGame(); }
+    else { appState.durak = new DurakGame({config:appState.tableConfig}); appState.durak.startMatch(); appState.durak.wager=appState.stake; beep('card'); scheduleAI(); renderGame(); }
   } catch (error) {
     bankroll.credit(appState.stake, 'Rollback after start error'); saveState(); showToast(error.message, 'bad');
   }
@@ -1363,27 +1422,28 @@ function blackjackAction(action) {
   } catch (error) { showToast(error.message, 'bad'); }
 }
 function goBackToLobby() {
-  if (appState.aiTimer) clearTimeout(appState.aiTimer);
-  clearBlackjackTimer();
-  clearDurakDrag();
-  appState.bj = null; appState.durak = null; appState.pendingResult = false; appState.selectedDurak = null; appState.selectedTarget = null;
+  if (appState.aiTimer) { clearTimeout(appState.aiTimer); appState.aiTimer = null; }
+  clearBlackjackTimer(); clearDurakPlanning(); clearDurakDrag();
+  appState.bj = null; appState.durak = null; appState.pendingResult = false;
   renderGame();
 }
 function startAnotherRound() {
+  const activeContent=appState.game==='blackjack'?$('blackjackContent'):$('durakContent'); const picker=activeContent.querySelector('[data-next-round-stake]');
+  if (picker) { const requested=Number(picker.value); const currentMode=selectedMode(); if (!Number.isSafeInteger(requested)||requested<currentMode.min||requested>currentMode.max) { showToast(`Stake must be between ${intMoney(currentMode.min)} and ${intMoney(currentMode.max)}.`, 'bad'); return; } appState.stake=requested; }
   const mode = selectedMode();
   const funds = bankroll.ensureFunds(appState.stake);
   if (funds.granted) showToast('Bankruptcy grant: +$100 added.', 'good');
-  if (!funds.ok) { showToast(`Need ${intMoney(appState.stake - bankroll.balance)} more — choose a lower stake.`, 'bad'); goBackToLobby(); return; }
+  if (!funds.ok) { showToast(`Need ${intMoney(appState.stake - bankroll.balance)} more — choose a lower stake.`, 'bad'); renderGame(); return; }
   try {
     bankroll.debit(appState.stake, `${mode.name} stake`);
-    appState.pendingResult = false; appState.selectedDurak = null; appState.selectedTarget = null;
+    clearDurakPlanning(); appState.pendingResult = false;
     if (appState.game === 'blackjack' && appState.bj) {
       appState.bj.startRound(appState.stake);
       if (appState.bj.phase === 'ai') scheduleBlackjackAI();
       if (appState.bj.phase === 'settled') queueBlackjackSettlement();
       beep('card');
     } else if (appState.game === 'durak') {
-      appState.durak = new DurakGame({config:appState.tableConfig}); appState.durak.startMatch();
+      appState.durak = new DurakGame({config:appState.tableConfig}); appState.durak.startMatch(); appState.durak.wager=appState.stake;
       scheduleAI(); beep('card');
     }
     saveState(); if (!(appState.game === 'blackjack' && appState.bj?.phase === 'settled')) renderGame();
@@ -1392,6 +1452,13 @@ function startAnotherRound() {
   }
 }
 function nextRound() { startAnotherRound(); }
+function handleNextRoundStakeChange(event) {
+  const picker=event.target.closest?.('[data-next-round-stake]'); if (!picker) return;
+  const requested=Number(picker.value); const mode=selectedMode();
+  if (!Number.isSafeInteger(requested)||requested<mode.min||requested>mode.max) { picker.value=String(appState.stake); showToast('Choose a valid next-round stake.', 'bad'); return; }
+  appState.stake=requested; const content=picker.closest('#blackjackContent, #durakContent'); const button=content?.querySelector('[data-next-round]');
+  if (button) { button.disabled=!canStartAnotherRound(); button.textContent=`${appState.game==='blackjack'?'Deal next hand':'New duel'} · ${intMoney(appState.stake)}`; }
+}
 
 const DURAK_HAND_SUIT_ORDER = Object.freeze(['clubs','diamonds','hearts','spades']);
 function sortDurakHand(cards, trump) {
@@ -1403,10 +1470,10 @@ function cardFaceMarkup(card) {
   const suit = SUIT_BY_KEY[card.suit];
   return `<span class="corner">${esc(card.rank)}<br>${suit.symbol}</span><span class="pip">${suit.symbol}</span><span class="corner bottom">${esc(card.rank)}<br>${suit.symbol}</span>`;
 }
-function durakTableCardMarkup(card, {kind = 'attack', targetIndex = null, selected = false} = {}) {
+function durakTableCardMarkup(card, {kind = 'attack', targetIndex = null, targetSerial = null, selected = false} = {}) {
   const isAttack = kind === 'attack'; const suit = SUIT_BY_KEY[card.suit]; const label = `${RANK_LABEL[card.rank] || card.rank} of ${suit.key}`;
   const classes = `playing-card table-card compact ${isAttack ? 'attack-card' : 'defense-card'} ${card.isRed ? 'red' : ''} ${selected ? 'target-outline' : ''} ${isAttack ? 'durak-drop-zone' : ''}`;
-  if (isAttack) return `<button type="button" class="${classes}" data-target-index="${targetIndex}" data-drop-zone="target" aria-label="Attack ${esc(label)}">${cardFaceMarkup(card)}</button>`;
+  if (isAttack) return `<button type="button" class="${classes}" data-target-index="${targetIndex}" data-target-serial="${esc(targetSerial || '')}" data-drop-zone="target" aria-label="Attack ${esc(label)}">${cardFaceMarkup(card)}</button>`;
   return `<div class="${classes}" aria-label="Defense ${esc(label)}">${cardFaceMarkup(card)}</div>`;
 }
 function durakTalonMarkup(game) {
@@ -1448,23 +1515,82 @@ function renderBlackjack() {
   else if (game.phase === 'ai') html += '<div class="action-note">AI seats are taking their turns…</div>';
   else if (active && game.phase === 'player') {
     const actions = [['hit','Hit',''],['stand','Stand',''],['double','Double',game.activeHand ? `+${intMoney(game.activeHand.wager)}` : ''],['split','Split','Pairs only']]; if (cfg.surrender) actions.push(['surrender','Surrender','Half back']); const actionButtons = actions.map(([action,label,meta]) => `<button class="${action === 'hit' ? 'primary-btn' : action === 'stand' ? 'secondary-btn stand-action' : 'secondary-btn'} action-btn ${action}-action" data-bj-action="${action}" ${game.can(action) ? '' : 'disabled'}><span>${label}</span>${meta ? `<small>${meta}</small>` : ''}</button>`).join(''); const actionNote = game.activeHand ? (hands.length > 1 ? `Hand ${game.activeIndex + 1} · choose a move` : 'Choose a move') : ''; html += actionButtons + `<div class="action-note">${actionNote}</div>`;
-  } else if (!active) html += `<button class="primary-btn" data-next-round="bj">Deal next hand</button><button class="secondary-btn" data-back-lobby="true">Choose another table</button>`;
+  } else if (!active) html += `${nextRoundStakeControlMarkup()}<button class="primary-btn" data-next-round="bj" ${canStartAnotherRound()?'':'disabled'}>Deal next hand · ${intMoney(appState.stake)}</button><button class="secondary-btn" data-back-lobby="true">Choose another table</button>`;
   else if (game.phase === 'insurance') html += '<div class="action-note">Choose insurance or decline to reveal the dealer hand.</div>';
   html += '</div>';
   $('blackjackContent').innerHTML = html;
 }
-function selectDurakCard(serial) { appState.selectedDurak = appState.selectedDurak === serial ? null : serial; renderDurak(); beep('tap'); }
-function selectDurakTarget(index) { appState.selectedTarget = appState.selectedTarget === index ? null : index; renderDurak(); beep('tap'); }
-function currentDurakSelection() { return appState.durak?.playerHand.find((card) => card.serial === appState.selectedDurak) || null; }
-function durakAction(action) {
+function pauseDurakAIForThrowIn() {
+  const game = appState.durak; if (!canPlanDurakThrowIn(game)) return false;
+  if (appState.aiTimer) { clearTimeout(appState.aiTimer); appState.aiTimer = null; }
+  if (!appState.durakReactionPaused) {
+    appState.durakReactionPaused = true;
+    appState.durakPauseTimer = setTimeout(() => {
+      appState.durakPauseTimer = null; resumeDurakAIPlanning({clearDraft:true,expired:true});
+    }, 12000);
+  }
+  return true;
+}
+function resumeDurakAIPlanning({clearDraft = false, expired = false} = {}) {
+  if (appState.durakPauseTimer) { clearTimeout(appState.durakPauseTimer); appState.durakPauseTimer = null; }
+  appState.durakReactionPaused = false;
+  if (clearDraft) { appState.selectedDurak = null; clearDurakTarget(); }
+  if (expired) showToast('Throw-in planning timed out; AI resumed.', '');
+  scheduleAI(); renderDurak();
+}
+function selectDurakCard(serial) {
   const game = appState.durak; if (!game) return;
+  if (appState.durakQueuedThrowIn) appState.durakQueuedThrowIn = null;
+  if (game.turn !== 0) {
+    if (!canPlanDurakThrowIn(game)) return;
+    if (!game.legalThrowIns(0).some((card) => card.serial === serial)) { showToast('Choose a matching rank to plan a throw-in.', 'bad'); return; }
+    pauseDurakAIForThrowIn();
+  }
+  appState.selectedDurak = appState.selectedDurak === serial ? null : serial; renderDurak(); beep('tap');
+}
+function selectDurakTarget(index) {
+  const game = appState.durak; const pair = game?.table[index]; if (!pair) return;
+  const targetSerial = pair.attack.serial;
+  if (appState.durakQueuedThrowIn) { appState.selectedDurak = appState.durakQueuedThrowIn.cardSerial; appState.durakQueuedThrowIn = null; }
+  if (game.turn !== 0) {
+    if (!canPlanDurakThrowIn(game)) return;
+    const possible = game.legalThrowIns(0).some((card) => game.legalThrowTargets(0,card.serial).includes(targetSerial));
+    if (!possible) { showToast('Choose a pile whose rank matches a card in your hand.', 'bad'); return; }
+    pauseDurakAIForThrowIn();
+  }
+  if (appState.selectedTargetSerial === targetSerial) clearDurakTarget();
+  else { appState.selectedTarget = index; appState.selectedTargetSerial = targetSerial; }
+  renderDurak(); beep('tap');
+}
+function currentDurakSelection() { return appState.durak?.playerHand.find((card) => card.serial === appState.selectedDurak) || null; }
+function durakTargetCard(game, targetSerial) { return game?.table.find((pair) => pair.attack.serial === targetSerial)?.attack || null; }
+function durakThrowTargetChoices(game, cardSerial = null) {
+  if (!game || game.phase !== 'attack' || game.table.length === 0 || !game.table.every((pair) => pair.defense)) return [];
+  const cards = cardSerial ? [game.cardBySerial(0,cardSerial)].filter(Boolean) : game.legalThrowIns(0);
+  return [...new Set(cards.flatMap((card) => game.legalThrowTargets(0,card.serial)))];
+}
+function durakAction(action, actionCardSerial = null, actionTargetSerial = null) {
+  const game = appState.durak; if (!game) return;
+  const cardSerial = actionCardSerial || appState.selectedDurak; const targetSerial = action === 'attack' ? null : actionTargetSerial || appState.selectedTargetSerial;
+  if (action === 'continue-ai') { if (appState.durakPauseTimer) { clearTimeout(appState.durakPauseTimer); appState.durakPauseTimer = null; } appState.durakReactionPaused = false; appState.selectedDurak = null; clearDurakTarget(); runAIImmediately(); return; }
+  if (action === 'queue-throw') {
+    const legalTargets = cardSerial ? game.legalThrowTargets(0,cardSerial) : [];
+    if (!canPlanDurakThrowIn(game) || !legalTargets.includes(targetSerial)) { showToast('Choose a matching card and target pile first.', 'bad'); return; }
+    appState.durakQueuedThrowIn = {cardSerial,targetAttackSerial:targetSerial};
+    appState.selectedDurak = null; clearDurakTarget(); resumeDurakAIPlanning(); showToast('Throw-in queued for your turn.', 'good'); return;
+  }
+  if (action === 'cancel-queue') { appState.durakQueuedThrowIn = null; renderDurak(); showToast('Queued throw-in canceled.'); return; }
   try {
-    if (action === 'attack' || action === 'throw') game.attackCard(0, appState.selectedDurak);
-    else if (action === 'beat') game.beatCard(0, appState.selectedDurak, appState.selectedTarget);
-    else if (action === 'push') game.push(0, appState.selectedDurak);
+    if (action === 'attack') game.attackCard(0, cardSerial);
+    else if (action === 'throw') game.attackCard(0, cardSerial, targetSerial);
+    else if (action === 'beat') { const targetIndex = targetSerial ? game.table.findIndex((pair) => pair.attack.serial === targetSerial) : null; game.beatCard(0, cardSerial, targetIndex); }
+    else if (action === 'push') game.push(0, cardSerial);
     else if (action === 'take') game.take(0);
     else if (action === 'end') game.endAttack(0);
-    appState.selectedDurak = null; appState.selectedTarget = null; if (game.phase === 'finished') finalizeDurak(); else { game.aiStalled = false; scheduleAI(); } renderDurak(); beep(action === 'take' ? 'loss' : 'card');
+    appState.selectedDurak = null; clearDurakTarget(); appState.durakQueuedThrowIn = null;
+    if (appState.durakPauseTimer) { clearTimeout(appState.durakPauseTimer); appState.durakPauseTimer = null; } appState.durakReactionPaused = false;
+    if (game.phase === 'finished') finalizeDurak(); else { game.aiStalled = false; scheduleAI(); }
+    renderDurak(); beep(action === 'take' ? 'loss' : 'card');
   } catch (error) { showToast(error.message, 'bad'); }
 }
 function durakDropTargetAt(x, y) {
@@ -1479,7 +1605,7 @@ function updateDurakDragTarget(target) {
 function beginDurakDrag(event) {
   const source = event.target.closest?.('.durak-draggable');
   const game = appState.durak;
-  if (!source || !game || game.phase === 'finished' || game.turn !== 0) return;
+  if (!source || !game || game.phase === 'finished' || (game.turn !== 0 && !canPlanDurakThrowIn(game))) return;
   if (event.pointerType === 'mouse' && event.button !== 0) return;
   const serial = source.dataset.cardSerial;
   if (!serial || !game.cardBySerial(0, serial)) return;
@@ -1501,15 +1627,19 @@ function moveDurakDrag(event) {
 }
 function finishDurakDrag(event) {
   if (!durakDrag.active || event.pointerId !== durakDrag.pointerId) return;
-  const wasDragged = durakDrag.moved; const serial = durakDrag.serial; const target = durakDrag.target || durakDropTargetAt(event.clientX, event.clientY); const targetIndex = target?.dataset.targetIndex === undefined ? null : Number(target.dataset.targetIndex); const game = appState.durak;
+  const wasDragged = durakDrag.moved; const serial = durakDrag.serial; const target = durakDrag.target || durakDropTargetAt(event.clientX, event.clientY); const targetPair = target?.matches?.('.attack-pair') ? target : target?.closest?.('.attack-pair'); const rawTargetIndex = target?.dataset.targetIndex ?? targetPair?.dataset.targetIndex; const targetIndex = rawTargetIndex === undefined ? null : Number(rawTargetIndex); const targetSerial = target?.dataset.targetSerial || targetPair?.dataset.targetSerial || (Number.isInteger(targetIndex) ? appState.durak?.table[targetIndex]?.attack.serial : null); const game = appState.durak;
   if (wasDragged && game) {
     durakDrag.ignoreClick = true;
     const tableTarget = target?.dataset.dropZone === 'table' || target?.closest?.('[data-drop-zone="table"]');
-    if (game.phase === 'attack' && game.turn === 0 && tableTarget) {
-      appState.selectedDurak = serial; durakAction(game.table.length ? 'throw' : 'attack');
-    } else if (game.phase === 'defense' && game.turn === 0 && Number.isInteger(targetIndex)) {
-      appState.selectedDurak = serial; appState.selectedTarget = targetIndex; durakAction('beat');
-    } else showToast(game.phase === 'defense' ? 'Drop the card onto an uncovered attack.' : 'Drop the card onto the table.', 'bad');
+    if (game.phase === 'attack' && game.turn !== 0 && canPlanDurakThrowIn(game) && Number.isInteger(targetIndex) && targetSerial && game.legalThrowTargets(0,serial).includes(targetSerial)) {
+      pauseDurakAIForThrowIn(); durakAction('queue-throw',serial,targetSerial);
+    } else if (game.phase === 'attack' && game.turn === 0 && game.table.length === 0 && tableTarget) {
+      appState.selectedDurak = serial; durakAction('attack',serial);
+    } else if (game.phase === 'attack' && game.turn === 0 && game.table.length > 0 && Number.isInteger(targetIndex) && targetSerial) {
+      appState.selectedDurak = serial; appState.selectedTarget = targetIndex; appState.selectedTargetSerial = targetSerial; durakAction('throw',serial,targetSerial);
+    } else if (game.phase === 'defense' && game.turn === 0 && Number.isInteger(targetIndex) && targetSerial) {
+      appState.selectedDurak = serial; appState.selectedTarget = targetIndex; appState.selectedTargetSerial = targetSerial; durakAction('beat',serial,targetSerial);
+    } else showToast(game.phase === 'attack' && game.table.length ? 'Drop the card onto a matching pile to choose where to throw in.' : game.phase === 'defense' ? 'Drop the card onto an uncovered attack.' : 'Drop the card onto the table.', 'bad');
   }
   clearDurakDrag();
   if (wasDragged) setTimeout(() => { durakDrag.ignoreClick = false; }, 450);
@@ -1519,36 +1649,55 @@ function cancelDurakDrag(event) {
   if (!durakDrag.active || (event.pointerId !== undefined && event.pointerId !== durakDrag.pointerId)) return;
   clearDurakDrag();
 }
+function durakOutcomeValues(game) {
+  const wager=Number.isFinite(game?.wager)?game.wager:appState.stake; const draw=game?.winner==='draw'; const humanLost=game?.winner===1;
+  return {wager,net:draw?0:humanLost?-wager:wager,returned:draw?wager:humanLost?0:wager*2};
+}
 function finalizeDurak() {
   const game = appState.durak; if (!game || game.phase !== 'finished' || appState.pendingResult) return;
-  appState.pendingResult = true;
-  if (game.winner === 0) { bankroll.credit(appState.stake * 2, 'Durak win payout'); progression.recordWin('durak'); beep('win'); showToast(game.durakLoserIndex === null ? 'You escaped the duel.' : `You escaped; Player ${game.durakLoserIndex + 1} is the Durak.`, 'good'); }
+  clearDurakPlanning(); appState.pendingResult = true; const payout=durakOutcomeValues(game);
+  if (game.winner === 0) { bankroll.credit(payout.returned, 'Durak win payout'); progression.recordWin('durak'); beep('win'); showToast(game.durakLoserIndex === null ? 'You escaped the duel.' : `You escaped; Player ${game.durakLoserIndex + 1} is the Durak.`, 'good'); }
   else if (game.winner === 1) { beep('loss'); showToast('You are the Durak this duel.', 'bad'); }
-  else { bankroll.credit(appState.stake, 'Durak draw return'); showToast('Draw — stake returned.', ''); }
+  else { bankroll.credit(payout.returned, game.stalemate ? 'Durak stalemate return' : 'Durak draw return'); showToast(game.stalemate ? 'Stalemate — stake returned.' : 'Draw — stake returned.', ''); }
   saveState();
 }
 function durakProgressSignature(game) { return JSON.stringify([game.phase,game.turn,game.attacker,game.defender,game.round,game.talonCount,game.players.map((player)=>player.hand.map((card)=>card.serial)),game.table.map((pair)=>[pair.attack.serial,pair.defense?.serial||null]),game.winner]); }
 function scheduleAI() {
   if (appState.aiTimer) clearTimeout(appState.aiTimer);
-  const game = appState.durak; if (!game || game.phase === 'finished' || game.turn === 0 || game.aiStalled) return;
+  appState.aiTimer = null;
+  const game = appState.durak; if (!game || game.phase === 'finished' || game.turn === 0 || game.aiStalled || appState.durakReactionPaused) return;
+  const [minDelay,maxDelay] = durakAIReactionDelayRange(game,Boolean(appState.durakQueuedThrowIn));
   appState.aiTimer = setTimeout(() => {
     appState.aiTimer = null; const current = appState.durak; if (!current || current.phase === 'finished' || current.turn === 0) return;
-    const before = durakProgressSignature(current);
+    const before = durakProgressSignature(current); const hadQueue = Boolean(appState.durakQueuedThrowIn);
     try {
       current.aiStep();
-      if (current.phase === 'finished') { finalizeDurak(); renderDurak(); return; }
+      if (current.phase === 'finished') { clearDurakPlanning(); finalizeDurak(); renderDurak(); return; }
+      if (hadQueue && !reconcileDurakQueuedThrowIn(current)) showToast('Queued throw-in is no longer legal. Choose another card or pile.', 'bad');
       if (before === durakProgressSignature(current)) { current.aiStalled = true; showToast('AI paused: no legal move was found. Leave this table to restart.', 'bad'); renderDurak(); return; }
       current.aiStalled = false; renderDurak(); scheduleAI();
     } catch (error) { current.aiStalled = true; showToast(`AI paused: ${error.message}`, 'bad'); renderDurak(); }
-  }, randomReactionDelay());
+  }, randomReactionDelay(minDelay,maxDelay));
 }
-function runAIImmediately() { if (appState.aiTimer) { clearTimeout(appState.aiTimer); appState.aiTimer = null; } let steps=0; while (appState.durak && appState.durak.turn !== 0 && appState.durak.phase !== 'finished' && steps<2000) { const before=durakProgressSignature(appState.durak); appState.durak.aiStep(true); steps+=1; if (before===durakProgressSignature(appState.durak)) { appState.durak.aiStalled=true; break; } } if (appState.durak?.phase === 'finished') finalizeDurak(); renderDurak(); }
+function runAIImmediately() {
+  if (appState.aiTimer) { clearTimeout(appState.aiTimer); appState.aiTimer = null; }
+  if (appState.durakPauseTimer) { clearTimeout(appState.durakPauseTimer); appState.durakPauseTimer = null; }
+  appState.durakReactionPaused = false; let steps=0;
+  while (appState.durak && appState.durak.turn !== 0 && appState.durak.phase !== 'finished' && steps<2000) {
+    const before=durakProgressSignature(appState.durak), hadQueue=Boolean(appState.durakQueuedThrowIn); appState.durak.aiStep(true); steps+=1;
+    if (hadQueue && !reconcileDurakQueuedThrowIn(appState.durak)) showToast('Queued throw-in is no longer legal. Choose another card or pile.', 'bad');
+    if (before===durakProgressSignature(appState.durak)) { appState.durak.aiStalled=true; break; }
+  }
+  if (appState.durak?.phase === 'finished') { clearDurakPlanning(); finalizeDurak(); } renderDurak();
+}
 function renderDurak() {
   const game = appState.durak; if (!game) return;
   const cfg = game.config || normalizeDurakConfig(appState.tableConfig);
+  const hadQueuedPlan = Boolean(appState.durakQueuedThrowIn); if (hadQueuedPlan && !reconcileDurakQueuedThrowIn(game)) showToast('Queued throw-in is no longer legal. Choose another card or pile.', 'bad');
+  const queuedPlan = appState.durakQueuedThrowIn; const selectedTargetIndex = currentDurakTargetIndex(game);
   const playerIsAttacker = game.attacker === 0; const playerIsDefender = game.defender === 0; const playerIsOut = game.isSeatOut(0);
-  const turnLabel = game.aiStalled ? 'AI paused' : game.phase === 'finished' ? 'Duel complete' : game.turn === 0 ? 'Your turn' : `Player ${game.turn + 1} is thinking`;
-  const turnState = game.aiStalled ? 'paused' : game.phase === 'finished' ? 'complete' : game.turn === 0 ? 'your-turn' : 'ai-turn';
+  const turnLabel = game.aiStalled ? 'AI paused' : appState.durakReactionPaused ? 'Choose your throw-in' : game.phase === 'finished' ? 'Duel complete' : game.turn === 0 ? 'Your turn' : `Player ${game.turn + 1} is thinking`;
+  const turnState = game.aiStalled ? 'paused' : appState.durakReactionPaused ? 'your-turn' : game.phase === 'finished' ? 'complete' : game.turn === 0 ? 'your-turn' : 'ai-turn';
   let html = `<div class="table-topline"><div class="table-title"><strong class="turn-state ${turnState}">${turnLabel}</strong><span>Round ${game.round + 1}</span><div class="table-rules-badge">${esc(tableConfigSummary('durak', cfg))}</div></div><div class="deck-pills"><span class="deck-pill">Seats <strong>${cfg.players}</strong></span><span class="deck-pill">Talon <strong>${game.talonCount}</strong></span><span class="deck-pill">Your cards <strong>${game.playerHand.length}</strong></span></div></div>`;
   html += `<div class="durak-layout"><div class="durak-board"><div class="durak-opponents">${game.players.slice(1).map((player,index) => {
     const seat = index + 1; const out = game.isSeatOut(seat); const isDurak = game.phase === 'finished' && game.durakLoserIndex === seat; const currentThrower = game.phase === 'attack' && game.turn === seat && seat !== game.attacker;
@@ -1557,35 +1706,47 @@ function renderDurak() {
     const cards = player.hand.length ? `${cardMarkup(null,{faceDown:true,mini:true})}<span class="opponent-count">${player.hand.length} cards</span>` : `<span class="opponent-count ${out?'seat-out':''}">${out?'OUT':'No cards'}</span>`;
     return `<div class="durak-opponent" data-seat-index="${seat}" data-seat-state="${role}"><div class="durak-seat-head"><span>Player ${seat + 1}</span><span class="seat-role ${role}">${roleLabel}</span></div><div class="durak-opponent-hand">${cards}</div></div>`;
   }).join('')}</div>`;
+  const selectedHandCard = currentDurakSelection(); const queueWindow = canPlanDurakThrowIn(game);
+  const possibleThrowTargets = queuedPlan ? [queuedPlan.targetAttackSerial] : game.phase === 'attack' && game.table.length > 0 && game.table.every((pair) => pair.defense) ? (selectedHandCard ? game.legalThrowTargets(0,selectedHandCard.serial) : game.legalThrowIns(0).flatMap((card) => game.legalThrowTargets(0,card.serial))) : [];
   const pairs = game.table.map((pair,index) => {
-    const selected = appState.selectedTarget === index; const open = !pair.defense; const dropActive = open && game.phase === 'defense' && game.turn === 0;
-    const state = pair.defense ? 'covered' : 'uncovered';
+    const selected = appState.selectedTargetSerial === pair.attack.serial || queuedPlan?.targetAttackSerial === pair.attack.serial; const open = !pair.defense;
+    const dropActive = (open && game.phase === 'defense' && game.turn === 0) || ((game.turn === 0 || queueWindow || appState.durakReactionPaused) && possibleThrowTargets.includes(pair.attack.serial));
+    const state = pair.defense ? 'covered' : 'uncovered'; const linkedPile = pair.throwInTargetSerial ? game.table.find((entry) => entry.attack.serial === pair.throwInTargetSerial) : null;
+    const linkedLabel = linkedPile ? ` · thrown in on ${linkedPile.attack.label}` : '';
     const defenseSlot = pair.defense ? durakTableCardMarkup(pair.defense,{kind:'defense'}) : '<div class="defense-drop-slot" aria-label="Uncovered attack; drop a defense here"><span>DEFEND</span></div>';
-    return `<div class="attack-pair ${state} ${selected?'target-outline':''} ${dropActive?'drop-active':''} durak-drop-zone" data-target-index="${index}" data-drop-zone="target" role="group" aria-label="Attack ${index+1}, ${esc(pair.attack.label)}, ${state}">${durakTableCardMarkup(pair.attack,{kind:'attack',targetIndex:index,selected})}${defenseSlot}</div>`;
+    return `<div class="attack-pair ${state} ${selected?'target-outline':''} ${dropActive?'drop-active':''} ${linkedPile?'throw-in-pair':''} durak-drop-zone" data-target-index="${index}" data-target-serial="${esc(pair.attack.serial)}" ${linkedPile?`title="Throw-in on ${esc(linkedPile.attack.label)}"`:''} role="group" aria-label="Attack ${index+1}, ${esc(pair.attack.label)}, ${state}${esc(linkedLabel)}">${durakTableCardMarkup(pair.attack,{kind:'attack',targetIndex:index,targetSerial:pair.attack.serial,selected})}${defenseSlot}${linkedPile?`<span class="throw-in-link">ON ${esc(linkedPile.attack.label)}</span>`:''}</div>`;
   }).join('');
   html += `<div class="table-cards durak-drop-zone" data-drop-zone="table">${game.table.length ? pairs : '<div class="durak-empty-table"><span class="empty-slot">＋</span><strong>Open attack</strong><small>Choose a card from your hand.</small></div>'}</div>`;
   const handLabel = playerIsOut ? 'You · out of cards' : playerIsAttacker ? 'Your hand · attacker' : playerIsDefender ? 'Your hand · defender' : 'Your hand · waiting';
-  html += `<div class="hand-zone durak-player-zone"><div class="hand-label"><span>${handLabel}</span><strong>Trump ${SUIT_BY_KEY[game.trump]?.symbol || '—'}</strong></div><div class="card-row center durak-hand">${sortDurakHand(game.playerHand,game.trump).map((card)=>cardMarkup(card,{selected:card.serial===appState.selectedDurak,testId:'durak-card',drag:true,trump:isTrump(card,game.trump)})).join('')||'<span class="muted">Empty hand</span>'}</div></div></div>`;
-  const rulesText = `${cfg.throwIn==='off'?'Extra throw-ins are off.':cfg.throwIn==='all'?'All active seats may throw in matching ranks.':'Only active neighbors of the defender may throw in matching ranks.'} ${cfg.push?'One same-rank transfer is allowed per bout before any card is covered, if the next defender can cover the table.':'Transfers are disabled.'} After a take, the next active seat after the defender attacks.`;
+  html += `<div class="hand-zone durak-player-zone"><div class="hand-label"><span>${handLabel}</span><strong>Trump ${SUIT_BY_KEY[game.trump]?.symbol || '—'}</strong></div><div class="card-row center durak-hand">${sortDurakHand(game.playerHand,game.trump).map((card)=>cardMarkup(card,{selected:card.serial===appState.selectedDurak||card.serial===queuedPlan?.cardSerial,testId:'durak-card',drag:true,trump:isTrump(card,game.trump)})).join('')||'<span class="muted">Empty hand</span>'}</div></div></div>`;
+  const rulesText = `${cfg.throwIn==='off'?'Extra throw-ins are off.':cfg.throwIn==='all'?'All active seats may throw in matching ranks.':'Only active neighbors of the defender may throw in matching ranks.'} Choose a covered pile with a matching rank; the new attack is placed beside that pile. ${cfg.push?'Push onward is an optional same-rank transfer once per bout before any card is covered, if the next defender can cover the table.':'Transfers are disabled.'} After a take, the next active seat after the defender attacks. A repeated full position ends as a stalemate draw.`;
   html += `<aside class="durak-side"><div class="trump-tile"><h3>Trump & talon</h3><div class="trump-suit ${SUIT_BY_KEY[game.trump]?.color==='red'?'suit-red':'suit-black'}"><span class="suit-large">${SUIT_BY_KEY[game.trump]?.symbol||'—'}</span><span>${SUIT_BY_KEY[game.trump]?.key||'unknown'}<br><small class="muted">Trump suit</small></span></div><div class="talon-stack">${durakTalonMarkup(game)}</div></div><div class="notice"><strong>Rules</strong><span>${esc(rulesText)}</span></div><div class="log-panel"><h3>Table log</h3><div class="log-lines">${game.log.map((line)=>`<div class="log-line">${esc(line)}</div>`).join('')||'<div class="log-line">The duel is ready.</div>'}</div></div></aside></div>`;
   if (game.phase === 'finished') {
-    const draw = game.winner === 'draw'; const humanLost = game.winner === 1;
-    const copy = draw ? {kicker:'Match complete',title:'Draw',detail:'Every player emptied their hand.'} : humanLost ? {kicker:'Match complete',title:'You are the Durak',detail:'Your hand was the last one left.'} : {kicker:'Match complete',title:'You escaped',detail:game.durakLoserIndex===null?'No player was left holding cards.':`Player ${game.durakLoserIndex+1} is the Durak.`};
-    const net = draw ? 0 : humanLost ? -appState.stake : appState.stake; const returned = draw ? appState.stake : humanLost ? 0 : appState.stake*2;
-    html += outcomeMarkup(copy,humanLost?'loss':draw?'push':'',net,returned);
+    const draw = game.winner === 'draw'; const humanLost = game.winner === 1; const payout=durakOutcomeValues(game);
+    const copy = draw ? {kicker:'Match complete',title:game.stalemate?'Stalemate draw':'Draw',detail:game.stalemate?'The same complete position repeated, so no cards could move forward.':'Every player emptied their hand.'} : humanLost ? {kicker:'Match complete',title:'You are the Durak',detail:'Your hand was the last one left.'} : {kicker:'Match complete',title:'You escaped',detail:game.durakLoserIndex===null?'No player was left holding cards.':`Player ${game.durakLoserIndex+1} is the Durak.`};
+    html += outcomeMarkup(copy,humanLost?'loss':draw?'push':'',payout.net,payout.returned);
   }
   html += '<div class="action-dock">';
   if (game.aiStalled) html += '<div class="action-note">AI paused because this state has no legal move.</div><button class="secondary-btn" data-back-lobby="true">Leave table</button>';
   else if (game.phase === 'attack' && game.turn === 0) {
-    const selected=currentDurakSelection(); const canAttack=selected&&game.canAttack(0,selected.serial); const allCovered=game.table.length>0&&game.table.every((pair)=>pair.defense);
-    const attackLabel=selected&&canAttack?`${game.table.length?'Throw in':'Attack'} ${esc(selected.label)}`:game.table.length?'Select a legal card':'Select an attack card';
-    if (game.table.length===0) html+=`<button class="primary-btn action-btn durak-primary-action" data-durak-action="attack" ${canAttack?'':'disabled'}><span>${attackLabel}</span></button>`;
-    else html+=`<button class="primary-btn action-btn durak-primary-action" data-durak-action="throw" ${canAttack?'':'disabled'}><span>${attackLabel}</span></button><button class="secondary-btn action-btn" data-durak-action="end" ${allCovered?'':'disabled'}><span>${cfg.players>2?'Pass / end':'End attack'}</span></button>`;
-    html+=`<div class="action-note">${selected?`Selected ${esc(selected.label)} · tap to play or drop on the table`:game.table.length?'Select a matching card to throw in.':'Select a card to open the attack.'}</div>`;
+    const selected=currentDurakSelection(); const queued=appState.durakQueuedThrowIn; const card=queued?game.cardBySerial(0,queued.cardSerial):selected; const targetSerial=game.table.length?(queued?.targetAttackSerial||appState.selectedTargetSerial):null; const target=durakTargetCard(game,targetSerial); const canAttack=card&&game.canAttack(0,card.serial,targetSerial); const allCovered=game.table.length>0&&game.table.every((pair)=>pair.defense);
+    const attackLabel=canAttack?(game.table.length?`Throw in ${esc(card.label)} on ${esc(target?.label||'pile')}`:`Attack ${esc(card.label)}`):game.table.length?(card?`Choose a matching pile for ${esc(card.label)}`:'Select a matching card and pile'):'Select an attack card';
+    if (game.table.length===0) html+=`<button class="primary-btn action-btn durak-primary-action" data-durak-action="attack" ${card?`data-action-card-serial="${esc(card.serial)}"`:''} ${canAttack?'':'disabled'}><span>${attackLabel}</span></button>`;
+    else html+=`<button class="primary-btn action-btn durak-primary-action" data-durak-action="throw" ${card?`data-action-card-serial="${esc(card.serial)}"`:''} ${targetSerial?`data-target-serial="${esc(targetSerial)}"`:''} ${canAttack?'':'disabled'}><span>${attackLabel}</span></button><button class="secondary-btn action-btn" data-durak-action="end" ${allCovered?'':'disabled'}><span>${cfg.players>2?'Pass / end':'End attack'}</span></button>${queued?'<button class="secondary-btn action-btn" data-durak-action="cancel-queue"><span>Cancel queued</span></button>':''}`;
+    html+=`<div class="action-note">${game.table.length?(queued?`Queued ${esc(card?.label||'card')} on ${esc(target?.label||'pile')} · play now or pass.`:selected?`Select a matching pile for ${esc(selected.label)}; the throw-in is placed beside it.`:'Select a matching card, then choose the pile to place it beside.'):'Select a card to open the attack.'}</div>`;
   } else if (game.phase==='defense'&&game.turn===0) {
-    const selected=currentDurakSelection(); const target=appState.selectedTarget; const canDefend=selected&&game.canDefend(0,selected.serial,target); const canPush=selected&&game.canPush(0,selected.serial); const beatLabel=selected&&canDefend?`Beat ${esc(selected.label)}`:'Beat card';
-    html+=`<button class="primary-btn action-btn durak-primary-action" data-durak-action="beat" ${canDefend?'':'disabled'}><span>${beatLabel}</span></button>${cfg.push?`<button class="secondary-btn action-btn" data-durak-action="push" ${canPush?'':'disabled'}><span>Push attack</span></button>`:''}<button class="danger-btn action-btn" data-durak-action="take"><span>Take cards</span></button><div class="action-note">${target===null?selected?'Choose an uncovered attack.':'Cover an attack, transfer if legal, or take.':selected?`Selected ${esc(selected.label)} · target ${target+1}`:'Tap or drop onto an uncovered pair.'}</div>`;
-  } else if (game.phase==='finished') html+=`<button class="primary-btn" data-next-round="durak">New duel</button><button class="secondary-btn" data-back-lobby="true">Choose another table</button>`;
+    const selected=currentDurakSelection(); const targetIndex=selectedTargetIndex; const canDefend=selected&&game.canDefend(0,selected.serial,targetIndex); const pushCard=cfg.push?chooseHumanPushCard(game,selected?.serial):null; const beatLabel=selected&&canDefend?`Beat ${esc(selected.label)}`:'Beat card';
+    html+=`<button class="primary-btn action-btn durak-primary-action" data-durak-action="beat" ${canDefend?'':'disabled'}><span>${beatLabel}</span></button>${cfg.push?`<button class="secondary-btn action-btn" data-durak-action="push" ${pushCard?`data-action-card-serial="${esc(pushCard.serial)}"`:''} ${pushCard?'':'disabled'}><span>${pushCard?`Push onward ${esc(pushCard.label)}`:'Push onward'}</span></button>`:''}<button class="danger-btn action-btn" data-durak-action="take"><span>Take cards</span></button><div class="action-note">${selected&&canDefend?`Beat stack ${targetIndex+1}, push onward with a same-rank card if allowed, or take.`:selected?'Choose an uncovered attack.':'Choose a defense, push onward if allowed, or take the table.'}</div>`;
+  } else if (game.phase==='attack' && game.turn!==0 && queuedPlan) {
+    const card=game.cardBySerial(0,queuedPlan.cardSerial); const target=durakTargetCard(game,queuedPlan.targetAttackSerial);
+    html+=`<div class="action-note">Queued: ${esc(card?.label||'card')} on ${esc(target?.label||'pile')} · waiting for your throw-in turn.</div><button class="secondary-btn action-btn" data-durak-action="cancel-queue"><span>Cancel queued throw-in</span></button><button class="secondary-btn action-btn" data-durak-action="continue-ai"><span>Continue AI</span></button>`;
+  } else if (game.phase==='defense' && game.turn!==0 && queuedPlan) {
+    const card=game.cardBySerial(0,queuedPlan.cardSerial); const target=durakTargetCard(game,queuedPlan.targetAttackSerial);
+    html+=`<div class="action-note">Queued: ${esc(card?.label||'card')} on ${esc(target?.label||'pile')} · waiting for the defense to finish.</div><button class="secondary-btn action-btn" data-durak-action="cancel-queue"><span>Cancel queued throw-in</span></button><button class="secondary-btn action-btn" data-durak-action="continue-ai"><span>Continue AI</span></button>`;
+  } else if (queueWindow) {
+    const selected=currentDurakSelection(); const targetSerial=appState.selectedTargetSerial; const target=durakTargetCard(game,targetSerial); const legal=selected&&game.legalThrowIns(0).some((card)=>card.serial===selected.serial); const ready=Boolean(legal&&target&&game.legalThrowTargets(0,selected.serial).includes(targetSerial));
+    html+=`<div class="action-note">${appState.durakReactionPaused?`AI paused while you plan. Auto-resumes in 12 seconds.`:selected?legal?(target?`Ready to queue ${esc(selected.label)} on ${esc(target.label)}.`:`Choose one of the highlighted matching piles.`):'Select a matching-rank card to throw in.':`Throw-in window: choose a matching card and pile while Player ${game.turn+1} acts.`}</div>${ready?`<button class="primary-btn action-btn" data-durak-action="queue-throw" data-action-card-serial="${esc(selected.serial)}" data-target-serial="${esc(targetSerial)}"><span>Queue ${esc(selected.label)} on ${esc(target.label)}</span></button>`:''}<button class="secondary-btn action-btn" data-durak-action="continue-ai"><span>Continue AI</span></button>`;
+  } else if (game.phase==='finished') html+=`${nextRoundStakeControlMarkup()}<button class="primary-btn" data-next-round="durak" ${canStartAnotherRound()?'':'disabled'}>New duel · ${intMoney(appState.stake)}</button><button class="secondary-btn" data-back-lobby="true">Choose another table</button>`;
   else html+='<div class="action-note">The AI is making its move…</div>';
   html+='</div>';
   $('durakContent').innerHTML=html;
@@ -1596,7 +1757,7 @@ function closeModal() { $('modalBackdrop').hidden = true; }
 function showRules() {
   const isBJ = appState.game === 'blackjack'; const cfg = isBJ ? normalizeBlackjackConfig(appState.tableConfig) : normalizeDurakConfig(appState.tableConfig);
   const bjBody = `<div class="notice"><strong>Configured table</strong><span>${esc(tableConfigSummary('blackjack', cfg))}</span></div><br><div class="test-group"><b>Goal</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">Finish closer to 21 than the dealer without busting. Natural Blackjack pays ${cfg.payout}.</p></div><br><div class="test-group"><b>Actions</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">Hit draws one physical card. Stand ends the hand. Double doubles the wager, draws exactly one card, then ends that hand. Split separates an exact matching-rank pair once per round. Split Aces receive one card and stand; a split 21 is not a natural. ${cfg.insurance ? 'Insurance is offered against an Ace.' : 'Insurance is disabled at this table.'} ${cfg.surrender ? 'Surrender returns half the wager.' : 'Surrender is disabled.'}</p></div><br><div class="test-group"><b>Dealer</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">The dealer ${cfg.soft17 === 'hit' ? 'hits' : 'stands'} on soft 17. Other seats are controlled by the table AI.</p></div>`;
-  const durakBody = `<div class="notice"><strong>Configured table</strong><span>${esc(tableConfigSummary('durak', cfg))}</span></div><br><div class="test-group"><b>Goal</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">Get rid of your cards. Once the talon is empty, empty seats leave the bout; the last player holding cards is the Durak. If every hand empties at the same bout end, the result is a draw.</p></div><br><div class="test-group"><b>Attack and throw-in</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">The player with the lowest trump opens. Play proceeds clockwise. Add only ranks already on the table; ${cfg.throwIn === 'off' ? 'extra throw-ins are disabled.' : `this table allows ${cfg.throwIn === 'all' ? 'all active seats' : 'only active neighbors of the defender'} to throw in.`} An attack is capped at six cards and the defender’s hand size.</p></div><br><div class="test-group"><b>Defend and take</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">Beat a card with a higher card of the same suit, or with trump against a non-trump. After beating the bout, the defender leads next. After taking, the next active seat clockwise after the defender attacks; the defender is skipped.</p></div><br><div class="test-group"><b>Transfer</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">${cfg.push ? 'One same-rank transfer is allowed per bout before any card has been covered. The next active defender must hold enough cards to cover the whole table.' : 'Transfers are disabled at this table.'}</p></div><br><div class="test-group"><b>Refill</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">After a bout, active seats draw toward six in clockwise order from the principal attacker, with the defender drawing last. The face-up trump is the final card in the talon.</p></div>`;
+  const durakBody = `<div class="notice"><strong>Configured table</strong><span>${esc(tableConfigSummary('durak', cfg))}</span></div><br><div class="test-group"><b>Goal</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">Get rid of your cards. Once the talon is empty, empty seats leave the bout; the last player holding cards is the Durak. If every hand empties at the same bout end, or an identical complete position repeats, the result is a draw.</p></div><br><div class="test-group"><b>Attack and throw-in</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">The player with the lowest trump opens. Play proceeds clockwise. Add only ranks already on the table; ${cfg.throwIn === 'off' ? 'extra throw-ins are disabled.' : `this table allows ${cfg.throwIn === 'all' ? 'all active seats' : 'only active neighbors of the defender'} to throw in. Choose a covered pile with a matching rank; the new card is placed beside that pile.`} When an eligible AI seat is acting, you can queue a card and pile without playing out of turn. An attack is capped at six cards and the defender’s hand size.</p></div><br><div class="test-group"><b>Defend and take</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">Beat a card with a higher card of the same suit, or with trump against a non-trump. After beating the bout, the defender leads next. After taking, the next active seat clockwise after the defender attacks; the defender is skipped.</p></div><br><div class="test-group"><b>Transfer</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">${cfg.push ? 'Push onward is optional: choose it instead of defending when you have a same-rank card, before any card is covered, and the next defender has enough cards for the whole table. It can be used once per bout.' : 'Push / transfer is disabled at this table.'}</p></div><br><div class="test-group"><b>Refill</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">After a bout, active seats draw toward six in clockwise order from the principal attacker, with the defender drawing last. The face-up trump is the final card in the talon.</p></div>`;
   showModal(isBJ ? 'Blackjack rules' : 'Durak rules', isBJ ? bjBody : durakBody);
 }
 function showBankroll() {
@@ -1608,6 +1769,16 @@ function showBankroll() {
 function assert(condition, message) { if (!condition) throw new Error(message); }
 function assertEqual(actual, expected, message) { assert(Object.is(actual, expected), `${message}: expected ${expected}, got ${actual}`); }
 function testCard(shoe, rank, suit) { const card = shoe.allCards.find((candidate) => candidate.rank === rank && candidate.suit === suit); assert(card, `test card ${rank}${suit} exists`); return card; }
+function makeDurakTargetTestFixture(config = {players:4,throwIn:'all',push:true}) {
+  const game = new DurakGame({rng:RandomSource.seeded(2606),config}); game.startMatch();
+  const c = (rank,suit) => testCard(game.shoe,rank,suit); const targetAttack=c('8','clubs'),targetDefense=c('10','clubs'),otherAttack=c('Q','diamonds'),otherDefense=c('A','diamonds'),humanThrow=c('8','spades'),aiThrow=c('8','hearts'),trumpCard=c('10','spades');
+  const reserved = new Set([targetAttack,targetDefense,otherAttack,otherDefense,humanThrow,aiThrow,trumpCard].map(card=>card.serial));
+  const remaining = game.shoe.allCards.filter(card=>!reserved.has(card.serial)); game.players=Array.from({length:config.players},()=>({hand:[]})); game.players[0].hand.push(humanThrow); game.players[1].hand.push(aiThrow);
+  let cursor=0; for(let seat=0;seat<game.players.length;seat+=1) while(game.players[seat].hand.length<6) game.players[seat].hand.push(remaining[cursor++]);
+  game.shoe.cards=[trumpCard,...remaining.slice(cursor)]; game.shoe.discard=[]; game.trumpCard=trumpCard; game.trump=trumpCard.suit;
+  game.table=[{attack:targetAttack,defense:targetDefense},{attack:otherAttack,defense:otherDefense}]; game.attacker=game.players.length-1; game.defender=game.players.length-2; game.turn=0; game.phase='attack'; game.attackLimit=6; game.throwersUsed=new Set([game.attacker]); game.lastThrower=game.attacker; game.pushUsed=false;
+  return {game,humanThrow,aiThrow,targetAttack,otherAttack};
+}
 function runSelfTests() {
   const groups = []; let passed = 0; let failed = 0;
   function group(name, fn) { const tests = []; const t = (name2, fn2) => { try { fn2(); tests.push({name:name2, pass:true}); passed += 1; } catch (error) { tests.push({name:name2, pass:false, error:error.message}); failed += 1; } }; try { fn(t); } catch (error) { tests.push({name:'group setup', pass:false, error:error.message}); failed += 1; } groups.push({name, tests}); }
@@ -1646,10 +1817,13 @@ function runSelfTests() {
     t('take preserves every table card in defender hand', () => { const game = new DurakGame({rng:RandomSource.seeded(22)}); game.startMatch(); game.attacker=0; game.defender=1; game.turn=0; game.phase='attack'; game.attackCard(0,game.playerHand[0].serial); const before = game.aiHand.length; const tableSerial = game.table[0].attack.serial; game.take(1); assert(game.aiHand.some((card) => card.serial === tableSerial),'taken card present'); assert(game.aiHand.length >= before + 1,'hand grew'); assert(game.table.length === 0,'table clear'); });
     t('autonomous seeded match terminates with legal actions', () => { const game = new DurakGame({rng:RandomSource.seeded(23)}); game.startMatch(); let steps = 0; while (game.phase !== 'finished' && steps < 1200) { game.autonomousStep(); steps += 1; } assertEqual(game.phase,'finished','match terminal'); assert(steps < 1200,'match bounded'); assert(game.winner === 0 || game.winner === 1 || game.winner === 'draw','winner'); });
     t('autonomous match keeps all physical cards accounted for', () => { const game = new DurakGame({rng:RandomSource.seeded(24)}); game.startMatch(); let steps = 0; while (game.phase !== 'finished' && steps < 1200) { game.autonomousStep(); assert(game.audit().ok, `audit at step ${steps}`); steps += 1; } assert(game.audit().ok,'final audit'); });
+    t('repeated full Durak positions settle as a stalemate draw', () => { const game=new DurakGame({rng:RandomSource.seeded(261201),config:{players:4,throwIn:'all',push:false}}); game.startMatch(); let steps=0; while(game.phase!=='finished'&&steps<200){game.aiStep(true); assert(game.audit().ok,`cycle audit at step ${steps}`); steps+=1;} assertEqual(game.phase,'finished','repeated position terminates'); assertEqual(game.winner,'draw','stalemate resolves as draw'); assert(game.stalemate,'draw is marked as a stalemate'); assert(steps<200,'cycle is caught before the hard bound'); assert(game.players.some(player=>player.hand.length>0),'stalemate may retain cards'); });
   });
   group('Persistence and UI helpers', (t) => {
     t('save schema round-trips without active game data', () => { const sample = {version:1, bankroll:{balance:77,transactions:[],bankruptcyGrants:1}, progression:{wins:{blackjack:3,durak:2}}, settings:{sound:false}}; const b = new Bankroll(sample.bankroll); const p = new Progression(sample.progression); assertEqual(b.balance,77,'balance'); assertEqual(p.wins.blackjack,3,'BJ wins'); assertEqual(p.wins.durak,2,'Durak wins'); assert(sample.version === 1 && sample.settings.sound === false,'schema'); });
     t('card markup contains accessible physical labels', () => { const shoe = new PhysicalShoe({rng:RandomSource.seeded(25)}); const card = shoe.allCards[0]; const markup = cardMarkup(card); assert(markup.includes('aria-label='),'aria label'); assert(markup.includes(card.serial),'serial'); });
+    t('in-game next-round stake controls stay within the selected table bounds', () => { const previous={game:appState.game,modeIndex:appState.modeIndex,stake:appState.stake}; try { appState.game='blackjack'; appState.modeIndex=0; appState.stake=20; assertEqual(nextRoundStakeOptions().map(option=>option.value).join(','),'10,20,50,100','rookie wager presets'); assert(nextRoundStakeControlMarkup().includes('data-next-round-stake'),'wager control is rendered'); appState.game='durak'; appState.modeIndex=3; appState.stake=100; assertEqual(nextRoundStakeOptions().map(option=>option.value).join(','),'100,200,500,1000','iron-table wager presets'); } finally { appState.game=previous.game; appState.modeIndex=previous.modeIndex; appState.stake=previous.stake; } });
+    t('changing next-round wager preserves the settled Durak payout amount', () => { const previous=appState.stake; try { appState.stake=20; const result=durakOutcomeValues({winner:0,wager:10}); assertEqual(result.wager,10,'completed duel stake is retained'); assertEqual(result.net,10,'previous net uses the completed stake'); assertEqual(result.returned,20,'previous return uses the completed stake'); } finally { appState.stake=previous; } });
   });
   group('Table configuration and variants', (t) => {
     t('normalizes custom Blackjack and Durak table variants', () => { const bj = normalizeBlackjackConfig({players:4,payout:'6:5',soft17:'hit',insurance:false,surrender:true}); const du = normalizeDurakConfig({players:4,throwIn:'neighbors',push:false}); assertEqual(bj.players,4,'BJ seats'); assertEqual(bj.payout,'6:5','BJ payout'); assertEqual(bj.soft17,'hit','BJ soft 17'); assert(!bj.insurance && bj.surrender,'BJ toggles'); assertEqual(du.players,4,'Durak seats'); assertEqual(du.throwIn,'neighbors','throw-in policy'); assert(!du.push,'push toggle'); });
@@ -1685,6 +1859,12 @@ function runSelfTests() {
     t('empty talon does not render a second copy of the exposed trump', () => { const game=new DurakGame({rng:RandomSource.seeded(64),config:{players:3}}); game.startMatch(); game.shoe.cards=[]; const markup=durakTalonMarkup(game); assert(markup.includes('class="talon-empty"'),'empty talon marker is visible'); assert(!markup.includes('data-card-serial='),'exposed trump is not duplicated outside a hand'); });
     t('all seats draw after the attacker and the defender draws last', () => { const game=new DurakGame({rng:RandomSource.seeded(62),config:{players:4,throwIn:'neighbors',push:false}}); game.startMatch(); const markers=game.shoe.cards.slice(-4); for(const player of game.players) game.shoe.discard.push(player.hand.pop()); game.shoe.setTopCards(markers); game.attacker=2; game.defender=1; game.turn=2; game.phase='attack'; game.finishRound(false); const destinations=markers.map(card=>game.players.findIndex(player=>player.hand.some(entry=>entry.serial===card.serial))); assertEqual(destinations.join(','),'2,3,0,1','clockwise draw order with defender last'); assert(game.audit().ok,'ordered draw preserves every card'); });
     t('talon-empty match continues while multiple players still hold cards', () => { const game=new DurakGame({rng:RandomSource.seeded(63),config:{players:3,throwIn:'neighbors',push:false}}); game.startMatch(); const holders=[game.shoe.allCards[0],game.shoe.allCards[1]]; game.players=[{hand:[]},{hand:[holders[0]]},{hand:[holders[1]]}]; game.shoe.cards=[]; game.shoe.discard=game.shoe.allCards.filter(card=>!holders.some(held=>held.serial===card.serial)); game.table=[]; game.attacker=1; game.defender=2; game.turn=1; game.phase='attack'; game.finishRound(false); assertEqual(game.phase,'attack','two remaining seats continue'); assertEqual(game.winner,null,'no premature winner'); assertEqual(game.activeSeats().length,2,'both card-holding seats remain active'); assert(game.audit().ok,'endgame state accounts for every card'); });
+    t('human throw-in requires a matching target pile and inserts beside it', () => { const {game,humanThrow,targetAttack,otherAttack}=makeDurakTargetTestFixture(); assert(!game.canAttack(0,humanThrow.serial),'target pile is required'); assert(game.canAttack(0,humanThrow.serial,targetAttack.serial),'matching pile accepts throw-in'); game.attackCard(0,humanThrow.serial,targetAttack.serial); assertEqual(game.table[1].attack.serial,humanThrow.serial,'throw-in follows selected pile'); assertEqual(game.table[1].throwInTargetSerial,targetAttack.serial,'pile relationship stays stable'); assertEqual(game.table[2].attack.serial,otherAttack.serial,'unselected pile stays after it'); assert(game.audit().ok,'targeted throw-in audit'); });
+    t('throw-in rejects a mismatching or stale target pile', () => { const {game,humanThrow,otherAttack}=makeDurakTargetTestFixture(); assert(!game.canAttack(0,humanThrow.serial,otherAttack.serial),'different rank pile rejects throw-in'); assert(!game.canAttack(0,humanThrow.serial,'missing-attack-serial'),'stale target rejects throw-in'); });
+    t('AI selects a legal target pile for a throw-in', () => { const {game,aiThrow,targetAttack}=makeDurakTargetTestFixture(); game.turn=1; assertEqual(game.chooseThrowTarget(1,aiThrow.serial),targetAttack.serial,'AI targets matching pile'); });
+    t('human can plan a throw-in during an AI turn without taking the turn', () => { const {game}=makeDurakTargetTestFixture(); game.turn=1; assert(canPlanDurakThrowIn(game),'human has an eligible matching throw-in'); assertEqual(durakAIReactionDelayRange(game).join(','),'1400,2200','AI opens a longer reaction window'); assertEqual(durakAIReactionDelayRange(game,true).join(','),'320,760','queued choice shortens the next AI step'); assertEqual(game.turn,1,'preplanning does not steal AI turn'); assert(game.audit().ok,'planning leaves physical cards untouched'); game.config.throwIn='off'; assert(!canPlanDurakThrowIn(game),'throw-in off disables planning'); assertEqual(durakAIReactionDelayRange(game).join(','),'320,760','no opportunity uses normal AI pace'); });
+    t('queued throw-in is invalidated when its target pile disappears', () => { const {game,humanThrow,targetAttack}=makeDurakTargetTestFixture(); const plan={cardSerial:humanThrow.serial,targetAttackSerial:targetAttack.serial}; assert(isDurakThrowInPlanValid(game,plan),'queue starts valid'); const index=game.table.findIndex(pair=>pair.attack.serial===targetAttack.serial); const removed=game.table.splice(index,1)[0]; game.shoe.discardCards([removed.attack,removed.defense]); assert(!isDurakThrowInPlanValid(game,plan),'missing pile invalidates queue'); assert(game.audit().ok,'stale plan preserves the deck audit'); });
+    t('push option is available before the human selects a card', () => { const game=new DurakGame({rng:RandomSource.seeded(2607),config:{players:3,throwIn:'neighbors',push:true}}); game.startMatch(); const attack=testCard(game.shoe,'9','hearts'),pushCard=testCard(game.shoe,'9','clubs'),move=(card,seat)=>{game.players.forEach(player=>player.hand=player.hand.filter(entry=>entry.serial!==card.serial));game.shoe.cards=game.shoe.cards.filter(entry=>entry.serial!==card.serial);game.shoe.discard=game.shoe.discard.filter(entry=>entry.serial!==card.serial);if(seat!==null)game.players[seat].hand.push(card)}; move(attack,null); move(pushCard,0); game.table=[{attack,defense:null}]; game.attacker=2; game.defender=0; game.turn=0; game.phase='defense'; game.attackLimit=6; game.throwersUsed=new Set([2]); game.lastThrower=2; game.pushUsed=false; const suggested=chooseHumanPushCard(game,null); assertEqual(suggested.serial,pushCard.serial,'push card is suggested without selection'); assert(game.canPush(0,suggested.serial),'suggested option is legal'); const other=game.playerHand.find(card=>card.rank!=='9'); assertEqual(chooseHumanPushCard(game,other.serial).serial,pushCard.serial,'non-push selection preserves the push option'); });
     t('visible version badge matches the running app version', () => { const badge=document.querySelector('#appVersion'); assert(badge,'version badge exists in the site header'); assertEqual(badge.textContent.trim(),`v${APP_VERSION}`,'visible release version'); });
   });
   return {version:APP_VERSION, passed, failed, total:passed + failed, groups, timestamp:new Date().toISOString()};
@@ -1709,7 +1889,8 @@ function bindEvents() {
   $('chipRow').addEventListener('click', (event) => { const button = event.target.closest('[data-stake]'); if (!button) return; appState.stake = Number(button.dataset.stake); renderLobby(); beep('tap'); });
   $('tableSetup').addEventListener('click', (event) => { const helpButton = event.target.closest('[data-setup-help]'); if (helpButton) { showSettingHelp(helpButton.dataset.setupHelp); return; } const playerButton = event.target.closest('[data-config-players]'); if (playerButton) { updateTableConfig('players', playerButton.dataset.configPlayers); return; } const button = event.target.closest('[data-config-key]'); if (button) updateTableConfig(button.dataset.configKey, button.dataset.configValue); });
   $('blackjackContent').addEventListener('click', (event) => { const action = event.target.closest('[data-bj-action]')?.dataset.bjAction; if (action) blackjackAction(action); if (event.target.closest('[data-next-round]')) startAnotherRound(); if (event.target.closest('[data-back-lobby]')) goBackToLobby(); });
-  $('durakContent').addEventListener('click', (event) => { if (durakDrag.ignoreClick) { durakDrag.ignoreClick = false; event.preventDefault(); return; } const card = event.target.closest('[data-card-serial]'); if (card && card.dataset.cardSerial) selectDurakCard(card.dataset.cardSerial); const target = event.target.closest('[data-target-index]'); if (target) selectDurakTarget(Number(target.dataset.targetIndex)); const action = event.target.closest('[data-durak-action]')?.dataset.durakAction; if (action) durakAction(action); if (event.target.closest('[data-next-round]')) startAnotherRound(); if (event.target.closest('[data-back-lobby]')) goBackToLobby(); });
+  $('durakContent').addEventListener('click', (event) => { if (durakDrag.ignoreClick) { durakDrag.ignoreClick = false; event.preventDefault(); return; } const card = event.target.closest('[data-card-serial]'); if (card && card.dataset.cardSerial) selectDurakCard(card.dataset.cardSerial); const target = event.target.closest('[data-target-index]'); if (target) selectDurakTarget(Number(target.dataset.targetIndex)); const actionButton = event.target.closest('[data-durak-action]'); if (actionButton) durakAction(actionButton.dataset.durakAction,actionButton.dataset.actionCardSerial||null,actionButton.dataset.targetSerial||null); if (event.target.closest('[data-next-round]')) startAnotherRound(); if (event.target.closest('[data-back-lobby]')) goBackToLobby(); });
+  $('blackjackContent').addEventListener('change', handleNextRoundStakeChange); $('durakContent').addEventListener('change', handleNextRoundStakeChange);
   $('durakContent').addEventListener('pointerdown', beginDurakDrag, {passive:false});
   $('durakContent').addEventListener('pointermove', moveDurakDrag, {passive:false});
   $('durakContent').addEventListener('pointerup', finishDurakDrag, {passive:false});
@@ -1717,7 +1898,7 @@ function bindEvents() {
   $('durakContent').addEventListener('lostpointercapture', cancelDurakDrag, {passive:false});
 }
 
-const testApi = {runSelfTests, RandomSource, shuffle, Card, PhysicalShoe, Bankroll, Progression, BlackjackGame, BlackjackHand, DurakGame, totalForCards, canBeat, BJ_MODES, DURAK_MODES, normalizeBlackjackConfig, normalizeDurakConfig, tableConfigSummary, blackjackOutcomeCopy, renderGame, startAnotherRound, goBackToLobby, get appState() { return appState; }, get settings() { return settings; }, get bankroll() { return bankroll; }, get progression() { return progression; }, get activeBlackjack() { return appState.bj; }, get activeDurak() { return appState.durak; }, forceAIMove: runAIImmediately};
+const testApi = {runSelfTests, RandomSource, shuffle, Card, PhysicalShoe, Bankroll, Progression, BlackjackGame, BlackjackHand, DurakGame, totalForCards, canBeat, BJ_MODES, DURAK_MODES, normalizeBlackjackConfig, normalizeDurakConfig, tableConfigSummary, blackjackOutcomeCopy, canPlanDurakThrowIn, durakAIReactionDelayRange, chooseHumanPushCard, nextRoundStakeOptions, canStartAnotherRound, makeDurakTargetTestFixture, scheduleDurakAI:scheduleAI, renderGame, startAnotherRound, goBackToLobby, get appState() { return appState; }, get settings() { return settings; }, get bankroll() { return bankroll; }, get progression() { return progression; }, get activeBlackjack() { return appState.bj; }, get activeDurak() { return appState.durak; }, forceAIMove: runAIImmediately};
 window.DeckForge = testApi;
 window.__deckForgeErrors = [];
 window.addEventListener('error', (event) => window.__deckForgeErrors.push(String(event.message || event.error || 'error')));

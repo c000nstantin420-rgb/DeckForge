@@ -1,0 +1,16 @@
+{
+  "version": "0.2.6",
+  "reactionWindow": {
+    "scheduledRangeMs": [1400, 2200],
+    "samples": [
+      { "random": 0, "scheduledDelayMs": 1400, "elapsedMs": 1651, "aiTurn": 2, "phase": "defense", "error": null },
+      { "random": 0.5, "scheduledDelayMs": 1800, "elapsedMs": 2585, "aiTurn": 2, "phase": "defense", "error": null },
+      { "random": 0.999999, "scheduledDelayMs": 2200, "elapsedMs": 2293, "aiTurn": 2, "phase": "defense", "error": null }
+    ]
+  },
+  "afterQueue": { "random": 0.5, "scheduledDelayMs": 540, "elapsedMs": 1345, "aiTurn": 2, "phase": "defense", "queuePreserved": true, "error": null },
+  "continueAI": { "afterPlanning": { "paused": true, "aiTimerPending": false, "pauseTimerPending": true }, "afterContinue": { "turn": 0, "phase": "attack", "paused": false, "timerPending": false, "selection": null, "audit": true } },
+  "timeout": { "configuredDelayMs": 12000, "expired": true, "pausedAfter": false, "selectionAfter": null, "aiTimerPending": true, "toast": "Throw-in planning timed out; AI resumed.", "audit": true },
+  "browserErrors": [],
+  "measurementNote": "Elapsed callback times include headless Chromium timer and rendering jitter; scheduled delays are the contract."
+}

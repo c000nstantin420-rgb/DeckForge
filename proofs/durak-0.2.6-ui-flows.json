@@ -1,0 +1,111 @@
+{
+  "version": "v0.2.6",
+  "flows": [
+    {
+      "config": {
+        "players": 2,
+        "throwIn": "neighbors",
+        "push": false
+      },
+      "steps": 27,
+      "elapsedMs": 142,
+      "phase": "finished",
+      "winner": 1,
+      "stalemate": false,
+      "loser": 0,
+      "wager": 10,
+      "audit": {
+        "ok": true,
+        "total": 36,
+        "accounted": 36,
+        "unique": 36,
+        "duplicates": 0,
+        "missing": [],
+        "unknown": []
+      },
+      "actions": {
+        "attack": 9,
+        "throw": 0,
+        "beat": 8,
+        "take": 1,
+        "push": 0,
+        "end": 0,
+        "ai": 9
+      },
+      "stakeControl": true,
+      "roundButton": "New duel · $10",
+      "errors": []
+    },
+    {
+      "config": {
+        "players": 3,
+        "throwIn": "neighbors",
+        "push": true
+      },
+      "steps": 32,
+      "elapsedMs": 71,
+      "phase": "finished",
+      "winner": 1,
+      "stalemate": false,
+      "loser": 0,
+      "wager": 10,
+      "audit": {
+        "ok": true,
+        "total": 36,
+        "accounted": 36,
+        "unique": 36,
+        "duplicates": 0,
+        "missing": [],
+        "unknown": []
+      },
+      "actions": {
+        "attack": 3,
+        "throw": 3,
+        "beat": 5,
+        "take": 4,
+        "push": 0,
+        "end": 2,
+        "ai": 15
+      },
+      "stakeControl": true,
+      "roundButton": "New duel · $10",
+      "errors": []
+    },
+    {
+      "config": {
+        "players": 4,
+        "throwIn": "all",
+        "push": true
+      },
+      "steps": 22,
+      "elapsedMs": 51,
+      "phase": "finished",
+      "winner": 0,
+      "stalemate": false,
+      "loser": 3,
+      "wager": 10,
+      "audit": {
+        "ok": true,
+        "total": 36,
+        "accounted": 36,
+        "unique": 36,
+        "duplicates": 0,
+        "missing": [],
+        "unknown": []
+      },
+      "actions": {
+        "attack": 3,
+        "throw": 2,
+        "beat": 4,
+        "take": 0,
+        "push": 0,
+        "end": 2,
+        "ai": 11
+      },
+      "stakeControl": true,
+      "roundButton": "New duel · $10",
+      "errors": []
+    }
+  ],
+  "errors": []
+}
