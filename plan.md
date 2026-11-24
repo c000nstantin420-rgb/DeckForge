@@ -29,7 +29,7 @@
 - Blackjack uses six standard 52-card decks (312 cards) per shoe. Cards have unique `shoeId`/`serial`, even when rank and suit repeat. The shoe reshuffles only at a defined penetration threshold, never between individual draws.
 - Blackjack dealer stands on soft 17. Natural Blackjack pays 3:2; a split 21 is not natural. Double-down is allowed on the first two cards of each hand; split hands may double. Insurance is available only against an Ace up-card and pays 2:1. One split is allowed initially, with aces receiving one card only.
 - Durak uses the 36-card ranks 6 through Ace, 2–4 seats, one trump suit, a maximum of six cards in an attack, and standard Podkidnoy throw-in rules. The defender may beat an attack card or take the complete table. After a successful defense the defender attacks next; after a take, the same attacker attacks again. Drawing after each round is attacker first, then defender, up to six cards.
-- A match stake is deducted when it begins. A Blackjack result pays the wager according to the hand result; a Durak win pays 2× the stake (stake included), a loss pays 0. A new wager at balance 0 grants exactly $100 first. Balance is never allowed below zero.
+- A match stake is deducted when it begins. Blackjack results pay according to hand rules. A Durak winner receives `configured players × stake` (the full pot, including the human's ante); the human loses only their own ante on a loss, and draws return it. A new wager at balance 0 grants exactly $100 first. Balance is never allowed below zero.
 - Modes are intentionally simple and visible: four Blackjack tables and four Durak tables. Each next mode requires wins in that game and has a higher minimum stake. No hidden debug unlock is shipped.
 
 ---
@@ -333,3 +333,15 @@ Record actual counts and measurements only: engine assertion total, browser erro
 - **Visible version and screenshots:** header shows `v0.2.6` on home, Blackjack, and Durak; screenshot proofs are `proofs/deckforge-0.2.6-*.png`.
 - **Limits:** physical iPad Safari and real audio were not tested. Chromium device emulation and synthetic touch-pointer events were tested.
 - **Release artifacts:** `VERSION` / `APP_VERSION` `0.2.6`; notes `RELEASE_NOTES_0.2.6.md`; archive `releases/DeckForge-0.2.6.zip`; annotated tag `v0.2.6`. The final handoff records the commit SHA and verified remote deployment.
+
+### DeckForge 0.2.6.1 — Durak hand sizing, batch attacks, and all-seat pot
+
+- **Hand layout:** Six-card Durak hands use small whole cards with visible gaps; larger hands scroll rather than overlap. Vision and DOM checks passed at iPhone-emulated `390×844` (DPR3) and iPad-landscape-emulated `1194×834` (DPR2).
+- **Multi-card attacks:** Tap same-rank cards to add/remove a batch, then attack together. Batches also work by dragging a selected card onto the table. Targeted throw-in batches insert beside the selected covered pile, preserve links, and pass the 36-card audit. Single-card actions remain available.
+- **Push drag:** The enabled `Push onward` button is a real drop target with a high-contrast amber hover state. Tap and drag paths both transferred a legal card and preserved the 36-card audit.
+- **Pot settlement:** The Durak winner receives `players × stake`; loss forfeits only the human ante and draw/stalemate refunds it. A four-seat `$10` winner was settled through the rendered action: `$40` credited, `$30` net, `$280` bankroll header after starting at `$250` and deducting the ante.
+- **Final tests:** 75/75 in-app assertions; 168/168 seeded matches across 14 2–4-seat configurations with a card audit on every move; a real two-seat lobby-to-settlement browser flow; queue/continue/timeout and batch/tap/drag UI paths; no browser errors.
+- **Layout matrix:** `390×844`, `1024×768`, `1024×600`, `1194×834`, `1194×700`, `1366×768`, `1366×600`; every hand/dock stayed within its bounds, no card overlap/clipping, document equals viewport. Evidence: `proofs/durak-0.2.6.1-layout.json`.
+- **Vision proofs:** iPhone, iPad, Push onward drop highlight, and four-seat payout screenshots are in `proofs/deckforge-0.2.6.1-*.png`; structured results are in `proofs/browser-qa-0.2.6.1.json`.
+- **Limits:** Physical iPhone/iPad Safari and real audio hardware were not tested; checks used Chromium emulation and synthetic touch-pointer dispatch.
+- **Release artifacts:** `VERSION` / `APP_VERSION` `0.2.6.1`; notes `RELEASE_NOTES_0.2.6.1.md`; archive `releases/DeckForge-0.2.6.1.zip`; annotated tag `v0.2.6.1`. Acceptance: read back the published tag/asset, Pages deploy/build, live runtime bytes/version, and clean worktree.

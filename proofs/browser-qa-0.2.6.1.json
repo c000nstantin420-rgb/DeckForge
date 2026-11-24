@@ -1,0 +1,76 @@
+{
+  "version": "0.2.6.1",
+  "browser": "Chromium emulation; not physical iPhone/iPad Safari",
+  "runtimeErrors": [],
+  "versionBadge": {"home": "v0.2.6.1", "activeDurak": "v0.2.6.1", "activeBlackjack": "v0.2.6.1"},
+  "selfTests": {"passed": 75, "failed": 0, "total": 75, "groups": 8, "proof": "self-test-0.2.6.1.json"},
+  "primaryUiFlow": {
+    "path": "Durak lobby → choose 2 seats / throw-in off / push off → start → legal hand actions → settlement",
+    "versionHome": "v0.2.6.1",
+    "versionGame": "v0.2.6.1",
+    "players": 2,
+    "iterations": 27,
+    "humanMoves": 18,
+    "aiPasses": 9,
+    "result": "draw",
+    "wager": 10,
+    "bankrollBefore": 250,
+    "bankrollAfter": 250,
+    "outcomeText": "+$0; $10 returned",
+    "36CardAudit": true,
+    "errors": []
+  },
+  "batchedAttacks": {
+    "tapOpening": {"selectedCards": 2, "actionEnabled": true, "actionLabel": "Attack 2 cards of rank 8", "tableCardsAfterAction": 2, "phase": "defense", "turn": 1, "audit": true},
+    "tapTargetedThrowIn": {"actionEnabled": true, "actionLabel": "Throw in 2 cards on 8♣", "targetSerial": "durak-0-29", "insertedCards": ["durak-0-2", "durak-0-20"], "allInsertedCardsLinkedToTarget": true, "tableCardsAfterAction": 4, "phase": "defense", "turn": 2, "audit": true},
+    "dragOpeningBatch": {"selectedCards": 2, "dropTargetHighlighted": true, "dragGhostVisible": true, "tableCardsAfterAction": 2, "phase": "defense", "turn": 1, "audit": true}
+  },
+  "pushOnward": {
+    "tap": {"enabled": true, "cardPushed": true, "tableCardsAfterAction": 2, "phase": "defense", "turn": 1, "audit": true},
+    "drag": {"legalCard": true, "dropTarget": "push", "dropTargetHighlighted": true, "dragGhostVisible": true, "cardPushed": true, "tableCardsAfterAction": 2, "phase": "defense", "turn": 1, "audit": true, "visionScreenshot": "deckforge-0.2.6.1-push-drag-1194.png"}
+  },
+  "throwInPlanning": {
+    "queuedWithoutTurnMutation": {"queued": true, "turnRemained": 1, "tableUnchanged": true, "cardStayedInHand": true, "audit": true},
+    "humanTurnExecution": {"queuedActionEnabled": true, "insertedBesideSelectedPile": true, "cardRemovedFromHand": true, "queueCleared": true, "audit": true},
+    "continueAi": {"buttonExecuted": true, "reactionPauseCleared": true, "audit": true, "errors": []},
+    "timeout": {"scheduledDelayMs": 12000, "draftCleared": true, "reactionPauseCleared": true, "timeoutToastShown": true, "audit": true}
+  },
+  "fourSeatWinnerPot": {
+    "players": 4,
+    "stakePerSeat": 10,
+    "winner": 0,
+    "creditTransaction": 40,
+    "bankrollBeforeAnte": 250,
+    "bankrollAfterSettlement": 280,
+    "netProfitShown": 30,
+    "headerAfterSettlement": "$280",
+    "resultText": "You collected the full 4-seat pot.",
+    "returnedAmountShown": "$40 returned",
+    "36CardAudit": true,
+    "visionScreenshot": "deckforge-0.2.6.1-four-seat-pot-390.png"
+  },
+  "layout": {
+    "viewports": ["390×844 DPR3 iPhone emulation", "1024×768", "1024×600", "1194×834 DPR2 iPad landscape emulation", "1194×700", "1366×768", "1366×600"],
+    "allCards": 6,
+    "cardAspect": 0.714,
+    "overlap": false,
+    "selectedCardsClipped": false,
+    "dockInsideVisualViewport": true,
+    "handAboveDock": true,
+    "documentMatchesViewport": true,
+    "browserErrors": [],
+    "proof": "durak-0.2.6.1-layout.json"
+  },
+  "vision": {
+    "iphoneScreenshot": "deckforge-0.2.6.1-iphone-390.png",
+    "iphonePassed": true,
+    "ipadScreenshot": "deckforge-0.2.6.1-ipad-1194.png",
+    "ipadPassed": true,
+    "pushDropScreenshot": "deckforge-0.2.6.1-push-drag-1194.png",
+    "pushTargetHighlightPassed": true,
+    "potSettlementScreenshot": "deckforge-0.2.6.1-four-seat-pot-390.png",
+    "potResultPassed": true
+  },
+  "stressProof": "durak-0.2.6.1-stress.json",
+  "limits": ["iPhone/iPad Safari hardware was not tested; checks used Chromium emulation and synthetic touch PointerEvents.", "Real audio hardware was not tested."]
+}

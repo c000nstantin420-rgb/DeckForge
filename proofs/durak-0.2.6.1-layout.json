@@ -1,0 +1,275 @@
+{
+  "version": "0.2.6.1",
+  "viewports": [
+    {
+      "version": "v0.2.6.1",
+      "bankroll": 250,
+      "viewport": [
+        390,
+        844,
+        3
+      ],
+      "visual": [
+        390,
+        844
+      ],
+      "cards": 6,
+      "size": [
+        35.09375,
+        49.125
+      ],
+      "aspect": 0.714,
+      "overlap": false,
+      "selectedClip": false,
+      "selected": 2,
+      "hand": [
+        600,
+        717
+      ],
+      "dock": [
+        729,
+        835
+      ],
+      "dockVisible": true,
+      "handAboveDock": true,
+      "gap": 12,
+      "scroll": [
+        390,
+        844
+      ],
+      "errors": []
+    },
+    {
+      "version": "v0.2.6.1",
+      "bankroll": 250,
+      "viewport": [
+        1024,
+        768,
+        1
+      ],
+      "visual": [
+        1024,
+        768
+      ],
+      "cards": 6,
+      "size": [
+        36,
+        50.390625
+      ],
+      "aspect": 0.714,
+      "overlap": false,
+      "selectedClip": false,
+      "selected": 2,
+      "hand": [
+        601.609375,
+        686
+      ],
+      "dock": [
+        690,
+        761
+      ],
+      "dockVisible": true,
+      "handAboveDock": true,
+      "gap": 4,
+      "scroll": [
+        1024,
+        768
+      ],
+      "errors": []
+    },
+    {
+      "version": "v0.2.6.1",
+      "bankroll": 250,
+      "viewport": [
+        1024,
+        600,
+        1
+      ],
+      "visual": [
+        1024,
+        600
+      ],
+      "cards": 6,
+      "size": [
+        36,
+        50.390625
+      ],
+      "aspect": 0.714,
+      "overlap": false,
+      "selectedClip": false,
+      "selected": 2,
+      "hand": [
+        433.609375,
+        518
+      ],
+      "dock": [
+        522,
+        593
+      ],
+      "dockVisible": true,
+      "handAboveDock": true,
+      "gap": 4,
+      "scroll": [
+        1024,
+        600
+      ],
+      "errors": []
+    },
+    {
+      "version": "v0.2.6.1",
+      "bankroll": 250,
+      "viewport": [
+        1194,
+        834,
+        2
+      ],
+      "visual": [
+        1194,
+        834
+      ],
+      "cards": 6,
+      "size": [
+        36,
+        50.390625
+      ],
+      "aspect": 0.714,
+      "overlap": false,
+      "selectedClip": false,
+      "selected": 2,
+      "hand": [
+        435.515625,
+        519.90625
+      ],
+      "dock": [
+        756,
+        827
+      ],
+      "dockVisible": true,
+      "handAboveDock": true,
+      "gap": 236,
+      "scroll": [
+        1194,
+        834
+      ],
+      "errors": []
+    },
+    {
+      "version": "v0.2.6.1",
+      "bankroll": 250,
+      "viewport": [
+        1194,
+        700,
+        1
+      ],
+      "visual": [
+        1194,
+        700
+      ],
+      "cards": 6,
+      "size": [
+        36,
+        50.390625
+      ],
+      "aspect": 0.714,
+      "overlap": false,
+      "selectedClip": false,
+      "selected": 2,
+      "hand": [
+        398,
+        482.390625
+      ],
+      "dock": [
+        622,
+        693
+      ],
+      "dockVisible": true,
+      "handAboveDock": true,
+      "gap": 140,
+      "scroll": [
+        1194,
+        700
+      ],
+      "errors": []
+    },
+    {
+      "version": "v0.2.6.1",
+      "bankroll": 250,
+      "viewport": [
+        1366,
+        768,
+        1
+      ],
+      "visual": [
+        1366,
+        768
+      ],
+      "cards": 6,
+      "size": [
+        36,
+        50.390625
+      ],
+      "aspect": 0.714,
+      "overlap": false,
+      "selectedClip": false,
+      "selected": 2,
+      "hand": [
+        417.03125,
+        501.421875
+      ],
+      "dock": [
+        690,
+        761
+      ],
+      "dockVisible": true,
+      "handAboveDock": true,
+      "gap": 189,
+      "scroll": [
+        1366,
+        768
+      ],
+      "errors": []
+    },
+    {
+      "version": "v0.2.6.1",
+      "bankroll": 250,
+      "viewport": [
+        1366,
+        600,
+        1
+      ],
+      "visual": [
+        1366,
+        600
+      ],
+      "cards": 6,
+      "size": [
+        36,
+        50.390625
+      ],
+      "aspect": 0.714,
+      "overlap": false,
+      "selectedClip": false,
+      "selected": 2,
+      "hand": [
+        370,
+        454.390625
+      ],
+      "dock": [
+        522,
+        593
+      ],
+      "dockVisible": true,
+      "handAboveDock": true,
+      "gap": 68,
+      "scroll": [
+        1366,
+        600
+      ],
+      "errors": []
+    }
+  ],
+  "screenshots": [
+    "/home/constantin/Documents/DeckForge/proofs/deckforge-0.2.6.1-iphone-390.png",
+    "/home/constantin/Documents/DeckForge/proofs/deckforge-0.2.6.1-ipad-1194.png"
+  ]
+}

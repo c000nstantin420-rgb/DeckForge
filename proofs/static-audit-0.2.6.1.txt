@@ -1,0 +1,16 @@
+DeckForge 0.2.6.1 static audit
+runtime_file=deckforge.html
+file_bytes=248822
+html_lines=1976
+inline_scripts=1
+node_check=PASS (inline script extracted under session scratch)
+external_asset_refs=none
+network_url_literals=0
+duplicate_ids=none
+unique_ids=50
+missing_static_dom_refs=none
+inline_event_attributes=0
+APP_VERSION=0.2.6.1
+header_badge=v0.2.6.1
+json_proofs_validated=4
+git_diff_check=PASS
