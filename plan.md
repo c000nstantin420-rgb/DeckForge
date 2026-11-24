@@ -291,3 +291,11 @@ Record actual counts and measurements only: engine assertion total, browser erro
 - **Live-UI:** Aktiver Tisch zeigt die Konfiguration im Header/Table-Badge, kompakte AI-Sitz-Lanes, menschliche Hand und variantenspezifische Actions. Gegnerkarten werden in Durak mobil als Kartenrücken plus Kartenanzahl dargestellt; die menschliche Hand nutzt eine lesbare Fan-Anordnung mit Scroll-Fallback, damit Tisch/Hand bei `390×844` sichtbar bleiben.
 - **Finale Beweise:** `39/39` Assertions, Static Audit PASS, 4-seat Blackjack `participants:4/results:4/audit:true`, 4-seat Durak `finished/steps:54/audit:true`, 2-seat Push `attacker:1/defender:0/audit:true`, 4-seat-only All-player throw-in, Throw-in Off, every table setting has an English help button, redesigned felt/card-room home preview, Konfigurations-Reload persistent, Drag-Angriff weiterhin `table:1/hand:5/phase:defense`, keine Browserfehler. Vollständige Daten: `proofs/multiplayer-variants-qa.json`.
 - **Release status:** `VERSION` is `0.2.2`; the user explicitly requested the commit, tag, public GitHub repository, and Pages deployment after the final verification gate.
+
+### Blackjack single-hand outcome fix
+
+- **Symptom:** A completed one-hand Blackjack round showed the same outcome banner twice.
+- **Cause:** `renderBlackjack()` rendered a per-hand outcome and the overall settlement banner for the same single hand.
+- **Change:** Keep per-hand banners for split hands; use only the overall settlement banner for a single hand.
+- **Before/after proof:** At `390×844`, a real deal/stand/settle flow changed `.outcome-banner` count from `2` to `1`; action buttons remained visible, document size stayed `390×844`, browser errors `0`, diagnostics `39/39`, `node --check` PASS.
+- **Release boundary:** No version bump, tag, archive update, or push; commit the source and this plan note only.
