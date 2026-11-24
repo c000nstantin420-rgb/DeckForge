@@ -1,0 +1,860 @@
+{
+  "version": "0.2.6.55",
+  "method": "Fresh local Chromium file://; rendered coordinate clicks on the brand control. Pointer emulation is not physical Apple touch.",
+  "passed": true,
+  "geometryMatrix": [
+    {
+      "viewport": [
+        320,
+        800
+      ],
+      "clientWidth": 320,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionRect": [
+        4,
+        26.5,
+        40.28125,
+        37.5,
+        36.28125,
+        11
+      ],
+      "brand": [
+        115.265625,
+        10,
+        204.734375,
+        54,
+        89.46875,
+        44
+      ],
+      "left": [
+        4,
+        10,
+        105.28125,
+        54,
+        101.28125,
+        44
+      ],
+      "actions": [
+        208,
+        10,
+        316,
+        54,
+        108,
+        44
+      ],
+      "centerDelta": 0,
+      "document": [
+        320,
+        320
+      ]
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "clientWidth": 360,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionRect": [
+        8,
+        26,
+        50.90625,
+        38,
+        42.90625,
+        12
+      ],
+      "brand": [
+        127.734375,
+        10,
+        232.25,
+        54,
+        104.515625,
+        44
+      ],
+      "left": [
+        8,
+        10,
+        117.90625,
+        54,
+        109.90625,
+        44
+      ],
+      "actions": [
+        238,
+        10,
+        352,
+        54,
+        114,
+        44
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        360,
+        360
+      ]
+    },
+    {
+      "viewport": [
+        375,
+        667
+      ],
+      "clientWidth": 375,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionRect": [
+        8,
+        26,
+        50.90625,
+        38,
+        42.90625,
+        12
+      ],
+      "brand": [
+        135.234375,
+        10,
+        239.75,
+        54,
+        104.515625,
+        44
+      ],
+      "left": [
+        8,
+        10,
+        117.90625,
+        54,
+        109.90625,
+        44
+      ],
+      "actions": [
+        253,
+        10,
+        367,
+        54,
+        114,
+        44
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        375,
+        375
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionRect": [
+        8,
+        26,
+        50.90625,
+        38,
+        42.90625,
+        12
+      ],
+      "brand": [
+        142.734375,
+        10,
+        247.25,
+        54,
+        104.515625,
+        44
+      ],
+      "left": [
+        8,
+        10,
+        117.90625,
+        54,
+        109.90625,
+        44
+      ],
+      "actions": [
+        268,
+        10,
+        382,
+        54,
+        114,
+        44
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        390,
+        390
+      ]
+    },
+    {
+      "viewport": [
+        414,
+        896
+      ],
+      "clientWidth": 414,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionRect": [
+        8,
+        26,
+        50.90625,
+        38,
+        42.90625,
+        12
+      ],
+      "brand": [
+        154.734375,
+        10,
+        259.25,
+        54,
+        104.515625,
+        44
+      ],
+      "left": [
+        8,
+        10,
+        117.90625,
+        54,
+        109.90625,
+        44
+      ],
+      "actions": [
+        290,
+        10,
+        406,
+        54,
+        116,
+        44
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        414,
+        414
+      ]
+    },
+    {
+      "viewport": [
+        834,
+        1194
+      ],
+      "clientWidth": 834,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionRect": [
+        14,
+        23,
+        77.6875,
+        41,
+        63.6875,
+        18
+      ],
+      "brand": [
+        353.328125,
+        10,
+        480.65625,
+        54,
+        127.328125,
+        44
+      ],
+      "left": [
+        14,
+        10,
+        242.21875,
+        54,
+        228.21875,
+        44
+      ],
+      "actions": [
+        650.9375,
+        10,
+        820,
+        54,
+        169.0625,
+        44
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        834,
+        834
+      ]
+    },
+    {
+      "viewport": [
+        1024,
+        768
+      ],
+      "clientWidth": 1009,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionRect": [
+        14,
+        23,
+        77.6875,
+        41,
+        63.6875,
+        18
+      ],
+      "brand": [
+        440.828125,
+        10,
+        568.15625,
+        54,
+        127.328125,
+        44
+      ],
+      "left": [
+        14,
+        10,
+        242.21875,
+        54,
+        228.21875,
+        44
+      ],
+      "actions": [
+        825.9375,
+        10,
+        995,
+        54,
+        169.0625,
+        44
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        1009,
+        1009
+      ]
+    },
+    {
+      "viewport": [
+        1194,
+        834
+      ],
+      "clientWidth": 1179,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionRect": [
+        14,
+        23,
+        77.6875,
+        41,
+        63.6875,
+        18
+      ],
+      "brand": [
+        525.828125,
+        10,
+        653.15625,
+        54,
+        127.328125,
+        44
+      ],
+      "left": [
+        14,
+        10,
+        242.21875,
+        54,
+        228.21875,
+        44
+      ],
+      "actions": [
+        995.9375,
+        10,
+        1165,
+        54,
+        169.0625,
+        44
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        1179,
+        1179
+      ]
+    }
+  ],
+  "states": [
+    {
+      "label": "mobile Home",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionWidth": 42.90625,
+      "brand": [
+        142.734375,
+        247.25,
+        104.515625
+      ],
+      "left": [
+        8,
+        117.90625,
+        109.90625
+      ],
+      "actions": [
+        268,
+        382,
+        114
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        390,
+        390
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "brandCurrent": "page",
+      "audit": null
+    },
+    {
+      "label": "Blackjack lobby",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionWidth": 42.90625,
+      "brand": [
+        142.734375,
+        247.25,
+        104.515625
+      ],
+      "left": [
+        8,
+        117.90625,
+        109.90625
+      ],
+      "actions": [
+        268,
+        382,
+        114
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        390,
+        390
+      ],
+      "screen": "game",
+      "game": "blackjack",
+      "homeVisible": false,
+      "brandCurrent": null,
+      "audit": null
+    },
+    {
+      "label": "Home from Blackjack lobby",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionWidth": 42.90625,
+      "brand": [
+        142.734375,
+        247.25,
+        104.515625
+      ],
+      "left": [
+        8,
+        117.90625,
+        109.90625
+      ],
+      "actions": [
+        268,
+        382,
+        114
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        390,
+        390
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "brandCurrent": "page",
+      "audit": null
+    },
+    {
+      "label": "Durak lobby",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionWidth": 42.90625,
+      "brand": [
+        142.734375,
+        247.25,
+        104.515625
+      ],
+      "left": [
+        8,
+        117.90625,
+        109.90625
+      ],
+      "actions": [
+        268,
+        382,
+        114
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        390,
+        390
+      ],
+      "screen": "game",
+      "game": "durak",
+      "homeVisible": false,
+      "brandCurrent": null,
+      "audit": null
+    },
+    {
+      "label": "Home from Durak lobby",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionWidth": 42.90625,
+      "brand": [
+        142.734375,
+        247.25,
+        104.515625
+      ],
+      "left": [
+        8,
+        117.90625,
+        109.90625
+      ],
+      "actions": [
+        268,
+        382,
+        114
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        390,
+        390
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "brandCurrent": "page",
+      "audit": null
+    },
+    {
+      "label": "active Blackjack mobile",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionWidth": 42.90625,
+      "brand": [
+        142.734375,
+        247.25,
+        104.515625
+      ],
+      "left": [
+        8,
+        117.90625,
+        109.90625
+      ],
+      "actions": [
+        268,
+        382,
+        114
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        390,
+        390
+      ],
+      "screen": "game",
+      "game": "blackjack",
+      "homeVisible": false,
+      "brandCurrent": null,
+      "audit": true,
+      "phase": "player"
+    },
+    {
+      "label": "Home from active Blackjack",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionWidth": 42.90625,
+      "brand": [
+        142.734375,
+        247.25,
+        104.515625
+      ],
+      "left": [
+        8,
+        117.90625,
+        109.90625
+      ],
+      "actions": [
+        268,
+        382,
+        114
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        390,
+        390
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "brandCurrent": "page",
+      "audit": null
+    },
+    {
+      "label": "active Durak mobile",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionWidth": 42.90625,
+      "brand": [
+        142.734375,
+        247.25,
+        104.515625
+      ],
+      "left": [
+        8,
+        117.90625,
+        109.90625
+      ],
+      "actions": [
+        268,
+        382,
+        114
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        390,
+        390
+      ],
+      "screen": "game",
+      "game": "durak",
+      "homeVisible": false,
+      "brandCurrent": null,
+      "audit": true
+    },
+    {
+      "label": "Home from active Durak",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionWidth": 42.90625,
+      "brand": [
+        142.734375,
+        247.25,
+        104.515625
+      ],
+      "left": [
+        8,
+        117.90625,
+        109.90625
+      ],
+      "actions": [
+        268,
+        382,
+        114
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        390,
+        390
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "brandCurrent": "page",
+      "audit": null
+    },
+    {
+      "label": "ipadPortrait active Blackjack",
+      "viewport": [
+        834,
+        1194
+      ],
+      "clientWidth": 834,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionWidth": 63.6875,
+      "brand": [
+        353.328125,
+        480.65625,
+        127.328125
+      ],
+      "left": [
+        14,
+        242.21875,
+        228.21875
+      ],
+      "actions": [
+        650.9375,
+        820,
+        169.0625
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        834,
+        834
+      ],
+      "screen": "game",
+      "game": "blackjack",
+      "homeVisible": false,
+      "brandCurrent": null,
+      "audit": true,
+      "phase": "player"
+    },
+    {
+      "label": "ipadPortrait Home after active",
+      "viewport": [
+        834,
+        1194
+      ],
+      "clientWidth": 834,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionWidth": 63.6875,
+      "brand": [
+        353.328125,
+        480.65625,
+        127.328125
+      ],
+      "left": [
+        14,
+        242.21875,
+        228.21875
+      ],
+      "actions": [
+        650.9375,
+        820,
+        169.0625
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        834,
+        834
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "brandCurrent": "page",
+      "audit": null
+    },
+    {
+      "label": "ipadLandscape active Blackjack",
+      "viewport": [
+        1194,
+        834
+      ],
+      "clientWidth": 1194,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionWidth": 63.6875,
+      "brand": [
+        533.328125,
+        660.65625,
+        127.328125
+      ],
+      "left": [
+        14,
+        242.21875,
+        228.21875
+      ],
+      "actions": [
+        1010.9375,
+        1180,
+        169.0625
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        1194,
+        1194
+      ],
+      "screen": "game",
+      "game": "blackjack",
+      "homeVisible": false,
+      "brandCurrent": null,
+      "audit": true,
+      "phase": "settled"
+    },
+    {
+      "label": "ipadLandscape Home after active",
+      "viewport": [
+        1194,
+        834
+      ],
+      "clientWidth": 1179,
+      "wordmark": "DeckForge",
+      "version": "v0.2.6.55",
+      "versionWidth": 63.6875,
+      "brand": [
+        525.828125,
+        653.15625,
+        127.328125
+      ],
+      "left": [
+        14,
+        242.21875,
+        228.21875
+      ],
+      "actions": [
+        995.9375,
+        1165,
+        169.0625
+      ],
+      "centerDelta": -0.0078125,
+      "document": [
+        1179,
+        1179
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "brandCurrent": "page",
+      "audit": null
+    }
+  ],
+  "screenshots": {
+    "mobileHome": "proofs/deckforge-0.2.6.55-mobile-home.png",
+    "mobileBlackjack": "proofs/deckforge-0.2.6.55-mobile-blackjack.png",
+    "mobileDurak": "proofs/deckforge-0.2.6.55-mobile-durak.png",
+    "phone320": "proofs/deckforge-0.2.6.55-phone320-home.png",
+    "ipadPortraitHome": "proofs/deckforge-0.2.6.55-ipadPortrait-home.png",
+    "ipadPortraitBlackjack": "proofs/deckforge-0.2.6.55-ipadPortrait-blackjack.png",
+    "desktopHome": "proofs/deckforge-0.2.6.55-desktop-home.png",
+    "ipadLandscapeHome": "proofs/deckforge-0.2.6.55-ipadLandscape-home.png",
+    "ipadLandscapeBlackjack": "proofs/deckforge-0.2.6.55-ipadLandscape-blackjack.png"
+  },
+  "browserErrors": []
+}

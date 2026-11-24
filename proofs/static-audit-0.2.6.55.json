@@ -1,0 +1,66 @@
+{
+  "version": "0.2.6.55",
+  "runtime_bytes": 297225,
+  "runtime_lines": 2262,
+  "inline_scripts": 1,
+  "duplicate_ids": [],
+  "literal_dom_refs": 80,
+  "missing_dom_refs": [],
+  "external_asset_refs": 0,
+  "inline_event_attributes": 0,
+  "http_urls_in_runtime": 0,
+  "json_proof_count": 4,
+  "json_proof_files": [
+    "center-brand-0.2.6.55.json",
+    "self-test-0.2.6.55.json",
+    "version-badge-0.2.6.55.json",
+    "static-audit-0.2.6.55.json"
+  ],
+  "json_semantic_checks": {
+    "self-test-0.2.6.55.json": true,
+    "center-brand-0.2.6.55.json": true,
+    "version-badge-0.2.6.55.json": true
+  },
+  "png_proof_count": 9,
+  "png_dimensions": {
+    "deckforge-0.2.6.55-desktop-home.png": [
+      1024,
+      768
+    ],
+    "deckforge-0.2.6.55-ipadLandscape-blackjack.png": [
+      1194,
+      834
+    ],
+    "deckforge-0.2.6.55-ipadLandscape-home.png": [
+      1194,
+      834
+    ],
+    "deckforge-0.2.6.55-ipadPortrait-blackjack.png": [
+      834,
+      1194
+    ],
+    "deckforge-0.2.6.55-ipadPortrait-home.png": [
+      834,
+      1194
+    ],
+    "deckforge-0.2.6.55-mobile-blackjack.png": [
+      390,
+      844
+    ],
+    "deckforge-0.2.6.55-mobile-durak.png": [
+      390,
+      844
+    ],
+    "deckforge-0.2.6.55-mobile-home.png": [
+      390,
+      844
+    ],
+    "deckforge-0.2.6.55-phone320-home.png": [
+      320,
+      800
+    ]
+  },
+  "png_valid": true,
+  "node_check": true,
+  "git_diff_check": true
+}

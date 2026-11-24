@@ -384,3 +384,13 @@ Record actual counts and measurements only: engine assertion total, browser erro
 - **Static checks:** `deckforge.html` is 295,371 bytes / 2,252 lines with one inline script and 76 literal DOM references; zero missing/duplicate IDs, external assets/URLs, or inline event attributes. `node --check`, JSON/PNG proof validation, and `git diff --check` pass; details: `proofs/static-audit-0.2.6.5.json`.
 - **Limits:** Physical iPhone/iPad Safari and audio hardware were not tested; screenshots use Chromium device emulation. Currency remains fictional and local-only.
 - **Release artifacts:** `VERSION` / `APP_VERSION` `0.2.6.5`; notes `RELEASE_NOTES_0.2.6.5.md`; archive `releases/DeckForge-0.2.6.5.zip`; tag `v0.2.6.5`. Release tag, asset, Pages build and live runtime-byte match are verified in the final handoff.
+
+### DeckForge 0.2.6.55 — centered DeckForge wordmark
+
+- **Requested version:** Literal target `0.2.6.55`; previous release `v0.2.6.5`. Tag `v0.2.6.55` is new; no prior tags are moved.
+- **Header:** Moved a stylized, text-only `DeckForge` button to the horizontal center. Clicking it returns Home from both game shortcuts, lobbies, and active rounds. The redundant Home tab is removed; Blackjack/Durak shortcuts remain at left, bankroll/utilities at right. Version remains beside the game shortcuts; the badge compacts at `320px` but stays visible.
+- **Navigation proof:** Rendered coordinate clicks returned Home from Blackjack lobby, Durak lobby, live Blackjack, and live Durak. Card audits remained valid and page errors were zero. Evidence: `proofs/center-brand-0.2.6.55.json` and versioned Home/game screenshots.
+- **Geometry:** Wordmark center is within `0.01px` of the content center at `320`, `360`, `375`, `390`, `414`, `834`, `1024`, and `1194px`; no document-width overflow or collisions. The version badge remains visible at every tested width.
+- **Tests/Vision:** `83/83` in-app assertions; Vision reviewed phone Home/live Blackjack and iPad portrait Home/live Blackjack plus landscape live Blackjack. No header overlap or clipping. Physical iPhone/iPad Safari was not tested; this was Chromium emulation.
+- **Static checks:** `deckforge.html` is 297,225 bytes / 2,262 lines, one inline script, 80 literal DOM refs; no missing/duplicate IDs, external assets/URLs, or inline event attributes. `node --check`, four JSON proofs/nine PNG signatures, and `git diff --check` pass; details: `proofs/static-audit-0.2.6.55.json`.
+- **Release artifacts:** `VERSION` / `APP_VERSION` `0.2.6.55`; notes `RELEASE_NOTES_0.2.6.55.md`; archive `releases/DeckForge-0.2.6.55.zip`; tag `v0.2.6.55`. Read back the release asset, Pages build and live runtime bytes before handoff.

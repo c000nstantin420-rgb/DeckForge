@@ -1,0 +1,200 @@
+{
+  "version": "0.2.6.55",
+  "screens": {
+    "home initial": {
+      "label": "home initial",
+      "viewport": [
+        390,
+        844
+      ],
+      "version": "v0.2.6.55",
+      "versionVisible": true,
+      "wordmark": "DeckForge",
+      "brandCenter": 194.9921875,
+      "clientCenter": 195,
+      "leftEdge": 117.90625,
+      "brandLeft": 142.734375,
+      "brandRight": 247.25,
+      "rightEdge": 268,
+      "document": [
+        390,
+        390
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "gameVisible": false,
+      "ariaCurrent": "page"
+    },
+    "active Blackjack": {
+      "label": "active Blackjack",
+      "viewport": [
+        390,
+        844
+      ],
+      "version": "v0.2.6.55",
+      "versionVisible": true,
+      "wordmark": "DeckForge",
+      "brandCenter": 194.9921875,
+      "clientCenter": 195,
+      "leftEdge": 117.90625,
+      "brandLeft": 142.734375,
+      "brandRight": 247.25,
+      "rightEdge": 268,
+      "document": [
+        390,
+        390
+      ],
+      "screen": "game",
+      "game": "blackjack",
+      "homeVisible": false,
+      "gameVisible": true,
+      "ariaCurrent": null,
+      "phase": "player",
+      "audit": true
+    },
+    "active Durak": {
+      "label": "active Durak",
+      "viewport": [
+        390,
+        844
+      ],
+      "version": "v0.2.6.55",
+      "wordmark": "DeckForge",
+      "screen": "game",
+      "game": "durak",
+      "phase": "attack",
+      "audit": true,
+      "brandCenter": 194.9921875,
+      "clientCenter": 195,
+      "document": [
+        390,
+        390
+      ]
+    },
+    "ipadPortrait active": {
+      "label": "ipadPortrait active",
+      "viewport": [
+        834,
+        1194
+      ],
+      "version": "v0.2.6.55",
+      "wordmark": "DeckForge",
+      "brandCenter": 416.9921875,
+      "clientCenter": 417,
+      "leftEdge": 242.21875,
+      "brandLeft": 353.328125,
+      "brandRight": 480.65625,
+      "rightEdge": 650.9375,
+      "document": [
+        834,
+        834
+      ],
+      "screen": "game",
+      "game": "blackjack",
+      "phase": "player",
+      "audit": true,
+      "errors": []
+    },
+    "ipadLandscape active": {
+      "label": "ipadLandscape active",
+      "viewport": [
+        1194,
+        834
+      ],
+      "version": "v0.2.6.55",
+      "wordmark": "DeckForge",
+      "brandCenter": 596.9921875,
+      "clientCenter": 597,
+      "leftEdge": 242.21875,
+      "brandLeft": 533.328125,
+      "brandRight": 660.65625,
+      "rightEdge": 1010.9375,
+      "document": [
+        1194,
+        1194
+      ],
+      "screen": "game",
+      "game": "blackjack",
+      "phase": "player",
+      "audit": true,
+      "errors": []
+    }
+  },
+  "passed": true,
+  "source_proof": "proofs/center-brand-0.2.6.55.json",
+  "geometryMatrix": [
+    {
+      "viewport": [
+        320,
+        800
+      ],
+      "version": "v0.2.6.55",
+      "visible": true,
+      "centerDelta": 0
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "version": "v0.2.6.55",
+      "visible": true,
+      "centerDelta": -0.0078125
+    },
+    {
+      "viewport": [
+        375,
+        667
+      ],
+      "version": "v0.2.6.55",
+      "visible": true,
+      "centerDelta": -0.0078125
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "version": "v0.2.6.55",
+      "visible": true,
+      "centerDelta": -0.0078125
+    },
+    {
+      "viewport": [
+        414,
+        896
+      ],
+      "version": "v0.2.6.55",
+      "visible": true,
+      "centerDelta": -0.0078125
+    },
+    {
+      "viewport": [
+        834,
+        1194
+      ],
+      "version": "v0.2.6.55",
+      "visible": true,
+      "centerDelta": -0.0078125
+    },
+    {
+      "viewport": [
+        1024,
+        768
+      ],
+      "version": "v0.2.6.55",
+      "visible": true,
+      "centerDelta": -0.0078125
+    },
+    {
+      "viewport": [
+        1194,
+        834
+      ],
+      "version": "v0.2.6.55",
+      "visible": true,
+      "centerDelta": -0.0078125
+    }
+  ]
+}

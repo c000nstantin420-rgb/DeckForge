@@ -16,13 +16,18 @@ button:focus-visible{outline:3px solid rgba(10,132,255,.65);outline-offset:2px}
 [hidden]{display:none!important}
 .app-shell{min-height:100dvh;display:flex;flex-direction:column}
 .topbar{position:sticky;top:0;z-index:30;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:12px;padding:max(10px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) 10px max(14px,env(safe-area-inset-left));background:rgba(13,13,18,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--card2)}
-.brand-button{display:flex;align-items:center;gap:9px;border:0;background:transparent;padding:2px;color:var(--fg);cursor:pointer;flex:0 0 auto;min-height:44px}
-.brand-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:11px;background:linear-gradient(145deg,var(--ac),#5e5ce6);box-shadow:0 5px 18px rgba(10,132,255,.25);font-size:19px;font-weight:800}
-.brand-name{font-weight:800;letter-spacing:-.4px;font-size:16px}
+.top-left-cluster{grid-column:1;justify-self:start;display:flex;align-items:center;gap:7px;min-width:0}
+.brand-button{grid-column:2;justify-self:center;display:flex;align-items:center;justify-content:center;min-height:44px;padding:2px 9px;border:0;background:transparent;color:var(--fg);cursor:pointer;flex:0 0 auto}
+.brand-name{display:inline-flex;align-items:baseline;font-size:20px;font-weight:900;letter-spacing:-1.15px;line-height:1;white-space:nowrap;transition:transform .15s ease,filter .15s ease}
+.brand-deck{color:var(--fg)}
+.brand-forge{color:var(--ac2);background:linear-gradient(115deg,#8af0b5 0%,#30d158 46%,#49b7ff 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.brand-button:hover .brand-name{filter:drop-shadow(0 0 10px rgba(48,209,88,.24))}
+.brand-button:active .brand-name{transform:scale(.96)}
+.brand-button[aria-current="page"] .brand-forge{filter:drop-shadow(0 0 9px rgba(48,209,88,.28))}
 .brand-version{display:inline-flex;align-items:center;padding:3px 6px;border:1px solid rgba(232,232,236,.13);border-radius:999px;background:rgba(232,232,236,.06);color:var(--muted);font-size:9px;font-weight:850;letter-spacing:.25px;white-space:nowrap}
-.top-tabs{display:flex;grid-column:2;justify-content:center;gap:5px;flex:0 1 auto;min-width:0;max-width:100%;overflow-x:auto;scrollbar-width:none}
+.top-tabs{display:flex;grid-column:auto;justify-content:flex-start;gap:5px;flex:0 1 auto;min-width:0;max-width:100%;overflow-x:auto;scrollbar-width:none}
 .top-tabs::-webkit-scrollbar{display:none}
-.top-tabs + .top-actions{grid-column:3;justify-self:end}
+.top-actions{grid-column:3;justify-self:end}
 .tab-short{display:none;font-size:15px}
 .tab{display:inline-flex;align-items:center;justify-content:center;min-width:44px;border:0;border-radius:var(--rs);padding:9px 13px;min-height:44px;background:var(--card2);color:var(--muted);cursor:pointer;font-size:13px;white-space:nowrap}
 .tab.active{background:var(--ac);color:#fff}
@@ -251,7 +256,7 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 .game-active{overflow:hidden}.game-active .app-shell{height:100dvh;min-height:0;overflow:hidden}.game-active main{display:flex;flex-direction:column;height:calc(100dvh - var(--topbar-height));min-height:0;overflow:hidden;padding:12px 16px 0}.game-active #gameScreen{height:100%;display:flex;flex:1;flex-direction:column;min-height:0}.game-active .game-header{flex:0 0 auto;margin:0 0 10px}.game-active #playPanel{display:flex;flex:1;flex-direction:column;min-height:0}.game-active .table-shell{height:100%;width:100%;display:flex;flex:1;flex-direction:column;min-height:0}.game-active .table-content{flex:1;min-height:0;padding-top:16px}.game-active .table-zone{min-height:0}
 .kbd{display:inline-block;padding:2px 5px;border:1px solid #454554;border-radius:4px;background:var(--card2);font-size:10px;color:var(--fg)}
 @media (max-width:760px){
- .topbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:7px}.brand-button{width:auto;max-width:100%;justify-self:start;gap:5px}.brand-mark{width:34px;height:34px;font-size:17px}.brand-name{display:none}.brand-version{font-size:8px;padding:3px 4px}.top-tabs{min-width:0;gap:2px}.tab-full{display:none}.tab-short{display:inline}.tab{min-width:38px;padding:8px 5px}.top-actions{gap:2px;min-width:0}.bankroll-pill{width:40px;justify-content:center;gap:2px;padding:0;font-size:11px}.icon-btn{width:38px}
+ .topbar{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:5px}.top-left-cluster{gap:4px;min-width:0}.brand-button{max-width:100%;padding:2px 5px}.brand-name{font-size:18px;letter-spacing:-.9px}.brand-version{font-size:8px;padding:2px 4px}.top-tabs{min-width:0;gap:2px}.tab-full{display:none}.tab-short{display:inline}.tab{min-width:36px;padding:8px 5px;min-height:44px}.top-actions{gap:2px;min-width:0}.bankroll-pill{width:40px;justify-content:center;gap:2px;padding:0;font-size:11px}.icon-btn{width:36px;min-height:44px;font-size:14px}
  .table-setup{gap:4px;padding:8px}.setup-head .setup-brief{font-size:9px;line-height:1.25;margin-top:2px}.setup-toggle{min-height:29px;padding:4px 6px;font-size:9px}.setup-toggle-mark{font-size:13px}.setup-controls{gap:7px}.setup-label{font-size:9px}.setup-label strong{font-size:10px}.setup-control{gap:2px}.setup-choice{min-height:28px;padding:3px 4px;font-size:10px}.setup-summary{font-size:9px}
  main{padding:19px 11px 31px}.section-heading{align-items:flex-start}.hero{grid-template-columns:1fr;margin-top:0}.hero-copy{padding:9px 3px 0}.hero-copy h1{letter-spacing:-1.6px;line-height:1.02}.hero-art{min-height:180px}.hero-card{width:67px}.game-grid{grid-template-columns:1fr}.game-card{min-height:190px}.game-card h3{margin-top:19px}.stats-grid{grid-template-columns:repeat(2,1fr)}
  .game-header{align-items:flex-start}.game-header h1{font-size:27px}.game-header p{font-size:12px}.game-header-actions{flex-direction:column}.mode-heading{align-items:center!important}.mode-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:520px;width:100%;margin-left:auto;margin-right:auto}.mode-card{max-width:none}.lobby-grid{grid-template-columns:1fr}.lobby-aside{order:-1}.lobby-main{min-height:0}.feature-list{grid-template-columns:1fr}.table-shell{padding:10px;border-radius:16px}.table-content{min-height:0}.table-topline{align-items:flex-start;flex-direction:column}.bj-middle{gap:9px}.bj-total{min-width:66px}.bj-total strong{font-size:25px}.playing-card{width:58px}.card-row{gap:7px}.action-dock{position:sticky;bottom:0;background:linear-gradient(180deg,rgba(13,13,18,0),rgba(13,13,18,.96) 25%);margin:0 -10px;padding:18px 9px max(8px,env(safe-area-inset-bottom));z-index:5}.action-dock .primary-btn,.action-dock .secondary-btn,.action-dock .danger-btn{flex:1;min-width:calc(50% - 8px);min-height:48px}.durak-layout{grid-template-columns:1fr}.durak-side{display:grid;grid-template-columns:1fr 1fr}.log-panel{grid-column:1/-1}.table-cards{min-height:135px}.attack-pair{transform:scale(.9);margin:-5px -3px}
@@ -264,6 +269,8 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
  .game-active #durakContent{min-height:0;overflow:hidden}.game-active #durakContent .durak-layout{flex:1 1 0;min-height:0;overflow:hidden}.game-active #durakContent .durak-board{min-height:0}.game-active #durakContent .table-cards{flex:1 1 auto;min-height:96px;max-height:min(25dvh,210px);overflow:auto;align-content:flex-start}.game-active #durakContent .durak-player-zone,.game-active #durakContent .action-dock{flex:0 0 auto}
 }
 @media (max-width:390px){.topbar{padding-left:8px;padding-right:8px}.tab{font-size:12px;padding:8px 4px;min-width:36px}.bankroll-pill{width:38px}.icon-btn{width:36px}.mode-card{padding:10px}.mode-card small{font-size:10px}.playing-card{width:53px}.action-dock .primary-btn,.action-dock .secondary-btn,.action-dock .danger-btn{font-size:12px;padding-left:8px;padding-right:8px}}
+@media (max-width:420px){.topbar{padding-left:8px;padding-right:8px;gap:4px}.top-left-cluster{gap:2px}.brand-version{font-size:7px;padding:1px 2px;letter-spacing:0}.brand-name{font-size:17px;letter-spacing:-.8px}.top-tabs{gap:1px}.tab{min-width:32px;padding:8px 3px}}
+@media (max-width:340px){.topbar{padding-left:4px;padding-right:4px;gap:2px}.top-left-cluster{gap:3px}.brand-version{display:inline-flex;font-size:6px;padding:1px 2px;letter-spacing:-.15px}.brand-button{padding:2px 3px}.brand-name{font-size:15px;letter-spacing:-.7px}.top-tabs{gap:2px}.tab{min-width:30px;padding:8px 2px}.top-actions{gap:3px}.bankroll-pill{width:42px}.icon-btn{width:30px}}
 @media (max-width:760px){
  .game-active .game-header{gap:8px}.game-active .game-header .back-btn{flex:0 0 34px;width:34px;overflow:hidden;font-size:0;padding:0;display:grid;place-items:center}.game-active .game-header .back-btn:before{content:"‹";font-size:25px;line-height:1}.game-active .game-header-copy{min-width:0;flex:1}.game-active .game-header-copy h1{font-size:23px}.game-active .game-header-copy p{display:none}.game-active .game-header-actions{flex:0 0 auto}.game-active .game-header-actions .small-btn{font-size:11px;padding:5px 8px}
  .game-active .table-content{gap:8px;padding:6px 5px 0}.game-active .table-zone{gap:8px;justify-content:space-evenly}.game-active .hand-zone{gap:5px}.game-active .hand-label{padding:0 2px;font-size:11px}.game-active .hand-label strong{font-size:14px}.game-active .table-title{gap:6px}.game-active .table-title>span{font-size:10px}.game-active .deck-pills{gap:4px}.game-active .deck-pill{padding:5px 7px;font-size:10px}
@@ -338,12 +345,11 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 <body>
 <div class="app-shell" id="app">
 <header class="topbar" id="topbar">
-  <button class="brand-button" id="brandBtn" aria-label="Go to DeckForge home"><span class="brand-mark">♠</span><span class="brand-name">DeckForge</span><span class="brand-version" id="appVersion">v0.2.6.5</span></button>
-  <nav class="top-tabs" aria-label="Games">
-    <button class="tab active" id="tabHome" data-game="home"><span class="tab-full">Home</span><span class="tab-short">⌂</span></button>
+  <div class="top-left-cluster"><span class="brand-version" id="appVersion">v0.2.6.55</span><nav class="top-tabs" aria-label="Games">
     <button class="tab" id="tabBlackjack" data-game="blackjack"><span class="tab-full">Blackjack</span><span class="tab-short">BJ</span></button>
     <button class="tab" id="tabDurak" data-game="durak"><span class="tab-full">Durak</span><span class="tab-short">DU</span></button>
-  </nav>
+  </nav></div>
+  <button class="brand-button" id="brandBtn" aria-label="Go to DeckForge home" title="DeckForge home"><span class="brand-name"><span class="brand-deck">Deck</span><span class="brand-forge">Forge</span></span></button>
   <div class="top-actions">
     <button class="bankroll-pill" id="bankrollBtn" aria-label="Open bankroll"><span class="coin">$</span><strong id="balanceValue">250</strong></button>
     <button class="icon-btn" id="soundBtn" aria-label="Toggle sound">♪</button>
@@ -384,7 +390,7 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 (() => {
 'use strict';
 
-const APP_VERSION = '0.2.6.5';
+const APP_VERSION = '0.2.6.55';
 const STORAGE_KEY = 'deckforge-save-v1';
 const STORAGE_RESET_KEY = 'deckforge-brand-reset-v1';
 const $ = (id) => document.getElementById(id);
@@ -1392,10 +1398,13 @@ function nextRoundStakeControlMarkup() {
 }
 function gameWins(game) { return progression.wins[game]; }
 function setActiveTab() {
-  $$('.tab').forEach((tab) => tab.classList.toggle('active', tab.dataset.game === appState.game));
-  $('homeScreen').hidden = appState.screen !== 'home';
-  $('gameScreen').hidden = appState.screen === 'home';
-  document.body.classList.toggle('game-active', appState.screen === 'game' && Boolean(appState.bj || appState.durak));
+  const homeActive=appState.screen==='home',brand=$('brandBtn');
+  $$('.tab').forEach((tab)=>tab.classList.toggle('active',tab.dataset.game===appState.game));
+  brand.classList.toggle('is-home',homeActive);
+  if(homeActive)brand.setAttribute('aria-current','page');else brand.removeAttribute('aria-current');
+  $('homeScreen').hidden=!homeActive;
+  $('gameScreen').hidden=homeActive;
+  document.body.classList.toggle('game-active',appState.screen==='game'&&Boolean(appState.bj||appState.durak));
   syncViewport();
 }
 function renderTop() {
@@ -2155,6 +2164,7 @@ function runSelfTests() {
   group('Persistence and UI helpers', (t) => {
     t('save schema round-trips without active game data', () => { const sample = {version:1, bankroll:{balance:77,transactions:[],bankruptcyGrants:1}, progression:{wins:{blackjack:3,durak:2}}, settings:{sound:false}}; const b = new Bankroll(sample.bankroll); const p = new Progression(sample.progression); assertEqual(b.balance,77,'balance'); assertEqual(p.wins.blackjack,3,'BJ wins'); assertEqual(p.wins.durak,2,'Durak wins'); assert(sample.version === 1 && sample.settings.sound === false,'schema'); });
     t('card markup contains accessible physical labels', () => { const shoe = new PhysicalShoe({rng:RandomSource.seeded(25)}); const card = shoe.allCards[0]; const markup = cardMarkup(card); assert(markup.includes('aria-label='),'aria label'); assert(markup.includes(card.serial),'serial'); });
+    t('centered DeckForge wordmark is the visible Home control', () => { const brand=$('brandBtn'); assert(brand,'brand button exists'); assertEqual(brand.textContent,'DeckForge','wordmark contains only DeckForge'); assert(!brand.querySelector('.brand-mark,.brand-version'),'wordmark has no icon or version'); assert(brand.getAttribute('aria-label').includes('home'),'wordmark is labeled as Home navigation'); assert($('appVersion')&&$('tabBlackjack')&&$('tabDurak')&&!document.querySelector('.top-tabs [data-game="home"]'),'version and game shortcuts stay available'); });
     t('in-game next-round stake controls stay within the selected table bounds', () => { const previous={game:appState.game,modeIndex:appState.modeIndex,stake:appState.stake}; try { appState.game='blackjack'; appState.modeIndex=0; appState.stake=20; assertEqual(nextRoundStakeOptions().map(option=>option.value).join(','),'10,20,50,100','rookie wager presets'); assert(nextRoundStakeControlMarkup().includes('data-next-round-stake'),'wager control is rendered'); appState.game='durak'; appState.modeIndex=3; appState.stake=100; assertEqual(nextRoundStakeOptions().map(option=>option.value).join(','),'100,200,500,1000','iron-table wager presets'); } finally { appState.game=previous.game; appState.modeIndex=previous.modeIndex; appState.stake=previous.stake; } });
     t('changing next-round wager preserves the settled Durak payout amount', () => { const previous=appState.stake; try { appState.stake=20; const result=durakOutcomeValues({winner:0,wager:10,config:{players:4}}); assertEqual(result.wager,10,'completed duel stake is retained'); assertEqual(result.net,30,'winner nets the stakes from all four seats'); assertEqual(result.returned,40,'winner receives the full four-seat pot'); for(const players of [2,3,4]){const pot=durakOutcomeValues({winner:0,wager:10,config:{players}});assertEqual(pot.returned,players*10,`${players}-seat winner receives every ante`);assertEqual(pot.net,(players-1)*10,`${players}-seat net profit excludes the returned own ante`)} const loss=durakOutcomeValues({winner:1,wager:10,config:{players:4}}); assertEqual(loss.net,-10,'human loss is limited to the human stake'); assertEqual(loss.returned,0,'losing human receives no pot'); const draw=durakOutcomeValues({winner:'draw',wager:10,config:{players:4}}); assertEqual(draw.net,0,'draw breaks even'); assertEqual(draw.returned,10,'draw returns the human stake'); } finally { appState.stake=previous; } });
   });
@@ -2216,7 +2226,7 @@ function showDiagnostics() {
 }
 
 function bindEvents() {
-  $('brandBtn').addEventListener('click', goHome); $('tabHome').addEventListener('click', goHome); $('tabBlackjack').addEventListener('click', () => openGame('blackjack')); $('tabDurak').addEventListener('click', () => openGame('durak'));
+  $('brandBtn').addEventListener('click', goHome); $('tabBlackjack').addEventListener('click', () => openGame('blackjack')); $('tabDurak').addEventListener('click', () => openGame('durak'));
   $('heroEnterBtn').addEventListener('click', () => openGame('blackjack'));
   $('homeBlackjack').addEventListener('click', () => openGame('blackjack')); $('homeDurak').addEventListener('click', () => openGame('durak')); $('backHomeBtn').addEventListener('click', goHome);
   $('diagnosticsBtn').addEventListener('click', showDiagnostics); $('modalClose').addEventListener('click', closeModal); $('modalBackdrop').addEventListener('click', (event) => { if (event.target === $('modalBackdrop')) closeModal(); });

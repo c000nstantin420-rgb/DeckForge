@@ -17,16 +17,15 @@ Open `deckforge.html` directly in a browser. No server, install, build, font, im
 
 ## Release and verification
 
-Current release: **0.2.6.5** (`v0.2.6.5`). The version is visible in the site header on the home screen and game screens. The earlier mistaken `v0.0.0.1` release remains superseded; `0.2.6.5` continues from `0.2.6.3`.
+Current release: **0.2.6.55** (`v0.2.6.55`), a small UI patch over `0.2.6.5`. The earlier mistaken `v0.0.0.1` release remains superseded.
 
-- In-app diagnostics: **82 passed / 0 failed**.
-- Blackjack recovery: starting a new round clears the previous settled phase before dealing; a second-round dealer natural now records one settlement, displays one outcome, and allows round 3. Deterministic UI proof: `proofs/blackjack-reentry-0.2.6.5.json` and `proofs/deckforge-0.2.6.5-iphone-390-blackjack-round2-natural.png`.
-- Bankroll dashboard: income/expenses/net comparison, balance trend with an explicit range, ledger reconciliation, and paired inflow/outflow charts for all eight categories. Recent ledger is capped to the latest 80 transactions; the most recent 12 are shown.
-- Bankroll QA: a 14-entry fixture reconciled `$0 + $154 = $154`; empty history also reconciles and shows a clear no-data state. Mobile/iPad geometry and screenshots: `proofs/bankroll-layout-0.2.6.5.json`, `proofs/bankroll-empty-0.2.6.5.json`, and versioned PNGs in `proofs/`.
-- Vision reviewed mobile `390×844`, iPad portrait `834×1194`, and iPad landscape `1194×834`; no horizontal overflow, overlapping labels, or chart clipping. Physical Apple hardware/Safari was not available, so this is Chromium device emulation.
-- Durak stress: **168 seeded matches / 14 configurations**, audits on every move, zero failures; bounded matches completed in 32–73 steps. Proof: `proofs/durak-0.2.6.5-stress.json`.
-- Release badge: `v0.2.6.5` is present on Home and active Blackjack at `390×844`; proof: `proofs/version-badge-0.2.6.5.json` plus its screenshots.
-- `node --check`, JSON validation, static audit, and `git diff --check`: **PASS**. Detailed measurements: `proofs/static-audit-0.2.6.5.json`.
-- Release artifacts: `RELEASE_NOTES_0.2.6.5.md` and `releases/DeckForge-0.2.6.5.zip`.
+- **Header:** A stylized `DeckForge` wordmark is centered at the top and contains no icon or version label. It is the Home/menu button; clicking it from either game tab, a lobby, or a live round returns to Home. Blackjack and Durak shortcuts remain at the left; bankroll and utility controls remain at the right.
+- **Version:** `v0.2.6.55` remains visible outside the centered wordmark beside the game shortcuts.
+- **Responsive QA:** Wordmark center measured within `0.01px` of the content center at `360`, `375`, `390`, `834`, `1024`, and `1194px`; no horizontal overflow or header overlap. At `320px`, a compact version badge remains visible and the header still fits.
+- **Navigation flows:** Brand returned Home from Blackjack and Durak lobbies and from live Blackjack/Durak states. Active physical-card audits stayed valid; no browser errors. Evidence: `proofs/center-brand-0.2.6.55.json` and versioned header screenshots in `proofs/`.
+- **Vision:** Reviewed Home and active-game headers at phone `390×844` and iPad portrait/landscape; centered wordmark and side groups stayed clear and unclipped. Physical Apple hardware/Safari was not available; tests used Chromium emulation.
+- In-app diagnostics: **83 passed / 0 failed**.
+- `deckforge.html` static audit: **297,225 bytes / 2,262 lines**, one inline script, 80 literal DOM refs; no missing/duplicate IDs, external assets/URLs, or inline event attributes. `node --check`, JSON/PNG validation, static audit, and `git diff --check`: **PASS**. Proof: `proofs/static-audit-0.2.6.55.json`.
+- Release artifacts: `RELEASE_NOTES_0.2.6.55.md` and `releases/DeckForge-0.2.6.55.zip`.
 
-`plan.md` records implementation and measured acceptance evidence. Currency is fictional and local-only. Physical iPhone/iPad Safari and real audio were not tested; layout checks used Chromium emulation and the touch proof used synthetic pointer input.
+`plan.md` records implementation and measured acceptance evidence. Currency is fictional and local-only.
