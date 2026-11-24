@@ -1,0 +1,40 @@
+{
+  "version": "0.2.3",
+  "kind": "Blackjack single-hand outcome regression browser QA",
+  "timestamp": "2026-11-24T06:45:32Z",
+  "source": {
+    "file": "deckforge.html",
+    "bytes": 161274,
+    "lines": 1531,
+    "inlineScriptBlocks": 1,
+    "externalAssets": 0
+  },
+  "regression": {
+    "singleHandOutcomeBannersBeforeFix": 2,
+    "singleHandOutcomeBannersAfterFix": 1,
+    "splitHandFixture": {"seed": 52, "phase": "settled", "hands": 2, "perHandBanners": 2, "overallSummaryBanners": 1, "totalOutcomeBanners": 3}
+  },
+  "engine": {
+    "passed": 39,
+    "failed": 0,
+    "total": 39
+  },
+  "static": {
+    "nodeCheck": "PASS",
+    "duplicateIds": [],
+    "missingDomReferences": [],
+    "inlineEventAttributes": 0
+  },
+  "browser": {
+    "flow": "Blackjack lobby → deal → stand → settlement",
+    "viewport": {"width": 390, "height": 844},
+    "outcomeBannerCount": 1,
+    "visibleActions": ["Deal next hand", "Choose another table"],
+    "document": {"scrollWidth": 390, "scrollHeight": 844},
+    "errors": []
+  },
+  "visualEvidence": ["proofs/blackjack-outcome-single-mobile.png"],
+  "limits": [
+    "Physical iPhone/iPad Safari hardware and real audio were not tested; Chromium mobile emulation was used."
+  ]
+}

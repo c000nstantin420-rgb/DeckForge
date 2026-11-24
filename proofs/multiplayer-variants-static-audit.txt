@@ -2,7 +2,7 @@ DeckForge multiplayer / table-variant static audit
 ===============================================
 
 Source: deckforge.html
-Bytes: 161254
+Bytes: 161274
 Lines: 1531
 Inline script blocks: 1
 External assets: 0
@@ -16,6 +16,7 @@ Pointer drag hooks: PRESENT (pointerdown/pointermove/pointerup + touch-action:no
 Config UI: PRESENT (players + Blackjack/Durak variant controls)
 Multi-seat engines: PRESENT (Blackjack 1-4, Durak 2-4)
 Card rows: Durak mobile uses readable overlapping fan cards with an explicit horizontal-scroll fallback; desktop remains non-scrollable
+Single-hand Blackjack settlement banner: 1 after settle; split-hand per-hand banners preserved
 
 Browser runtime errors: []
 Engine assertions: 39 passed / 0 failed
