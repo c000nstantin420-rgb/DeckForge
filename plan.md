@@ -2,7 +2,7 @@
 
 > **For Hermes:** Execute task-by-task, keep the HTML self-contained, and do not report completion before the browser and engine proofs are green.
 
-**Goal:** Build an offline, single-file iPhone/iPad card-game app with a physically simulated deck/shoe, a real playable Blackjack mode, a real playable two-player Durak mode, persistent bankroll/progression, and a $100 bankruptcy grant.
+**Goal:** Build an offline, single-file iPhone/iPad card-game app with a physically simulated deck/shoe, a real playable Blackjack mode, a real playable 2–4-seat Durak mode, persistent bankroll/progression, and a $100 bankruptcy grant.
 
 **Architecture:** `deckforge.html` is the only runtime artifact and contains all CSS and JavaScript inline. The engine is separated into small classes/functions inside the script (`Deck`, `Shoe`, `BlackjackGame`, `DurakGame`, `Bankroll`, `Progression`, persistence, UI). Every draw removes a concrete card object from a shuffled array; no game asks RNG for a fresh rank/suit during play. `window.CardForge` exposes the engine and a deterministic self-test suite for browser proofs without adding runtime dependencies.
 
@@ -28,7 +28,7 @@
 
 - Blackjack uses six standard 52-card decks (312 cards) per shoe. Cards have unique `shoeId`/`serial`, even when rank and suit repeat. The shoe reshuffles only at a defined penetration threshold, never between individual draws.
 - Blackjack dealer stands on soft 17. Natural Blackjack pays 3:2; a split 21 is not natural. Double-down is allowed on the first two cards of each hand; split hands may double. Insurance is available only against an Ace up-card and pays 2:1. One split is allowed initially, with aces receiving one card only.
-- Durak uses the 36-card ranks 6 through Ace, two players, one trump suit, a maximum of six cards in an attack, and standard Podkidnoy throw-in rules. The defender may beat an attack card or take the complete table. After a successful defense the defender attacks next; after a take, the same attacker attacks again. Drawing after each round is attacker first, then defender, up to six cards.
+- Durak uses the 36-card ranks 6 through Ace, 2–4 seats, one trump suit, a maximum of six cards in an attack, and standard Podkidnoy throw-in rules. The defender may beat an attack card or take the complete table. After a successful defense the defender attacks next; after a take, the same attacker attacks again. Drawing after each round is attacker first, then defender, up to six cards.
 - A match stake is deducted when it begins. A Blackjack result pays the wager according to the hand result; a Durak win pays 2× the stake (stake included), a loss pays 0. A new wager at balance 0 grants exactly $100 first. Balance is never allowed below zero.
 - Modes are intentionally simple and visible: four Blackjack tables and four Durak tables. Each next mode requires wins in that game and has a higher minimum stake. No hidden debug unlock is shipped.
 
@@ -288,6 +288,6 @@ Record actual counts and measurements only: engine assertion total, browser erro
 - **Lobby-Konfiguration:** Beide Spiele haben eine sichtbare `Table setup`-Karte. Blackjack: `1–4 seats`, Natural `3:2/6:5`, Soft-17 `Stand/Hit`, Insurance und Surrender. Durak: `2–4 seats`, `All players/Neighbors` beim Einwerfen und `Push allowed/off`.
 - **Blackjack:** Ein menschlicher Sitz plus AI-Sitze werden physisch aus demselben Shoe gedealt. AI-Sitze spielen vor dem menschlichen Zug; Settlement bewertet alle vier Sitze, aber nur Sitz 0 verändert die Bankroll. 6:5, Soft-17, Insurance und Surrender sind Engine-Regeln, nicht nur UI-Texte.
 - **Durak:** 2–4 Sitze, zirkuläre Sitznachbarn, Nachbar-only/all throw-in, optionales gleichrangiges Weiter-Schieben und AI-Turn-Progression. Vier-Sitz-Autoplay endet nach `54` Schritten mit gültigem Audit.
-- **Live-UI:** Aktiver Tisch zeigt die Konfiguration im Header/Table-Badge, kompakte AI-Sitz-Lanes, menschliche Hand und variantenspezifische Actions. Gegnerkarten werden in Durak mobil als Kartenrücken plus `×N` dargestellt, damit Tisch/Hand bei `390×844` sichtbar bleiben.
+- **Live-UI:** Aktiver Tisch zeigt die Konfiguration im Header/Table-Badge, kompakte AI-Sitz-Lanes, menschliche Hand und variantenspezifische Actions. Gegnerkarten werden in Durak mobil als Kartenrücken plus Kartenanzahl dargestellt; die menschliche Hand nutzt eine lesbare Fan-Anordnung mit Scroll-Fallback, damit Tisch/Hand bei `390×844` sichtbar bleiben.
 - **Finale Beweise:** `39/39` Assertions, Static Audit PASS, 4-seat Blackjack `participants:4/results:4/audit:true`, 4-seat Durak `finished/steps:54/audit:true`, 2-seat Push `attacker:1/defender:0/audit:true`, 4-seat-only All-player throw-in, Throw-in Off, every table setting has an English help button, redesigned felt/card-room home preview, Konfigurations-Reload persistent, Drag-Angriff weiterhin `table:1/hand:5/phase:defense`, keine Browserfehler. Vollständige Daten: `proofs/multiplayer-variants-qa.json`.
-- **Release status:** `VERSION` is `0.2.1`; the user explicitly requested the commit, tag, public GitHub repository, and Pages deployment after the final verification gate.
+- **Release status:** `VERSION` is `0.2.2`; the user explicitly requested the commit, tag, public GitHub repository, and Pages deployment after the final verification gate.

@@ -5,7 +5,7 @@ CardForge is an offline single-file card room for iPhone, iPad, and desktop brow
 ## Games
 
 - **Blackjack** — a real six-deck shoe with physical card identities, hit, stand, double, split, insurance, natural Blackjack 3:2, dealer soft-17 rules, discard tracking, and shoe reshuffles.
-- **Durak** — a complete two-player Podkidnoy match with a real 36-card deck, trump, attacks, throw-ins, defenses, takes, draw order, and an AI opponent.
+- **Durak** — a complete configurable 2–4-seat Podkidnoy match with a real 36-card deck, trump, attacks, throw-ins, defenses, takes, draw order, and AI opponents.
 
 ## Bankroll and progression
 
@@ -20,7 +20,7 @@ Open `deckforge.html` directly in a browser. No server, install, build, font, im
 - Current engine diagnostics: **39 passed / 0 failed**.
 - Static audit: one inline script, no external assets, no duplicate IDs, no missing DOM references, no inline event attributes, and `node --check` passes.
 - Browser QA covers configurable 1–4-seat Blackjack, configurable 2–4-seat Durak, Blackjack payout/soft-17/insurance/surrender rules, Durak 2-seat push, 4-seat-only all-player throw-in, throw-in off, help buttons for every table setting, English-only UI, AI progression, PointerEvent drag attack/defense, persistence, the bankruptcy grant, and 390×844 / 1024×768 no-scroll gameplay geometry.
-- Current variant measurements and screenshots are in `proofs/multiplayer-variants-qa.json`, `proofs/multiplayer-variants-static-audit.txt`, and `proofs/deckforge-*.png`. Release `0.2.1` includes the verified `deckforge.html` artifact and GitHub Pages deployment workflow.
+- Current variant measurements and screenshots are in `proofs/multiplayer-variants-qa.json`, `proofs/multiplayer-variants-static-audit.txt`, and `proofs/deckforge-*.png`. Release `0.2.2` includes the verified `deckforge.html` artifact, Blackjack/Durak mobile polish, side-AI throw-in support, and a GitHub Pages workflow that deploys on main pushes and published releases.
 - `plan.md` contains the implementation plan and measured acceptance evidence.
 
 Currency is fictional and local-only. Physical iPhone/iPad Safari and real audio hardware still need a device pass; Chromium mobile emulation and touch-pointer dispatch are covered.

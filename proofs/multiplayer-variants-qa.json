@@ -1,6 +1,6 @@
 {
-  "version": "0.2.1",
-  "source": {"file": "deckforge.html", "bytes": 153092, "lines": 1514, "inlineScriptBlocks": 1, "externalAssets": 0},
+  "version": "0.2.2",
+  "source": {"file": "deckforge.html", "bytes": 160928, "lines": 1523, "inlineScriptBlocks": 1, "externalAssets": 0},
   "static": {
     "nodeCheck": "PASS",
     "duplicateIds": [],
@@ -11,7 +11,8 @@
     "pointerDragHooks": true,
     "configUi": true,
     "multiSeatEngine": true,
-    "cardRowsNonScrollable": true
+    "cardRowsReadableFan": true,
+    "mobileHandScrollFallback": true
   },
   "engine": {
     "passed": 39,
@@ -39,6 +40,7 @@
     "durak4Autonomous": {"phase": "finished", "winner": 1, "steps": 54, "players": 4, "audit": true, "config": {"players": 4, "throwIn": "neighbors", "push": true}},
     "durakDrag": {"table": 1, "hand": 5, "phase": "defense", "turn": 1, "scrollWidth": 390, "scrollHeight": 844, "errors": []},
     "durakVariantMatches": [{"players": 2, "throwIn": "neighbors", "push": true, "phase": "finished", "steps": 61, "audit": true}, {"players": 2, "throwIn": "off", "push": true, "phase": "finished", "steps": 38, "audit": true}, {"players": 3, "throwIn": "neighbors", "push": false, "phase": "finished", "steps": 47, "audit": true}, {"players": 4, "throwIn": "all", "push": true, "phase": "finished", "steps": 58, "audit": true}],
+    "sideAiThrowIn": {"players": 4, "throwIn": "all", "sideSeat": 3, "phase": "defense", "tableCards": 2, "sideHandBefore": 6, "sideHandAfter": 5, "log": "Player 4 attack with 8♦."},
     "persistence": {"settingsSaved": {"players": 4, "throwIn": "all", "push": false}, "unfinishedStakeBeforeTab": 240, "tabSwitchBalance": 250, "tabSwitchActiveRound": false, "reloadBalance": 250, "reloadScreen": "home", "resetDefaults": {"balance": 250, "players": 2, "throwIn": "neighbors", "push": false}},
     "bankruptcy": {"balance": 90, "grants": 1, "phase": "attack"}
   },
@@ -47,6 +49,9 @@
     "proofs/deckforge-durak-setup-mobile.png",
     "proofs/deckforge-blackjack-setup-mobile.png",
     "proofs/deckforge-durak-push-mobile.png",
+    "proofs/blackjack-mobile-polished.png",
+    "proofs/durak-mobile-polished.png",
+    "proofs/durak-desktop-polished.png",
     "proofs/polish-diagnostics-mobile.png"
   ],
   "limits": [

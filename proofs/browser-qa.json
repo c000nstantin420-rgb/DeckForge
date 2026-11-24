@@ -1,5 +1,5 @@
 {
-  "version": "0.2.1",
+  "version": "0.2.2",
   "kind": "CardForge local multiplayer / variants browser QA",
   "engine": {"passed": 39, "failed": 0, "total": 39},
   "mobile390": {
@@ -26,6 +26,9 @@
     "proofs/deckforge-blackjack-setup-mobile.png",
     "proofs/deckforge-durak-setup-mobile.png",
     "proofs/deckforge-durak-push-mobile.png",
+    "proofs/blackjack-mobile-polished.png",
+    "proofs/durak-mobile-polished.png",
+    "proofs/durak-desktop-polished.png",
     "proofs/multiplayer-variants-static-audit.txt"
   ],
   "limits": [
