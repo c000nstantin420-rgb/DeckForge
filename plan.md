@@ -39,10 +39,10 @@
 ### Task 1: Create the project and plan checkpoint
 
 **Files:**
-- Create: `~/Documents/CardForge/deckforge.html`
-- Create: `~/Documents/CardForge/plan.md` (copy of this plan)
-- Create: `~/Documents/CardForge/.hermes/plans/2026-11-23_172723-deckforge.md`
-- Create: `~/Documents/CardForge/proofs/.gitkeep`
+- Create: `~/Documents/DeckForge/deckforge.html`
+- Create: `~/Documents/DeckForge/plan.md` (copy of this plan)
+- Create: `~/Documents/DeckForge/.hermes/plans/2026-11-23_172723-deckforge.md`
+- Create: `~/Documents/DeckForge/proofs/.gitkeep`
 
 **Acceptance:** project directory exists, the two plan copies are identical, and the runtime file remains absent until the implementation task starts.
 
