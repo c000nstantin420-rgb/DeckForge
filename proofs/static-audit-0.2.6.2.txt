@@ -1,0 +1,14 @@
+DeckForge 0.2.6.2 static audit
+Runtime: deckforge.html
+APP_VERSION / visible badge: 0.2.6.2 / v0.2.6.2
+Bytes / lines: 263,200 / 2,001
+Inline scripts: 1
+External asset references: 0
+Network URL literals: 0
+Unique IDs: 50
+Duplicate IDs: 0
+Missing static DOM references: 0
+Inline event attributes: 0
+node --check: PASS
+JSON validation: proofs/self-test-0.2.6.2.json and proofs/durak-0.2.6.2-stress.json parsed successfully after generation.
+git diff --check: PASS

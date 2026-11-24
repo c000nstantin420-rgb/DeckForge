@@ -1,0 +1,315 @@
+{
+  "version": "0.2.6.2",
+  "browser": "Chromium responsive emulation; physical iPhone/iPad Safari not tested",
+  "versionBadge": {
+    "home": "v0.2.6.2",
+    "activeBlackjack": "v0.2.6.2",
+    "activeDurak": "v0.2.6.2"
+  },
+  "runtimeErrors": [],
+  "selfTests": {
+    "passed": 75,
+    "failed": 0,
+    "total": 75,
+    "groups": 8,
+    "proof": "self-test-0.2.6.2.json"
+  },
+  "durakStress": {
+    "matches": 168,
+    "variants": 14,
+    "passed": 168,
+    "failed": 0,
+    "auditedEveryAction": true,
+    "proof": "durak-0.2.6.2-stress.json"
+  },
+  "layoutMatrix": {
+    "cases": 11,
+    "allPassed": true,
+    "viewports": {
+      "iphone-375-durak-defense": {
+        "viewport": [
+          375,
+          667,
+          2
+        ],
+        "players": 3,
+        "phase": "defense",
+        "fit": true,
+        "audit": true,
+        "document": [
+          375,
+          667
+        ],
+        "errors": []
+      },
+      "iphone-375x600-durak-4seat": {
+        "viewport": [
+          375,
+          600,
+          2
+        ],
+        "players": 4,
+        "phase": "defense",
+        "fit": true,
+        "audit": true,
+        "document": [
+          375,
+          600
+        ],
+        "errors": []
+      },
+      "iphone-390-durak-defense": {
+        "viewport": [
+          390,
+          844,
+          3
+        ],
+        "players": 3,
+        "phase": "defense",
+        "fit": true,
+        "audit": true,
+        "document": [
+          390,
+          844
+        ],
+        "errors": []
+      },
+      "ipad-1194-durak-defense": {
+        "viewport": [
+          1194,
+          834,
+          2
+        ],
+        "players": 3,
+        "phase": "defense",
+        "fit": true,
+        "audit": true,
+        "document": [
+          1194,
+          834
+        ],
+        "errors": []
+      },
+      "iphone-375-blackjack-insurance": {
+        "viewport": [
+          375,
+          667,
+          2
+        ],
+        "players": 3,
+        "phase": "insurance",
+        "fit": true,
+        "audit": true,
+        "document": [
+          375,
+          667
+        ],
+        "errors": []
+      },
+      "iphone-375-blackjack-player": {
+        "viewport": [
+          375,
+          667,
+          2
+        ],
+        "players": 3,
+        "phase": "player",
+        "fit": true,
+        "audit": true,
+        "document": [
+          375,
+          667
+        ],
+        "errors": []
+      },
+      "iphone-375x600-blackjack-4seat": {
+        "viewport": [
+          375,
+          600,
+          2
+        ],
+        "players": 4,
+        "phase": "player",
+        "fit": true,
+        "audit": true,
+        "document": [
+          375,
+          600
+        ],
+        "errors": []
+      },
+      "iphone-390-blackjack-player": {
+        "viewport": [
+          390,
+          844,
+          3
+        ],
+        "players": 3,
+        "phase": "player",
+        "fit": true,
+        "audit": true,
+        "document": [
+          390,
+          844
+        ],
+        "errors": []
+      },
+      "iphone-390-blackjack-insurance": {
+        "viewport": [
+          390,
+          844,
+          3
+        ],
+        "players": 3,
+        "phase": "insurance",
+        "fit": true,
+        "audit": true,
+        "document": [
+          390,
+          844
+        ],
+        "errors": []
+      },
+      "iphone-390-blackjack-4seat": {
+        "viewport": [
+          390,
+          844,
+          3
+        ],
+        "players": 4,
+        "phase": "player",
+        "fit": true,
+        "audit": true,
+        "document": [
+          390,
+          844
+        ],
+        "errors": []
+      },
+      "ipad-1194-blackjack-player": {
+        "viewport": [
+          1194,
+          834,
+          2
+        ],
+        "players": 3,
+        "phase": "player",
+        "fit": true,
+        "audit": true,
+        "document": [
+          1194,
+          834
+        ],
+        "errors": []
+      }
+    },
+    "proof": "browser-qa-0.2.6.2-layouts.json"
+  },
+  "renderedFlows": {
+    "blackjack": {
+      "path": "fresh 3-seat lobby → deal → Stand → settlement",
+      "insurancePromptSeen": false,
+      "humanAction": "Stand via rendered control",
+      "phase": "settled",
+      "outcome": "EVEN HAND\nPush\nDealer and player matched — your wager came back.\n+$0\n$10 returned",
+      "balance": "$ 250",
+      "shoeAudit": true,
+      "viewport": [
+        375,
+        667
+      ],
+      "completed": true
+    },
+    "durak": {
+      "path": "fresh 3-seat lobby → rendered legal actions → terminal result",
+      "humanMoves": 19,
+      "round": 22,
+      "phase": "finished",
+      "winner": 1,
+      "visibleResult": "MATCH COMPLETE\nYou are the Durak\nYour hand was the last one left.\n$-10\n$0 returned",
+      "tablePlaceholder": "✓\nMatch complete\nSee result below.",
+      "talonEmptyPlaceholder": false,
+      "audit": true,
+      "viewport": [
+        375,
+        667
+      ],
+      "completed": true
+    }
+  },
+  "durakPush": {
+    "tap": {
+      "method": "Browser coordinate clicks on the rendered matching hand card and enabled Push onward button",
+      "before": {
+        "selectedCards": 1,
+        "handCards": 6,
+        "tableCards": 1,
+        "pushLabel": "Push onward 9♠"
+      },
+      "after": {
+        "phase": "defense",
+        "turn": 1,
+        "defender": 1,
+        "handCards": 5,
+        "tableCards": 2,
+        "pushUsed": true,
+        "audit": true,
+        "browserErrors": []
+      }
+    },
+    "drag": {
+      "method": "Rendered card dragged with synthetic PointerEvent(pointerType=touch); document.elementFromPoint steered to the actual push drop-zone",
+      "fixtureSeed": 1,
+      "rankMatched": "A",
+      "dropZone": "push",
+      "hoverHighlighted": true,
+      "after": {
+        "phase": "defense",
+        "turn": 1,
+        "defender": 1,
+        "handCards": 5,
+        "tableCards": 2,
+        "pushUsed": true,
+        "audit": true,
+        "browserErrors": []
+      },
+      "screenshot": "deckforge-0.2.6.2-durak-push-drag-375.png",
+      "vision": "PASS: amber target visible; Push onward label unobscured; hand remains above dock"
+    },
+    "proof": "durak-0.2.6.2-push-qa.json"
+  },
+  "vision": {
+    "passed": true,
+    "screenshots": [
+      "deckforge-0.2.6.2-durak-push-drag-375.png",
+      "deckforge-0.2.6.2-ipad-1194-blackjack-player.png",
+      "deckforge-0.2.6.2-ipad-1194-durak-defense.png",
+      "deckforge-0.2.6.2-iphone-375-blackjack-insurance.png",
+      "deckforge-0.2.6.2-iphone-375-blackjack-player-live.png",
+      "deckforge-0.2.6.2-iphone-375-blackjack-player.png",
+      "deckforge-0.2.6.2-iphone-375-blackjack-settlement.png",
+      "deckforge-0.2.6.2-iphone-375-durak-defense.png",
+      "deckforge-0.2.6.2-iphone-375-durak-live.png",
+      "deckforge-0.2.6.2-iphone-375-durak-settlement.png",
+      "deckforge-0.2.6.2-iphone-375-home.png",
+      "deckforge-0.2.6.2-iphone-375x600-blackjack-4seat.png",
+      "deckforge-0.2.6.2-iphone-375x600-durak-4seat.png",
+      "deckforge-0.2.6.2-iphone-390-blackjack-4seat.png",
+      "deckforge-0.2.6.2-iphone-390-blackjack-insurance.png",
+      "deckforge-0.2.6.2-iphone-390-blackjack-player.png",
+      "deckforge-0.2.6.2-iphone-390-durak-defense.png"
+    ],
+    "reviewed": [
+      "Durak defender 375×667, 390×844, iPad 1194×834, and four-seat 375×600",
+      "Blackjack insurance/player at 375×667 and 390×844",
+      "Blackjack four-seat at 375×600 and 390×844",
+      "Blackjack settlement at 375×667",
+      "Durak terminal screen at 375×667",
+      "Durak Push onward drag target at 375×667"
+    ]
+  },
+  "limits": [
+    "Physical iPhone/iPad Safari and real audio were not tested.",
+    "Touch drag used synthetic PointerEvents in Chromium."
+  ]
+}

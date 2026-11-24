@@ -1,0 +1,45 @@
+{
+  "version": "0.2.6.2",
+  "viewport": [375, 667],
+  "tap": {
+    "method": "Browser coordinate clicks on the rendered matching hand card and enabled Push onward button",
+    "before": {
+      "selectedCards": 1,
+      "handCards": 6,
+      "tableCards": 1,
+      "pushLabel": "Push onward 9♠"
+    },
+    "after": {
+      "phase": "defense",
+      "turn": 1,
+      "defender": 1,
+      "handCards": 5,
+      "tableCards": 2,
+      "pushUsed": true,
+      "audit": true,
+      "browserErrors": []
+    }
+  },
+  "drag": {
+    "method": "Rendered card dragged with synthetic PointerEvent(pointerType=touch); document.elementFromPoint steered to the actual push drop-zone",
+    "fixtureSeed": 1,
+    "rankMatched": "A",
+    "dropZone": "push",
+    "hoverHighlighted": true,
+    "after": {
+      "phase": "defense",
+      "turn": 1,
+      "defender": 1,
+      "handCards": 5,
+      "tableCards": 2,
+      "pushUsed": true,
+      "audit": true,
+      "browserErrors": []
+    },
+    "screenshot": "deckforge-0.2.6.2-durak-push-drag-375.png",
+    "vision": "PASS: amber target visible; Push onward label unobscured; hand remains above dock"
+  },
+  "limits": [
+    "The drag handler was exercised in Chromium with synthetic touch PointerEvents; physical iPhone Safari was not tested."
+  ]
+}

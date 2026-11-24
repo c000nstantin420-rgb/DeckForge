@@ -1,0 +1,102 @@
+{
+  "version": "v0.2.6.2",
+  "browser": "Chromium at 375×667 CSS px; not physical iPhone Safari",
+  "screenshots": {
+    "home": "deckforge-0.2.6.2-iphone-375-home.png",
+    "blackjackPlayerLive": "deckforge-0.2.6.2-iphone-375-blackjack-player-live.png",
+    "blackjackSettlement": "deckforge-0.2.6.2-iphone-375-blackjack-settlement.png",
+    "durakLive": "deckforge-0.2.6.2-iphone-375-durak-live.png",
+    "durakSettlement": "deckforge-0.2.6.2-iphone-375-durak-settlement.png"
+  },
+  "errors": [],
+  "homeVersion": "v0.2.6.2",
+  "blackjack": {
+    "players": 3,
+    "stake": 10,
+    "bankrollBefore": "$250",
+    "insurancePromptSeen": false,
+    "humanAction": "Stand via rendered control",
+    "settlement": {
+      "phase": "settled",
+      "version": "v0.2.6.2",
+      "outcome": "EVEN HAND\nPush\nDealer and player matched — your wager came back.\n+$0\n$10 returned",
+      "balance": "$\n250",
+      "buttons": [
+        {
+          "text": "Deal next hand · $10",
+          "rect": [
+            17,
+            619,
+            185.5,
+            657
+          ],
+          "disabled": false
+        },
+        {
+          "text": "Choose another table",
+          "rect": [
+            189.5,
+            619,
+            358,
+            657
+          ],
+          "disabled": false
+        }
+      ],
+      "dockClass": "action-dock settled-dock",
+      "zone": [
+        387,
+        387
+      ],
+      "audit": true,
+      "errors": [],
+      "document": [
+        375,
+        667
+      ]
+    },
+    "settled": true
+  },
+  "durak": {
+    "players": 3,
+    "humanMoves": 19,
+    "durationSeconds": 38.18,
+    "initialHumanTurn": {
+      "phase": "attack",
+      "turn": 0,
+      "attacker": 0,
+      "defender": 1,
+      "hand": 6,
+      "table": 0,
+      "winner": null,
+      "audit": true,
+      "finished": false,
+      "errors": []
+    },
+    "final": {
+      "phase": "finished",
+      "winner": 1,
+      "stalemate": false,
+      "round": 22,
+      "players": 3,
+      "humanHand": 14,
+      "table": 0,
+      "audit": true,
+      "visible": true,
+      "result": "MATCH COMPLETE\nYou are the Durak\nYour hand was the last one left.\n$-10\n$0 returned",
+      "tablePlaceholder": "✓\nMatch complete\nSee result below.",
+      "talonEmptyPlaceholder": false,
+      "dock": [
+        574,
+        661
+      ],
+      "version": "v0.2.6.2",
+      "document": [
+        375,
+        667
+      ],
+      "errors": []
+    },
+    "completed": true
+  }
+}
