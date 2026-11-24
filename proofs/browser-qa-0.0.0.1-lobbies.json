@@ -1,0 +1,115 @@
+{
+  "version": "v0.0.0.1",
+  "screenshots": {
+    "blackjackCollapsed": "deckforge-0.0.0.1-iphone-390-blackjack-collapsed.png",
+    "blackjackExpanded": "deckforge-0.0.0.1-iphone-390-blackjack-expanded.png",
+    "durakCollapsed": "deckforge-0.0.0.1-iphone-390-durak-collapsed.png",
+    "durakExpanded": "deckforge-0.0.0.1-iphone-390-durak-expanded.png",
+    "blackjack375Collapsed": "deckforge-0.0.0.1-iphone-375-blackjack-collapsed.png",
+    "blackjackDesktopExpanded": "deckforge-0.0.0.1-desktop-1024-blackjack-expanded.png"
+  },
+  "states": {
+    "blackjackCollapsed": {
+      "viewport": [
+        390,
+        844
+      ],
+      "game": "blackjack",
+      "stored": null,
+      "expanded": "false",
+      "hidden": true,
+      "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on",
+      "detailsButtons": 17,
+      "startInViewport": true,
+      "wagerVisible": true,
+      "overflow": false,
+      "errors": []
+    },
+    "blackjackExpanded": {
+      "viewport": [
+        390,
+        844
+      ],
+      "game": "blackjack",
+      "stored": true,
+      "expanded": "true",
+      "hidden": false,
+      "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on",
+      "detailsButtons": 17,
+      "startInViewport": false,
+      "wagerVisible": true,
+      "overflow": false,
+      "errors": []
+    },
+    "durakCollapsed": {
+      "viewport": [
+        390,
+        844
+      ],
+      "game": "durak",
+      "stored": null,
+      "expanded": "false",
+      "hidden": true,
+      "summary": "2 seats · Neighbors · Push off",
+      "detailsButtons": 11,
+      "startInViewport": true,
+      "wagerVisible": true,
+      "overflow": false,
+      "errors": []
+    },
+    "durakExpanded": {
+      "viewport": [
+        390,
+        844
+      ],
+      "game": "durak",
+      "stored": true,
+      "expanded": "true",
+      "hidden": false,
+      "summary": "2 seats · Neighbors · Push off",
+      "detailsButtons": 11,
+      "startInViewport": false,
+      "wagerVisible": true,
+      "overflow": false,
+      "errors": []
+    },
+    "blackjack375Collapsed": {
+      "viewport": [
+        375,
+        667
+      ],
+      "game": "blackjack",
+      "stored": null,
+      "expanded": "false",
+      "hidden": true,
+      "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on",
+      "detailsButtons": 17,
+      "startInViewport": false,
+      "wagerVisible": true,
+      "overflow": false,
+      "errors": []
+    },
+    "blackjackDesktopExpanded": {
+      "viewport": [
+        1024,
+        768
+      ],
+      "game": "blackjack",
+      "stored": null,
+      "expanded": "true",
+      "hidden": false,
+      "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on",
+      "detailsButtons": 17,
+      "startInViewport": false,
+      "wagerVisible": true,
+      "document": [
+        1009,
+        1143
+      ],
+      "overflow": false,
+      "errors": []
+    }
+  },
+  "errors": [],
+  "desktopVisionNote": "Vision found the 1024x768 expanded panel readable but tall; lower controls/primary action are below the fold and reachable by vertical page scroll. Horizontal overflow is false."
+}

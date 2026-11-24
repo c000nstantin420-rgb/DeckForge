@@ -1,0 +1,37 @@
+{
+  "version": "0.0.0.1",
+  "browser": "Chromium mobile emulation 390x844; rendered click events, not physical Safari",
+  "homeBadge": "v0.0.0.1",
+  "defaultLobby": {
+    "expanded": "false",
+    "hidden": true,
+    "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on",
+    "overflow": false
+  },
+  "configured": {
+    "players": 3,
+    "expanded": "true",
+    "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on"
+  },
+  "phaseAfterDeal": "player",
+  "configInEngine": 3,
+  "activeBadge": "v0.0.0.1",
+  "humanAction": "Stand",
+  "settlement": {
+    "phase": "settled",
+    "outcome": "CLEAN FINISH\nYou win\nYour total finished ahead of the dealer.\n+$10\n$20 returned",
+    "balance": "$\n260",
+    "participants": 0,
+    "audit": true,
+    "viewport": [
+      390,
+      844
+    ],
+    "document": [
+      390,
+      844
+    ],
+    "errors": []
+  },
+  "completed": true
+}

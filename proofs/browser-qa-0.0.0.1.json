@@ -1,0 +1,1037 @@
+{
+  "version": "0.0.0.1",
+  "runtime": "deckforge.html",
+  "checks": {
+    "inAppSelfTests": {
+      "passed": 76,
+      "failed": 0,
+      "total": 76,
+      "groups": [
+        {
+          "name": "Physical deck and shoe",
+          "tests": [
+            {
+              "name": "standard deck has 52 cards",
+              "pass": true
+            },
+            {
+              "name": "six-deck shoe has 312 unique physical serials",
+              "pass": true
+            },
+            {
+              "name": "shuffle preserves cards and seeded order is reproducible",
+              "pass": true
+            },
+            {
+              "name": "draw removes actual cards and audit accounts for all",
+              "pass": true
+            },
+            {
+              "name": "audit detects a missing physical card",
+              "pass": true
+            }
+          ]
+        },
+        {
+          "name": "Bankroll and progression",
+          "tests": [
+            {
+              "name": "debit never creates a negative balance",
+              "pass": true
+            },
+            {
+              "name": "bankruptcy grants exactly 100 before a wager",
+              "pass": true
+            },
+            {
+              "name": "progression unlocks by game wins",
+              "pass": true
+            },
+            {
+              "name": "payout math credits exact amounts",
+              "pass": true
+            }
+          ]
+        },
+        {
+          "name": "Blackjack engine",
+          "tests": [
+            {
+              "name": "ace totals switch from soft to hard",
+              "pass": true
+            },
+            {
+              "name": "natural blackjack pays 3:2 from physical deal",
+              "pass": true
+            },
+            {
+              "name": "dealer stands on soft 17",
+              "pass": true
+            },
+            {
+              "name": "double doubles wager and draws exactly one card",
+              "pass": true
+            },
+            {
+              "name": "split creates two physical hands and two draw cards",
+              "pass": true
+            },
+            {
+              "name": "double ends a sub-21 hand after exactly one draw",
+              "pass": true
+            },
+            {
+              "name": "double locks a split hand and advances to the next hand",
+              "pass": true
+            },
+            {
+              "name": "split Aces get one card and split 21 is not a natural",
+              "pass": true
+            },
+            {
+              "name": "one split per round rejects another split",
+              "pass": true
+            },
+            {
+              "name": "insurance pays 2:1 on dealer natural",
+              "pass": true
+            },
+            {
+              "name": "shoe does not repeat a serial across draw and discard",
+              "pass": true
+            },
+            {
+              "name": "shoe reshuffles the complete physical shoe at penetration",
+              "pass": true
+            }
+          ]
+        },
+        {
+          "name": "Durak engine",
+          "tests": [
+            {
+              "name": "36-card deal has six cards each and a real trump",
+              "pass": true
+            },
+            {
+              "name": "beat matrix follows suit and trump",
+              "pass": true
+            },
+            {
+              "name": "throw-in only uses ranks on the table",
+              "pass": true
+            },
+            {
+              "name": "attack limit stops at defender hand capacity",
+              "pass": true
+            },
+            {
+              "name": "same-rank opening batch attacks atomically",
+              "pass": true
+            },
+            {
+              "name": "same-rank throw-in batch links every card beside its selected pile",
+              "pass": true
+            },
+            {
+              "name": "attack batches reject mixed ranks, duplicates, stale serials, wrong piles, capacity, and out-of-turn play",
+              "pass": true
+            },
+            {
+              "name": "take preserves every table card in defender hand",
+              "pass": true
+            },
+            {
+              "name": "autonomous seeded match terminates with legal actions",
+              "pass": true
+            },
+            {
+              "name": "autonomous match keeps all physical cards accounted for",
+              "pass": true
+            },
+            {
+              "name": "repeated full Durak positions settle as a stalemate draw",
+              "pass": true
+            }
+          ]
+        },
+        {
+          "name": "Persistence and UI helpers",
+          "tests": [
+            {
+              "name": "save schema round-trips without active game data",
+              "pass": true
+            },
+            {
+              "name": "card markup contains accessible physical labels",
+              "pass": true
+            },
+            {
+              "name": "in-game next-round stake controls stay within the selected table bounds",
+              "pass": true
+            },
+            {
+              "name": "changing next-round wager preserves the settled Durak payout amount",
+              "pass": true
+            }
+          ]
+        },
+        {
+          "name": "Table configuration and variants",
+          "tests": [
+            {
+              "name": "normalizes custom Blackjack and Durak table variants",
+              "pass": true
+            },
+            {
+              "name": "all-player throw-in unlocks only at four seats",
+              "pass": true
+            },
+            {
+              "name": "Durak throw-in off disables extra attacks",
+              "pass": true
+            },
+            {
+              "name": "Durak push works with two seats",
+              "pass": true
+            },
+            {
+              "name": "three-seat neighbor-only match terminates",
+              "pass": true
+            },
+            {
+              "name": "Blackjack deals configured seats with physical-card audit",
+              "pass": true
+            },
+            {
+              "name": "Blackjack 6:5 natural payout follows the selected table rule",
+              "pass": true
+            },
+            {
+              "name": "Durak deals 4 seats and uses circular neighbors",
+              "pass": true
+            },
+            {
+              "name": "Durak neighbor-only throw-in rejects a non-neighbor",
+              "pass": true
+            },
+            {
+              "name": "Durak push transfers defense when enabled",
+              "pass": true
+            }
+          ]
+        },
+        {
+          "name": "Table feel and touch helpers",
+          "tests": [
+            {
+              "name": "same-rank attack cards can be selected together and mixed ranks are refused",
+              "pass": true
+            },
+            {
+              "name": "hand taps render a selected batch and enable the matching attack button",
+              "pass": true
+            },
+            {
+              "name": "push action button is recognized as a drag-and-drop target",
+              "pass": true
+            },
+            {
+              "name": "dealer 21 has an explicit finish message",
+              "pass": true
+            },
+            {
+              "name": "dealer natural has a distinct Blackjack message",
+              "pass": true
+            },
+            {
+              "name": "split hand presentation distinguishes active, next, and completed hands",
+              "pass": true
+            },
+            {
+              "name": "drag target highlight follows the current drop zone",
+              "pass": true
+            },
+            {
+              "name": "Durak cards expose a drag hook",
+              "pass": true
+            }
+          ]
+        },
+        {
+          "name": "Multiplayer correctness and presentation",
+          "tests": [
+            {
+              "name": "Blackjack insurance choices release all three seats to the AI scheduler phase",
+              "pass": true
+            },
+            {
+              "name": "all-player throw-ins pass once and a covered bout eventually finishes",
+              "pass": true
+            },
+            {
+              "name": "three-seat defended bout advances clockwise and clears bout flags",
+              "pass": true
+            },
+            {
+              "name": "three-seat take skips the old defender for the next attack",
+              "pass": true
+            },
+            {
+              "name": "four-seat terminal waits for one Durak and names the losing seat",
+              "pass": true
+            },
+            {
+              "name": "human is the Durak when their hand is the only one left",
+              "pass": true
+            },
+            {
+              "name": "empty hands at bout end settle as a draw",
+              "pass": true
+            },
+            {
+              "name": "empty AI attacker is skipped instead of returning an unchanged state",
+              "pass": true
+            },
+            {
+              "name": "three-seat push transfers attacker role and validates the next defender",
+              "pass": true
+            },
+            {
+              "name": "Durak hand sorting groups suits, ranks, and trump last without mutating the hand",
+              "pass": true
+            },
+            {
+              "name": "table card renderer keeps red suits and both rank corners",
+              "pass": true
+            },
+            {
+              "name": "empty talon does not render a second copy of the exposed trump",
+              "pass": true
+            },
+            {
+              "name": "all seats draw after the attacker and the defender draws last",
+              "pass": true
+            },
+            {
+              "name": "talon-empty match continues while multiple players still hold cards",
+              "pass": true
+            },
+            {
+              "name": "human throw-in requires a matching target pile and inserts beside it",
+              "pass": true
+            },
+            {
+              "name": "throw-in rejects a mismatching or stale target pile",
+              "pass": true
+            },
+            {
+              "name": "AI selects a legal target pile for a throw-in",
+              "pass": true
+            },
+            {
+              "name": "human can plan a throw-in during an AI turn without taking the turn",
+              "pass": true
+            },
+            {
+              "name": "queued throw-in is invalidated when its target pile disappears",
+              "pass": true
+            },
+            {
+              "name": "push option is available before the human selects a card",
+              "pass": true
+            },
+            {
+              "name": "visible version badge matches the running app version",
+              "pass": true
+            },
+            {
+              "name": "table setup defaults collapsed on mobile and expanded on desktop",
+              "pass": true
+            }
+          ]
+        }
+      ]
+    },
+    "durakStress": {
+      "seedStart": 330001,
+      "matches": 168,
+      "variants": 14,
+      "failedMatches": 0,
+      "errors": [],
+      "groups": [
+        {
+          "config": {
+            "players": 2,
+            "throwIn": "off",
+            "push": false
+          },
+          "requested": 12,
+          "passed": 12,
+          "failed": 0,
+          "stalemates": 0,
+          "minSteps": 36,
+          "maxSteps": 46
+        },
+        {
+          "config": {
+            "players": 2,
+            "throwIn": "off",
+            "push": true
+          },
+          "requested": 12,
+          "passed": 12,
+          "failed": 0,
+          "stalemates": 0,
+          "minSteps": 34,
+          "maxSteps": 38
+        },
+        {
+          "config": {
+            "players": 2,
+            "throwIn": "neighbors",
+            "push": false
+          },
+          "requested": 12,
+          "passed": 12,
+          "failed": 0,
+          "stalemates": 0,
+          "minSteps": 36,
+          "maxSteps": 46
+        },
+        {
+          "config": {
+            "players": 2,
+            "throwIn": "neighbors",
+            "push": true
+          },
+          "requested": 12,
+          "passed": 12,
+          "failed": 0,
+          "stalemates": 0,
+          "minSteps": 34,
+          "maxSteps": 44
+        },
+        {
+          "config": {
+            "players": 3,
+            "throwIn": "off",
+            "push": false
+          },
+          "requested": 12,
+          "passed": 12,
+          "failed": 0,
+          "stalemates": 0,
+          "minSteps": 36,
+          "maxSteps": 42
+        },
+        {
+          "config": {
+            "players": 3,
+            "throwIn": "off",
+            "push": true
+          },
+          "requested": 12,
+          "passed": 12,
+          "failed": 0,
+          "stalemates": 0,
+          "minSteps": 36,
+          "maxSteps": 45
+        },
+        {
+          "config": {
+            "players": 3,
+            "throwIn": "neighbors",
+            "push": false
+          },
+          "requested": 12,
+          "passed": 12,
+          "failed": 0,
+          "stalemates": 0,
+          "minSteps": 40,
+          "maxSteps": 58
+        },
+        {
+          "config": {
+            "players": 3,
+            "throwIn": "neighbors",
+            "push": true
+          },
+          "requested": 12,
+          "passed": 12,
+          "failed": 0,
+          "stalemates": 0,
+          "minSteps": 39,
+          "maxSteps": 62
+        },
+        {
+          "config": {
+            "players": 4,
+            "throwIn": "off",
+            "push": false
+          },
+          "requested": 12,
+          "passed": 12,
+          "failed": 0,
+          "stalemates": 0,
+          "minSteps": 36,
+          "maxSteps": 52
+        },
+        {
+          "config": {
+            "players": 4,
+            "throwIn": "off",
+            "push": true
+          },
+          "requested": 12,
+          "passed": 12,
+          "failed": 0,
+          "stalemates": 0,
+          "minSteps": 35,
+          "maxSteps": 44
+        },
+        {
+          "config": {
+            "players": 4,
+            "throwIn": "neighbors",
+            "push": false
+          },
+          "requested": 12,
+          "passed": 12,
+          "failed": 0,
+          "stalemates": 0,
+          "minSteps": 40,
+          "maxSteps": 67
+        },
+        {
+          "config": {
+            "players": 4,
+            "throwIn": "neighbors",
+            "push": true
+          },
+          "requested": 12,
+          "passed": 12,
+          "failed": 0,
+          "stalemates": 0,
+          "minSteps": 40,
+          "maxSteps": 67
+        },
+        {
+          "config": {
+            "players": 4,
+            "throwIn": "all",
+            "push": false
+          },
+          "requested": 12,
+          "passed": 12,
+          "failed": 0,
+          "stalemates": 0,
+          "minSteps": 46,
+          "maxSteps": 79
+        },
+        {
+          "config": {
+            "players": 4,
+            "throwIn": "all",
+            "push": true
+          },
+          "requested": 12,
+          "passed": 12,
+          "failed": 0,
+          "stalemates": 0,
+          "minSteps": 41,
+          "maxSteps": 79
+        }
+      ]
+    },
+    "inlineScriptSyntax": "node --check: PASS\ninline scripts: 1\nprobe: /home/constantin/.hermes/cache/scratch/deckforge-0.0.0.1-check.js",
+    "staticAudit": {
+      "version": "0.0.0.1",
+      "badge": "v0.0.0.1",
+      "runtime_file": "deckforge.html",
+      "file_bytes": 266305,
+      "html_lines": 2009,
+      "inline_scripts": 1,
+      "external_asset_refs": [],
+      "network_url_literals": 0,
+      "duplicate_ids": [],
+      "unique_ids": 51,
+      "missing_static_dom_refs": [],
+      "inline_event_attributes": 0
+    },
+    "gitDiffCheck": "PASS"
+  },
+  "mobileDisclosure": {
+    "version": "0.0.0.1",
+    "viewportTransitions": [
+      {
+        "label": "fresh mobile lobby",
+        "viewport": [
+          390,
+          844
+        ],
+        "screen": "game",
+        "game": "blackjack",
+        "stored": null,
+        "expanded": "false",
+        "hidden": true,
+        "players": 3,
+        "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on",
+        "overflow": false,
+        "errors": []
+      },
+      {
+        "label": "customize opened",
+        "viewport": [
+          390,
+          844
+        ],
+        "screen": "game",
+        "game": "blackjack",
+        "stored": true,
+        "expanded": "true",
+        "hidden": false,
+        "players": 3,
+        "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on",
+        "overflow": false,
+        "errors": []
+      },
+      {
+        "label": "seat selection rerender",
+        "viewport": [
+          390,
+          844
+        ],
+        "screen": "game",
+        "game": "blackjack",
+        "stored": true,
+        "expanded": "true",
+        "hidden": false,
+        "players": 3,
+        "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on",
+        "overflow": false,
+        "errors": []
+      },
+      {
+        "label": "hide explicitly",
+        "viewport": [
+          390,
+          844
+        ],
+        "screen": "game",
+        "game": "blackjack",
+        "stored": false,
+        "expanded": "false",
+        "hidden": true,
+        "players": 3,
+        "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on",
+        "overflow": false,
+        "errors": []
+      },
+      {
+        "label": "reopen explicitly",
+        "viewport": [
+          390,
+          844
+        ],
+        "screen": "game",
+        "game": "blackjack",
+        "stored": true,
+        "expanded": "true",
+        "hidden": false,
+        "players": 3,
+        "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on",
+        "overflow": false,
+        "errors": []
+      },
+      {
+        "label": "Home and re-enter",
+        "viewport": [
+          390,
+          844
+        ],
+        "screen": "game",
+        "game": "blackjack",
+        "stored": null,
+        "expanded": "false",
+        "hidden": true,
+        "players": 3,
+        "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on",
+        "overflow": false,
+        "errors": []
+      },
+      {
+        "label": "resize to desktop without override",
+        "viewport": [
+          1024,
+          768
+        ],
+        "screen": "game",
+        "game": "blackjack",
+        "stored": null,
+        "expanded": "true",
+        "hidden": false,
+        "players": 3,
+        "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on",
+        "overflow": false,
+        "errors": []
+      },
+      {
+        "label": "resize back to mobile without override",
+        "viewport": [
+          390,
+          844
+        ],
+        "screen": "game",
+        "game": "blackjack",
+        "stored": null,
+        "expanded": "false",
+        "hidden": true,
+        "players": 3,
+        "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on",
+        "overflow": false,
+        "errors": []
+      }
+    ],
+    "passed": true
+  },
+  "layout": {
+    "lobbies": {
+      "version": "v0.0.0.1",
+      "screenshots": {
+        "blackjackCollapsed": "deckforge-0.0.0.1-iphone-390-blackjack-collapsed.png",
+        "blackjackExpanded": "deckforge-0.0.0.1-iphone-390-blackjack-expanded.png",
+        "durakCollapsed": "deckforge-0.0.0.1-iphone-390-durak-collapsed.png",
+        "durakExpanded": "deckforge-0.0.0.1-iphone-390-durak-expanded.png",
+        "blackjack375Collapsed": "deckforge-0.0.0.1-iphone-375-blackjack-collapsed.png",
+        "blackjackDesktopExpanded": "deckforge-0.0.0.1-desktop-1024-blackjack-expanded.png"
+      },
+      "states": {
+        "blackjackCollapsed": {
+          "viewport": [
+            390,
+            844
+          ],
+          "game": "blackjack",
+          "stored": null,
+          "expanded": "false",
+          "hidden": true,
+          "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on",
+          "detailsButtons": 17,
+          "startInViewport": true,
+          "wagerVisible": true,
+          "overflow": false,
+          "errors": []
+        },
+        "blackjackExpanded": {
+          "viewport": [
+            390,
+            844
+          ],
+          "game": "blackjack",
+          "stored": true,
+          "expanded": "true",
+          "hidden": false,
+          "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on",
+          "detailsButtons": 17,
+          "startInViewport": false,
+          "wagerVisible": true,
+          "overflow": false,
+          "errors": []
+        },
+        "durakCollapsed": {
+          "viewport": [
+            390,
+            844
+          ],
+          "game": "durak",
+          "stored": null,
+          "expanded": "false",
+          "hidden": true,
+          "summary": "2 seats · Neighbors · Push off",
+          "detailsButtons": 11,
+          "startInViewport": true,
+          "wagerVisible": true,
+          "overflow": false,
+          "errors": []
+        },
+        "durakExpanded": {
+          "viewport": [
+            390,
+            844
+          ],
+          "game": "durak",
+          "stored": true,
+          "expanded": "true",
+          "hidden": false,
+          "summary": "2 seats · Neighbors · Push off",
+          "detailsButtons": 11,
+          "startInViewport": false,
+          "wagerVisible": true,
+          "overflow": false,
+          "errors": []
+        },
+        "blackjack375Collapsed": {
+          "viewport": [
+            375,
+            667
+          ],
+          "game": "blackjack",
+          "stored": null,
+          "expanded": "false",
+          "hidden": true,
+          "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on",
+          "detailsButtons": 17,
+          "startInViewport": false,
+          "wagerVisible": true,
+          "overflow": false,
+          "errors": []
+        },
+        "blackjackDesktopExpanded": {
+          "viewport": [
+            1024,
+            768
+          ],
+          "game": "blackjack",
+          "stored": null,
+          "expanded": "true",
+          "hidden": false,
+          "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on",
+          "detailsButtons": 17,
+          "startInViewport": false,
+          "wagerVisible": true,
+          "document": [
+            1009,
+            1143
+          ],
+          "overflow": false,
+          "errors": []
+        }
+      },
+      "errors": [],
+      "desktopVisionNote": "Vision found the 1024x768 expanded panel readable but tall; lower controls/primary action are below the fold and reachable by vertical page scroll. Horizontal overflow is false."
+    },
+    "visionReview": [
+      {
+        "viewport": "390×844",
+        "game": "Blackjack",
+        "state": "collapsed",
+        "result": "PASS — compact config summary and Customize are readable; wager/chips/Deal visible; no horizontal overflow."
+      },
+      {
+        "viewport": "390×844",
+        "game": "Blackjack",
+        "state": "expanded",
+        "result": "PASS — all five settings (players, payout, soft-17, insurance, surrender) legible and contained; no clipping/overflow."
+      },
+      {
+        "viewport": "390×844",
+        "game": "Durak",
+        "state": "collapsed",
+        "result": "PASS — compact summary/Customize and wager/Start visible; no horizontal overflow."
+      },
+      {
+        "viewport": "390×844",
+        "game": "Durak",
+        "state": "expanded",
+        "result": "PASS — players, throw-in and push controls legible within panel."
+      },
+      {
+        "viewport": "375×667",
+        "game": "Blackjack",
+        "state": "collapsed",
+        "result": "PASS — summary/toggle unclipped; simple first view; vertical scroll remains for lower actions."
+      },
+      {
+        "viewport": "1024×768",
+        "game": "Blackjack",
+        "state": "expanded",
+        "result": "PASS for expanded default/readability and no horizontal overflow; DOM height is 1143px and Deal is below the fold, reachable by vertical page scroll."
+      }
+    ]
+  },
+  "uiFlows": {
+    "blackjack": {
+      "version": "0.0.0.1",
+      "browser": "Chromium mobile emulation 390x844; rendered click events, not physical Safari",
+      "homeBadge": "v0.0.0.1",
+      "defaultLobby": {
+        "expanded": "false",
+        "hidden": true,
+        "summary": "1 seat · 3:2 natural · Stand S17 · Insurance on",
+        "overflow": false
+      },
+      "configured": {
+        "players": 3,
+        "expanded": "true",
+        "summary": "3 seats · 3:2 natural · Stand S17 · Insurance on"
+      },
+      "phaseAfterDeal": "player",
+      "configInEngine": 3,
+      "activeBadge": "v0.0.0.1",
+      "humanAction": "Stand",
+      "settlement": {
+        "phase": "settled",
+        "outcome": "CLEAN FINISH\nYou win\nYour total finished ahead of the dealer.\n+$10\n$20 returned",
+        "balance": "$\n260",
+        "participants": 0,
+        "audit": true,
+        "viewport": [
+          390,
+          844
+        ],
+        "document": [
+          390,
+          844
+        ],
+        "errors": []
+      },
+      "completed": true
+    },
+    "durak": {
+      "version": "0.0.0.1",
+      "browser": "Chromium mobile emulation 390x844; rendered button click, not physical Safari",
+      "before": {
+        "version": "v0.0.0.1",
+        "viewport": [
+          390,
+          844
+        ],
+        "phase": "defense",
+        "turn": 0,
+        "attacker": 3,
+        "defender": 0,
+        "config": {
+          "players": 4,
+          "throwIn": "all",
+          "push": false
+        },
+        "tableCards": 1,
+        "audit": true
+      },
+      "action": "Take cards",
+      "after": {
+        "phase": "attack",
+        "turn": 1,
+        "tableCards": 0,
+        "humanCards": 7,
+        "audit": true,
+        "errors": []
+      }
+    },
+    "touchPointer": {
+      "version": "0.0.0.1",
+      "method": "Synthetic PointerEvent pointerdown/up (pointerType touch) plus browser click event in Chromium mobile emulation; not physical Safari",
+      "cdpTouchAttempt": "Input.dispatchTouchEvent timed out in Browser Use; this proof uses the documented synthetic pointer integration fallback.",
+      "target": "Blackjack Customize button",
+      "result": {
+        "hitTarget": true,
+        "before": {
+          "expanded": "false",
+          "stored": null
+        },
+        "after": {
+          "expanded": "true",
+          "stored": true,
+          "events": [
+            {
+              "type": "pointerdown",
+              "pointerType": "touch",
+              "button": 0
+            },
+            {
+              "type": "pointerup",
+              "pointerType": "touch",
+              "button": 0
+            },
+            {
+              "type": "click",
+              "pointerType": null,
+              "button": 0
+            }
+          ],
+          "viewport": [
+            390,
+            844
+          ],
+          "errors": [],
+          "hidden": false
+        },
+        "liveRerender": {
+          "expanded": "true",
+          "hidden": false,
+          "stored": true,
+          "hit": true,
+          "errors": []
+        }
+      }
+    }
+  },
+  "screenshotMetadata": [
+    {
+      "file": "deckforge-0.0.0.1-desktop-1024-blackjack-expanded.png",
+      "width": 1024,
+      "height": 768,
+      "bytes": 149661
+    },
+    {
+      "file": "deckforge-0.0.0.1-iphone-375-blackjack-collapsed.png",
+      "width": 375,
+      "height": 667,
+      "bytes": 77194
+    },
+    {
+      "file": "deckforge-0.0.0.1-iphone-390-blackjack-collapsed.png",
+      "width": 780,
+      "height": 1688,
+      "bytes": 284858
+    },
+    {
+      "file": "deckforge-0.0.0.1-iphone-390-blackjack-expanded.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 126049
+    },
+    {
+      "file": "deckforge-0.0.0.1-iphone-390-blackjack-live.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 200207
+    },
+    {
+      "file": "deckforge-0.0.0.1-iphone-390-blackjack-lobby.png",
+      "width": 780,
+      "height": 1688,
+      "bytes": 284858
+    },
+    {
+      "file": "deckforge-0.0.0.1-iphone-390-blackjack-settlement.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 220115
+    },
+    {
+      "file": "deckforge-0.0.0.1-iphone-390-durak-collapsed.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 103748
+    },
+    {
+      "file": "deckforge-0.0.0.1-iphone-390-durak-expanded.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 191038
+    },
+    {
+      "file": "deckforge-0.0.0.1-iphone-390-durak-live.png",
+      "width": 390,
+      "height": 844,
+      "bytes": 225656
+    }
+  ],
+  "limitations": [
+    "Browser verification used Chromium device emulation, not physical iPhone/iPad Safari.",
+    "Real device audio was not tested.",
+    "At 1024×768 the expanded desktop lobby requires vertical scrolling to reach the lower wager/Deal controls."
+  ]
+}

@@ -1,0 +1,1 @@
+{'version': '0.0.0.1', 'badge': 'v0.0.0.1', 'runtime_file': 'deckforge.html', 'file_bytes': 266305, 'html_lines': 2009, 'inline_scripts': 1, 'external_asset_refs': [], 'network_url_literals': 0, 'duplicate_ids': [], 'unique_ids': 51, 'missing_static_dom_refs': [], 'inline_event_attributes': 0}

@@ -17,16 +17,17 @@ Open `deckforge.html` directly in a browser. No server, install, build, font, im
 
 ## Release and verification
 
-Current release: **0.2.6.2** (`v0.2.6.2`). The version is visible in the site header on the home screen and both game screens.
+Current release: **0.0.0.1** (`v0.0.0.1`). The version is visible in the site header on the home screen and both game screens.
 
-- In-app diagnostics: **75 passed / 0 failed**.
+- In-app diagnostics: **76 passed / 0 failed**.
 - Durak stress: **168 seeded matches** across 14 valid 2–4-seat throw-in/push configurations; every move preserved the 36-card audit and each match reached a legal terminal result.
-- Durak mobile: at `375×667`, the 3-seat defender sees all six cards and all three actions in one row; the hand remains above the dock. A four-seat `375×600` fixture also kept every card and action reachable. The terminal board now shows `Match complete` instead of a stale `Open attack` prompt, and the empty finished talon has no oversized placeholder.
-- Blackjack mobile: three-seat insurance and player-action screens passed at `375×667`; AI hands use readable overlapped mini-cards, controls remain visible, and the empty AI/insurance dock is suppressed. A four-seat player screen passed at `375×600` and `390×844`; settlement actions use two full-width columns.
-- Regression viewports: both games passed at `390×844` iPhone emulation and `1194×834` iPad-landscape emulation. Document dimensions matched the viewport; no card clipping, action overlap, or horizontal overflow.
-- Rendered flows: Blackjack lobby → three-seat deal → human action → settlement passed. A three-seat Durak lobby-to-terminal match passed; rendered Push onward worked by tap and touch-pointer drag. All physical-card audits passed and browser errors were zero.
-- Vision review passed for the compact Durak defender, Blackjack insurance/player/settlement screens, 390px iPhone layouts, iPad landscape layouts, and the highlighted Durak push drop target.
+- Mobile lobby: detailed seat/rule settings start collapsed at widths `≤760px`, with a current-config summary and `Customize` entry point. At `390×844`, wager and start are above the fold; the short `375×667` lobby scrolls vertically without horizontal overflow.
+- Depth on demand: all Blackjack and Durak settings expand, stay open while options change, and collapse on demand. Returning Home and reopening resets to the mobile default. Desktop at `1024×768` starts expanded.
+- Fresh browser flows: 3-seat Blackjack → deal → Stand → settlement; 4-seat Durak/all-player → legal `Take cards` action. Both physical-card audits passed with zero runtime errors.
+- Disclosure transitions: Customize, setting rerender, Hide, Home/re-entry reset, and automatic `760px` breakpoint defaults all passed. A synthetic touch-pointer sequence hit-tested and opened the rendered Customize button.
+- Vision reviewed collapsed/expanded Blackjack and Durak lobbies at `390×844`, Blackjack at `375×667`, and desktop Blackjack at `1024×768`.
+- Desktop limit: at `1024×768`, the expanded lobby has no horizontal overflow but its lower wager/Deal controls are below the fold; page height is `1143px`, so vertical scroll is needed.
 - `node --check`, JSON validation, static audit, and `git diff --check`: **PASS**.
-- Evidence: `proofs/self-test-0.2.6.2.json`, `proofs/durak-0.2.6.2-stress.json`, `proofs/durak-0.2.6.2-push-qa.json`, `proofs/browser-qa-0.2.6.2.json` (with `-layouts` and `-ui-flows` details), `proofs/static-audit-0.2.6.2.txt`, and `proofs/deckforge-0.2.6.2-*.png`.
+- Evidence: `proofs/self-test-0.0.0.1.json`, `proofs/durak-0.0.0.1-stress.json`, `proofs/browser-qa-0.0.0.1.json`, `proofs/setup-disclosure-0.0.0.1.json`, `proofs/blackjack-ui-flow-0.0.0.1.json`, `proofs/durak-ui-flow-0.0.0.1.json`, `proofs/touch-qa-0.0.0.1.json`, and `proofs/deckforge-0.0.0.1-*.png`.
 
-`plan.md` records implementation and measured acceptance evidence. Currency is fictional and local-only. Physical iPhone/iPad Safari and real audio were not tested; responsive checks used Chromium device emulation and synthetic touch-pointer flows.
+`plan.md` records implementation and measured acceptance evidence. Currency is fictional and local-only. Physical iPhone/iPad Safari and real audio were not tested; layout checks used Chromium emulation and the touch proof used synthetic pointer input.

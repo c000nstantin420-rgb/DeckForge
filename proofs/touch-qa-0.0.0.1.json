@@ -1,0 +1,47 @@
+{
+  "version": "0.0.0.1",
+  "method": "Synthetic PointerEvent pointerdown/up (pointerType touch) plus browser click event in Chromium mobile emulation; not physical Safari",
+  "cdpTouchAttempt": "Input.dispatchTouchEvent timed out in Browser Use; this proof uses the documented synthetic pointer integration fallback.",
+  "target": "Blackjack Customize button",
+  "result": {
+    "hitTarget": true,
+    "before": {
+      "expanded": "false",
+      "stored": null
+    },
+    "after": {
+      "expanded": "true",
+      "stored": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "pointerType": "touch",
+          "button": 0
+        },
+        {
+          "type": "pointerup",
+          "pointerType": "touch",
+          "button": 0
+        },
+        {
+          "type": "click",
+          "pointerType": null,
+          "button": 0
+        }
+      ],
+      "viewport": [
+        390,
+        844
+      ],
+      "errors": [],
+      "hidden": false
+    },
+    "liveRerender": {
+      "expanded": "true",
+      "hidden": false,
+      "stored": true,
+      "hit": true,
+      "errors": []
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "version": "0.0.0.1",
+  "browser": "Chromium mobile emulation 390x844; rendered button click, not physical Safari",
+  "before": {
+    "version": "v0.0.0.1",
+    "viewport": [
+      390,
+      844
+    ],
+    "phase": "defense",
+    "turn": 0,
+    "attacker": 3,
+    "defender": 0,
+    "config": {
+      "players": 4,
+      "throwIn": "all",
+      "push": false
+    },
+    "tableCards": 1,
+    "audit": true
+  },
+  "action": "Take cards",
+  "after": {
+    "phase": "attack",
+    "turn": 1,
+    "tableCards": 0,
+    "humanCards": 7,
+    "audit": true,
+    "errors": []
+  }
+}
