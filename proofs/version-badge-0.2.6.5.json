@@ -1,0 +1,36 @@
+{
+  "version": "0.2.6.5",
+  "home": {
+    "badge": "v0.2.6.5",
+    "homeVisible": true,
+    "viewport": [
+      390,
+      844
+    ],
+    "document": [
+      390,
+      390
+    ]
+  },
+  "active": {
+    "badge": "v0.2.6.5",
+    "screen": "game",
+    "game": "blackjack",
+    "phase": "player",
+    "viewport": [
+      390,
+      844
+    ],
+    "document": [
+      390,
+      390
+    ],
+    "audit": true,
+    "errors": []
+  },
+  "passed": true,
+  "screenshots": [
+    "proofs/deckforge-0.2.6.5-iphone-390-home.png",
+    "proofs/deckforge-0.2.6.5-iphone-390-blackjack-live.png"
+  ]
+}

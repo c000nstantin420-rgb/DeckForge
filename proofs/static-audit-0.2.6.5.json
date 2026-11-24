@@ -1,0 +1,88 @@
+{
+  "version": "0.2.6.5",
+  "runtime_bytes": 295371,
+  "runtime_lines": 2252,
+  "inline_scripts": 1,
+  "duplicate_ids": [],
+  "literal_dom_refs": 76,
+  "missing_dom_refs": [],
+  "external_asset_refs": 0,
+  "inline_event_attributes": 0,
+  "http_urls_in_runtime": 0,
+  "json_proof_count": 7,
+  "json_proof_files": [
+    "bankroll-empty-0.2.6.5.json",
+    "bankroll-layout-0.2.6.5.json",
+    "blackjack-reentry-0.2.6.5.json",
+    "durak-0.2.6.5-stress.json",
+    "self-test-0.2.6.5.json",
+    "version-badge-0.2.6.5.json",
+    "static-audit-0.2.6.5.json"
+  ],
+  "json_semantic_checks": {
+    "self-test-0.2.6.5.json": true,
+    "blackjack-reentry-0.2.6.5.json": true,
+    "durak-0.2.6.5-stress.json": true,
+    "bankroll-layout-0.2.6.5.json": true,
+    "bankroll-empty-0.2.6.5.json": true,
+    "version-badge-0.2.6.5.json": true
+  },
+  "png_proof_count": 13,
+  "png_dimensions": {
+    "bankroll-0.2.6.5-ipad-landscape-bottom.png": [
+      1194,
+      834
+    ],
+    "bankroll-0.2.6.5-ipad-landscape-categories.png": [
+      1194,
+      834
+    ],
+    "bankroll-0.2.6.5-ipad-landscape-overview.png": [
+      1194,
+      834
+    ],
+    "bankroll-0.2.6.5-ipad-portrait-bottom.png": [
+      834,
+      1194
+    ],
+    "bankroll-0.2.6.5-ipad-portrait-categories.png": [
+      834,
+      1194
+    ],
+    "bankroll-0.2.6.5-ipad-portrait-overview.png": [
+      834,
+      1194
+    ],
+    "bankroll-0.2.6.5-mobile-bottom.png": [
+      390,
+      844
+    ],
+    "bankroll-0.2.6.5-mobile-categories.png": [
+      390,
+      844
+    ],
+    "bankroll-0.2.6.5-mobile-empty.png": [
+      390,
+      844
+    ],
+    "bankroll-0.2.6.5-mobile-overview.png": [
+      390,
+      844
+    ],
+    "deckforge-0.2.6.5-iphone-390-blackjack-live.png": [
+      390,
+      844
+    ],
+    "deckforge-0.2.6.5-iphone-390-blackjack-round2-natural.png": [
+      390,
+      844
+    ],
+    "deckforge-0.2.6.5-iphone-390-home.png": [
+      390,
+      844
+    ]
+  },
+  "png_valid": true,
+  "node_check": true,
+  "git_diff_check": true
+}

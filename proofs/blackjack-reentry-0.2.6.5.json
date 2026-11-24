@@ -1,0 +1,49 @@
+{
+  "version": "0.2.6.5",
+  "visibleVersion": "v0.2.6.5",
+  "method": "Fresh local file:// rendered UI; deterministic card fixtures only in isolated browser.",
+  "viewport": [
+    390,
+    844
+  ],
+  "firstRound": {
+    "phase": "settled",
+    "round": 1,
+    "audit": true,
+    "nextButton": true
+  },
+  "forcedRound2": [
+    "4♠",
+    "10♣",
+    "4♥",
+    "A♣"
+  ],
+  "round2": {
+    "phase": "settled",
+    "round": 2,
+    "settlement": true,
+    "dealerNatural": true,
+    "lastRoundNatural": true,
+    "audit": true
+  },
+  "round2Rendered": {
+    "banner": "DEALER NATURAL\nDealer Blackjack\nThe dealer had a natural 21. This hand is settled.\n$-10\n$0 returned",
+    "count": 1,
+    "nextButton": true,
+    "errors": []
+  },
+  "forcedRound3": [
+    "5♠",
+    "6♥",
+    "9♣",
+    "8♦"
+  ],
+  "round3": {
+    "phase": "player",
+    "round": 3,
+    "standButton": true,
+    "audit": true,
+    "errors": []
+  },
+  "passed": true
+}

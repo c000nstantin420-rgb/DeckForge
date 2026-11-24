@@ -1,0 +1,87 @@
+{
+  "version": "0.2.6.5",
+  "states": [
+    {
+      "label": "mobile",
+      "viewport": [
+        390,
+        844
+      ],
+      "version": "v0.2.6.5",
+      "modal": [
+        376,
+        376,
+        791,
+        1792
+      ],
+      "document": [
+        390,
+        390
+      ],
+      "entryPill": "0 / 80 recent entries",
+      "check": "Opening $250 + net $0 = current $250.",
+      "warn": false,
+      "trendSvg": false,
+      "emptyTrend": "No recorded balance movement yet.\nCurrent balance:\n$250",
+      "categories": 8,
+      "recent": "No transactions yet. Your game activity will appear here.",
+      "hasNan": false,
+      "errors": []
+    },
+    {
+      "label": "ipad-portrait",
+      "viewport": [
+        834,
+        1194
+      ],
+      "version": "v0.2.6.5",
+      "modal": [
+        800,
+        800,
+        1098,
+        1273
+      ],
+      "document": [
+        834,
+        834
+      ],
+      "entryPill": "0 / 80 recent entries",
+      "check": "Opening $250 + net $0 = current $250.",
+      "warn": false,
+      "trendSvg": false,
+      "emptyTrend": "No recorded balance movement yet.\nCurrent balance:\n$250",
+      "categories": 8,
+      "recent": "No transactions yet. Your game activity will appear here.",
+      "hasNan": false,
+      "errors": []
+    },
+    {
+      "label": "ipad-landscape",
+      "viewport": [
+        1194,
+        834
+      ],
+      "version": "v0.2.6.5",
+      "modal": [
+        918,
+        918,
+        799,
+        1280
+      ],
+      "document": [
+        1194,
+        1194
+      ],
+      "entryPill": "0 / 80 recent entries",
+      "check": "Opening $250 + net $0 = current $250.",
+      "warn": false,
+      "trendSvg": false,
+      "emptyTrend": "No recorded balance movement yet.\nCurrent balance:\n$250",
+      "categories": 8,
+      "recent": "No transactions yet. Your game activity will appear here.",
+      "hasNan": false,
+      "errors": []
+    }
+  ],
+  "passed": true
+}

@@ -17,17 +17,16 @@ Open `deckforge.html` directly in a browser. No server, install, build, font, im
 
 ## Release and verification
 
-Current release: **0.2.6.3** (`v0.2.6.3`). The version is visible in the site header on the home screen and both game screens. The earlier mistaken `v0.0.0.1` release is superseded; this continues `v0.2.6.2`.
+Current release: **0.2.6.5** (`v0.2.6.5`). The version is visible in the site header on the home screen and game screens. The earlier mistaken `v0.0.0.1` release remains superseded; `0.2.6.5` continues from `0.2.6.3`.
 
-- In-app diagnostics: **76 passed / 0 failed**.
-- Durak stress: **168 seeded matches** across 14 valid 2–4-seat throw-in/push configurations; every move preserved the 36-card audit and each match reached a legal terminal result.
-- Mobile lobby: detailed seat/rule settings start collapsed at widths `≤760px`, with a current-config summary and `Customize` entry point. At `390×844`, wager and start are above the fold; the short `375×667` lobby scrolls vertically without horizontal overflow.
-- Depth on demand: all Blackjack and Durak settings expand, stay open while options change, and collapse on demand. Returning Home and reopening resets to the mobile default. Desktop at `1024×768` starts expanded.
-- Fresh browser flows: 3-seat Blackjack → deal → Stand → settlement; 4-seat Durak/all-player → legal `Take cards` action. Both physical-card audits passed with zero runtime errors.
-- Disclosure transitions: Customize, setting rerender, Hide, Home/re-entry reset, and automatic `760px` breakpoint defaults all passed. A synthetic touch-pointer sequence hit-tested and opened the rendered Customize button.
-- Vision reviewed collapsed/expanded Blackjack and Durak lobbies at `390×844`, Blackjack at `375×667`, and desktop Blackjack at `1024×768`.
-- Desktop limit: at `1024×768`, the expanded lobby has no horizontal overflow but its lower wager/Deal controls are below the fold; page height is `1143px`, so vertical scroll is needed.
-- `node --check`, JSON validation, static audit, and `git diff --check`: **PASS**.
-- Evidence: `proofs/self-test-0.2.6.3.json`, `proofs/durak-0.2.6.3-stress.json`, `proofs/browser-qa-0.2.6.3.json`, `proofs/setup-disclosure-0.2.6.3.json`, `proofs/blackjack-ui-flow-0.2.6.3.json`, `proofs/durak-ui-flow-0.2.6.3.json`, `proofs/touch-qa-0.2.6.3.json`, and `proofs/deckforge-0.2.6.3-*.png`.
+- In-app diagnostics: **82 passed / 0 failed**.
+- Blackjack recovery: starting a new round clears the previous settled phase before dealing; a second-round dealer natural now records one settlement, displays one outcome, and allows round 3. Deterministic UI proof: `proofs/blackjack-reentry-0.2.6.5.json` and `proofs/deckforge-0.2.6.5-iphone-390-blackjack-round2-natural.png`.
+- Bankroll dashboard: income/expenses/net comparison, balance trend with an explicit range, ledger reconciliation, and paired inflow/outflow charts for all eight categories. Recent ledger is capped to the latest 80 transactions; the most recent 12 are shown.
+- Bankroll QA: a 14-entry fixture reconciled `$0 + $154 = $154`; empty history also reconciles and shows a clear no-data state. Mobile/iPad geometry and screenshots: `proofs/bankroll-layout-0.2.6.5.json`, `proofs/bankroll-empty-0.2.6.5.json`, and versioned PNGs in `proofs/`.
+- Vision reviewed mobile `390×844`, iPad portrait `834×1194`, and iPad landscape `1194×834`; no horizontal overflow, overlapping labels, or chart clipping. Physical Apple hardware/Safari was not available, so this is Chromium device emulation.
+- Durak stress: **168 seeded matches / 14 configurations**, audits on every move, zero failures; bounded matches completed in 32–73 steps. Proof: `proofs/durak-0.2.6.5-stress.json`.
+- Release badge: `v0.2.6.5` is present on Home and active Blackjack at `390×844`; proof: `proofs/version-badge-0.2.6.5.json` plus its screenshots.
+- `node --check`, JSON validation, static audit, and `git diff --check`: **PASS**. Detailed measurements: `proofs/static-audit-0.2.6.5.json`.
+- Release artifacts: `RELEASE_NOTES_0.2.6.5.md` and `releases/DeckForge-0.2.6.5.zip`.
 
 `plan.md` records implementation and measured acceptance evidence. Currency is fictional and local-only. Physical iPhone/iPad Safari and real audio were not tested; layout checks used Chromium emulation and the touch proof used synthetic pointer input.

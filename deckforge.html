@@ -179,7 +179,71 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 .modal-backdrop{position:fixed;inset:0;z-index:80;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(0,0,0,.70);backdrop-filter:blur(5px)}
 .modal{width:min(650px,100%);max-height:min(84dvh,760px);overflow:auto;background:var(--card);border:1px solid #30303e;border-radius:var(--r);box-shadow:var(--shadow);padding:19px}
 .modal-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}.modal-head h2{font-size:20px}.close-btn{border:0;background:var(--card2);border-radius:8px;width:32px;height:32px;cursor:pointer;color:var(--muted)}
-.test-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:13px}.test-stat{padding:11px;border-radius:var(--rs);background:var(--card2);text-align:center}.test-stat strong{display:block;font-size:20px}.test-stat span{display:block;color:var(--muted);font-size:11px;margin-top:3px}
+.modal-backdrop.bankroll-mode{padding:16px}
+.modal-backdrop.bankroll-mode .modal{width:min(920px,100%);max-height:min(96dvh,1100px);padding:20px}
+.modal-backdrop.bankroll-mode .modal-head{position:sticky;top:-20px;z-index:4;margin:-20px -20px 14px;padding:14px 20px 12px;background:var(--card);border-bottom:1px solid rgba(232,232,236,.08)}
+.bankroll-dashboard{display:grid;gap:12px;min-width:0}
+.bankroll-lede{display:flex;align-items:center;justify-content:space-between;gap:10px;color:var(--muted);font-size:11px;line-height:1.4}.bankroll-lede .bankroll-window{flex:0 0 auto;padding:4px 7px;border:1px solid rgba(232,232,236,.10);border-radius:999px;color:var(--muted);font-size:9px;white-space:nowrap}
+.bankroll-overview{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.bankroll-stat{min-width:0;padding:12px;border:1px solid var(--card2);border-radius:12px;background:linear-gradient(150deg,rgba(30,30,42,.78),rgba(30,30,42,.38))}
+.bankroll-stat label{display:block;margin-bottom:7px;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.7px;font-weight:800}
+.bankroll-stat strong{display:block;overflow:hidden;color:var(--fg);font-size:clamp(17px,2.2vw,24px);font-variant-numeric:tabular-nums;letter-spacing:-.6px;text-overflow:ellipsis;white-space:nowrap}
+.bankroll-stat .income-value{color:var(--ac2)}.bankroll-stat .expense-value{color:#ff938a}.bankroll-stat .net-positive{color:var(--ac2)}.bankroll-stat .net-negative{color:#ff938a}.bankroll-stat small{display:block;margin-top:5px;color:var(--muted);font-size:10px}
+.bankroll-card{min-width:0;padding:13px;border:1px solid rgba(232,232,236,.10);border-radius:14px;background:linear-gradient(145deg,rgba(30,30,42,.70),rgba(20,20,29,.70))}
+.bankroll-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:11px}
+.bankroll-card-head h3{color:var(--fg);font-size:13px;letter-spacing:-.1px}
+.bankroll-card-head p{margin-top:3px;color:var(--muted);font-size:10px;line-height:1.35}
+.bankroll-card-head .bankroll-window{flex:0 0 auto;padding:4px 7px;border:1px solid rgba(232,232,236,.10);border-radius:999px;color:var(--muted);font-size:9px;white-space:nowrap}
+.bankroll-cashflow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.bankroll-flow-metric{min-width:0;padding:10px;border:1px solid rgba(232,232,236,.07);border-radius:10px;background:rgba(13,13,18,.22)}
+.bankroll-flow-label{display:flex;align-items:baseline;justify-content:space-between;gap:6px;color:var(--muted);font-size:10px}
+.bankroll-flow-label strong{color:var(--fg);font-size:15px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.bankroll-flow-label strong.income-value{color:var(--ac2)}.bankroll-flow-label strong.expense-value{color:#ff938a}
+.bankroll-flow-track{height:7px;margin-top:8px;overflow:hidden;border-radius:999px;background:rgba(232,232,236,.08)}
+.bankroll-flow-fill{display:block;height:100%;min-width:0;border-radius:inherit;transition:width .25s ease}
+.bankroll-flow-fill.income{background:linear-gradient(90deg,#25a979,#55e0ad)}.bankroll-flow-fill.expense{background:linear-gradient(90deg,#d35a5a,#ff9a78)}
+.bankroll-netline{display:flex;justify-content:space-between;gap:10px;margin-top:10px;padding-top:9px;border-top:1px solid rgba(232,232,236,.07);color:var(--muted);font-size:10px}
+.bankroll-netline strong{font-variant-numeric:tabular-nums}.bankroll-netline .positive{color:var(--ac2)}.bankroll-netline .negative{color:#ff938a}
+.bankroll-chart-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:12px;min-width:0;align-items:start}
+.bankroll-timeline{width:100%;height:auto;aspect-ratio:7/3;display:block;overflow:visible}
+.bankroll-timeline .timeline-grid{stroke:rgba(232,232,236,.10);stroke-width:1;stroke-dasharray:3 5}
+.bankroll-timeline .timeline-area{fill:rgba(55,184,145,.13)}.bankroll-timeline .timeline-line{fill:none;stroke:#4bd7a5;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.bankroll-timeline .timeline-point{fill:#d9fff0;stroke:#36bd8d;stroke-width:2}
+.bankroll-timeline-scale,.bankroll-timeline-range{display:flex;gap:8px;color:var(--muted);font-size:10px;font-variant-numeric:tabular-nums}
+.bankroll-timeline-scale{justify-content:center;margin:2px 1px 0;text-align:center}.bankroll-timeline-range{justify-content:space-between;margin-top:4px;font-size:9px}
+.bankroll-timeline-empty{display:grid;place-items:center;min-height:150px;padding:18px;border:1px dashed rgba(232,232,236,.12);border-radius:10px;color:var(--muted);text-align:center;font-size:11px;line-height:1.45}
+.bankroll-reconcile{display:flex;align-items:flex-start;gap:7px;margin-top:4px;color:var(--muted);font-size:10px;line-height:1.4}
+.bankroll-reconcile:before{content:'✓';flex:0 0 16px;display:grid;place-items:center;width:16px;height:16px;border-radius:50%;background:rgba(48,209,136,.14);color:var(--ac2);font-size:10px;font-weight:900}
+.bankroll-reconcile.warn:before{content:'!';background:rgba(255,159,10,.14);color:var(--warn)}
+.bankroll-category-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.bankroll-category{min-width:0;padding:10px;border:1px solid rgba(232,232,236,.08);border-radius:11px;background:rgba(13,13,18,.24)}
+.bankroll-category-head{display:flex;align-items:flex-start;justify-content:space-between;gap:7px;margin-bottom:8px}
+.bankroll-category-title{display:flex;align-items:center;gap:7px;min-width:0;color:var(--fg);font-size:11px;font-weight:800}
+.bankroll-category-dot{width:8px;height:8px;flex:0 0 8px;border-radius:50%;background:var(--category-color);box-shadow:0 0 10px color-mix(in srgb,var(--category-color),transparent 65%)}
+.bankroll-category-count{flex:0 0 auto;color:var(--muted);font-size:9px;white-space:nowrap}
+.bankroll-category-net{margin-top:7px;color:var(--muted);font-size:9px;text-align:right}
+.bankroll-flow-row{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:6px;margin-top:5px;color:var(--muted);font-size:9px}
+.bankroll-flow-row strong{min-width:44px;color:var(--fg);font-size:9px;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.bankroll-flow-row .bankroll-flow-track{height:5px;margin:0}
+.bankroll-flow-row .bankroll-flow-fill.category-income{background:var(--ac2)}.bankroll-flow-row .bankroll-flow-fill.category-expense{background:#ff8378}
+.bankroll-empty-category{margin-top:4px;color:var(--muted);font-size:9px}
+.bankroll-ledger{display:flex;flex-direction:column;gap:0}
+.bankroll-tx{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;padding:9px 2px;border-top:1px solid rgba(232,232,236,.07)}
+.bankroll-tx-main{min-width:0}.bankroll-tx-label{overflow:hidden;color:var(--fg);font-size:11px;font-weight:700;text-overflow:ellipsis;white-space:nowrap}
+.bankroll-tx-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:3px;color:var(--muted);font-size:9px}
+.bankroll-tx-amount{text-align:right;font-size:11px;font-weight:850;font-variant-numeric:tabular-nums;white-space:nowrap}.bankroll-tx-amount.income{color:var(--ac2)}.bankroll-tx-amount.expense{color:#ff938a}
+.bankroll-tx-balance{display:block;margin-top:3px;color:var(--muted);font-size:9px;font-weight:500}
+.bankroll-empty{padding:18px;border:1px dashed rgba(232,232,236,.12);border-radius:10px;color:var(--muted);font-size:11px;line-height:1.5;text-align:center}
+.bankroll-footnote{color:var(--muted);font-size:9px;line-height:1.4}
+@media (max-width:760px){
+ .modal-backdrop.bankroll-mode{align-items:flex-end;padding:6px 6px max(0px,env(safe-area-inset-bottom))}
+ .modal-backdrop.bankroll-mode .modal{width:100%;max-height:94dvh;padding:14px;border-radius:17px 17px 12px 12px}
+ .modal-backdrop.bankroll-mode .modal-head{top:-14px;margin:-14px -14px 12px;padding:12px 14px 10px}
+ .bankroll-dashboard{gap:9px}.bankroll-overview{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.bankroll-stat{padding:10px}.bankroll-stat label{font-size:9px}.bankroll-stat strong{font-size:20px}
+ .bankroll-card{padding:10px}.bankroll-card-head{margin-bottom:9px}.bankroll-cashflow{gap:7px}.bankroll-flow-metric{padding:8px}.bankroll-flow-label{align-items:flex-start;flex-direction:column;gap:3px}.bankroll-flow-label strong{font-size:14px}
+ .bankroll-chart-grid{grid-template-columns:1fr;gap:9px}.bankroll-timeline{min-height:140px}.bankroll-category-list{grid-template-columns:1fr;gap:6px}.bankroll-category{padding:9px}
+}
+ .test-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:13px}.test-stat{padding:11px;border-radius:var(--rs);background:var(--card2);text-align:center}.test-stat strong{display:block;font-size:20px}.test-stat span{display:block;color:var(--muted);font-size:11px;margin-top:3px}
 .test-groups{display:flex;flex-direction:column;gap:7px}.test-group{border:1px solid var(--card2);border-radius:var(--rs);padding:10px 12px}.test-group summary{cursor:pointer;font-size:13px;font-weight:700}.test-group ul{list-style:none;display:flex;flex-direction:column;gap:5px;margin-top:9px}.test-group li{font-size:11px;color:var(--muted)}.test-group li.pass:before{content:"✓";color:var(--ac2);margin-right:7px}.test-group li.fail:before{content:"×";color:var(--err);margin-right:7px}
 .toast-region{position:fixed;z-index:100;left:50%;bottom:max(22px,calc(env(safe-area-inset-bottom) + 14px));transform:translateX(-50%);display:flex;flex-direction:column;gap:8px;align-items:center;pointer-events:none}.toast{min-width:220px;max-width:min(92vw,430px);padding:11px 14px;border-radius:10px;background:#252531;border:1px solid #3b3b4c;box-shadow:var(--shadow);font-size:13px;text-align:center;animation:toast-in .2s ease both}.toast.good{border-color:rgba(48,209,88,.55)}.toast.bad{border-color:rgba(255,69,58,.55)}
 @keyframes toast-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
@@ -274,7 +338,7 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 <body>
 <div class="app-shell" id="app">
 <header class="topbar" id="topbar">
-  <button class="brand-button" id="brandBtn" aria-label="Go to DeckForge home"><span class="brand-mark">♠</span><span class="brand-name">DeckForge</span><span class="brand-version" id="appVersion">v0.2.6.3</span></button>
+  <button class="brand-button" id="brandBtn" aria-label="Go to DeckForge home"><span class="brand-mark">♠</span><span class="brand-name">DeckForge</span><span class="brand-version" id="appVersion">v0.2.6.5</span></button>
   <nav class="top-tabs" aria-label="Games">
     <button class="tab active" id="tabHome" data-game="home"><span class="tab-full">Home</span><span class="tab-short">⌂</span></button>
     <button class="tab" id="tabBlackjack" data-game="blackjack"><span class="tab-full">Blackjack</span><span class="tab-short">BJ</span></button>
@@ -320,7 +384,7 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 (() => {
 'use strict';
 
-const APP_VERSION = '0.2.6.3';
+const APP_VERSION = '0.2.6.5';
 const STORAGE_KEY = 'deckforge-save-v1';
 const STORAGE_RESET_KEY = 'deckforge-brand-reset-v1';
 const $ = (id) => document.getElementById(id);
@@ -758,7 +822,7 @@ BlackjackGame = class ConfiguredBlackjackGame extends LegacyBlackjackGame {
   startRound(wager) {
     if (!Number.isFinite(Number(wager)) || Number(wager) <= 0) throw new Error('Wager must be positive');
     if (!['idle','settled'].includes(this.phase)) throw new Error('Round already active');
-    this.initialWager = Number(wager); this.config = normalizeBlackjackConfig(this.config);
+    this.initialWager = Number(wager); this.phase = 'idle'; this.config = normalizeBlackjackConfig(this.config);
     this.participants = Array.from({length:this.config.players}, (_, index) => ({index, name:index === 0 ? 'You' : `Player ${index + 1}`, ai:index > 0, hands:[new BlackjackHand([], this.initialWager)]}));
     this.playerHands = this.participants[0].hands; this.dealer = []; this.activeIndex = 0; this.aiParticipantIndex = 1; this.splitUsed = false; this.insurance = null; this.settlement = null; this.lastRound = null;
     if (this.shoe.remaining < 52) { this.shoe.cards = this.shoe.allCards.slice(); this.shoe.discard = []; shuffle(this.shoe.cards, this.rng); }
@@ -1830,18 +1894,119 @@ function renderDurak() {
   $('durakContent').innerHTML=html;
 }
 
-function showModal(title, body) { $('modalTitle').textContent = title; $('modalBody').innerHTML = body; $('modalBackdrop').hidden = false; }
-function closeModal() { $('modalBackdrop').hidden = true; }
+function showModal(title, body) { const backdrop=$('modalBackdrop'); backdrop.classList.remove('bankroll-mode'); $('modalTitle').textContent=title; $('modalBody').innerHTML=body; backdrop.hidden=false; }
+function closeModal() { const backdrop=$('modalBackdrop'); backdrop.hidden=true; backdrop.classList.remove('bankroll-mode'); }
 function showRules() {
   const isBJ = appState.game === 'blackjack'; const cfg = isBJ ? normalizeBlackjackConfig(appState.tableConfig) : normalizeDurakConfig(appState.tableConfig);
   const bjBody = `<div class="notice"><strong>Configured table</strong><span>${esc(tableConfigSummary('blackjack', cfg))}</span></div><br><div class="test-group"><b>Goal</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">Finish closer to 21 than the dealer without busting. Natural Blackjack pays ${cfg.payout}.</p></div><br><div class="test-group"><b>Actions</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">Hit draws one physical card. Stand ends the hand. Double doubles the wager, draws exactly one card, then ends that hand. Split separates an exact matching-rank pair once per round. Split Aces receive one card and stand; a split 21 is not a natural. ${cfg.insurance ? 'Insurance is offered against an Ace.' : 'Insurance is disabled at this table.'} ${cfg.surrender ? 'Surrender returns half the wager.' : 'Surrender is disabled.'}</p></div><br><div class="test-group"><b>Dealer</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">The dealer ${cfg.soft17 === 'hit' ? 'hits' : 'stands'} on soft 17. Other seats are controlled by the table AI.</p></div>`;
   const durakBody = `<div class="notice"><strong>Configured table</strong><span>${esc(tableConfigSummary('durak', cfg))}</span></div><br><div class="test-group"><b>Goal</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">Get rid of your cards. Once the talon is empty, empty seats leave the bout; the last player holding cards is the Durak. If every hand empties at the same bout end, or an identical complete position repeats, the result is a draw.</p></div><br><div class="test-group"><b>Attack and throw-in</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">The player with the lowest trump opens. Play proceeds clockwise. Tap same-rank hand cards to build or remove a batch, then use the action button or drag the batch onto the table. A batch may contain only one rank and is capped at six cards and the defender’s hand size. On a covered table, choose a covered pile with a matching rank; every selected card is placed beside that pile. ${cfg.throwIn === 'off' ? 'Extra throw-ins are disabled.' : `This table allows ${cfg.throwIn === 'all' ? 'all active seats' : 'only active neighbors of the defender'} to throw in.`} When an eligible AI seat is acting, you can queue a card and pile without playing out of turn.</p></div><br><div class="test-group"><b>Defend and take</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">Beat a card with a higher card of the same suit, or with trump against a non-trump. After beating the bout, the defender leads next. After taking, the next active seat clockwise after the defender attacks; the defender is skipped.</p></div><br><div class="test-group"><b>Transfer</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">${cfg.push ? 'Push onward is optional: choose it instead of defending when you have a same-rank card, before any card is covered, and the next defender has enough cards for the whole table. It can be used once per bout.' : 'Push / transfer is disabled at this table.'}</p></div><br><div class="test-group"><b>Refill</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">After a bout, active seats draw toward six in clockwise order from the principal attacker, with the defender drawing last. The face-up trump is the final card in the talon.</p></div><br><div class="test-group"><b>Stake</b><p class="muted" style="margin-top:7px;font-size:12px;line-height:1.5">Each seat contributes one ante. The winner receives the whole pot (${cfg.players} × ${intMoney(appState.stake)}). If you lose, only your own stake is lost; a draw returns your stake.</p></div>`;
   showModal(isBJ ? 'Blackjack rules' : 'Durak rules', isBJ ? bjBody : durakBody);
 }
+const BANKROLL_CATEGORIES = Object.freeze([
+  {id:'blackjack',label:'Blackjack',color:'#38d39f'},
+  {id:'durak',label:'Durak',color:'#6da9ff'},
+  {id:'insurance',label:'Insurance',color:'#ffc164'},
+  {id:'double',label:'Double down',color:'#bb9cff'},
+  {id:'split',label:'Split hands',color:'#f08bc2'},
+  {id:'grant',label:'Bankruptcy grants',color:'#53d5c1'},
+  {id:'refunds',label:'Refunds & reversals',color:'#9ca3b2'},
+  {id:'other',label:'Other',color:'#8792a5'}
+]);
+function roundBankrollAmount(value) { return Math.round((Number(value) + Number.EPSILON) * 100) / 100; }
+function bankrollCategoryId(transaction = {}) {
+  const label=String(transaction.label||'').toLowerCase(), type=String(transaction.type||'').toLowerCase();
+  if(type==='grant'||label.includes('bankruptcy'))return 'grant';
+  if(/rollback|unfinished round|table switch|table left|page closed|refund/.test(label))return 'refunds';
+  if(label.includes('insurance'))return 'insurance';
+  if(label.includes('double down'))return 'double';
+  if(label.includes('split hand'))return 'split';
+  if(/blackjack|rookie room|club room|high stakes|vip vault/.test(label))return 'blackjack';
+  if(/durak|village yard|tavern table|champion ring|iron table/.test(label))return 'durak';
+  return 'other';
+}
+function buildBankrollAnalytics(transactions = [], currentBalance = 0) {
+  const source=Array.isArray(transactions)?transactions.filter(item=>item&&typeof item==='object').slice(0,80):[];
+  const currentValue=Number(currentBalance), closingBalance=roundBankrollAmount(Number.isFinite(currentValue)?currentValue:0);
+  const chronological=source.map((item,index)=>({item,index})).sort((a,b)=>{
+    const ta=Number(a.item.at),tb=Number(b.item.at),va=Number.isFinite(ta)?ta:0,vb=Number.isFinite(tb)?tb:0;
+    return va-vb||b.index-a.index;
+  }).map(entry=>entry.item);
+  const categories=BANKROLL_CATEGORIES.map(category=>({...category,income:0,expenses:0,net:0,transactionCount:0}));
+  const byId=new Map(categories.map(category=>[category.id,category]));
+  let totalIncome=0,totalExpenses=0;
+  for(const item of chronological){
+    const raw=Number(item.amount),amount=Number.isFinite(raw)?roundBankrollAmount(raw):0;
+    const income=Math.max(0,amount),expense=Math.max(0,-amount),category=byId.get(bankrollCategoryId(item))||byId.get('other');
+    totalIncome+=income;totalExpenses+=expense;category.income+=income;category.expenses+=expense;category.transactionCount+=1;
+  }
+  totalIncome=roundBankrollAmount(totalIncome);totalExpenses=roundBankrollAmount(totalExpenses);
+  for(const category of categories){category.income=roundBankrollAmount(category.income);category.expenses=roundBankrollAmount(category.expenses);category.net=roundBankrollAmount(category.income-category.expenses);}
+  const netFlow=roundBankrollAmount(totalIncome-totalExpenses),first=chronological[0],last=chronological[chronological.length-1];
+  const firstBefore=first?.before===null||first?.before===undefined?NaN:Number(first.before),openingBalance=first&&Number.isFinite(firstBefore)?roundBankrollAmount(firstBefore):roundBankrollAmount(closingBalance-netFlow);
+  const timeline=[{at:first?.at??null,balance:openingBalance,label:'Opening'}];let running=openingBalance;
+  for(const item of chronological){const amount=Number(item.amount),after=item.after===null||item.after===undefined?NaN:Number(item.after);running=roundBankrollAmount(Number.isFinite(after)?after:running+(Number.isFinite(amount)?amount:0));timeline.push({at:item.at??null,balance:running,label:String(item.label||'Transaction')});}
+  if(!chronological.length)timeline[0]={at:null,balance:closingBalance,label:'Current'};
+  else if(Math.abs(running-closingBalance)>0.01)timeline.push({at:null,balance:closingBalance,label:'Current'});
+  const reconciliationDelta=roundBankrollAmount((closingBalance-openingBalance)-netFlow);
+  return {transactionCount:source.length,historyLimit:80,totalIncome,totalExpenses,netFlow,openingBalance,closingBalance,reconciliationDelta,reconciles:Math.abs(reconciliationDelta)<=0.01,categories,timeline,recentTransactions:source.slice(0,12)};
+}
+function bankrollMoneyChange(value) { const amount=roundBankrollAmount(Number(value)||0);return `${amount>0?'+':amount<0?'−':''}${money(Math.abs(amount))}`; }
+function bankrollTimestampLabel(timestamp, compact = false) {
+  const value=timestamp===null||timestamp===undefined||timestamp===''?NaN:Number(timestamp),date=new Date(value);
+  if(!Number.isFinite(value)||!Number.isFinite(date.getTime()))return compact?'Start':'Earlier';
+  try{return new Intl.DateTimeFormat('en-US',compact?{month:'short',day:'numeric'}:{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}).format(date);}catch{return 'Recent';}
+}
+function bankrollTimelineMarkup(analytics) {
+  const series=analytics.timeline;
+  if(series.length<2)return `<div class="bankroll-timeline-empty">No recorded balance movement yet.<br>Current balance: <strong>${money(analytics.closingBalance)}</strong></div>`;
+  const width=700,height=300,pad={left:10,right:10,top:14,bottom:14},values=series.map(point=>point.balance),actualMin=Math.min(...values),actualMax=Math.max(...values);
+  let min=actualMin,max=actualMax,range=max-min;
+  if(range<0.01){range=Math.max(10,Math.abs(max)*0.08);min-=range/2;max+=range/2;}else{min-=range*0.12;max+=range*0.12;range=max-min;}
+  const plotW=width-pad.left-pad.right,plotH=height-pad.top-pad.bottom;
+  const coords=series.map((point,index)=>({x:pad.left+(series.length===1?plotW/2:index/(series.length-1)*plotW),y:pad.top+(max-point.balance)/range*plotH}));
+  const polyline=coords.map(point=>`${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(' ');
+  const area=`${coords[0].x.toFixed(1)},${(height-pad.bottom).toFixed(1)} ${polyline} ${coords[coords.length-1].x.toFixed(1)},${(height-pad.bottom).toFixed(1)}`;
+  const grid=[0,.5,1].map(ratio=>{const y=pad.top+plotH*ratio;return `<line class="timeline-grid" x1="${pad.left}" y1="${y.toFixed(1)}" x2="${width-pad.right}" y2="${y.toFixed(1)}"></line>`;}).join('');
+  const last=coords[coords.length-1],firstLabel=bankrollTimestampLabel(series[0].at,true),lastLabel=bankrollTimestampLabel(series[series.length-1].at,true);
+  return `<div class="bankroll-timeline-wrap"><div class="bankroll-timeline-scale"><span>Range ${money(actualMin)}–${money(actualMax)}</span></div><svg class="bankroll-timeline" viewBox="0 0 ${width} ${height}" role="img" aria-label="Balance trend ranged from ${esc(money(actualMin))} to ${esc(money(actualMax))}; ${esc(money(analytics.openingBalance))} opening, ${esc(money(analytics.closingBalance))} current" preserveAspectRatio="none"><title>Balance over recent transactions</title><desc>Recorded balance movement across ${analytics.transactionCount} saved transactions.</desc>${grid}<polygon class="timeline-area" points="${area}"></polygon><polyline class="timeline-line" points="${polyline}"></polyline><circle class="timeline-point" cx="${last.x.toFixed(1)}" cy="${last.y.toFixed(1)}" r="5"></circle></svg><div class="bankroll-timeline-range"><span>Opening · ${esc(firstLabel)}</span><span>Latest · ${esc(lastLabel)}</span></div></div>`;
+}
+function bankrollCategoryMarkup(category, scale) {
+  const incomePct=scale>0?Math.min(100,category.income/scale*100):0,expensePct=scale>0?Math.min(100,category.expenses/scale*100):0;
+  const flow=(label,value,pct,kind)=>`<div class="bankroll-flow-row"><span>${label}</span><div class="bankroll-flow-track" role="img" aria-label="${label} ${money(value)}"><span class="bankroll-flow-fill category-${kind}" style="width:${pct.toFixed(1)}%"></span></div><strong>${money(value)}</strong></div>`;
+  const netClass=category.net>0?'positive':category.net<0?'negative':'';
+  return `<article class="bankroll-category" style="--category-color:${category.color}"><div class="bankroll-category-head"><strong class="bankroll-category-title"><span class="bankroll-category-dot" aria-hidden="true"></span>${esc(category.label)}</strong><span class="bankroll-category-count">${category.transactionCount} tx</span></div>${flow('In',category.income,incomePct,'income')}${flow('Out',category.expenses,expensePct,'expense')}<div class="bankroll-category-net ${netClass}">Net ${bankrollMoneyChange(category.net)}</div></article>`;
+}
 function showBankroll() {
-  const tx = bankroll.transactions.slice(0, 15).map((item) => `<div class="result-row"><span class="result-label">${esc(item.label)}</span><span class="result-value" style="color:${item.amount >= 0 ? 'var(--ac2)' : 'var(--err)'}">${item.amount >= 0 ? '+' : ''}${intMoney(item.amount)}</span></div>`).join('') || '<div class="muted">No transactions yet.</div>';
-  showModal('Bankroll', `<div class="stats-grid"><div class="stat"><label>Balance</label><strong>${intMoney(bankroll.balance)}</strong></div><div class="stat"><label>Blackjack wins</label><strong>${progression.wins.blackjack}</strong></div><div class="stat"><label>Durak wins</label><strong>${progression.wins.durak}</strong></div><div class="stat"><label>Bankruptcy grants</label><strong>${bankroll.bankruptcyGrants}</strong></div></div><div class="section-heading"><div><h2>Recent transactions</h2></div></div>${tx}<br><button class="danger-btn full-btn" id="resetSaveBtn">Reset local save</button>`);
-  $('resetSaveBtn').addEventListener('click', () => { localStorage.removeItem(STORAGE_KEY); location.reload(); });
+  const analytics=buildBankrollAnalytics(bankroll.transactions,bankroll.balance),flowScale=Math.max(analytics.totalIncome,analytics.totalExpenses,1),categoryScale=Math.max(1,...analytics.categories.map(category=>Math.max(category.income,category.expenses)));
+  const totalInPct=Math.min(100,analytics.totalIncome/flowScale*100),totalOutPct=Math.min(100,analytics.totalExpenses/flowScale*100),reconcileText=analytics.reconciles?`Opening ${money(analytics.openingBalance)} + net ${bankrollMoneyChange(analytics.netFlow)} = current ${money(analytics.closingBalance)}.`:`Balance differs from recorded flow by ${bankrollMoneyChange(analytics.reconciliationDelta)}.`;
+  const transactions=analytics.recentTransactions.length?analytics.recentTransactions.map(item=>{
+    const amount=Number(item.amount)||0,category=BANKROLL_CATEGORIES.find(entry=>entry.id===bankrollCategoryId(item));
+    return `<div class="bankroll-tx"><div class="bankroll-tx-main"><div class="bankroll-tx-label">${esc(String(item.label||'Transaction'))}</div><div class="bankroll-tx-meta"><span>${esc(category?.label||'Other')}</span><span>${esc(bankrollTimestampLabel(item.at))}</span></div></div><div class="bankroll-tx-amount ${amount>=0?'income':'expense'}">${bankrollMoneyChange(amount)}<small class="bankroll-tx-balance">Balance ${money(item.after)}</small></div></div>`;
+  }).join(''):'<div class="bankroll-empty">No transactions yet. Your game activity will appear here.</div>';
+  const categoryCharts=analytics.categories.map(category=>bankrollCategoryMarkup(category,categoryScale)).join('');
+  const body=`<div class="bankroll-dashboard">
+    <div class="bankroll-lede"><span>Track the money moving through your tables.</span><span class="bankroll-window">${analytics.transactionCount} / ${analytics.historyLimit} recent entries</span></div>
+    <div class="bankroll-overview">
+      <article class="bankroll-stat"><label>Balance now</label><strong>${money(bankroll.balance)}</strong><small>Available to wager</small></article>
+      <article class="bankroll-stat"><label>Blackjack wins</label><strong>${progression.wins.blackjack}</strong><small>Saved progression</small></article>
+      <article class="bankroll-stat"><label>Durak wins</label><strong>${progression.wins.durak}</strong><small>Saved progression</small></article>
+      <article class="bankroll-stat"><label>Bankruptcy grants</label><strong>${bankroll.bankruptcyGrants}</strong><small>One-time rescue grants</small></article>
+    </div>
+    <section class="bankroll-card" aria-labelledby="bankrollFlowHeading"><div class="bankroll-card-head"><div><h3 id="bankrollFlowHeading">Income vs. expenses</h3><p>Gross cash movement in the saved history window.</p></div></div>
+      <div class="bankroll-cashflow">
+        <div class="bankroll-flow-metric"><div class="bankroll-flow-label"><span>Income</span><strong class="income-value">${money(analytics.totalIncome)}</strong></div><div class="bankroll-flow-track" role="img" aria-label="Income ${money(analytics.totalIncome)}"><span class="bankroll-flow-fill income" style="width:${totalInPct.toFixed(1)}%"></span></div></div>
+        <div class="bankroll-flow-metric"><div class="bankroll-flow-label"><span>Expenses</span><strong class="expense-value">${money(analytics.totalExpenses)}</strong></div><div class="bankroll-flow-track" role="img" aria-label="Expenses ${money(analytics.totalExpenses)}"><span class="bankroll-flow-fill expense" style="width:${totalOutPct.toFixed(1)}%"></span></div></div>
+      </div><div class="bankroll-netline"><span>Net recorded flow</span><strong class="${analytics.netFlow>=0?'positive':'negative'}">${bankrollMoneyChange(analytics.netFlow)}</strong></div>
+    </section>
+    <div class="bankroll-chart-grid">
+      <section class="bankroll-card" aria-labelledby="bankrollTrendHeading"><div class="bankroll-card-head"><div><h3 id="bankrollTrendHeading">Balance trend</h3><p>${money(analytics.openingBalance)} opening · ${money(analytics.closingBalance)} current</p></div></div>${bankrollTimelineMarkup(analytics)}</section>
+      <section class="bankroll-card" aria-labelledby="bankrollIntegrityHeading"><div class="bankroll-card-head"><div><h3 id="bankrollIntegrityHeading">Ledger check</h3><p>Opening balance plus recorded net flow.</p></div></div><div class="bankroll-reconcile ${analytics.reconciles?'':'warn'}">${esc(reconcileText)}</div><div class="bankroll-footnote" style="margin-top:10px">Income includes credits and grants. Refunds stay separate from game results. History is limited to the latest ${analytics.historyLimit} saved transactions.</div></section>
+    </div>
+    <section class="bankroll-card" aria-labelledby="bankrollCategoriesHeading"><div class="bankroll-card-head"><div><h3 id="bankrollCategoriesHeading">By category</h3><p>Each row compares money in and money out on the same scale.</p></div></div><div class="bankroll-category-list">${categoryCharts}</div></section>
+    <section class="bankroll-card" aria-labelledby="bankrollRecentHeading"><div class="bankroll-card-head"><div><h3 id="bankrollRecentHeading">Recent activity</h3><p>Latest 12 transactions, newest first.</p></div></div><div class="bankroll-ledger">${transactions}</div><div class="bankroll-footnote" style="margin-top:9px">Fictional currency stored only on this device.</div></section>
+    <button class="danger-btn full-btn" id="resetSaveBtn">Reset local save</button>
+  </div>`;
+  showModal('Bankroll',body);$('modalBackdrop').classList.add('bankroll-mode');$('resetSaveBtn').addEventListener('click',()=>{localStorage.removeItem(STORAGE_KEY);location.reload();});
 }
 
 function assert(condition, message) { if (!condition) throw new Error(message); }
@@ -1882,7 +2047,85 @@ function runSelfTests() {
     t('progression unlocks by game wins', () => { const p = new Progression(); assert(p.isUnlocked('blackjack',0), 'first table'); assert(!p.isUnlocked('blackjack',1), 'second locked'); p.recordWin('blackjack'); p.recordWin('blackjack'); assert(p.isUnlocked('blackjack',1), 'second unlock'); assert(!p.isUnlocked('durak',1), 'tracks separate'); });
     t('payout math credits exact amounts', () => { const b = new Bankroll({balance:0}); b.ensureFunds(10); b.debit(10); b.credit(25, 'Blackjack'); assertEqual(b.balance, 115, 'blackjack return'); b.debit(10); b.credit(20, 'Durak'); assertEqual(b.balance, 125, 'durak return'); });
   });
+  group('Bankroll analytics', (t) => {
+    t('categorizes every money source and action', () => {
+      assertEqual(bankrollCategoryId({type:'debit',label:'Rookie Room stake'}),'blackjack','Blackjack stake category');
+      assertEqual(bankrollCategoryId({type:'credit',label:'Blackjack payout'}),'blackjack','Blackjack return category');
+      assertEqual(bankrollCategoryId({type:'debit',label:'Village Yard stake'}),'durak','Durak stake category');
+      assertEqual(bankrollCategoryId({type:'credit',label:'Durak win payout'}),'durak','Durak return category');
+      assertEqual(bankrollCategoryId({type:'debit',label:'Insurance'}),'insurance','insurance category');
+      assertEqual(bankrollCategoryId({type:'debit',label:'Double down'}),'double','double category');
+      assertEqual(bankrollCategoryId({type:'debit',label:'Split hand'}),'split','split category');
+      assertEqual(bankrollCategoryId({type:'grant',label:'Bankruptcy grant'}),'grant','grant category');
+      assertEqual(bankrollCategoryId({type:'credit',label:'Unfinished round returned · Blackjack'}),'refunds','refund category');
+      assertEqual(bankrollCategoryId({type:'credit',label:'Mystery credit'}),'other','unknown category');
+    });
+    t('compares inflow and outflow and reconciles every category', () => {
+      const transactions=[
+        {type:'grant',amount:100,label:'Bankruptcy grant',before:0,after:100,at:1},
+        {type:'debit',amount:-10,label:'Rookie Room stake',before:100,after:90,at:2},
+        {type:'credit',amount:20,label:'Blackjack payout',before:90,after:110,at:3},
+        {type:'debit',amount:-5,label:'Insurance',before:110,after:105,at:4},
+        {type:'debit',amount:-10,label:'Village Yard stake',before:105,after:95,at:5},
+        {type:'credit',amount:40,label:'Durak win payout',before:95,after:135,at:6},
+        {type:'credit',amount:10,label:'Unfinished round returned · Durak',before:135,after:145,at:7}
+      ];
+      const report=buildBankrollAnalytics(transactions,145),category=id=>report.categories.find(entry=>entry.id===id);
+      assertEqual(report.totalIncome,170,'gross income'); assertEqual(report.totalExpenses,25,'gross expenses'); assertEqual(report.netFlow,145,'net cash flow');
+      assertEqual(report.openingBalance,0,'opening balance'); assertEqual(report.closingBalance,145,'closing balance'); assert(report.reconciles,'ledger reconciles to balance');
+      assertEqual(category('blackjack').income,20,'Blackjack income'); assertEqual(category('blackjack').expenses,10,'Blackjack stake');
+      assertEqual(category('durak').income,40,'Durak income'); assertEqual(category('durak').expenses,10,'Durak stake');
+      assertEqual(category('insurance').expenses,5,'insurance expense'); assertEqual(category('grant').income,100,'grant income');
+      assertEqual(category('refunds').income,10,'refund income'); assertEqual(report.timeline.length,8,'opening point plus every transaction');
+      assertEqual(report.timeline[0].balance,0,'timeline begins at opening balance'); assertEqual(report.timeline[7].balance,145,'timeline ends at closing balance');
+      const categoryMarkup=report.categories.map(category=>bankrollCategoryMarkup(category,100)).join(''),chartMarkup=bankrollTimelineMarkup(report);
+      assertEqual((categoryMarkup.match(/class="bankroll-category"/g)||[]).length,BANKROLL_CATEGORIES.length,'a paired chart is rendered for every category');
+      assert(categoryMarkup.includes('category-income')&&categoryMarkup.includes('category-expense'),'each category compares inflow and outflow');
+      assert(chartMarkup.includes('role="img"')&&chartMarkup.includes('Range ')&&chartMarkup.includes('Opening ·')&&chartMarkup.includes('Latest ·'),'timeline chart has an explicit range and distinct endpoints');
+      assert(!chartMarkup.includes('<text'),'timeline labels stay outside the scaled SVG');
+    });
+    t('keeps only the latest 80 entries and preserves their chronological balances', () => {
+      const transactions=Array.from({length:100},(_,index)=>{const number=100-index;return {type:'credit',amount:1,label:`Entry ${number}`,before:number-1,after:number,at:number};});
+      const report=buildBankrollAnalytics(transactions,100);
+      assertEqual(report.transactionCount,80,'saved history cap'); assertEqual(report.historyLimit,80,'history limit');
+      assertEqual(report.totalIncome,80,'latest window income'); assertEqual(report.openingBalance,20,'latest window opening balance');
+      assertEqual(report.closingBalance,100,'latest window closing balance'); assert(report.reconciles,'latest window reconciles');
+      assertEqual(report.timeline.length,81,'opening plus 80 entries'); assertEqual(report.timeline[1].label,'Entry 21','oldest retained entry');
+      assertEqual(report.timeline[80].label,'Entry 100','newest retained entry'); assertEqual(report.recentTransactions[0].label,'Entry 100','recent activity is newest first');
+    });
+    t('sorts equal and missing timestamps deterministically without epoch labels', () => {
+      const transactions=[
+        {type:'credit',amount:5,label:'Newer same-ms',before:15,after:20,at:5},
+        {type:'credit',amount:10,label:'Older same-ms',before:5,after:15,at:5},
+        {type:'credit',amount:5,label:'Legacy untimed',before:0,after:5}
+      ];
+      const report=buildBankrollAnalytics(transactions,20);
+      assertEqual(report.timeline.map(point=>point.label).join('|'),'Opening|Legacy untimed|Older same-ms|Newer same-ms','stable chronological order');
+      assert(report.reconciles,'mixed timestamp ledger reconciles');
+      assertEqual(bankrollTimestampLabel(null,true),'Start','missing trend timestamp label');
+      assertEqual(bankrollTimestampLabel(null,false),'Earlier','missing transaction timestamp label');
+    });
+    t('empty ledger stays finite and uses current balance as its baseline', () => {
+      const report=buildBankrollAnalytics([],250);
+      assertEqual(report.transactionCount,0,'empty transaction count'); assertEqual(report.totalIncome,0,'empty income'); assertEqual(report.totalExpenses,0,'empty expenses');
+      assertEqual(report.openingBalance,250,'empty opening balance'); assertEqual(report.closingBalance,250,'empty closing balance');
+      assert(report.reconciles,'empty ledger reconciliation'); assert(report.timeline.every(point=>Number.isFinite(point.balance)),'empty timeline is finite');
+      assert(report.categories.every(category=>Number.isFinite(category.income)&&Number.isFinite(category.expenses)),'empty categories are finite');
+      assert(bankrollTimelineMarkup(report).includes('No recorded balance movement yet'),'empty state explains the missing trend');
+    });
+  });
   group('Blackjack engine', (t) => {
+    t('a dealer natural settles correctly on the round after a settled hand', () => {
+      const game=new BlackjackGame({rng:RandomSource.seeded(26501)}),card=(rank,suit)=>testCard(game.shoe,rank,suit);
+      game.setTopCards([card('8','spades'),card('6','hearts'),card('9','clubs'),card('8','diamonds')]);
+      game.startRound(10); assertEqual(game.phase,'player','first hand starts'); game.resolve(false); assertEqual(game.phase,'settled','first hand settles');
+      game.setTopCards([card('4','spades'),card('10','clubs'),card('4','hearts'),card('A','clubs')]);
+      const next=game.startRound(10);
+      assertEqual(game.roundNumber,2,'second round number'); assertEqual(next.phase,'settled','dealer natural settles immediately');
+      assert(game.settlement,'second-round settlement exists'); assert(game.lastRound,'second-round snapshot exists');
+      assert(game.settlement.dealerNatural,'settlement records the dealer natural'); assertEqual(game.settlement.results[0].result,'lose','player result is settled'); assert(game.audit().ok,'second-round physical-card audit');
+    });
+
     t('ace totals switch from soft to hard', () => { const cards = [new Card({serial:'a',rank:'A',suit:'spades'}),new Card({serial:'b',rank:'9',suit:'hearts'}),new Card({serial:'c',rank:'5',suit:'clubs'}),new Card({serial:'d',rank:'10',suit:'diamonds'})]; assertEqual(totalForCards(cards.slice(0,2)).total,20,'soft total'); assert(totalForCards(cards).bust,'hard bust'); });
     t('natural blackjack pays 3:2 from physical deal', () => { const game = new BlackjackGame({rng:RandomSource.seeded(7)}); const order = [testCard(game.shoe,'A','spades'),testCard(game.shoe,'9','hearts'),testCard(game.shoe,'K','clubs'),testCard(game.shoe,'7','diamonds')]; game.setTopCards(order); game.startRound(10); assertEqual(game.phase,'settled','natural phase'); assertEqual(game.settlement.results[0].result,'blackjack','natural result'); assertEqual(game.settlement.totalPayout,25,'natural payout'); assert(game.audit().ok,'natural audit'); });
     t('dealer stands on soft 17', () => { const game = new BlackjackGame({rng:RandomSource.seeded(8)}); const order = [testCard(game.shoe,'10','spades'),testCard(game.shoe,'A','hearts'),testCard(game.shoe,'6','clubs'),testCard(game.shoe,'6','diamonds')]; game.setTopCards(order); game.startRound(10); game.declineInsurance(); game.stand(); assertEqual(game.lastRound.dealer.length,2,'soft 17 stays'); assertEqual(game.lastRound.dealerInfo.total,17,'dealer total'); });

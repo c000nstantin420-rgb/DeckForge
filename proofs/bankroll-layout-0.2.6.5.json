@@ -1,0 +1,678 @@
+{
+  "version": "0.2.6.5",
+  "sampleLedger": {
+    "transactions": 14,
+    "income": 227,
+    "expenses": 73,
+    "net": 154,
+    "opening": 0,
+    "closing": 154,
+    "blackjackWins": 2,
+    "durakWins": 1,
+    "bankruptcyGrants": 1,
+    "categories": 8
+  },
+  "states": [
+    {
+      "label": "mobile overview",
+      "viewport": [
+        390,
+        844
+      ],
+      "version": "v0.2.6.5",
+      "modal": [
+        376,
+        376,
+        791,
+        2276,
+        0
+      ],
+      "document": [
+        390,
+        390
+      ],
+      "modalRect": [
+        6,
+        50.640625,
+        384,
+        844
+      ],
+      "overview": [
+        "BALANCE NOW\n$154\nAvailable to wager",
+        "BLACKJACK WINS\n2\nSaved progression",
+        "DURAK WINS\n1\nSaved progression",
+        "BANKRUPTCY GRANTS\n1\nOne-time rescue grants"
+      ],
+      "cashflow": "Income vs. expenses\n\nGross cash movement in the saved history window.\n\nIncome\n$227\nExpenses\n$73\nNet recorded flow\n+$154",
+      "ledgerCheck": "Opening $0 + net +$154 = current $154.",
+      "ledgerCheckWarn": false,
+      "trendSvg": true,
+      "trendScale": "Range $0–$157",
+      "trendRange": "Opening · Nov 10\nLatest · Nov 23",
+      "trendRect": [
+        326,
+        140
+      ],
+      "chartCards": [
+        [
+          348,
+          227.5
+        ],
+        [
+          348,
+          113.6875
+        ]
+      ],
+      "categories": 8,
+      "categoryNames": [
+        "Blackjack",
+        "Durak",
+        "Insurance",
+        "Double down",
+        "Split hands",
+        "Bankruptcy grants",
+        "Refunds & reversals",
+        "Other"
+      ],
+      "flowBars": 16,
+      "headingRect": [
+        32,
+        868.109375,
+        356.421875,
+        883.109375
+      ],
+      "ledgerRows": 12,
+      "resetVisible": false,
+      "errors": []
+    },
+    {
+      "label": "mobile categories",
+      "viewport": [
+        390,
+        844
+      ],
+      "version": "v0.2.6.5",
+      "modal": [
+        376,
+        376,
+        791,
+        2276,
+        739
+      ],
+      "document": [
+        390,
+        390
+      ],
+      "modalRect": [
+        6,
+        50.640625,
+        384,
+        844
+      ],
+      "overview": [
+        "BALANCE NOW\n$154\nAvailable to wager",
+        "BLACKJACK WINS\n2\nSaved progression",
+        "DURAK WINS\n1\nSaved progression",
+        "BANKRUPTCY GRANTS\n1\nOne-time rescue grants"
+      ],
+      "cashflow": "Income vs. expenses\n\nGross cash movement in the saved history window.\n\nIncome\n$227\nExpenses\n$73\nNet recorded flow\n+$154",
+      "ledgerCheck": "Opening $0 + net +$154 = current $154.",
+      "ledgerCheckWarn": false,
+      "trendSvg": true,
+      "trendScale": "Range $0–$157",
+      "trendRange": "Opening · Nov 10\nLatest · Nov 23",
+      "trendRect": [
+        326,
+        140
+      ],
+      "chartCards": [
+        [
+          348,
+          227.5
+        ],
+        [
+          348,
+          113.6875
+        ]
+      ],
+      "categories": 8,
+      "categoryNames": [
+        "Blackjack",
+        "Durak",
+        "Insurance",
+        "Double down",
+        "Split hands",
+        "Bankruptcy grants",
+        "Refunds & reversals",
+        "Other"
+      ],
+      "flowBars": 16,
+      "headingRect": [
+        32,
+        129.109375,
+        356.421875,
+        144.109375
+      ],
+      "ledgerRows": 12,
+      "resetVisible": false,
+      "errors": []
+    },
+    {
+      "label": "mobile bottom",
+      "viewport": [
+        390,
+        844
+      ],
+      "version": "v0.2.6.5",
+      "modal": [
+        376,
+        376,
+        791,
+        2276,
+        1485
+      ],
+      "document": [
+        390,
+        390
+      ],
+      "modalRect": [
+        6,
+        50.640625,
+        384,
+        844
+      ],
+      "overview": [
+        "BALANCE NOW\n$154\nAvailable to wager",
+        "BLACKJACK WINS\n2\nSaved progression",
+        "DURAK WINS\n1\nSaved progression",
+        "BANKRUPTCY GRANTS\n1\nOne-time rescue grants"
+      ],
+      "cashflow": "Income vs. expenses\n\nGross cash movement in the saved history window.\n\nIncome\n$227\nExpenses\n$73\nNet recorded flow\n+$154",
+      "ledgerCheck": "Opening $0 + net +$154 = current $154.",
+      "ledgerCheckWarn": false,
+      "trendSvg": true,
+      "trendScale": "Range $0–$157",
+      "trendRange": "Opening · Nov 10\nLatest · Nov 23",
+      "trendRect": [
+        326,
+        140
+      ],
+      "chartCards": [
+        [
+          348,
+          227.5
+        ],
+        [
+          348,
+          113.6875
+        ]
+      ],
+      "categories": 8,
+      "categoryNames": [
+        "Blackjack",
+        "Durak",
+        "Insurance",
+        "Double down",
+        "Split hands",
+        "Bankruptcy grants",
+        "Refunds & reversals",
+        "Other"
+      ],
+      "flowBars": 16,
+      "headingRect": [
+        32,
+        -616.890625,
+        356.421875,
+        -601.890625
+      ],
+      "ledgerRows": 12,
+      "resetVisible": true,
+      "errors": []
+    },
+    {
+      "label": "ipad-portrait overview",
+      "viewport": [
+        834,
+        1194
+      ],
+      "version": "v0.2.6.5",
+      "modal": [
+        800,
+        800,
+        1098,
+        1806,
+        0
+      ],
+      "document": [
+        834,
+        834
+      ],
+      "modalRect": [
+        16,
+        47,
+        818,
+        1147
+      ],
+      "overview": [
+        "BALANCE NOW\n$154\nAvailable to wager",
+        "BLACKJACK WINS\n2\nSaved progression",
+        "DURAK WINS\n1\nSaved progression",
+        "BANKRUPTCY GRANTS\n1\nOne-time rescue grants"
+      ],
+      "cashflow": "Income vs. expenses\n\nGross cash movement in the saved history window.\n\nIncome\n$227\nExpenses\n$73\nNet recorded flow\n+$154",
+      "ledgerCheck": "Opening $0 + net +$154 = current $154.",
+      "ledgerCheckWarn": false,
+      "trendSvg": true,
+      "trendScale": "Range $0–$157",
+      "trendRange": "Opening · Nov 10\nLatest · Nov 23",
+      "trendRect": [
+        402.09375,
+        172.3125
+      ],
+      "chartCards": [
+        [
+          430.09375,
+          267.8125
+        ],
+        [
+          317.90625,
+          134.28125
+        ]
+      ],
+      "categories": 8,
+      "categoryNames": [
+        "Blackjack",
+        "Durak",
+        "Insurance",
+        "Double down",
+        "Split hands",
+        "Bankruptcy grants",
+        "Refunds & reversals",
+        "Other"
+      ],
+      "flowBars": 16,
+      "headingRect": [
+        51,
+        710.90625,
+        375.421875,
+        725.90625
+      ],
+      "ledgerRows": 12,
+      "resetVisible": false,
+      "errors": []
+    },
+    {
+      "label": "ipad-portrait categories",
+      "viewport": [
+        834,
+        1194
+      ],
+      "version": "v0.2.6.5",
+      "modal": [
+        800,
+        800,
+        1098,
+        1806,
+        586
+      ],
+      "document": [
+        834,
+        834
+      ],
+      "modalRect": [
+        16,
+        47,
+        818,
+        1147
+      ],
+      "overview": [
+        "BALANCE NOW\n$154\nAvailable to wager",
+        "BLACKJACK WINS\n2\nSaved progression",
+        "DURAK WINS\n1\nSaved progression",
+        "BANKRUPTCY GRANTS\n1\nOne-time rescue grants"
+      ],
+      "cashflow": "Income vs. expenses\n\nGross cash movement in the saved history window.\n\nIncome\n$227\nExpenses\n$73\nNet recorded flow\n+$154",
+      "ledgerCheck": "Opening $0 + net +$154 = current $154.",
+      "ledgerCheckWarn": false,
+      "trendSvg": true,
+      "trendScale": "Range $0–$157",
+      "trendRange": "Opening · Nov 10\nLatest · Nov 23",
+      "trendRect": [
+        402.09375,
+        172.3125
+      ],
+      "chartCards": [
+        [
+          430.09375,
+          267.8125
+        ],
+        [
+          317.90625,
+          134.28125
+        ]
+      ],
+      "categories": 8,
+      "categoryNames": [
+        "Blackjack",
+        "Durak",
+        "Insurance",
+        "Double down",
+        "Split hands",
+        "Bankruptcy grants",
+        "Refunds & reversals",
+        "Other"
+      ],
+      "flowBars": 16,
+      "headingRect": [
+        51,
+        124.90625,
+        375.421875,
+        139.90625
+      ],
+      "ledgerRows": 12,
+      "resetVisible": false,
+      "errors": []
+    },
+    {
+      "label": "ipad-portrait bottom",
+      "viewport": [
+        834,
+        1194
+      ],
+      "version": "v0.2.6.5",
+      "modal": [
+        800,
+        800,
+        1098,
+        1806,
+        708
+      ],
+      "document": [
+        834,
+        834
+      ],
+      "modalRect": [
+        16,
+        47,
+        818,
+        1147
+      ],
+      "overview": [
+        "BALANCE NOW\n$154\nAvailable to wager",
+        "BLACKJACK WINS\n2\nSaved progression",
+        "DURAK WINS\n1\nSaved progression",
+        "BANKRUPTCY GRANTS\n1\nOne-time rescue grants"
+      ],
+      "cashflow": "Income vs. expenses\n\nGross cash movement in the saved history window.\n\nIncome\n$227\nExpenses\n$73\nNet recorded flow\n+$154",
+      "ledgerCheck": "Opening $0 + net +$154 = current $154.",
+      "ledgerCheckWarn": false,
+      "trendSvg": true,
+      "trendScale": "Range $0–$157",
+      "trendRange": "Opening · Nov 10\nLatest · Nov 23",
+      "trendRect": [
+        402.09375,
+        172.3125
+      ],
+      "chartCards": [
+        [
+          430.09375,
+          267.8125
+        ],
+        [
+          317.90625,
+          134.28125
+        ]
+      ],
+      "categories": 8,
+      "categoryNames": [
+        "Blackjack",
+        "Durak",
+        "Insurance",
+        "Double down",
+        "Split hands",
+        "Bankruptcy grants",
+        "Refunds & reversals",
+        "Other"
+      ],
+      "flowBars": 16,
+      "headingRect": [
+        51,
+        2.90625,
+        375.421875,
+        17.90625
+      ],
+      "ledgerRows": 12,
+      "resetVisible": true,
+      "errors": []
+    },
+    {
+      "label": "ipad-landscape overview",
+      "viewport": [
+        1194,
+        834
+      ],
+      "version": "v0.2.6.5",
+      "modal": [
+        918,
+        918,
+        799,
+        1842,
+        0
+      ],
+      "document": [
+        1194,
+        1194
+      ],
+      "modalRect": [
+        137,
+        16.6875,
+        1057,
+        817.3125
+      ],
+      "overview": [
+        "BALANCE NOW\n$154\nAvailable to wager",
+        "BLACKJACK WINS\n2\nSaved progression",
+        "DURAK WINS\n1\nSaved progression",
+        "BANKRUPTCY GRANTS\n1\nOne-time rescue grants"
+      ],
+      "cashflow": "Income vs. expenses\n\nGross cash movement in the saved history window.\n\nIncome\n$227\nExpenses\n$73\nNet recorded flow\n+$154",
+      "ledgerCheck": "Opening $0 + net +$154 = current $154.",
+      "ledgerCheckWarn": false,
+      "trendSvg": true,
+      "trendScale": "Range $0–$157",
+      "trendRange": "Opening · Nov 10\nLatest · Nov 23",
+      "trendRect": [
+        469.9375,
+        201.390625
+      ],
+      "chartCards": [
+        [
+          497.9375,
+          296.890625
+        ],
+        [
+          368.0625,
+          121.6875
+        ]
+      ],
+      "categories": 8,
+      "categoryNames": [
+        "Blackjack",
+        "Durak",
+        "Insurance",
+        "Double down",
+        "Split hands",
+        "Bankruptcy grants",
+        "Refunds & reversals",
+        "Other"
+      ],
+      "flowBars": 16,
+      "headingRect": [
+        172,
+        716.671875,
+        496.421875,
+        731.671875
+      ],
+      "ledgerRows": 12,
+      "resetVisible": false,
+      "errors": []
+    },
+    {
+      "label": "ipad-landscape categories",
+      "viewport": [
+        1194,
+        834
+      ],
+      "version": "v0.2.6.5",
+      "modal": [
+        918,
+        918,
+        799,
+        1842,
+        622
+      ],
+      "document": [
+        1194,
+        1194
+      ],
+      "modalRect": [
+        137,
+        16.6875,
+        1057,
+        817.3125
+      ],
+      "overview": [
+        "BALANCE NOW\n$154\nAvailable to wager",
+        "BLACKJACK WINS\n2\nSaved progression",
+        "DURAK WINS\n1\nSaved progression",
+        "BANKRUPTCY GRANTS\n1\nOne-time rescue grants"
+      ],
+      "cashflow": "Income vs. expenses\n\nGross cash movement in the saved history window.\n\nIncome\n$227\nExpenses\n$73\nNet recorded flow\n+$154",
+      "ledgerCheck": "Opening $0 + net +$154 = current $154.",
+      "ledgerCheckWarn": false,
+      "trendSvg": true,
+      "trendScale": "Range $0–$157",
+      "trendRange": "Opening · Nov 10\nLatest · Nov 23",
+      "trendRect": [
+        469.9375,
+        201.390625
+      ],
+      "chartCards": [
+        [
+          497.9375,
+          296.890625
+        ],
+        [
+          368.0625,
+          121.6875
+        ]
+      ],
+      "categories": 8,
+      "categoryNames": [
+        "Blackjack",
+        "Durak",
+        "Insurance",
+        "Double down",
+        "Split hands",
+        "Bankruptcy grants",
+        "Refunds & reversals",
+        "Other"
+      ],
+      "flowBars": 16,
+      "headingRect": [
+        172,
+        94.671875,
+        496.421875,
+        109.671875
+      ],
+      "ledgerRows": 12,
+      "resetVisible": false,
+      "errors": []
+    },
+    {
+      "label": "ipad-landscape bottom",
+      "viewport": [
+        1194,
+        834
+      ],
+      "version": "v0.2.6.5",
+      "modal": [
+        918,
+        918,
+        799,
+        1842,
+        1043
+      ],
+      "document": [
+        1194,
+        1194
+      ],
+      "modalRect": [
+        137,
+        16.6875,
+        1057,
+        817.3125
+      ],
+      "overview": [
+        "BALANCE NOW\n$154\nAvailable to wager",
+        "BLACKJACK WINS\n2\nSaved progression",
+        "DURAK WINS\n1\nSaved progression",
+        "BANKRUPTCY GRANTS\n1\nOne-time rescue grants"
+      ],
+      "cashflow": "Income vs. expenses\n\nGross cash movement in the saved history window.\n\nIncome\n$227\nExpenses\n$73\nNet recorded flow\n+$154",
+      "ledgerCheck": "Opening $0 + net +$154 = current $154.",
+      "ledgerCheckWarn": false,
+      "trendSvg": true,
+      "trendScale": "Range $0–$157",
+      "trendRange": "Opening · Nov 10\nLatest · Nov 23",
+      "trendRect": [
+        469.9375,
+        201.390625
+      ],
+      "chartCards": [
+        [
+          497.9375,
+          296.890625
+        ],
+        [
+          368.0625,
+          121.6875
+        ]
+      ],
+      "categories": 8,
+      "categoryNames": [
+        "Blackjack",
+        "Durak",
+        "Insurance",
+        "Double down",
+        "Split hands",
+        "Bankruptcy grants",
+        "Refunds & reversals",
+        "Other"
+      ],
+      "flowBars": 16,
+      "headingRect": [
+        172,
+        -326.328125,
+        496.421875,
+        -311.328125
+      ],
+      "ledgerRows": 12,
+      "resetVisible": true,
+      "errors": []
+    }
+  ],
+  "screenshots": {
+    "mobile-overview": "/home/constantin/Documents/DeckForge/proofs/bankroll-0.2.6.5-mobile-overview.png",
+    "mobile-categories": "/home/constantin/Documents/DeckForge/proofs/bankroll-0.2.6.5-mobile-categories.png",
+    "mobile-bottom": "/home/constantin/Documents/DeckForge/proofs/bankroll-0.2.6.5-mobile-bottom.png",
+    "ipad-portrait-overview": "/home/constantin/Documents/DeckForge/proofs/bankroll-0.2.6.5-ipad-portrait-overview.png",
+    "ipad-portrait-categories": "/home/constantin/Documents/DeckForge/proofs/bankroll-0.2.6.5-ipad-portrait-categories.png",
+    "ipad-portrait-bottom": "/home/constantin/Documents/DeckForge/proofs/bankroll-0.2.6.5-ipad-portrait-bottom.png",
+    "ipad-landscape-overview": "/home/constantin/Documents/DeckForge/proofs/bankroll-0.2.6.5-ipad-landscape-overview.png",
+    "ipad-landscape-categories": "/home/constantin/Documents/DeckForge/proofs/bankroll-0.2.6.5-ipad-landscape-categories.png",
+    "ipad-landscape-bottom": "/home/constantin/Documents/DeckForge/proofs/bankroll-0.2.6.5-ipad-landscape-bottom.png"
+  },
+  "browserErrors": [],
+  "passed": true
+}
