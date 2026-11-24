@@ -299,3 +299,12 @@ Record actual counts and measurements only: engine assertion total, browser erro
 - **Change:** Keep per-hand banners for split hands; use only the overall settlement banner for a single hand.
 - **Before/after proof:** At `390×844`, a real deal/stand/settle flow changed `.outcome-banner` count from `2` to `1`; action buttons remained visible, document size stayed `390×844`, browser errors `0`, diagnostics `39/39`, `node --check` PASS.
 - **Release:** After the fix commit, the user approved release `0.2.3`; `VERSION`, `RELEASE_NOTES_0.2.3.md`, tag `v0.2.3`, and `releases/DeckForge-0.2.3.zip` are the release artifacts.
+
+### Blackjack split/double repair — 0.2.4
+
+- **Baseline defect:** In v0.2.3, seed `52` left a doubled split hand at `stood=false`, `canAct=true`, `activeIndex=0`; Hit/Stand remained available and Hand 2 never became active.
+- **Engine fix:** Double now draws exactly one physical card, marks that hand closed, and advances to the next playable split hand or settles the round. Added tests for below-21 double, illegal post-double actions, split hand advancement, split Aces, split 21 payout, and the one-split rule.
+- **UI fix:** Split hands carry explicit `YOUR TURN`, `UP NEXT`, `DOUBLED`, `STOOD`, `WON`, `LOST`, or `PUSH` badges; the active hand is highlighted and the action prompt names its hand. Mobile stacks hands with compact per-hand net badges; tablet uses two columns. Settlement keeps one aggregate banner.
+- **Final verification:** 44/44 diagnostics; `node --check` PASS; static audit `171507` bytes / `1589` lines, zero external assets, duplicate IDs, missing DOM references, inline handlers, and browser errors. Browser QA passed solo double and split→double→Hand 2→settlement at `390×844`, 4-seat split at `390×844`, and tablet split at `1024×768`; no clipping or document overflow.
+- **Evidence:** `proofs/blackjack-split-double-qa.json` plus mobile, multi-seat, and tablet screenshots.
+- **Release:** `VERSION` / `APP_VERSION` `0.2.4`; notes `RELEASE_NOTES_0.2.4.md`; archive `releases/DeckForge-0.2.4.zip`; tag `v0.2.4`.

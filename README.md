@@ -17,10 +17,11 @@ Open `deckforge.html` directly in a browser. No server, install, build, font, im
 
 ## Verification
 
-- Current engine diagnostics: **39 passed / 0 failed**.
+- Current engine diagnostics: **44 passed / 0 failed**.
 - Static audit: one inline script, no external assets, no duplicate IDs, no missing DOM references, no inline event attributes, and `node --check` passes.
-- Browser QA covers configurable 1–4-seat Blackjack, configurable 2–4-seat Durak, Blackjack payout/soft-17/insurance/surrender rules, Durak 2-seat push, 4-seat-only all-player throw-in, throw-in off, help buttons for every table setting, English-only UI, AI progression, PointerEvent drag attack/defense, persistence, the bankruptcy grant, and 390×844 / 1024×768 no-scroll gameplay geometry.
-- Current variant measurements and screenshots are in `proofs/multiplayer-variants-qa.json`, `proofs/multiplayer-variants-static-audit.txt`, and `proofs/deckforge-*.png`; the `0.2.3` outcome-banner regression proof is in `proofs/banner-fix-qa.json`. Release `0.2.3` fixes the duplicate single-hand Blackjack result banner while preserving per-hand split results, and carries forward the `0.2.2` mobile polish, table variants, and side-AI throw-in support. GitHub Pages deploys on main pushes and published releases.
+- Browser QA covers configurable 1–4-seat Blackjack, configurable 2–4-seat Durak, Blackjack payout/soft-17/insurance/surrender/split/double rules, Durak variants and drag attack/defense, persistence, bankruptcy, and no-scroll gameplay at 390×844 / 1024×768.
+- Blackjack split/double regression proof is in `proofs/blackjack-split-double-qa.json`; screenshots show mobile/tablet active split hands, single-hand double settlement, and 4-seat split settlement. Double draws one card, closes that hand, and advances to the next split hand; split statuses and payouts stay distinct.
+- Table-variant measurements remain in `proofs/multiplayer-variants-qa.json` and `proofs/multiplayer-variants-static-audit.txt`. Release `0.2.4` includes the split/double fixes and carries forward the single-hand settlement-banner fix from `0.2.3`, plus the `0.2.2` mobile polish and table variants. GitHub Pages deploys on main pushes and published releases.
 - `plan.md` contains the implementation plan and measured acceptance evidence.
 
 Currency is fictional and local-only. Physical iPhone/iPad Safari and real audio hardware still need a device pass; Chromium mobile emulation and touch-pointer dispatch are covered.

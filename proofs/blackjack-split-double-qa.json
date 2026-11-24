@@ -1,0 +1,114 @@
+{
+  "version": "0.2.4",
+  "kind": "Blackjack split/double regression and responsive browser QA",
+  "timestamp": "2026-11-24T07:44:14Z",
+  "source": {
+    "file": "deckforge.html",
+    "bytes": 171507,
+    "lines": 1589,
+    "inlineScriptBlocks": 1,
+    "externalAssets": 0
+  },
+  "static": {
+    "nodeCheck": "PASS",
+    "duplicateIds": [],
+    "missingDomReferences": [],
+    "inlineEventAttributes": 0
+  },
+  "tdd": {
+    "v0.2.3Seed52BeforeFix": {
+      "afterDouble": {
+        "phase": "player",
+        "activeIndex": 0,
+        "firstHand": {"total": 14, "cards": 3, "wager": 20, "doubled": true, "stood": false, "canAct": true},
+        "hitStillLegal": true
+      }
+    },
+    "preFixSuite": {"passed": 40, "failed": 2, "total": 42},
+    "finalSuite": {"passed": 44, "failed": 0, "total": 44},
+    "groups": {
+      "Physical deck and shoe": "5/5",
+      "Bankroll and progression": "4/4",
+      "Blackjack engine": "12/12",
+      "Durak engine": "7/7",
+      "Persistence and UI helpers": "2/2",
+      "Table configuration and variants": "10/10",
+      "Table feel and touch helpers": "4/4"
+    }
+  },
+  "rules": {
+    "split": "Exact-rank pair; one split per round",
+    "splitAces": "One card each, then stand",
+    "split21": "Ordinary 21, not a natural",
+    "double": "Double wager, draw exactly one card, close that hand"
+  },
+  "browser": {
+    "soloDouble390": {
+      "fixture": "5♠ + 6♣; double draws 2♣",
+      "inputTotal": 11,
+      "finalTotal": 13,
+      "phase": "settled",
+      "playerCards": 3,
+      "wager": 20,
+      "doubled": true,
+      "stood": true,
+      "outcomeBanners": 1,
+      "visibleActions": ["Deal next hand", "Choose another table"],
+      "document": {"viewport": [390, 844], "scroll": [390, 844]},
+      "errors": []
+    },
+    "splitDouble390": {
+      "fixtureSeed": 92,
+      "afterDouble": {
+        "phase": "player",
+        "activeIndex": 1,
+        "hand1": {"total": 12, "wager": 20, "cards": 3, "doubled": true, "stood": true, "canAct": false, "hitLegal": false},
+        "hand2": {"total": 11, "wager": 10, "canAct": true, "status": "YOUR TURN"},
+        "actionNote": "Hand 2 · choose a move"
+      },
+      "afterSettlement": {
+        "phase": "settled",
+        "outcomeBanners": 1,
+        "handStatuses": ["WON · +$20", "WON · +$10"],
+        "tableZone": {"clientHeight": 468, "scrollHeight": 468},
+        "visibleActions": ["Deal next hand", "Choose another table"]
+      },
+      "document": {"viewport": [390, 844], "scroll": [390, 844]},
+      "errors": []
+    },
+    "splitDouble1024": {
+      "fixtureSeed": 92,
+      "viewport": [1024, 768],
+      "activeHands": "two columns",
+      "activeHandStates": ["DOUBLED", "YOUR TURN"],
+      "afterSettlementOutcomeBanners": 1,
+      "settledTableZone": {"clientHeight": 355, "scrollHeight": 355},
+      "visibleActions": ["Deal next hand", "Choose another table"],
+      "documentScroll": [1024, 768],
+      "errors": []
+    },
+    "fourSeatSplit390": {
+      "fixtureSeed": 930,
+      "aiSeats": 3,
+      "aiStepsBeforeHuman": 3,
+      "activeHandStates": ["DOUBLED", "YOUR TURN"],
+      "afterSettlementHandStatuses": ["LOST · −$20", "LOST · −$10"],
+      "outcomeBanners": 1,
+      "tableZone": {"clientHeight": 482, "scrollHeight": 482},
+      "visibleActions": ["Deal next hand", "Choose another table"],
+      "document": {"viewport": [390, 844], "scroll": [390, 844]},
+      "errors": []
+    }
+  },
+  "visualEvidence": [
+    "proofs/blackjack-double-settlement-mobile.png",
+    "proofs/blackjack-split-double-mobile.png",
+    "proofs/blackjack-split-settlement-mobile.png",
+    "proofs/blackjack-split-tablet.png",
+    "proofs/blackjack-split-settlement-tablet.png",
+    "proofs/blackjack-split-multiseat-mobile.png"
+  ],
+  "limits": [
+    "Chromium emulation was used; physical iPhone/iPad Safari and real audio hardware were not tested."
+  ]
+}
