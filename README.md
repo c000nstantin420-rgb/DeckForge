@@ -9,18 +9,18 @@ CardForge is an offline single-file card room for iPhone, iPad, and desktop brow
 
 ## Bankroll and progression
 
-The fictional bankroll persists in `localStorage`. Each game has four stake tables. Wins unlock higher tables. A new wager made at a zero balance grants exactly `$100` before the wager is deducted.
+The fictional bankroll, wins, table settings, and transaction history persist in `localStorage`. Each game has four stake tables and wins unlock higher tables. A new wager made at a zero balance grants exactly `$100` before the wager is deducted. Switching games or leaving the page cancels an unfinished round and returns its stake; the completed stats remain saved. A reload opens the home screen and restores the saved stats/settings, but does not resume a live hand. The `Reset local save` control is the intentional deletion path.
 
 ## Run
 
-Open `index.html` directly in a browser. No server, install, build, font, image, or network connection is required.
+Open `deckforge.html` directly in a browser. No server, install, build, font, image, or network connection is required.
 
 ## Verification
 
-- Engine diagnostics: **26 passed / 0 failed**.
-- Static audit: one inline script, no external assets, no duplicate IDs, no missing DOM references, and `node --check` passes.
-- Browser QA covers Blackjack settlement, complete Durak matches, player win/loss/draw outcomes, persistence, the bankruptcy grant, touch-pointer navigation, and 390×844 / 1024×768 layout geometry.
-- Detailed results and screenshots are in `proofs/`.
+- Current engine diagnostics: **39 passed / 0 failed**.
+- Static audit: one inline script, no external assets, no duplicate IDs, no missing DOM references, no inline event attributes, and `node --check` passes.
+- Browser QA covers configurable 1–4-seat Blackjack, configurable 2–4-seat Durak, Blackjack payout/soft-17/insurance/surrender rules, Durak 2-seat push, 4-seat-only all-player throw-in, throw-in off, help buttons for every table setting, English-only UI, AI progression, PointerEvent drag attack/defense, persistence, the bankruptcy grant, and 390×844 / 1024×768 no-scroll gameplay geometry.
+- Current variant measurements and screenshots are in `proofs/multiplayer-variants-qa.json`, `proofs/multiplayer-variants-static-audit.txt`, and `proofs/deckforge-*.png`. Release `0.2.1` includes the verified `deckforge.html` artifact and GitHub Pages deployment workflow.
 - `plan.md` contains the implementation plan and measured acceptance evidence.
 
 Currency is fictional and local-only. Physical iPhone/iPad Safari and real audio hardware still need a device pass; Chromium mobile emulation and touch-pointer dispatch are covered.

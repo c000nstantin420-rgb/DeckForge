@@ -1,0 +1,21 @@
+CardForge multiplayer / table-variant static audit
+===============================================
+
+Source: deckforge.html
+Bytes: 153092
+Lines: 1514
+Inline script blocks: 1
+External assets: 0
+node --check: PASS
+Duplicate IDs: 0
+Missing DOM references: 0
+Inline event attributes: 0
+crypto.getRandomValues: PRESENT
+Physical this.cards.pop() draw: PRESENT
+Pointer drag hooks: PRESENT (pointerdown/pointermove/pointerup + touch-action:none)
+Config UI: PRESENT (players + Blackjack/Durak variant controls)
+Multi-seat engines: PRESENT (Blackjack 1-4, Durak 2-4)
+Card rows: non-scrollable (`overflow: visible; flex-wrap: wrap`)
+
+Browser runtime errors: []
+Engine assertions: 39 passed / 0 failed

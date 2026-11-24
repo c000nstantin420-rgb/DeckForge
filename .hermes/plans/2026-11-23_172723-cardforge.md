@@ -4,7 +4,7 @@
 
 **Goal:** Build an offline, single-file iPhone/iPad card-game app with a physically simulated deck/shoe, a real playable Blackjack mode, a real playable two-player Durak mode, persistent bankroll/progression, and a $100 bankruptcy grant.
 
-**Architecture:** `index.html` is the only runtime artifact and contains all CSS and JavaScript inline. The engine is separated into small classes/functions inside the script (`Deck`, `Shoe`, `BlackjackGame`, `DurakGame`, `Bankroll`, `Progression`, persistence, UI). Every draw removes a concrete card object from a shuffled array; no game asks RNG for a fresh rank/suit during play. `window.CardForge` exposes the engine and a deterministic self-test suite for browser proofs without adding runtime dependencies.
+**Architecture:** `deckforge.html` is the only runtime artifact and contains all CSS and JavaScript inline. The engine is separated into small classes/functions inside the script (`Deck`, `Shoe`, `BlackjackGame`, `DurakGame`, `Bankroll`, `Progression`, persistence, UI). Every draw removes a concrete card object from a shuffled array; no game asks RNG for a fresh rank/suit during play. `window.CardForge` exposes the engine and a deterministic self-test suite for browser proofs without adding runtime dependencies.
 
 **Tech Stack:** HTML5, CSS, vanilla ES modules-style code in one inline script, CSS playing cards, `localStorage`, `crypto.getRandomValues` with injectable seeded RNG for tests. No CDN, fonts, images, build step, or network dependency.
 
@@ -14,7 +14,7 @@
 
 | Requirement | Implementation | Acceptance proof |
 |---|---|---|
-| One offline single file | `index.html`; inline CSS/JS only | no external `<script>`, `<link>`, image or network request; `node --check` passes |
+| One offline single file | `deckforge.html`; inline CSS/JS only | no external `<script>`, `<link>`, image or network request; `node --check` passes |
 | Genuine deck simulation | Fisher–Yates shuffle once; card objects are removed from `cards` by `draw`; discard/talon state is explicit | deck count decreases, drawn IDs never repeat, audit reports every card in exactly one zone |
 | Blackjack | six-deck shoe, hit, stand, double, split, insurance, blackjack 3:2, dealer soft-17 policy, push/bust/payouts | direct engine tests plus a browser hand from deal through settlement |
 | Durak | 36-card deck, trump, six-card deal, first attacker, attack/throw-in, beat, take, draw order, AI, end conditions | legal-move matrix, forced attack/defense/AI round, full browser match to winner |
@@ -39,7 +39,7 @@
 ### Task 1: Create the project and plan checkpoint
 
 **Files:**
-- Create: `~/Documents/CardForge/index.html`
+- Create: `~/Documents/CardForge/deckforge.html`
 - Create: `~/Documents/CardForge/plan.md` (copy of this plan)
 - Create: `~/Documents/CardForge/.hermes/plans/2026-11-23_172723-cardforge.md`
 - Create: `~/Documents/CardForge/proofs/.gitkeep`
@@ -48,7 +48,7 @@
 
 ### Task 2: Build the responsive shell
 
-**Files:** `index.html`
+**Files:** `deckforge.html`
 
 Add the viewport/meta tags, exact unified dark `:root` palette, sticky header, game tabs, bankroll pill, home screen, game screen, mode cards, felt/table region, action dock, modal/toast layer, and a compact diagnostics panel. Use `<button>` for every interactive action, `touch-action: manipulation`, `env(safe-area-inset-bottom)`, and no inline `onclick` handlers.
 
@@ -56,7 +56,7 @@ Add the viewport/meta tags, exact unified dark `:root` palette, sticky header, g
 
 ### Task 3: Add card and chip rendering primitives
 
-**Files:** `index.html`
+**Files:** `deckforge.html`
 
 Implement DOM renderers for a card (`rank`, `suit`, `face-down`, selected, disabled), hand fan/grid, chip buttons, badges, and deck audit summary. Add accessible labels and stable `data-testid` attributes.
 
@@ -68,7 +68,7 @@ Implement DOM renderers for a card (`rank`, `suit`, `face-down`, selected, disab
 
 ### Task 4: Implement random sources and physical decks
 
-**Files:** `index.html`
+**Files:** `deckforge.html`
 
 Implement `RandomSource.crypto()`, `RandomSource.seeded(seed)`, Fisher–Yates, `Card`, `Deck`, `Shoe`, `draw`, `peek`, `discard`, `remaining`, `snapshot`, and `audit`. Use immutable card identity and an explicit zone map. Make the test suite injectable with a deterministic source while production uses crypto randomness.
 
@@ -83,7 +83,7 @@ Implement `RandomSource.crypto()`, `RandomSource.seeded(seed)`, Fisher–Yates, 
 
 ### Task 5: Implement bankroll, transactions, persistence, and progression
 
-**Files:** `index.html`
+**Files:** `deckforge.html`
 
 Implement `Bankroll` with `balance`, `ensureFunds(amount)`, `debit`, `credit`, `grantBankruptcy`, and capped transaction history. Implement separate progression tracks, mode definitions, unlock rules, save/load schema versioning, reset-to-default, and corrupt-save recovery.
 
@@ -98,7 +98,7 @@ Implement `Bankroll` with `balance`, `ensureFunds(amount)`, `debit`, `credit`, `
 
 ### Task 6: Implement Blackjack state machine
 
-**Files:** `index.html`
+**Files:** `deckforge.html`
 
 Implement shoe setup, wagers, initial deal, dealer hole card, action validation, hit, stand, double, split, insurance, dealer resolution, hand status, natural detection, exact payout settlement, discard, round reset, and shoe reshuffle threshold. Keep the engine UI-independent.
 
@@ -116,7 +116,7 @@ Implement shoe setup, wagers, initial deal, dealer hole card, action validation,
 
 ### Task 7: Implement Durak state machine and AI
 
-**Files:** `index.html`
+**Files:** `deckforge.html`
 
 Implement the 36-card deal, trump, lowest-trump opening attacker, table attack objects, rank matching, beat rules, legal throw-in calculation, take, end-attack, draw order, next-attacker rules, terminal win/loss, and a deterministic heuristic AI. AI must never make an illegal move; it must choose the cheapest legal defense or take when none exists.
 
@@ -139,7 +139,7 @@ Implement the 36-card deal, trump, lowest-trump opening attacker, table attack o
 
 ### Task 8: Wire home, modes, bankroll, and reset flows
 
-**Files:** `index.html`
+**Files:** `deckforge.html`
 
 Connect game selection, mode selection, bet/stake controls, start buttons, bankruptcy grant messaging, progression display, transaction history, save/reset, and game-over return actions. Keep the selected game/mode in URL-free local state and update all visible values after every mutation.
 
@@ -147,7 +147,7 @@ Connect game selection, mode selection, bet/stake controls, start buttons, bankr
 
 ### Task 9: Wire Blackjack controls and table
 
-**Files:** `index.html`
+**Files:** `deckforge.html`
 
 Render dealer/player hands, hidden dealer card, shoe count, current wager, totals (including soft/hard indicator), action buttons, split hands, insurance panel, outcome banner, and next-round control. Disable buttons from engine legality rather than duplicating rule conditions in event handlers.
 
@@ -155,7 +155,7 @@ Render dealer/player hands, hidden dealer card, shoe count, current wager, total
 
 ### Task 10: Wire Durak controls and table
 
-**Files:** `index.html`
+**Files:** `deckforge.html`
 
 Render trump, talon count, player/AI hands, attack cards and target slots, selection state, contextual action buttons (`Attack`, `Throw In`, `Beat`, `Take`, `End Attack`), turn/status text, action log, and match result. AI turns use a short UI delay but remain deterministic through the injected engine.
 
@@ -163,7 +163,7 @@ Render trump, talon count, player/AI hands, attack cards and target slots, selec
 
 ### Task 11: Add audio-safe microfeedback and mobile polish
 
-**Files:** `index.html`
+**Files:** `deckforge.html`
 
 Add optional synthesized tap/deal/win/loss cues created only in a user gesture, mute toggle persisted locally, card motion classes, focus states, safe-area dock spacing, landscape/iPad layout, and reduced-motion support. No external audio assets.
 
@@ -175,7 +175,7 @@ Add optional synthesized tap/deal/win/loss cues created only in a user gesture, 
 
 ### Task 12: Add in-app self-test runner and proof export
 
-**Files:** `index.html`, `proofs/` generated outputs
+**Files:** `deckforge.html`, `proofs/` generated outputs
 
 Expose `window.CardForge.runSelfTests()` and a Diagnostics modal that reports grouped assertions, pass/fail counts, and engine invariants. Include a proof export that serializes the latest test result and current deck audit without changing gameplay data.
 
@@ -188,7 +188,7 @@ Expose `window.CardForge.runSelfTests()` and a Diagnostics modal that reports gr
 python3 - <<'PY'
 import re
 from pathlib import Path
-html=Path('index.html').read_text()
+html=Path('deckforge.html').read_text()
 scripts=re.findall(r'<script[^>]*>(.*?)</script>', html, re.S)
 Path('/tmp/cardforge-check.js').write_text('\n'.join(scripts))
 print('scripts:', len(scripts), 'external:', bool(re.search(r'<(?:script|link)[^>]+(?:src|href)=', html)))
@@ -239,7 +239,7 @@ Record actual counts and measurements only: engine assertion total, browser erro
 
 ## Definition of done
 
-1. `index.html` opens offline and has no external dependencies.
+1. `deckforge.html` opens offline and has no external dependencies.
 2. Both games can be started and completed through the UI, including player win/loss paths.
 3. Physical deck/shoe audits pass and no card is generated ad hoc during play.
 4. Bankroll, payouts, bankruptcy grant, progression, and persistence are tested.
@@ -248,7 +248,7 @@ Record actual counts and measurements only: engine assertion total, browser erro
 
 ## Verification evidence (actual run)
 
-- Runtime artifact: `index.html` — 97,967 bytes, 1,071 lines, one inline script, no external assets or network dependency.
+- Runtime artifact: `deckforge.html` — 97,967 bytes, 1,071 lines, one inline script, no external assets or network dependency.
 - Static audit: `node --check` passed; no duplicate IDs, no missing `$()` DOM references, no inline event attributes, and `crypto.getRandomValues` plus physical `this.cards.pop()` draw are present.
 - Engine diagnostics: **26 passed / 0 failed**. Groups: physical shoe 5/5, bankroll/progression 4/4, Blackjack 8/8, Durak 7/7, persistence/UI helpers 2/2.
 - Browser Blackjack: real lobby → deal → rendered action flow reached `settled`; the six-deck shoe reported 308 cards after the four-card deal and no page errors.
@@ -264,4 +264,30 @@ Record actual counts and measurements only: engine assertion total, browser erro
 - **Symptom:** The table-mode cards used the full lobby width instead of reading as a centered mode chooser.
 - **Cause:** `.mode-strip` used a four-column full-width grid with no centered group width.
 - **Change:** Replaced it with a centered, capped flex strip on desktop and a centered two-column grid on mobile; centered the mode heading and kept each desktop mode card at 230px.
-- **Before/after proof:** final desktop strip center `512` at viewport `1024`, four cards at `230px`; final mobile strip center `195` at viewport `390`, four cards in two centered columns; browser self-tests remain `26/26`.
+- **Before/after proof:** final desktop strip center `512` at viewport `1024`, four cards at `230px`; final mobile strip center `195` at viewport `390`, four cards in two centered columns; browser self-tests were `26/26` at that release checkpoint.
+
+### Lokaler Polish-Pass nach 0.1.0 (nicht als neuer Release getaggt)
+
+- **Blackjack-Spielgefühl:** Dealer-Natural/Dealer-21 hat eine eigene Outcome-Karte statt generischem `Hand lost`; die doppelte Settlement-Meldung ist entfernt; Spielertotals bleiben auch im Live-State korrekt; `Deal next hand` startet Runde 2 direkt im Tisch und führt nicht mehr ins Hauptmenü.
+- **Viewport-Fix:** Gameplay nutzt eine feste `100dvh`-Fläche mit In-Flow-Action-Dock. Final gemessen: `390×844 → scrollWidth 390 / scrollHeight 844`, `1024×768 → scrollWidth 1024 / scrollHeight 768` für Blackjack und Durak.
+- **Durak Touch:** Player cards haben echte Pointer-Drag-Hooks, Drop-Zonen für Tisch und Angriffsziele, Ghost-Card, Highlighting und Trump-Karten mit Goldrahmen/Kronenmarkierung. Angriff und Verteidigung wurden über `PointerEvent` mit `pointerType=touch` durchgespielt; beide Pfade blieben legal und fehlerfrei.
+- **Visual pass:** Home-CTA und 3-D-Kartenstapel, polierte Kartenflächen, klare Outcome-Karte, kompaktes iPhone-Durak-Layout und sichere Dock-Abstände. Screenshots: `proofs/polish-home-mobile.png`, `proofs/polish-blackjack-dealer21-mobile.png`, `proofs/polish-durak-drag-mobile.png`, `proofs/polish-diagnostics-mobile.png`.
+- **Finale Beweise:** `29/29` Engine-Assertions, Static Audit PASS, keine Page Errors, `$250 → $240` über Reload persistent, Bankruptcy `$0 → $100 → $90` mit exakt einem Grant. Vollständige Messwerte: `proofs/polish-qa.json`.
+- **Grenzen:** Physisches iPhone/iPad-Safari und echtes Audio wurden nicht getestet. Der Harness konnte keinen CDP-Hardware-Touch-Dispatch ausführen; deshalb ist der Drag-Nachweis ein echter gerenderter PointerEvent-Pfad mit Touch-Pointer, kein physischer Safari-Test. `VERSION`, Release-Archiv und Tag bleiben unverändert bei `0.1.0`.
+
+### Follow-up: Header, Card-Rows und Reaktionspacing
+
+- **Top-Bar:** Die Spielauswahl ist jetzt eine echte mittlere Grid-Spalte. Mobile Tabs werden auf `⌂ / BJ / DU` kompakt, aber vollständig dargestellt; gemessene Zentrierung: `390px → center 195px`, `1024px → center 512px`, jeweils innerhalb ≤ `0.01px`.
+- **Blackjack-Cards:** Card rows sind nicht mehr horizontal scrollbar. Sie nutzen `overflow: visible` und `flex-wrap: wrap`; finaler DOM-Nachweis bei `390×844`: `scrollWidth === clientWidth === 328`, keine Scrollbar.
+- **Reaktionszeit:** Dealer-Settlement zeigt zuerst einen statischen `Dealer is checking the hand…`-Zustand und wartet zufällig `320–760ms`; Durak-AI nutzt denselben Bereich zwischen Zügen. Nachweis: ein echter Durak-AI-Timer mit `415ms`, anschließend `turn:0`, `phase:defense`, keine Fehler. Keine neue Animation hinzugefügt.
+- **Follow-up-QA:** `29/29`, `node --check PASS`, keine DOM-/Runtimefehler, Persistence und Bankruptcy erneut grün. Aktuelle Messwerte und Screenshots: `proofs/polish-qa.json` plus fünf `polish-*.png`-Beweise.
+- **Release-Grenze:** Kein Version-Bump, kein Commit, kein neues Archiv und kein Tag.
+
+### Multiplayer und Table-Varianten umgesetzt
+
+- **Lobby-Konfiguration:** Beide Spiele haben eine sichtbare `Table setup`-Karte. Blackjack: `1–4 seats`, Natural `3:2/6:5`, Soft-17 `Stand/Hit`, Insurance und Surrender. Durak: `2–4 seats`, `All players/Neighbors` beim Einwerfen und `Push allowed/off`.
+- **Blackjack:** Ein menschlicher Sitz plus AI-Sitze werden physisch aus demselben Shoe gedealt. AI-Sitze spielen vor dem menschlichen Zug; Settlement bewertet alle vier Sitze, aber nur Sitz 0 verändert die Bankroll. 6:5, Soft-17, Insurance und Surrender sind Engine-Regeln, nicht nur UI-Texte.
+- **Durak:** 2–4 Sitze, zirkuläre Sitznachbarn, Nachbar-only/all throw-in, optionales gleichrangiges Weiter-Schieben und AI-Turn-Progression. Vier-Sitz-Autoplay endet nach `54` Schritten mit gültigem Audit.
+- **Live-UI:** Aktiver Tisch zeigt die Konfiguration im Header/Table-Badge, kompakte AI-Sitz-Lanes, menschliche Hand und variantenspezifische Actions. Gegnerkarten werden in Durak mobil als Kartenrücken plus `×N` dargestellt, damit Tisch/Hand bei `390×844` sichtbar bleiben.
+- **Finale Beweise:** `39/39` Assertions, Static Audit PASS, 4-seat Blackjack `participants:4/results:4/audit:true`, 4-seat Durak `finished/steps:54/audit:true`, 2-seat Push `attacker:1/defender:0/audit:true`, 4-seat-only All-player throw-in, Throw-in Off, every table setting has an English help button, redesigned felt/card-room home preview, Konfigurations-Reload persistent, Drag-Angriff weiterhin `table:1/hand:5/phase:defense`, keine Browserfehler. Vollständige Daten: `proofs/multiplayer-variants-qa.json`.
+- **Release status:** `VERSION` is `0.2.1`; the user explicitly requested the commit, tag, public GitHub repository, and Pages deployment after the final verification gate.

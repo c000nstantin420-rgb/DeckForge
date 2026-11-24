@@ -1,0 +1,56 @@
+{
+  "version": "0.2.1",
+  "source": {"file": "deckforge.html", "bytes": 153092, "lines": 1514, "inlineScriptBlocks": 1, "externalAssets": 0},
+  "static": {
+    "nodeCheck": "PASS",
+    "duplicateIds": [],
+    "missingDomRefs": [],
+    "inlineEventAttributes": [],
+    "cryptoRandom": true,
+    "physicalPopDraw": true,
+    "pointerDragHooks": true,
+    "configUi": true,
+    "multiSeatEngine": true,
+    "cardRowsNonScrollable": true
+  },
+  "engine": {
+    "passed": 39,
+    "failed": 0,
+    "total": 39,
+    "groups": {
+      "Physical deck and shoe": "5/5",
+      "Bankroll and progression": "4/4",
+      "Blackjack engine": "8/8",
+      "Durak engine": "7/7",
+      "Persistence and UI helpers": "2/2",
+      "Table configuration and variants": "10/10",
+      "Table feel and touch helpers": "3/3"
+    },
+    "timestamp": "2026-11-24T05:11:12.455Z"
+  },
+  "browser": {
+    "topBar": {"mobileCenter": 195, "mobileViewport": 390, "tabletCenter": 511.9921875, "tabletViewport": 512},
+    "blackjackSetup": {"summary": "4 seats · you + 3 AI · 6:5 natural · soft 17 hit · insurance off · surrender", "top": 530, "bottom": 820.28125, "scrollWidth": 390, "errors": []},
+    "blackjackMultiStart": {"phase": "ai", "players": 4, "opponents": 3, "scrollWidth": 390, "scrollHeight": 844, "errors": []},
+    "blackjackMultiPlayer": {"phase": "player", "opponents": 3, "scrollWidth": 390, "scrollHeight": 844, "errors": []},
+    "blackjack4Engine": {"phase": "settled", "participants": 4, "results": 4, "humanReturn": 0, "audit": true, "aiSteps": 3},
+    "durakSetup": {"summary": "4 seats · you + 3 AI · throw-in neighbors only · push on", "top": 530, "bottom": 753.28125, "scrollWidth": 390, "errors": []},
+    "durakMulti": {"config": {"players": 4, "throwIn": "neighbors", "push": true}, "players": 4, "opponents": 3, "tableBottom": 484.453125, "handBottom": 587.015625, "scrollWidth": 390, "scrollHeight": 844, "errors": []},
+    "durak4Autonomous": {"phase": "finished", "winner": 1, "steps": 54, "players": 4, "audit": true, "config": {"players": 4, "throwIn": "neighbors", "push": true}},
+    "durakDrag": {"table": 1, "hand": 5, "phase": "defense", "turn": 1, "scrollWidth": 390, "scrollHeight": 844, "errors": []},
+    "durakVariantMatches": [{"players": 2, "throwIn": "neighbors", "push": true, "phase": "finished", "steps": 61, "audit": true}, {"players": 2, "throwIn": "off", "push": true, "phase": "finished", "steps": 38, "audit": true}, {"players": 3, "throwIn": "neighbors", "push": false, "phase": "finished", "steps": 47, "audit": true}, {"players": 4, "throwIn": "all", "push": true, "phase": "finished", "steps": 58, "audit": true}],
+    "persistence": {"settingsSaved": {"players": 4, "throwIn": "all", "push": false}, "unfinishedStakeBeforeTab": 240, "tabSwitchBalance": 250, "tabSwitchActiveRound": false, "reloadBalance": 250, "reloadScreen": "home", "resetDefaults": {"balance": 250, "players": 2, "throwIn": "neighbors", "push": false}},
+    "bankruptcy": {"balance": 90, "grants": 1, "phase": "attack"}
+  },
+  "visualEvidence": [
+    "proofs/deckforge-home-mobile.png",
+    "proofs/deckforge-durak-setup-mobile.png",
+    "proofs/deckforge-blackjack-setup-mobile.png",
+    "proofs/deckforge-durak-push-mobile.png",
+    "proofs/polish-diagnostics-mobile.png"
+  ],
+  "limits": [
+    "Physical iPhone/iPad Safari hardware and real audio were not tested; Chromium mobile emulation was used.",
+    "CDP hardware-touch dispatch was unavailable; Durak drag proof uses the real rendered PointerEvent handler path with pointerType=touch."
+  ]
+}

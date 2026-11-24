@@ -1,0 +1,84 @@
+{
+  "version": "0.1.0",
+  "source": {
+    "file": "deckforge.html",
+    "bytes": 115546,
+    "lines": 1230,
+    "inlineScriptBlocks": 1,
+    "externalAssets": 0
+  },
+  "static": {
+    "nodeCheck": "PASS",
+    "duplicateIds": [],
+    "missingDomRefs": [],
+    "inlineEventAttributes": [],
+    "cryptoRandom": true,
+    "physicalPopDraw": true,
+    "pointerDragHooks": true,
+    "cardRows": "overflow: visible; flex-wrap: wrap",
+    "blackjackWaitState": true,
+    "randomReactionDelay": "320-760ms"
+  },
+  "engine": {
+    "passed": 29,
+    "failed": 0,
+    "total": 29,
+    "groups": {
+      "Physical deck and shoe": "5/5",
+      "Bankroll and progression": "4/4",
+      "Blackjack engine": "8/8",
+      "Durak engine": "7/7",
+      "Persistence and UI helpers": "2/2",
+      "Table feel and touch helpers": "3/3"
+    },
+    "timestamp": "2026-11-23T19:03:23.725Z"
+  },
+  "browser": {
+    "mobile390": {
+      "home": {"tabsCenter": 195, "viewportCenter": 195, "delta": 0, "scrollWidth": 390, "errors": []},
+      "blackjackStart": {"phase": "player", "cardRows": [{"scrollWidth": 328, "clientWidth": 328, "overflow": "visible", "wrap": "wrap"}, {"scrollWidth": 328, "clientWidth": 328, "overflow": "visible", "wrap": "wrap"}], "scrollWidth": 390, "scrollHeight": 844, "errors": []},
+      "blackjackWaiting": {"phase": "settled", "settling": true, "waitingText": true, "outcomes": 0, "action": "Dealer is checking the hand…", "errors": []},
+      "blackjackSettlement": {"phase": "settled", "settling": false, "outcomes": 1, "buttons": ["Deal next hand", "Choose another table"], "scrollWidth": 390, "scrollHeight": 844, "errors": []},
+      "blackjackNextHand": {"phase": "player", "round": 2, "lobby": false, "play": true, "errors": []},
+      "durakBeforeDrag": {"phase": "attack", "turn": 0, "rows": [{"scrollWidth": 328, "clientWidth": 328, "overflow": "visible", "wrap": "wrap"}, {"scrollWidth": 328, "clientWidth": 328, "overflow": "visible", "wrap": "wrap"}], "scrollWidth": 390, "scrollHeight": 844, "errors": []},
+      "durakAttackDrag": {"table": 1, "hand": 5, "phase": "defense", "turn": 1, "uncoveredText": false, "errors": []},
+      "durakDefenseDrag": {"legalCard": "9♥", "table": 1, "hand": 5, "phase": "attack", "turn": 1, "errors": []},
+      "topBar": {"allTabsVisible": true, "tabsCenter": 195, "viewportCenter": 195, "delta": 0, "scrollWidth": 390, "errors": []}
+    },
+    "tablet1024": {
+      "viewport": {"width": 1024, "height": 768},
+      "tabsCenter": 511.9921875,
+      "viewportCenter": 512,
+      "blackjack": {"scrollWidth": 1024, "scrollHeight": 768, "errors": []},
+      "durak": {"scrollWidth": 1024, "scrollHeight": 768, "errors": []}
+    },
+    "aiPacing": {
+      "scheduledDelayMs": 415,
+      "range": "320-760",
+      "afterCallback": {"turn": 0, "phase": "defense", "errors": []}
+    },
+    "persistence": {
+      "afterWager": {"balance": 240, "transactions": 1, "phase": "player", "errors": []},
+      "afterReload": {"balance": 240, "grants": 0, "errors": []}
+    },
+    "bankruptcy": {
+      "afterStart": {"balance": 90, "grants": 1, "grantTransactions": 1, "phase": "player", "errors": []}
+    }
+  },
+  "behavior": {
+    "newAnimationAdded": false,
+    "dealerPause": "short random delay with a static Dealer thinking state",
+    "cardRowsScrollable": false
+  },
+  "visualEvidence": [
+    "proofs/polish-home-mobile.png",
+    "proofs/polish-blackjack-dealer21-mobile.png",
+    "proofs/polish-blackjack-dealer-thinking-mobile.png",
+    "proofs/polish-durak-drag-mobile.png",
+    "proofs/polish-diagnostics-mobile.png"
+  ],
+  "limits": [
+    "Physical iPhone/iPad Safari hardware was not available; Chromium mobile emulation was used.",
+    "The browser harness CDP hardware-touch dispatch timed out, so the drag proof uses real PointerEvent handlers with pointerType=touch on the rendered controls; the physical-device pass remains separate."
+  ]
+}
