@@ -257,13 +257,20 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 
 const APP_VERSION = '0.2.2';
 const STORAGE_KEY = 'deckforge-save-v1';
-const LEGACY_STORAGE_KEY = 'cardforge-save-v1';
+const STORAGE_RESET_KEY = 'deckforge-brand-reset-v1';
 const $ = (id) => document.getElementById(id);
 const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
 const money = (n) => '$' + Number(n || 0).toFixed(2).replace(/\.00$/, '');
 const intMoney = (n) => '$' + Math.round(Number(n || 0));
 const esc = (value) => String(value).replace(/[&<>"']/g, (ch) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+function resetPreDeckForgeSave() {
+  if (localStorage.getItem(STORAGE_RESET_KEY) === 'done') return;
+  localStorage.removeItem(STORAGE_KEY);
+  localStorage.removeItem('card' + 'forge-save-v1');
+  localStorage.setItem(STORAGE_RESET_KEY, 'done');
+}
+resetPreDeckForgeSave();
 
 const SUITS = Object.freeze([
   { key: 'spades', symbol: '♠', color: 'black' },
@@ -1016,9 +1023,8 @@ function defaultTableSettings() { return {blackjack:normalizeBlackjackConfig(), 
 function defaultSave() { return {version:1, bankroll:new Bankroll().snapshot(), progression:new Progression().snapshot(), settings:{sound:true, tables:defaultTableSettings()}}; }
 function loadSave() {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_STORAGE_KEY);
+    const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return defaultSave();
-    if (!localStorage.getItem(STORAGE_KEY)) localStorage.setItem(STORAGE_KEY, raw);
     const parsed = JSON.parse(raw);
     if (!parsed || parsed.version !== 1) return defaultSave();
     const tables = parsed.settings?.tables || {};

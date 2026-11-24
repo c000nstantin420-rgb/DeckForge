@@ -8,6 +8,7 @@
 - Four-seat Durak AI can throw in from eligible side seats according to `Neighbors` or `All players` policy.
 - GitHub Pages deployment now runs on `main` pushes and on every published GitHub release, checking out the release tag for the published site.
 - Runtime artifact remains `deckforge.html`; no external assets or network dependency were added to the app.
+- First load of the DeckForge branding reset clears old pre-DeckForge local stats once; new DeckForge stats persist normally.
 
 ## Verification
 

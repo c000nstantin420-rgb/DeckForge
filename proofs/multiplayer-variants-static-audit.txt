@@ -2,8 +2,8 @@ DeckForge multiplayer / table-variant static audit
 ===============================================
 
 Source: deckforge.html
-Bytes: 161104
-Lines: 1525
+Bytes: 161254
+Lines: 1531
 Inline script blocks: 1
 External assets: 0
 node --check: PASS
