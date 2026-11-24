@@ -1,0 +1,632 @@
+{
+  "version": "0.2.6.56",
+  "passed": true,
+  "method": "Fresh local Chromium browser. Home cards opened both games; rendered coordinate clicks on DeckForge returned Home from lobbies and live rounds. Pointer emulation is not physical touch.",
+  "states": [
+    {
+      "label": "Home mobile",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "version": "v0.2.6.56",
+      "versionWidth": 42.90625,
+      "wordmark": "DeckForge",
+      "brandCenter": 194.9921875,
+      "leftEnd": 50.90625,
+      "brandLeft": 142.734375,
+      "brandRight": 247.25,
+      "rightStart": 268,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "scroll": [
+        390,
+        390
+      ],
+      "blackjackAudit": null,
+      "durakAudit": null,
+      "errors": []
+    },
+    {
+      "label": "Blackjack lobby",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "version": "v0.2.6.56",
+      "versionWidth": 42.90625,
+      "wordmark": "DeckForge",
+      "brandCenter": 194.9921875,
+      "leftEnd": 50.90625,
+      "brandLeft": 142.734375,
+      "brandRight": 247.25,
+      "rightStart": 268,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "game",
+      "game": "blackjack",
+      "homeVisible": false,
+      "scroll": [
+        390,
+        390
+      ],
+      "blackjackAudit": null,
+      "durakAudit": null,
+      "errors": []
+    },
+    {
+      "label": "Home from Blackjack lobby",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "version": "v0.2.6.56",
+      "versionWidth": 42.90625,
+      "wordmark": "DeckForge",
+      "brandCenter": 194.9921875,
+      "leftEnd": 50.90625,
+      "brandLeft": 142.734375,
+      "brandRight": 247.25,
+      "rightStart": 268,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "scroll": [
+        390,
+        390
+      ],
+      "blackjackAudit": null,
+      "durakAudit": null,
+      "errors": []
+    },
+    {
+      "label": "Durak lobby",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "version": "v0.2.6.56",
+      "versionWidth": 42.90625,
+      "wordmark": "DeckForge",
+      "brandCenter": 194.9921875,
+      "leftEnd": 50.90625,
+      "brandLeft": 142.734375,
+      "brandRight": 247.25,
+      "rightStart": 268,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "game",
+      "game": "durak",
+      "homeVisible": false,
+      "scroll": [
+        390,
+        390
+      ],
+      "blackjackAudit": null,
+      "durakAudit": null,
+      "errors": []
+    },
+    {
+      "label": "Home from Durak lobby",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "version": "v0.2.6.56",
+      "versionWidth": 42.90625,
+      "wordmark": "DeckForge",
+      "brandCenter": 194.9921875,
+      "leftEnd": 50.90625,
+      "brandLeft": 142.734375,
+      "brandRight": 247.25,
+      "rightStart": 268,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "scroll": [
+        390,
+        390
+      ],
+      "blackjackAudit": null,
+      "durakAudit": null,
+      "errors": []
+    },
+    {
+      "label": "Active Blackjack mobile",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "version": "v0.2.6.56",
+      "versionWidth": 42.90625,
+      "wordmark": "DeckForge",
+      "brandCenter": 194.9921875,
+      "leftEnd": 50.90625,
+      "brandLeft": 142.734375,
+      "brandRight": 247.25,
+      "rightStart": 268,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "game",
+      "game": "blackjack",
+      "homeVisible": false,
+      "scroll": [
+        390,
+        390
+      ],
+      "blackjackAudit": true,
+      "durakAudit": null,
+      "errors": [],
+      "phase": "player"
+    },
+    {
+      "label": "Home from active Blackjack",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "version": "v0.2.6.56",
+      "versionWidth": 42.90625,
+      "wordmark": "DeckForge",
+      "brandCenter": 194.9921875,
+      "leftEnd": 50.90625,
+      "brandLeft": 142.734375,
+      "brandRight": 247.25,
+      "rightStart": 268,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "scroll": [
+        390,
+        390
+      ],
+      "blackjackAudit": null,
+      "durakAudit": null,
+      "errors": []
+    },
+    {
+      "label": "Active Durak mobile",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "version": "v0.2.6.56",
+      "versionWidth": 42.90625,
+      "wordmark": "DeckForge",
+      "brandCenter": 194.9921875,
+      "leftEnd": 50.90625,
+      "brandLeft": 142.734375,
+      "brandRight": 247.25,
+      "rightStart": 268,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "game",
+      "game": "durak",
+      "homeVisible": false,
+      "scroll": [
+        390,
+        390
+      ],
+      "blackjackAudit": null,
+      "durakAudit": true,
+      "errors": []
+    },
+    {
+      "label": "Home from active Durak",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "version": "v0.2.6.56",
+      "versionWidth": 42.90625,
+      "wordmark": "DeckForge",
+      "brandCenter": 194.9921875,
+      "leftEnd": 50.90625,
+      "brandLeft": 142.734375,
+      "brandRight": 247.25,
+      "rightStart": 268,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "scroll": [
+        390,
+        390
+      ],
+      "blackjackAudit": null,
+      "durakAudit": null,
+      "errors": []
+    },
+    {
+      "label": "Active Blackjack iPad portrait",
+      "viewport": [
+        834,
+        1194
+      ],
+      "clientWidth": 834,
+      "version": "v0.2.6.56",
+      "versionWidth": 63.6875,
+      "wordmark": "DeckForge",
+      "brandCenter": 416.9921875,
+      "leftEnd": 77.6875,
+      "brandLeft": 353.328125,
+      "brandRight": 480.65625,
+      "rightStart": 650.9375,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "game",
+      "game": "blackjack",
+      "homeVisible": false,
+      "scroll": [
+        834,
+        834
+      ],
+      "blackjackAudit": true,
+      "durakAudit": null,
+      "errors": [],
+      "phase": "player"
+    },
+    {
+      "label": "Home from active iPad Blackjack",
+      "viewport": [
+        834,
+        1194
+      ],
+      "clientWidth": 834,
+      "version": "v0.2.6.56",
+      "versionWidth": 63.6875,
+      "wordmark": "DeckForge",
+      "brandCenter": 416.9921875,
+      "leftEnd": 77.6875,
+      "brandLeft": 353.328125,
+      "brandRight": 480.65625,
+      "rightStart": 650.9375,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "scroll": [
+        834,
+        834
+      ],
+      "blackjackAudit": null,
+      "durakAudit": null,
+      "errors": []
+    }
+  ],
+  "geometryMatrix": [
+    {
+      "label": "phone320 Home",
+      "viewport": [
+        320,
+        800
+      ],
+      "clientWidth": 320,
+      "version": "v0.2.6.56",
+      "versionWidth": 42.90625,
+      "wordmark": "DeckForge",
+      "brandCenter": 160,
+      "leftEnd": 46.90625,
+      "brandLeft": 115.265625,
+      "brandRight": 204.734375,
+      "rightStart": 208,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "scroll": [
+        320,
+        320
+      ],
+      "blackjackAudit": null,
+      "durakAudit": null,
+      "errors": []
+    },
+    {
+      "label": "phone360 Home",
+      "viewport": [
+        360,
+        800
+      ],
+      "clientWidth": 360,
+      "version": "v0.2.6.56",
+      "versionWidth": 42.90625,
+      "wordmark": "DeckForge",
+      "brandCenter": 179.9921875,
+      "leftEnd": 50.90625,
+      "brandLeft": 127.734375,
+      "brandRight": 232.25,
+      "rightStart": 238,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "scroll": [
+        360,
+        360
+      ],
+      "blackjackAudit": null,
+      "durakAudit": null,
+      "errors": []
+    },
+    {
+      "label": "phone375 Home",
+      "viewport": [
+        375,
+        667
+      ],
+      "clientWidth": 375,
+      "version": "v0.2.6.56",
+      "versionWidth": 42.90625,
+      "wordmark": "DeckForge",
+      "brandCenter": 187.4921875,
+      "leftEnd": 50.90625,
+      "brandLeft": 135.234375,
+      "brandRight": 239.75,
+      "rightStart": 253,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "scroll": [
+        375,
+        375
+      ],
+      "blackjackAudit": null,
+      "durakAudit": null,
+      "errors": []
+    },
+    {
+      "label": "phone390 Home",
+      "viewport": [
+        390,
+        844
+      ],
+      "clientWidth": 390,
+      "version": "v0.2.6.56",
+      "versionWidth": 42.90625,
+      "wordmark": "DeckForge",
+      "brandCenter": 194.9921875,
+      "leftEnd": 50.90625,
+      "brandLeft": 142.734375,
+      "brandRight": 247.25,
+      "rightStart": 268,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "scroll": [
+        390,
+        390
+      ],
+      "blackjackAudit": null,
+      "durakAudit": null,
+      "errors": []
+    },
+    {
+      "label": "phone414 Home",
+      "viewport": [
+        414,
+        896
+      ],
+      "clientWidth": 414,
+      "version": "v0.2.6.56",
+      "versionWidth": 42.90625,
+      "wordmark": "DeckForge",
+      "brandCenter": 206.9921875,
+      "leftEnd": 50.90625,
+      "brandLeft": 154.734375,
+      "brandRight": 259.25,
+      "rightStart": 290,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "scroll": [
+        414,
+        414
+      ],
+      "blackjackAudit": null,
+      "durakAudit": null,
+      "errors": []
+    },
+    {
+      "label": "ipadPortrait Home",
+      "viewport": [
+        834,
+        1194
+      ],
+      "clientWidth": 834,
+      "version": "v0.2.6.56",
+      "versionWidth": 63.6875,
+      "wordmark": "DeckForge",
+      "brandCenter": 416.9921875,
+      "leftEnd": 77.6875,
+      "brandLeft": 353.328125,
+      "brandRight": 480.65625,
+      "rightStart": 650.9375,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "scroll": [
+        834,
+        834
+      ],
+      "blackjackAudit": null,
+      "durakAudit": null,
+      "errors": []
+    },
+    {
+      "label": "desktop Home",
+      "viewport": [
+        1024,
+        768
+      ],
+      "clientWidth": 1009,
+      "version": "v0.2.6.56",
+      "versionWidth": 63.6875,
+      "wordmark": "DeckForge",
+      "brandCenter": 504.4921875,
+      "leftEnd": 77.6875,
+      "brandLeft": 440.828125,
+      "brandRight": 568.15625,
+      "rightStart": 825.9375,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "scroll": [
+        1009,
+        1009
+      ],
+      "blackjackAudit": null,
+      "durakAudit": null,
+      "errors": []
+    },
+    {
+      "label": "ipadLandscape Home",
+      "viewport": [
+        1194,
+        834
+      ],
+      "clientWidth": 1179,
+      "version": "v0.2.6.56",
+      "versionWidth": 63.6875,
+      "wordmark": "DeckForge",
+      "brandCenter": 589.4921875,
+      "leftEnd": 77.6875,
+      "brandLeft": 525.828125,
+      "brandRight": 653.15625,
+      "rightStart": 995.9375,
+      "selectorPresent": false,
+      "modeButtonCount": 0,
+      "homeCards": [
+        true,
+        true
+      ],
+      "screen": "home",
+      "game": "home",
+      "homeVisible": true,
+      "scroll": [
+        1179,
+        1179
+      ],
+      "blackjackAudit": null,
+      "durakAudit": null,
+      "errors": []
+    }
+  ],
+  "screenshots": {
+    "mobileHome": "proofs/deckforge-0.2.6.56-mobile-home.png",
+    "blackjackLobby": "proofs/deckforge-0.2.6.56-mobile-blackjack-lobby.png",
+    "durakLobby": "proofs/deckforge-0.2.6.56-mobile-durak-lobby.png",
+    "mobileBlackjack": "proofs/deckforge-0.2.6.56-mobile-blackjack.png",
+    "mobileDurak": "proofs/deckforge-0.2.6.56-mobile-durak.png",
+    "phone320": "proofs/deckforge-0.2.6.56-phone320-home.png",
+    "ipadPortrait": "proofs/deckforge-0.2.6.56-ipadPortrait-home.png",
+    "ipadPortraitBlackjack": "proofs/deckforge-0.2.6.56-ipadPortrait-blackjack.png",
+    "desktop": "proofs/deckforge-0.2.6.56-desktop-home.png",
+    "ipadLandscape": "proofs/deckforge-0.2.6.56-ipadLandscape-home.png"
+  },
+  "browserErrors": []
+}

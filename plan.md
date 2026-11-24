@@ -385,6 +385,8 @@ Record actual counts and measurements only: engine assertion total, browser erro
 - **Limits:** Physical iPhone/iPad Safari and audio hardware were not tested; screenshots use Chromium device emulation. Currency remains fictional and local-only.
 - **Release artifacts:** `VERSION` / `APP_VERSION` `0.2.6.5`; notes `RELEASE_NOTES_0.2.6.5.md`; archive `releases/DeckForge-0.2.6.5.zip`; tag `v0.2.6.5`. Release tag, asset, Pages build and live runtime-byte match are verified in the final handoff.
 
+
+
 ### DeckForge 0.2.6.55 — centered DeckForge wordmark
 
 - **Requested version:** Literal target `0.2.6.55`; previous release `v0.2.6.5`. Tag `v0.2.6.55` is new; no prior tags are moved.
@@ -394,3 +396,12 @@ Record actual counts and measurements only: engine assertion total, browser erro
 - **Tests/Vision:** `83/83` in-app assertions; Vision reviewed phone Home/live Blackjack and iPad portrait Home/live Blackjack plus landscape live Blackjack. No header overlap or clipping. Physical iPhone/iPad Safari was not tested; this was Chromium emulation.
 - **Static checks:** `deckforge.html` is 297,225 bytes / 2,262 lines, one inline script, 80 literal DOM refs; no missing/duplicate IDs, external assets/URLs, or inline event attributes. `node --check`, four JSON proofs/nine PNG signatures, and `git diff --check` pass; details: `proofs/static-audit-0.2.6.55.json`.
 - **Release artifacts:** `VERSION` / `APP_VERSION` `0.2.6.55`; notes `RELEASE_NOTES_0.2.6.55.md`; archive `releases/DeckForge-0.2.6.55.zip`; tag `v0.2.6.55`. Read back the release asset, Pages build and live runtime bytes before handoff.
+
+### DeckForge 0.2.6.56 — remove game selection from the top bar
+
+- **Correction:** Removed the Blackjack/Durak mode shortcuts from the top bar completely. Header now contains only the left version badge, centered DeckForge Home button, and right-side bankroll/utilities. Game selection stays on the Home cards.
+- **Navigation:** Both Home cards still open their respective games. The brand returns Home from both lobbies and active Blackjack/Durak rounds; physical-card audits pass and browser errors are zero. Proof: `proofs/topbar-mode-removal-0.2.6.56.json`.
+- **Geometry:** Brand remains centered within `0.01px` at `320`, `360`, `375`, `390`, `414`, `834`, `1024`, and `1194px`; no horizontal overflow or collisions, and the version badge remains visible.
+- **Tests/Vision:** `83/83` in-app tests. Vision reviewed phone `320×800`/`390×844` Home, mobile active Blackjack, iPad portrait Home/active Blackjack, and iPad landscape Home; no top-bar mode controls or header collisions. Physical Apple Safari was not tested; this used Chromium emulation.
+- **Static checks:** `deckforge.html` is 295,759 bytes / 2,253 lines, one inline script, 78 literal DOM refs; no missing/duplicate IDs, external assets/URLs, or inline event attributes. `node --check`, three proof JSONs/ten PNG signatures, and `git diff --check` pass; details: `proofs/static-audit-0.2.6.56.json`.
+- **Release artifacts:** `VERSION` / `APP_VERSION` `0.2.6.56`; notes `RELEASE_NOTES_0.2.6.56.md`; archive `releases/DeckForge-0.2.6.56.zip`; tag `v0.2.6.56`. Verify the release asset, Pages build, live runtime bytes, and clean worktree before handoff.
