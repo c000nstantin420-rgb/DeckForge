@@ -1,10 +1,10 @@
-# CardForge Implementation Plan
+# DeckForge Implementation Plan
 
 > **For Hermes:** Execute task-by-task, keep the HTML self-contained, and do not report completion before the browser and engine proofs are green.
 
 **Goal:** Build an offline, single-file iPhone/iPad card-game app with a physically simulated deck/shoe, a real playable Blackjack mode, a real playable 2–4-seat Durak mode, persistent bankroll/progression, and a $100 bankruptcy grant.
 
-**Architecture:** `deckforge.html` is the only runtime artifact and contains all CSS and JavaScript inline. The engine is separated into small classes/functions inside the script (`Deck`, `Shoe`, `BlackjackGame`, `DurakGame`, `Bankroll`, `Progression`, persistence, UI). Every draw removes a concrete card object from a shuffled array; no game asks RNG for a fresh rank/suit during play. `window.CardForge` exposes the engine and a deterministic self-test suite for browser proofs without adding runtime dependencies.
+**Architecture:** `deckforge.html` is the only runtime artifact and contains all CSS and JavaScript inline. The engine is separated into small classes/functions inside the script (`Deck`, `Shoe`, `BlackjackGame`, `DurakGame`, `Bankroll`, `Progression`, persistence, UI). Every draw removes a concrete card object from a shuffled array; no game asks RNG for a fresh rank/suit during play. `window.DeckForge` exposes the engine and a deterministic self-test suite for browser proofs without adding runtime dependencies.
 
 **Tech Stack:** HTML5, CSS, vanilla ES modules-style code in one inline script, CSS playing cards, `localStorage`, `crypto.getRandomValues` with injectable seeded RNG for tests. No CDN, fonts, images, build step, or network dependency.
 
@@ -41,7 +41,7 @@
 **Files:**
 - Create: `~/Documents/CardForge/deckforge.html`
 - Create: `~/Documents/CardForge/plan.md` (copy of this plan)
-- Create: `~/Documents/CardForge/.hermes/plans/2026-11-23_172723-cardforge.md`
+- Create: `~/Documents/CardForge/.hermes/plans/2026-11-23_172723-deckforge.md`
 - Create: `~/Documents/CardForge/proofs/.gitkeep`
 
 **Acceptance:** project directory exists, the two plan copies are identical, and the runtime file remains absent until the implementation task starts.
@@ -177,7 +177,7 @@ Add optional synthesized tap/deal/win/loss cues created only in a user gesture, 
 
 **Files:** `deckforge.html`, `proofs/` generated outputs
 
-Expose `window.CardForge.runSelfTests()` and a Diagnostics modal that reports grouped assertions, pass/fail counts, and engine invariants. Include a proof export that serializes the latest test result and current deck audit without changing gameplay data.
+Expose `window.DeckForge.runSelfTests()` and a Diagnostics modal that reports grouped assertions, pass/fail counts, and engine invariants. Include a proof export that serializes the latest test result and current deck audit without changing gameplay data.
 
 **Acceptance:** self-tests run from a fresh page, report zero failures, and include counts for deck, Blackjack, Durak, economy, progression, persistence, and UI helpers.
 
@@ -190,10 +190,10 @@ import re
 from pathlib import Path
 html=Path('deckforge.html').read_text()
 scripts=re.findall(r'<script[^>]*>(.*?)</script>', html, re.S)
-Path('/tmp/cardforge-check.js').write_text('\n'.join(scripts))
+Path('/tmp/deckforge-check.js').write_text('\n'.join(scripts))
 print('scripts:', len(scripts), 'external:', bool(re.search(r'<(?:script|link)[^>]+(?:src|href)=', html)))
 PY
-node --check /tmp/cardforge-check.js
+node --check /tmp/deckforge-check.js
 ```
 
 Also compare every `getElementById('...')` with an HTML `id`, check no external URLs/assets, check duplicate IDs, and inspect all buttons for listeners.
@@ -207,7 +207,7 @@ Use Browser Use on a fresh `file://` page.
 - Install error/unhandled-rejection hooks before interaction.
 - Test home → Blackjack → deal → action → settlement.
 - Test home → Durak → attack/defense/take/draw until terminal result.
-- Run `CardForge.runSelfTests()` in the browser and read back the result.
+- Run `DeckForge.runSelfTests()` in the browser and read back the result.
 - Set 390×844 DPR 2 and 1024×768, reload in the same tab, assert no horizontal overflow, action dock inside viewport, and all visible buttons have usable rects.
 - Dispatch real touch events to primary action buttons and verify state changes from engine/UI state, not just `click()`.
 - Capture unique screenshots for home, Blackjack table, Durak table, diagnostics/test report, and a mobile viewport.

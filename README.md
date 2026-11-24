@@ -1,6 +1,6 @@
-# CardForge
+# DeckForge
 
-CardForge is an offline single-file card room for iPhone, iPad, and desktop browsers.
+DeckForge is an offline single-file card room for iPhone, iPad, and desktop browsers.
 
 ## Games
 

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0d0d12">
-<title>CardForge — Real Deck Games</title>
+<title>DeckForge — Real Deck Games</title>
 <style>
 :root{--bg:#0d0d12;--card:#16161d;--card2:#1e1e2a;--fg:#e8e8ec;--muted:#8b8b9a;--ac:#0a84ff;--ac2:#30d158;--warn:#ff9f0a;--err:#ff453a;--r:14px;--rs:10px;--felt:rgba(48,209,88,.10);--felt-line:rgba(48,209,88,.25);--shadow:0 18px 50px rgba(0,0,0,.28);--topbar-height:64px;--table-glow:rgba(48,209,88,.16);--preview-felt:#123f35;--preview-felt-deep:#0e2824}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -209,7 +209,7 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 <body>
 <div class="app-shell" id="app">
 <header class="topbar" id="topbar">
-  <button class="brand-button" id="brandBtn" aria-label="Go to CardForge home"><span class="brand-mark">♠</span><span class="brand-name">CardForge</span></button>
+  <button class="brand-button" id="brandBtn" aria-label="Go to DeckForge home"><span class="brand-mark">♠</span><span class="brand-name">DeckForge</span></button>
   <nav class="top-tabs" aria-label="Games">
     <button class="tab active" id="tabHome" data-game="home"><span class="tab-full">Home</span><span class="tab-short">⌂</span></button>
     <button class="tab" id="tabBlackjack" data-game="blackjack"><span class="tab-full">Blackjack</span><span class="tab-short">BJ</span></button>
@@ -224,7 +224,7 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 <main>
 <section class="screen" id="homeScreen">
   <div class="hero">
-    <div class="hero-copy"><div class="eyebrow">A real-deck card room</div><h1>Play the cards.<br><span style="color:var(--ac2)">Not a random number.</span></h1><p>CardForge keeps every physical card in a shuffled shoe, tracks the talon, and makes every wager matter. Climb the tables, protect your bankroll, and never lose the thread of a real game.</p><div class="hero-cta-row"><button class="primary-btn hero-cta" id="heroEnterBtn">Enter the card room</button><span class="hero-cta-note">Offline · real shuffled shoe</span></div></div>
+    <div class="hero-copy"><div class="eyebrow">A real-deck card room</div><h1>Play the cards.<br><span style="color:var(--ac2)">Not a random number.</span></h1><p>DeckForge keeps every physical card in a shuffled shoe, tracks the talon, and makes every wager matter. Climb the tables, protect your bankroll, and never lose the thread of a real game.</p><div class="hero-cta-row"><button class="primary-btn hero-cta" id="heroEnterBtn">Enter the card room</button><span class="hero-cta-note">Offline · real shuffled shoe</span></div></div>
     <div class="hero-art" aria-label="Card room preview"><div class="hero-art-label"><span>The card room</span><strong>Deal with intent.</strong><small>Real cards · real choices</small></div><div class="hero-card one"><span class="hero-corner">A<br><small>♠</small></span><span class="hero-center">♠</span><span class="hero-corner bottom">A<br><small>♠</small></span></div><div class="hero-card two"><span class="hero-corner">K<br><small>♥</small></span><span class="hero-center">♥</span><span class="hero-corner bottom">K<br><small>♥</small></span></div><div class="hero-card three"><span class="hero-corner">7<br><small>♦</small></span><span class="hero-center">♦</span><span class="hero-corner bottom">7<br><small>♦</small></span></div></div>
   </div>
   <div class="section-heading"><div><h2>Choose your table</h2><p>Two complete games. One persistent bankroll.</p></div><span class="badge green">Offline ready</span></div>
@@ -256,7 +256,8 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 'use strict';
 
 const APP_VERSION = '0.2.2';
-const STORAGE_KEY = 'cardforge-save-v1';
+const STORAGE_KEY = 'deckforge-save-v1';
+const LEGACY_STORAGE_KEY = 'cardforge-save-v1';
 const $ = (id) => document.getElementById(id);
 const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
 const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
@@ -1015,8 +1016,9 @@ function defaultTableSettings() { return {blackjack:normalizeBlackjackConfig(), 
 function defaultSave() { return {version:1, bankroll:new Bankroll().snapshot(), progression:new Progression().snapshot(), settings:{sound:true, tables:defaultTableSettings()}}; }
 function loadSave() {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_STORAGE_KEY);
     if (!raw) return defaultSave();
+    if (!localStorage.getItem(STORAGE_KEY)) localStorage.setItem(STORAGE_KEY, raw);
     const parsed = JSON.parse(raw);
     if (!parsed || parsed.version !== 1) return defaultSave();
     const tables = parsed.settings?.tables || {};
@@ -1507,10 +1509,10 @@ function bindEvents() {
 }
 
 const testApi = {runSelfTests, RandomSource, shuffle, Card, PhysicalShoe, Bankroll, Progression, BlackjackGame, BlackjackHand, DurakGame, totalForCards, canBeat, BJ_MODES, DURAK_MODES, normalizeBlackjackConfig, normalizeDurakConfig, tableConfigSummary, blackjackOutcomeCopy, renderGame, startAnotherRound, goBackToLobby, get appState() { return appState; }, get settings() { return settings; }, get bankroll() { return bankroll; }, get progression() { return progression; }, get activeBlackjack() { return appState.bj; }, get activeDurak() { return appState.durak; }, forceAIMove: runAIImmediately};
-window.CardForge = testApi;
-window.__cardForgeErrors = [];
-window.addEventListener('error', (event) => window.__cardForgeErrors.push(String(event.message || event.error || 'error')));
-window.addEventListener('unhandledrejection', (event) => window.__cardForgeErrors.push(String(event.reason || 'unhandled rejection')));
+window.DeckForge = testApi;
+window.__deckForgeErrors = [];
+window.addEventListener('error', (event) => window.__deckForgeErrors.push(String(event.message || event.error || 'error')));
+window.addEventListener('unhandledrejection', (event) => window.__deckForgeErrors.push(String(event.reason || 'unhandled rejection')));
 window.addEventListener('beforeunload', () => { cancelActiveRound('Page closed'); });
 bindEvents();
 syncViewport();

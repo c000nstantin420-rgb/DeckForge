@@ -1,4 +1,4 @@
-CardForge local polish static audit
+DeckForge local polish static audit
 ===================================
 
 Source: deckforge.html

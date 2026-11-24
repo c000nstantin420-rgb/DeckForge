@@ -1,8 +1,8 @@
-# CardForge 0.1.0
+# DeckForge 0.1.0
 
 ## Release
 
-Initial private release of the offline CardForge single-file card room.
+Initial private release of the offline DeckForge single-file card room.
 
 ## Included
 

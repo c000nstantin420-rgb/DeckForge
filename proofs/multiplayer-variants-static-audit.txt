@@ -1,9 +1,9 @@
-CardForge multiplayer / table-variant static audit
+DeckForge multiplayer / table-variant static audit
 ===============================================
 
 Source: deckforge.html
-Bytes: 160928
-Lines: 1523
+Bytes: 161104
+Lines: 1525
 Inline script blocks: 1
 External assets: 0
 node --check: PASS

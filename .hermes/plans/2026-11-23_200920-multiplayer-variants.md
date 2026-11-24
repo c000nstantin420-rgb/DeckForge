@@ -2,11 +2,11 @@
 
 > **For Hermes:** Execute this plan in the current local workspace. Do not commit, tag, bump `VERSION`, or rebuild a release archive unless explicitly requested.
 
-**Goal:** Let CardForge configure player count and meaningful Blackjack/Durak table variants in the lobby, carry those rules into the live table, and keep the experience readable on mobile.
+**Goal:** Let DeckForge configure player count and meaningful Blackjack/Durak table variants in the lobby, carry those rules into the live table, and keep the experience readable on mobile.
 
 **Architecture:** Keep the single-file/offline architecture. Extend the rule engines with explicit table configuration objects, preserve the current two-player/standard-rule defaults for compatibility, and use one human seat (seat 0) plus AI seats for additional players. The lobby becomes the source of truth for the table config; the active table renders a compact rules/seat summary and exposes the relevant participant state.
 
-**Tech Stack:** One inline HTML/CSS/ES-module-style script, no external assets, existing `CardForge` API and in-app self-tests, browser viewport/pointer QA.
+**Tech Stack:** One inline HTML/CSS/ES-module-style script, no external assets, existing `DeckForge` API and in-app self-tests, browser viewport/pointer QA.
 
 ---
 
@@ -46,7 +46,7 @@
 - Add table preferences to the saved settings schema with backwards-compatible defaults.
 - Keep `BlackjackGame({})` and `DurakGame({})` behavior identical to the current default rules.
 - Wire lobby control state through `appState.tableConfig` and ensure switching games loads that game’s saved preferences.
-- Make the configuration visible to the `CardForge` test API for deterministic browser probes.
+- Make the configuration visible to the `DeckForge` test API for deterministic browser probes.
 
 ## Task 3: Extend Blackjack seats and rules
 
@@ -95,7 +95,7 @@
 
 ## Task 7: Browser acceptance and proof artifacts
 
-**Files:** `proofs/multiplayer-variants-qa.json`, `proofs/multiplayer-variants-static-audit.txt`, screenshots under `proofs/`, `plan.md`, `.hermes/plans/2026-11-23_172723-cardforge.md`
+**Files:** `proofs/multiplayer-variants-qa.json`, `proofs/multiplayer-variants-static-audit.txt`, screenshots under `proofs/`, `plan.md`, `.hermes/plans/2026-11-23_172723-deckforge.md`
 
 - Run syntax/static audit and in-app diagnostics.
 - Browser-probe lobby configuration for both games, reload persistence, and active-table summaries.
