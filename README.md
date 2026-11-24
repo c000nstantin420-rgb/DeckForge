@@ -15,13 +15,17 @@ The fictional bankroll, wins, table settings, and transaction history persist in
 
 Open `deckforge.html` directly in a browser. No server, install, build, font, image, or network connection is required.
 
-## Verification
+## Release and verification
 
-- Current engine diagnostics: **44 passed / 0 failed**.
-- Static audit: one inline script, no external assets, no duplicate IDs, no missing DOM references, no inline event attributes, and `node --check` passes.
-- Browser QA covers configurable 1–4-seat Blackjack, configurable 2–4-seat Durak, Blackjack payout/soft-17/insurance/surrender/split/double rules, Durak variants and drag attack/defense, persistence, bankruptcy, and no-scroll gameplay at 390×844 / 1024×768.
-- Blackjack split/double regression proof is in `proofs/blackjack-split-double-qa.json`; screenshots show mobile/tablet active split hands, single-hand double settlement, and 4-seat split settlement. Double draws one card, closes that hand, and advances to the next split hand; split statuses and payouts stay distinct.
-- Table-variant measurements remain in `proofs/multiplayer-variants-qa.json` and `proofs/multiplayer-variants-static-audit.txt`. Release `0.2.4` includes the split/double fixes and carries forward the single-hand settlement-banner fix from `0.2.3`, plus the `0.2.2` mobile polish and table variants. GitHub Pages deploys on main pushes and published releases.
-- `plan.md` contains the implementation plan and measured acceptance evidence.
+Current release: **0.2.5** (`v0.2.5`). The version is visible in the site header on the home screen and both game screens.
 
-Currency is fictional and local-only. Physical iPhone/iPad Safari and real audio hardware still need a device pass; Chromium mobile emulation and touch-pointer dispatch are covered.
+- In-app diagnostics: **60 passed / 0 failed**.
+- Durak stress: **100 seeded matches** across five 2–4-seat rule configurations; all matches terminated and every step preserved the 36-card audit.
+- Full rendered-UI Durak matches completed for 2, 3 and 4 seats. Separate flows exercised attack, throw-in, defense, push, take, a human-loss terminal result, a valid touch-pointer drag and an invalid drop.
+- Blackjack insurance was tested with both choices in 3-seat play and through all three AI turns in a 4-seat game; the human action and settlement completed.
+- Responsive Durak geometry passed at 390×844 and 1024×768 with six table pairs; action controls remained inside the viewport.
+- Static audit: one inline script, no external assets, duplicate IDs, missing DOM references or inline event attributes; `node --check` passes.
+- Structured evidence: `proofs/self-test.json`, `proofs/browser-qa.json`, `proofs/static-audit.txt`, and `proofs/deckforge-0.2.5-*.png`.
+- Historical Blackjack split/double evidence remains in `proofs/blackjack-split-double-qa.json`; previous release notes and artifacts are retained.
+
+`plan.md` records the implementation plan and measured acceptance evidence. Currency is fictional and local-only. Physical iPhone/iPad Safari and real audio were not tested; Chromium mobile emulation and synthetic `PointerEvent` touch-pointer flows were used.

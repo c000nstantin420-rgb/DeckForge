@@ -1,8 +1,8 @@
 {
-  "version": "0.2.4",
-  "passed": 44,
+  "version": "0.2.5",
+  "passed": 60,
   "failed": 0,
-  "total": 44,
+  "total": 60,
   "groups": {
     "Physical deck and shoe": {"passed": 5, "total": 5},
     "Bankroll and progression": {"passed": 4, "total": 4},
@@ -10,7 +10,8 @@
     "Durak engine": {"passed": 7, "total": 7},
     "Persistence and UI helpers": {"passed": 2, "total": 2},
     "Table configuration and variants": {"passed": 10, "total": 10},
-    "Table feel and touch helpers": {"passed": 4, "total": 4}
+    "Table feel and touch helpers": {"passed": 5, "total": 5},
+    "Multiplayer correctness and presentation": {"passed": 15, "total": 15}
   },
-  "timestamp": "2026-11-24T07:43:42.716Z"
+  "timestamp": "2026-11-24T09:31:11.004Z"
 }

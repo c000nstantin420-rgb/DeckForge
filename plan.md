@@ -308,3 +308,15 @@ Record actual counts and measurements only: engine assertion total, browser erro
 - **Final verification:** 44/44 diagnostics; `node --check` PASS; static audit `171507` bytes / `1589` lines, zero external assets, duplicate IDs, missing DOM references, inline handlers, and browser errors. Browser QA passed solo double and split→double→Hand 2→settlement at `390×844`, 4-seat split at `390×844`, and tablet split at `1024×768`; no clipping or document overflow.
 - **Evidence:** `proofs/blackjack-split-double-qa.json` plus mobile, multi-seat, and tablet screenshots.
 - **Release:** `VERSION` / `APP_VERSION` `0.2.4`; notes `RELEASE_NOTES_0.2.4.md`; archive `releases/DeckForge-0.2.4.zip`; tag `v0.2.4`.
+
+### DeckForge 0.2.5 — multiplayer correctness, Durak feel, visible version
+
+- **Blackjack:** Fixed the multi-seat scheduler handoff after either insurance choice. Fresh UI runs passed for 3-seat Take/No-thanks and a 4-seat table through all three AI turns, a human action, settlement, and shoe audit.
+- **Durak rules:** Corrected clockwise attacker/defender transitions after defense, take and push; refill order; empty-seat handling; end-of-match Durak/draw outcomes; and one-pass-per-bout throw-in tracking. The latter prevents `all players` from ping-ponging forever among seats with no matching rank. Empty AI turns now advance, and any remaining no-op is surfaced as a paused state instead of a repeated timer.
+- **Durak UI:** Human hand display sorts by suit/rank with trumps last without mutating the engine hand. Table cards, red suits, compact trump/talon, defense target and drop highlight were improved. The exposed trump is no longer duplicated after the talon is empty.
+- **Visible release version:** Header badge and accessible brand label show `v0.2.5` on home and live Blackjack/Durak screens, including 390px mobile width.
+- **Engine evidence:** `proofs/self-test.json` records 60/60 assertions. `proofs/browser-qa.json` records 100 autonomous matches across five 2–4-seat variants, full rendered-UI matches for 2/3/4 seats, insurance paths, drag/drop behavior, reaction measurements and viewport geometry.
+- **Timing evidence:** UI action-to-first-AI callback measured 328ms (low), 546/547ms (mid) and 775ms (high including browser/timer dispatch overhead); scheduled delay remains 320–760ms.
+- **Responsive evidence:** At 390×844 and 1024×768, six-pair Durak fixtures had no document overflow and every action control stayed within the viewport.
+- **Limits:** Physical iPhone/iPad Safari and real audio were not tested. CDP hardware-touch dispatch timed out; synthetic `PointerEvent` touch-pointer handlers were exercised. QA browser contexts were isolated; no test bankroll or active game is included in repository artifacts.
+- **Release artifacts:** `VERSION` / `APP_VERSION` `0.2.5`; notes `RELEASE_NOTES_0.2.5.md`; archive `releases/DeckForge-0.2.5.zip`; annotated tag `v0.2.5`. The Pages workflow deploys the release tag.
