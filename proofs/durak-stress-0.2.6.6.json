@@ -1,0 +1,58 @@
+{
+  "version": "0.2.6.6",
+  "passed": true,
+  "deckSizes": [24, 36, 52],
+  "seatCounts": [2, 3, 4],
+  "ruleModes": [
+    "throwIn-neighbors",
+    "throwIn-all at four seats",
+    "transfer",
+    "off"
+  ],
+  "seedsPerConfiguration": 12,
+  "configurationCount": 30,
+  "totalMatches": 360,
+  "auditedActions": 15398,
+  "stalemateDraws": 57,
+  "zeroTalonStarts": 48,
+  "minSteps": 22,
+  "maxSteps": 101,
+  "hardStepBound": 1500,
+  "failures": [],
+  "browserErrors": [],
+  "deckBatches": [
+    {
+      "deckSize": 24,
+      "configurations": 10,
+      "matches": 120,
+      "auditedActions": 3313,
+      "stalemateDraws": 19,
+      "zeroTalonStarts": 48,
+      "minSteps": 22,
+      "maxSteps": 55,
+      "failures": 0
+    },
+    {
+      "deckSize": 36,
+      "configurations": 10,
+      "matches": 120,
+      "auditedActions": 4929,
+      "stalemateDraws": 17,
+      "zeroTalonStarts": 0,
+      "minSteps": 34,
+      "maxSteps": 76,
+      "failures": 0
+    },
+    {
+      "deckSize": 52,
+      "configurations": 10,
+      "matches": 120,
+      "auditedActions": 7156,
+      "stalemateDraws": 21,
+      "zeroTalonStarts": 0,
+      "minSteps": 50,
+      "maxSteps": 101,
+      "failures": 0
+    }
+  ]
+}

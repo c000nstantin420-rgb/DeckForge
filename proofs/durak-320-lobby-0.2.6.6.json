@@ -1,0 +1,104 @@
+{
+  "version": "0.2.6.6",
+  "passed": true,
+  "measurement": {
+    "viewport": [
+      320,
+      800
+    ],
+    "client": 320,
+    "scroll": 320,
+    "cards": [
+      {
+        "name": "Village Yard",
+        "text": [
+          {
+            "left": 22,
+            "right": 116.0625,
+            "top": 295.75,
+            "bottom": 311.75
+          }
+        ],
+        "icon": {
+          "left": 134.015625,
+          "right": 144.5,
+          "top": 282,
+          "bottom": 296
+        },
+        "overlap": false,
+        "titlePadding": "24px"
+      },
+      {
+        "name": "Tavern Table",
+        "text": [
+          {
+            "left": 175.5,
+            "right": 228.1875,
+            "top": 281,
+            "bottom": 297
+          },
+          {
+            "left": 175.5,
+            "right": 217.015625,
+            "top": 297,
+            "bottom": 313
+          }
+        ],
+        "icon": {
+          "left": 291.609375,
+          "right": 298,
+          "top": 282,
+          "bottom": 296
+        },
+        "overlap": false,
+        "titlePadding": "24px"
+      },
+      {
+        "name": "Champion Ring",
+        "text": [
+          {
+            "left": 22,
+            "right": 100.6875,
+            "top": 406,
+            "bottom": 422
+          },
+          {
+            "left": 22,
+            "right": 57.578125,
+            "top": 422,
+            "bottom": 438
+          }
+        ],
+        "icon": {
+          "left": 138.109375,
+          "right": 144.5,
+          "top": 407,
+          "bottom": 421
+        },
+        "overlap": false,
+        "titlePadding": "24px"
+      },
+      {
+        "name": "Iron Table",
+        "text": [
+          {
+            "left": 175.5,
+            "right": 253.59375,
+            "top": 414,
+            "bottom": 430
+          }
+        ],
+        "icon": {
+          "left": 291.609375,
+          "right": 298,
+          "top": 407,
+          "bottom": 421
+        },
+        "overlap": false,
+        "titlePadding": "24px"
+      }
+    ],
+    "errors": []
+  },
+  "screenshot": "proofs/deckforge-0.2.6.6-durak-lobby-phone320.png"
+}

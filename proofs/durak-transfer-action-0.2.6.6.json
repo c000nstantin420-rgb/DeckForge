@@ -1,0 +1,32 @@
+{
+  "version": "0.2.6.6",
+  "passed": true,
+  "defendLabelMetrics": {
+    "slotWidth": 37.80000305175781,
+    "textWidth": 29.193756103515625,
+    "leftGap": 4.3031158447265625,
+    "rightGap": 4.303131103515625
+  },
+  "renderedControl": {
+    "visible": true,
+    "label": "Transfer with 8♥",
+    "disabled": false,
+    "dropZone": "push",
+    "note": "Choose a defense, tap Transfer with 8♥, or drop that card on the Transfer button.",
+    "rect": [
+      199,
+      687,
+      366,
+      735
+    ]
+  },
+  "afterClick": {
+    "attacker": 0,
+    "defender": 1,
+    "turn": 1,
+    "table": 2,
+    "audit": true,
+    "errors": []
+  },
+  "screenshot": "proofs/deckforge-0.2.6.6-durak-transfer-action-mobile.png"
+}

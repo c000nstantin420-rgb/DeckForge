@@ -1,0 +1,224 @@
+{
+  "version": "0.2.6.6",
+  "passed": true,
+  "measurement": {
+    "viewport": [
+      320,
+      800
+    ],
+    "client": 320,
+    "scroll": 320,
+    "version": "v0.2.6.6",
+    "subtitle": "4 seats · you + 3 AI · 36-card deck · throw-in neighbors only",
+    "config": {
+      "players": 4,
+      "deckSize": 36,
+      "attackRule": "throwIn",
+      "throwInPolicy": "neighbors",
+      "throwIn": "neighbors",
+      "push": false
+    },
+    "elements": [
+      {
+        "class": "setup-label",
+        "label": "Players?4 seats · you + 3 AI",
+        "left": 37,
+        "right": 283,
+        "width": 246,
+        "top": 572,
+        "bottom": 589
+      },
+      {
+        "class": "setup-segment",
+        "label": "2 seats3 seats4 seats",
+        "left": 37,
+        "right": 283,
+        "width": 246,
+        "top": 596,
+        "bottom": 624
+      },
+      {
+        "class": "setup-choice ",
+        "label": "2 seats",
+        "left": 37,
+        "right": 95.5,
+        "width": 58.5,
+        "top": 596,
+        "bottom": 624
+      },
+      {
+        "class": "setup-choice ",
+        "label": "3 seats",
+        "left": 99.5,
+        "right": 158,
+        "width": 58.5,
+        "top": 596,
+        "bottom": 624
+      },
+      {
+        "class": "setup-choice active",
+        "label": "4 seats",
+        "left": 162,
+        "right": 220.5,
+        "width": 58.5,
+        "top": 596,
+        "bottom": 624
+      },
+      {
+        "class": "setup-control",
+        "label": "Deck size?36 cards24 cards36 cards52 car",
+        "left": 37,
+        "right": 283,
+        "width": 246,
+        "top": 631,
+        "bottom": 678
+      },
+      {
+        "class": "setup-label",
+        "label": "Deck size?36 cards",
+        "left": 37,
+        "right": 283,
+        "width": 246,
+        "top": 631,
+        "bottom": 648
+      },
+      {
+        "class": "setup-segment three",
+        "label": "24 cards36 cards52 cards",
+        "left": 37,
+        "right": 283,
+        "width": 246,
+        "top": 650,
+        "bottom": 678
+      },
+      {
+        "class": "setup-choice ",
+        "label": "24 cards",
+        "left": 37,
+        "right": 116.33,
+        "width": 79.33,
+        "top": 650,
+        "bottom": 678
+      },
+      {
+        "class": "setup-choice active",
+        "label": "36 cards",
+        "left": 120.33,
+        "right": 199.66,
+        "width": 79.33,
+        "top": 650,
+        "bottom": 678
+      },
+      {
+        "class": "setup-choice ",
+        "label": "52 cards",
+        "left": 203.66,
+        "right": 283,
+        "width": 79.34,
+        "top": 650,
+        "bottom": 678
+      },
+      {
+        "class": "setup-control",
+        "label": "Extra rule?Throw-inThrow-inTransferOff",
+        "left": 37,
+        "right": 283,
+        "width": 246,
+        "top": 685,
+        "bottom": 732
+      },
+      {
+        "class": "setup-label",
+        "label": "Extra rule?Throw-in",
+        "left": 37,
+        "right": 283,
+        "width": 246,
+        "top": 685,
+        "bottom": 702
+      },
+      {
+        "class": "setup-segment three",
+        "label": "Throw-inTransferOff",
+        "left": 37,
+        "right": 283,
+        "width": 246,
+        "top": 704,
+        "bottom": 732
+      },
+      {
+        "class": "setup-choice active",
+        "label": "Throw-in",
+        "left": 37,
+        "right": 116.33,
+        "width": 79.33,
+        "top": 704,
+        "bottom": 732
+      },
+      {
+        "class": "setup-choice ",
+        "label": "Transfer",
+        "left": 120.33,
+        "right": 199.66,
+        "width": 79.33,
+        "top": 704,
+        "bottom": 732
+      },
+      {
+        "class": "setup-choice ",
+        "label": "Off",
+        "left": 203.66,
+        "right": 283,
+        "width": 79.34,
+        "top": 704,
+        "bottom": 732
+      },
+      {
+        "class": "setup-control",
+        "label": "Throw-in scope?NeighborsNeighborsAll pla",
+        "left": 37,
+        "right": 283,
+        "width": 246,
+        "top": 739,
+        "bottom": 786
+      },
+      {
+        "class": "setup-label",
+        "label": "Throw-in scope?Neighbors",
+        "left": 37,
+        "right": 283,
+        "width": 246,
+        "top": 739,
+        "bottom": 756
+      },
+      {
+        "class": "setup-segment two",
+        "label": "NeighborsAll players",
+        "left": 37,
+        "right": 283,
+        "width": 246,
+        "top": 758,
+        "bottom": 786
+      },
+      {
+        "class": "setup-choice active",
+        "label": "Neighbors",
+        "left": 37,
+        "right": 158,
+        "width": 121,
+        "top": 758,
+        "bottom": 786
+      },
+      {
+        "class": "setup-choice ",
+        "label": "All players",
+        "left": 162,
+        "right": 283,
+        "width": 121,
+        "top": 758,
+        "bottom": 786
+      }
+    ],
+    "errors": []
+  },
+  "screenshot": "proofs/deckforge-0.2.6.6-durak-setup-phone320.png"
+}

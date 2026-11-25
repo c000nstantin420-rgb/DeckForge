@@ -1,0 +1,97 @@
+{
+  "version": "0.2.6.6",
+  "passed": true,
+  "collapsedLobby": {
+    "game": "durak",
+    "summary": "2 seats · 36 cards · Throw-in · Neighbors",
+    "expanded": "false"
+  },
+  "controls": {
+    "deck": [
+      "24",
+      "36",
+      "52"
+    ],
+    "rules": [
+      "throwIn",
+      "transfer",
+      "off"
+    ],
+    "scope": [
+      {
+        "value": "neighbors",
+        "disabled": false
+      },
+      {
+        "value": "all",
+        "disabled": true
+      }
+    ]
+  },
+  "selectedTransfer": {
+    "players": 4,
+    "deckSize": 24,
+    "attackRule": "transfer",
+    "throwInPolicy": "neighbors",
+    "throwIn": "off",
+    "push": true
+  },
+  "transferScopeCount": 0,
+  "selectedOff": {
+    "players": 4,
+    "deckSize": 24,
+    "attackRule": "off",
+    "throwInPolicy": "neighbors",
+    "throwIn": "off",
+    "push": false
+  },
+  "offScopeCount": 0,
+  "selectedThrowInAll": {
+    "players": 4,
+    "deckSize": 24,
+    "attackRule": "throwIn",
+    "throwInPolicy": "all",
+    "throwIn": "all",
+    "push": false
+  },
+  "summary": {
+    "setup": "4 seats · 24 cards · Throw-in · All players",
+    "header": "4 seats · you + 3 AI · 24-card deck · throw-in all players"
+  },
+  "deckSizeHelp": {
+    "title": "Deck size help",
+    "body": "Deck size\nChoose a 24-card (9–Ace), 36-card (6–Ace), or 52-card (2–Ace) Durak deck. Each seat receives six cards. If a 24-card, four-seat deal empties the talon, the last dealt card sets trump."
+  },
+  "persistedConfig": {
+    "players": 4,
+    "deckSize": 24,
+    "attackRule": "throwIn",
+    "throwInPolicy": "all",
+    "throwIn": "all",
+    "push": false
+  },
+  "actual24CardDeal": {
+    "phase": "attack",
+    "deck": 24,
+    "players": 4,
+    "talon": 0,
+    "handTotal": 24,
+    "trumpCard": "durak-0-9",
+    "trumpInHand": true,
+    "rule": "throwIn",
+    "button": false,
+    "note": "The AI is making its move…",
+    "subtitle": "4 seats · you + 3 AI · 24-card deck · throw-in all players",
+    "audit": true
+  },
+  "brandReturn": {
+    "screen": "home",
+    "home": true,
+    "errors": []
+  },
+  "screenshots": {
+    "mobileSetup": "proofs/deckforge-0.2.6.6-durak-setup-mobile.png",
+    "mobile24FourActive": "proofs/deckforge-0.2.6.6-durak-24-four-active.png"
+  },
+  "browserErrors": []
+}

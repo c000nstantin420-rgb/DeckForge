@@ -1,0 +1,82 @@
+{
+  "version": "0.2.6.6",
+  "runtime_bytes": 307131,
+  "runtime_lines": 2289,
+  "inline_scripts": 1,
+  "duplicate_ids": [],
+  "literal_dom_refs": 87,
+  "missing_dom_refs": [],
+  "external_asset_refs": 0,
+  "inline_event_attributes": 0,
+  "http_urls_in_runtime": 0,
+  "json_proof_count": 10,
+  "json_proof_files": [
+    "durak-320-lobby-0.2.6.6.json",
+    "durak-36-deal-0.2.6.6.json",
+    "durak-active-visual-0.2.6.6.json",
+    "durak-config-ui-0.2.6.6.json",
+    "durak-ipad-0.2.6.6.json",
+    "durak-setup-320-0.2.6.6.json",
+    "durak-stress-0.2.6.6.json",
+    "durak-transfer-action-0.2.6.6.json",
+    "self-test-0.2.6.6.json",
+    "static-audit-0.2.6.6.json"
+  ],
+  "json_semantic_checks": {
+    "self-test-0.2.6.6.json": true,
+    "durak-stress-0.2.6.6.json": true,
+    "durak-config-ui-0.2.6.6.json": true,
+    "durak-transfer-action-0.2.6.6.json": true,
+    "durak-ipad-0.2.6.6.json": true,
+    "durak-36-deal-0.2.6.6.json": true,
+    "durak-setup-320-0.2.6.6.json": true,
+    "durak-320-lobby-0.2.6.6.json": true,
+    "durak-active-visual-0.2.6.6.json": true
+  },
+  "png_proof_count": 10,
+  "png_dimensions": {
+    "deckforge-0.2.6.6-durak-24-four-active.png": [
+      390,
+      844
+    ],
+    "deckforge-0.2.6.6-durak-36-off-active-ipad-landscape.png": [
+      1194,
+      834
+    ],
+    "deckforge-0.2.6.6-durak-lobby-phone320.png": [
+      320,
+      800
+    ],
+    "deckforge-0.2.6.6-durak-off-active-ipad-landscape.png": [
+      1194,
+      834
+    ],
+    "deckforge-0.2.6.6-durak-setup-mobile.png": [
+      390,
+      844
+    ],
+    "deckforge-0.2.6.6-durak-setup-phone320.png": [
+      320,
+      800
+    ],
+    "deckforge-0.2.6.6-durak-throwin-setup-ipad-landscape.png": [
+      1194,
+      834
+    ],
+    "deckforge-0.2.6.6-durak-transfer-action-ipad-portrait.png": [
+      834,
+      1194
+    ],
+    "deckforge-0.2.6.6-durak-transfer-action-mobile.png": [
+      390,
+      844
+    ],
+    "deckforge-0.2.6.6-durak-transfer-setup-ipad-portrait.png": [
+      834,
+      1194
+    ]
+  },
+  "png_valid": true,
+  "node_check": true,
+  "git_diff_check": true
+}

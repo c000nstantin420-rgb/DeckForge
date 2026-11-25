@@ -1,0 +1,95 @@
+{
+  "version": "0.2.6.6",
+  "passed": true,
+  "ipadPortraitSetup": {
+    "config": {
+      "players": 4,
+      "deckSize": 52,
+      "attackRule": "transfer",
+      "throwInPolicy": "neighbors",
+      "throwIn": "off",
+      "push": true
+    },
+    "summary": "4 seats · 52 cards · Transfer",
+    "subtitle": "4 seats · you + 3 AI · 52-card deck · transfer",
+    "scroll": [
+      834,
+      834
+    ]
+  },
+  "ipadPortrait52Deal": {
+    "deck": 52,
+    "talon": 28,
+    "players": 4,
+    "handTotal": 24,
+    "rule": "transfer",
+    "throwIn": "off",
+    "push": true,
+    "audit": true,
+    "errors": []
+  },
+  "ipadLandscapeSetup": {
+    "config": {
+      "players": 4,
+      "deckSize": 36,
+      "attackRule": "throwIn",
+      "throwInPolicy": "all",
+      "throwIn": "all",
+      "push": false
+    },
+    "summary": "4 seats · 36 cards · Throw-in · All players",
+    "subtitle": "4 seats · you + 3 AI · 36-card deck · throw-in all players",
+    "scroll": [
+      1194,
+      1194
+    ],
+    "controls": [
+      [
+        "deckSize",
+        "24",
+        false
+      ],
+      [
+        "deckSize",
+        "36",
+        false
+      ],
+      [
+        "deckSize",
+        "52",
+        false
+      ],
+      [
+        "attackRule",
+        "throwIn",
+        false
+      ],
+      [
+        "attackRule",
+        "transfer",
+        false
+      ],
+      [
+        "attackRule",
+        "off",
+        false
+      ],
+      [
+        "throwInPolicy",
+        "neighbors",
+        false
+      ],
+      [
+        "throwInPolicy",
+        "all",
+        false
+      ]
+    ]
+  },
+  "screenshots": {
+    "ipadPortraitTransferSetup": "proofs/deckforge-0.2.6.6-durak-transfer-setup-ipad-portrait.png",
+    "ipadPortrait52Active": "proofs/deckforge-0.2.6.6-durak-transfer-action-ipad-portrait.png",
+    "ipadLandscapeThrowInSetup": "proofs/deckforge-0.2.6.6-durak-throwin-setup-ipad-landscape.png"
+  },
+  "browserErrors": []
+}

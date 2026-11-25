@@ -1,0 +1,40 @@
+{
+  "version": "0.2.6.6",
+  "passed": true,
+  "setup": {
+    "config": {
+      "players": 4,
+      "deckSize": 36,
+      "attackRule": "off",
+      "throwInPolicy": "neighbors",
+      "throwIn": "off",
+      "push": false
+    },
+    "subtitle": "4 seats · you + 3 AI · 36-card deck · extra rules off",
+    "summary": "4 seats · 36 cards · Extra rules off"
+  },
+  "deal": {
+    "deck": 36,
+    "ranks": [
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "J",
+      "Q",
+      "K",
+      "A"
+    ],
+    "players": 4,
+    "talon": 12,
+    "handTotal": 24,
+    "rule": "off",
+    "throwIn": "off",
+    "push": false,
+    "extraButton": false,
+    "audit": true,
+    "errors": []
+  },
+  "screenshot": "proofs/deckforge-0.2.6.6-durak-36-off-active-ipad-landscape.png"
+}

@@ -1,0 +1,55 @@
+{
+  "version": "0.2.6.6",
+  "passed": true,
+  "ipadPortraitTransfer": {
+    "audit": true,
+    "config": {
+      "players": 4,
+      "deckSize": 52,
+      "attackRule": "transfer",
+      "throwInPolicy": "neighbors",
+      "throwIn": "off",
+      "push": true
+    },
+    "button": {
+      "text": "Transfer with 8♥",
+      "disabled": false
+    },
+    "note": "Choose a defense, tap Transfer with 8♥, or drop that card on the Transfer button.",
+    "defendGap": 6.78125,
+    "scroll": [
+      834,
+      834
+    ],
+    "hitRect": [
+      333.4375,
+      1096,
+      497.03125,
+      1142
+    ]
+  },
+  "ipadLandscapeOff": {
+    "audit": true,
+    "config": {
+      "players": 4,
+      "deckSize": 52,
+      "attackRule": "off",
+      "throwInPolicy": "neighbors",
+      "throwIn": "off",
+      "push": false
+    },
+    "button": null,
+    "note": "Choose a defense or take the cards.",
+    "defendGap": 3.78125,
+    "scroll": [
+      1194,
+      1194
+    ],
+    "hitRect": null
+  },
+  "browserErrors": [],
+  "screenshots": {
+    "portraitTransfer": "proofs/deckforge-0.2.6.6-durak-transfer-action-ipad-portrait.png",
+    "landscapeOff": "proofs/deckforge-0.2.6.6-durak-off-active-ipad-landscape.png"
+  }
+}
