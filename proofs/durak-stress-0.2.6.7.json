@@ -1,0 +1,229 @@
+{
+  "version": "0.2.6.7",
+  "matches": 360,
+  "configurations": 30,
+  "matches_per_configuration": 12,
+  "total_audited_actions": 15430,
+  "min_steps": 22,
+  "max_steps": 97,
+  "draws": 49,
+  "non_draws": 311,
+  "complete_non_draw_finish_orders": 311,
+  "failures": [],
+  "all_terminal": true,
+  "all_audits_valid": true,
+  "all_finish_orders_unique": true,
+  "all_finish_orders_consistent": true,
+  "configurations_detail": [
+    {
+      "deckSize": 24,
+      "players": 2,
+      "attackRule": "throwIn",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 24,
+      "players": 2,
+      "attackRule": "transfer",
+      "throwInPolicy": "neighbors",
+      "push": true
+    },
+    {
+      "deckSize": 24,
+      "players": 2,
+      "attackRule": "off",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 24,
+      "players": 3,
+      "attackRule": "throwIn",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 24,
+      "players": 3,
+      "attackRule": "transfer",
+      "throwInPolicy": "neighbors",
+      "push": true
+    },
+    {
+      "deckSize": 24,
+      "players": 3,
+      "attackRule": "off",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 24,
+      "players": 4,
+      "attackRule": "throwIn",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 24,
+      "players": 4,
+      "attackRule": "throwIn",
+      "throwInPolicy": "all",
+      "push": false
+    },
+    {
+      "deckSize": 24,
+      "players": 4,
+      "attackRule": "transfer",
+      "throwInPolicy": "neighbors",
+      "push": true
+    },
+    {
+      "deckSize": 24,
+      "players": 4,
+      "attackRule": "off",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 36,
+      "players": 2,
+      "attackRule": "throwIn",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 36,
+      "players": 2,
+      "attackRule": "transfer",
+      "throwInPolicy": "neighbors",
+      "push": true
+    },
+    {
+      "deckSize": 36,
+      "players": 2,
+      "attackRule": "off",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 36,
+      "players": 3,
+      "attackRule": "throwIn",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 36,
+      "players": 3,
+      "attackRule": "transfer",
+      "throwInPolicy": "neighbors",
+      "push": true
+    },
+    {
+      "deckSize": 36,
+      "players": 3,
+      "attackRule": "off",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 36,
+      "players": 4,
+      "attackRule": "throwIn",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 36,
+      "players": 4,
+      "attackRule": "throwIn",
+      "throwInPolicy": "all",
+      "push": false
+    },
+    {
+      "deckSize": 36,
+      "players": 4,
+      "attackRule": "transfer",
+      "throwInPolicy": "neighbors",
+      "push": true
+    },
+    {
+      "deckSize": 36,
+      "players": 4,
+      "attackRule": "off",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 52,
+      "players": 2,
+      "attackRule": "throwIn",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 52,
+      "players": 2,
+      "attackRule": "transfer",
+      "throwInPolicy": "neighbors",
+      "push": true
+    },
+    {
+      "deckSize": 52,
+      "players": 2,
+      "attackRule": "off",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 52,
+      "players": 3,
+      "attackRule": "throwIn",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 52,
+      "players": 3,
+      "attackRule": "transfer",
+      "throwInPolicy": "neighbors",
+      "push": true
+    },
+    {
+      "deckSize": 52,
+      "players": 3,
+      "attackRule": "off",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 52,
+      "players": 4,
+      "attackRule": "throwIn",
+      "throwInPolicy": "neighbors",
+      "push": false
+    },
+    {
+      "deckSize": 52,
+      "players": 4,
+      "attackRule": "throwIn",
+      "throwInPolicy": "all",
+      "push": false
+    },
+    {
+      "deckSize": 52,
+      "players": 4,
+      "attackRule": "transfer",
+      "throwInPolicy": "neighbors",
+      "push": true
+    },
+    {
+      "deckSize": 52,
+      "players": 4,
+      "attackRule": "off",
+      "throwInPolicy": "neighbors",
+      "push": false
+    }
+  ]
+}

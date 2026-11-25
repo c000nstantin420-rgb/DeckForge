@@ -1,0 +1,40 @@
+{
+  "version": "0.2.6.7",
+  "runtime_bytes": 423139,
+  "runtime_lines": 2833,
+  "inline_scripts": 1,
+  "id_count": 58,
+  "unique_literal_dom_refs": 51,
+  "duplicate_ids": [],
+  "missing_dom_refs": [],
+  "external_asset_refs": 0,
+  "inline_event_attributes": 0,
+  "http_urls_in_runtime": 0,
+  "node_check": true,
+  "git_diff_check": true,
+  "pages_workflow_yaml_valid": true,
+  "durak_stress": {"matches": 360, "configurations": 30, "audited_actions": 15430, "draws": 49, "complete_non_draw_orders": 311, "failures": 0},
+  "mau_setup_layout": {"advanced_controls": 18, "viewports": ["320x800", "390x844", "834x1194", "1024x768", "1194x834", "1366x900"], "label_button_overflows": 0},
+  "release_json_proof_count": 6,
+  "release_json_proofs": [
+    "durak-placement-payout.json",
+    "durak-stress-0.2.6.7.json",
+    "mau-mau-manual-0.2.6.7.json",
+    "mau-mau-responsive-0.2.6.7.json",
+    "self-test-0.2.6.7.json",
+    "static-audit-0.2.6.7.json"
+  ],
+  "release_png_proof_count": 8,
+  "release_png_dimensions": {
+    "durak-placement-payout-390x844.png": [390, 844],
+    "mau-mau-1024x768.png": [1024, 768],
+    "mau-mau-320x800.png": [320, 800],
+    "mau-mau-390x844.png": [390, 844],
+    "mau-mau-idioten-config-390x844-0.2.6.7.png": [390, 844],
+    "mau-mau-manual-390x844-0.2.6.7.png": [390, 844],
+    "mau-mau-setup-390x844-0.2.6.7.png": [390, 844],
+    "mau-mau-setup-overflow-check-390x844-0.2.6.7.png": [390, 844]
+  },
+  "png_signatures_valid": true,
+  "proof_json_semantics_valid": true
+}

@@ -1,0 +1,66 @@
+{
+  "version": "0.2.6.7",
+  "setup": {
+    "viewport": [390, 844],
+    "idiotMau": true,
+    "idiotRounds": 5,
+    "advancedSettingsVisible": true,
+    "documentWidth": 390,
+    "versionBadge": "0.2.6.7"
+  },
+  "setupControlLayout": {
+    "nestedDisclosureOpenedByUI": true,
+    "selectedRules": {"idiotMau": true, "idiotRounds": 5},
+    "fixedRoundChoices": [3, 5, 7],
+    "advancedControlCount": 18,
+    "buttonOrLabelOverflows": 0,
+    "checkedViewports": ["320x800", "390x844", "834x1194", "1024x768", "1194x834", "1366x900"],
+    "documentWidths": [320, 390, 819, 1009, 1179, 1351],
+    "documentNeverExceedsViewport": true,
+    "idiotToggleAndRoundsVisibleAfterScroll": true,
+    "browserErrors": [],
+    "screenshots": [
+      "proofs/mau-mau-idioten-config-390x844-0.2.6.7.png",
+      "proofs/mau-mau-setup-overflow-check-390x844-0.2.6.7.png"
+    ]
+  },
+  "activeFixture": {
+    "players": 4,
+    "deckSize": 64,
+    "handSize": 7,
+    "audit": {"ok": true, "total": 64, "accounted": 64, "unique": 64, "duplicates": 0}
+  },
+  "responsiveChecks": [
+    {
+      "viewport": [320, 800],
+      "document": [320, 800],
+      "hand": {"scrollWidth": 321, "clientWidth": 254, "lastCardReachable": true},
+      "handBottom": 599.91,
+      "sidebarTop": 616.91,
+      "sidebarDoesNotOverlapHand": true,
+      "actionButtonsInsideViewport": true
+    },
+    {
+      "viewport": [390, 844],
+      "document": [390, 844],
+      "hand": {"scrollWidth": 376, "clientWidth": 324, "lastCardReachable": true},
+      "handBottom": 611.13,
+      "sidebarTop": 628.13,
+      "sidebarDoesNotOverlapHand": true,
+      "actionButtonsInsideViewport": true
+    },
+    {
+      "viewport": [1024, 768],
+      "document": [1024, 768],
+      "sidebarSeparateColumn": true,
+      "actionButtonsInsideViewport": true
+    }
+  ],
+  "browserErrors": [],
+  "screenshots": [
+    "proofs/mau-mau-setup-390x844-0.2.6.7.png",
+    "proofs/mau-mau-320x800.png",
+    "proofs/mau-mau-390x844.png",
+    "proofs/mau-mau-1024x768.png"
+  ]
+}

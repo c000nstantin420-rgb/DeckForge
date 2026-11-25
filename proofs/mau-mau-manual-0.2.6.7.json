@@ -1,0 +1,378 @@
+{
+  "version": "0.2.6.7",
+  "viewport": [
+    390,
+    844
+  ],
+  "home": {
+    "version": "Go to DeckForge home. Version 0.2.6.7",
+    "screen": "home",
+    "visible": "♥\n↗\nMau-Mau\n\nMatch suits and ranks, call Mau, and tune the table’s popular house rules.\n\nTable 1 · 0"
+  },
+  "setup": {
+    "config": {
+      "players": 2,
+      "deckSize": 32,
+      "handSize": 5,
+      "matchTarget": 1,
+      "scoreMode": "roundWins",
+      "scoreTarget": 100,
+      "faceCardValues": "ten",
+      "jackPoints": 20,
+      "idiotMau": false,
+      "idiotRounds": 3,
+      "stackSevens": false,
+      "stackEights": false,
+      "stackTwos": true,
+      "reverseNines": false,
+      "reverseAtTwo": "none",
+      "aceEffect": "none",
+      "drawTwos": false,
+      "playDrawnImmediately": true,
+      "allowVoluntaryDraw": true,
+      "jackOnJack": false,
+      "jackFinishForbidden": false,
+      "requireCalls": true,
+      "missedCallPenalty": 1,
+      "applyFirstCardEffects": true,
+      "multipleCards": false,
+      "clearJackWithTen": false,
+      "queenClubsDrawFour": false,
+      "jackFinishBonus": false,
+      "lastCardEffects": true
+    },
+    "summary": "Table setup\n2 seats · 32 cards · 5 each · first to 1 wins\nHide\n−\nPLAYERS\n?\n2 seats · you + 1 AI\n2 seats\n3 seats\n4 seats\nDECK SIZE\n?\n32\n32\n36\n52\n64\nCARDS PER HAND\n?\n5\n5\n6\n7\nMATCH SCORING\n?\nRound wins\nRound wins\nPenalty points\nPoints race\nFIRST TO\n?\n1 win\n1 win\n3 wins\n5 wins\nSpecial cards, calls & scoring",
+    "version": "Go to DeckForge home. Version 0.2.6.7"
+  },
+  "bankrollBefore": 250,
+  "initialDeal": {
+    "phase": "turn",
+    "turn": 0,
+    "round": 1,
+    "hand": 5,
+    "stock": 21,
+    "wager": 10,
+    "audit": {
+      "ok": true,
+      "total": 32,
+      "accounted": 32,
+      "unique": 32,
+      "duplicates": 0,
+      "missing": [],
+      "unknown": []
+    },
+    "config": {
+      "players": 2,
+      "deckSize": 32,
+      "handSize": 5,
+      "matchTarget": 1,
+      "scoreMode": "roundWins",
+      "scoreTarget": 100,
+      "faceCardValues": "ten",
+      "jackPoints": 20,
+      "idiotMau": false,
+      "idiotRounds": 3,
+      "stackSevens": false,
+      "stackEights": false,
+      "stackTwos": true,
+      "reverseNines": false,
+      "reverseAtTwo": "none",
+      "aceEffect": "none",
+      "drawTwos": false,
+      "playDrawnImmediately": true,
+      "allowVoluntaryDraw": true,
+      "jackOnJack": false,
+      "jackFinishForbidden": false,
+      "requireCalls": true,
+      "missedCallPenalty": 1,
+      "applyFirstCardEffects": true,
+      "multipleCards": false,
+      "clearJackWithTen": false,
+      "queenClubsDrawFour": false,
+      "jackFinishBonus": false,
+      "lastCardEffects": true
+    }
+  },
+  "steps": 9,
+  "lastActions": [
+    {
+      "step": 0,
+      "action": "select 9spades; play",
+      "after": {
+        "phase": "turn",
+        "turn": 1,
+        "round": 1,
+        "winner": null,
+        "hand": 4,
+        "top": "9:spades",
+        "stock": 21,
+        "scores": [
+          0,
+          0
+        ],
+        "audit": {
+          "ok": true,
+          "total": 32,
+          "accounted": 32,
+          "unique": 32,
+          "duplicates": 0,
+          "missing": [],
+          "unknown": []
+        },
+        "errors": []
+      }
+    },
+    {
+      "step": 1,
+      "action": "wait AI",
+      "after": {
+        "phase": "turn",
+        "turn": 0,
+        "round": 1,
+        "winner": null,
+        "hand": 4,
+        "top": "A:spades",
+        "stock": 21,
+        "scores": [
+          0,
+          0
+        ],
+        "audit": {
+          "ok": true,
+          "total": 32,
+          "accounted": 32,
+          "unique": 32,
+          "duplicates": 0,
+          "missing": [],
+          "unknown": []
+        },
+        "errors": []
+      }
+    },
+    {
+      "step": 2,
+      "action": "select Qspades; play",
+      "after": {
+        "phase": "turn",
+        "turn": 1,
+        "round": 1,
+        "winner": null,
+        "hand": 3,
+        "top": "Q:spades",
+        "stock": 21,
+        "scores": [
+          0,
+          0
+        ],
+        "audit": {
+          "ok": true,
+          "total": 32,
+          "accounted": 32,
+          "unique": 32,
+          "duplicates": 0,
+          "missing": [],
+          "unknown": []
+        },
+        "errors": []
+      }
+    },
+    {
+      "step": 3,
+      "action": "wait AI",
+      "after": {
+        "phase": "turn",
+        "turn": 0,
+        "round": 1,
+        "winner": null,
+        "hand": 3,
+        "top": "A:hearts",
+        "stock": 19,
+        "scores": [
+          0,
+          0
+        ],
+        "audit": {
+          "ok": true,
+          "total": 32,
+          "accounted": 32,
+          "unique": 32,
+          "duplicates": 0,
+          "missing": [],
+          "unknown": []
+        },
+        "errors": []
+      }
+    },
+    {
+      "step": 4,
+      "action": "select 10hearts; play",
+      "after": {
+        "phase": "turn",
+        "turn": 1,
+        "round": 1,
+        "winner": null,
+        "hand": 2,
+        "top": "10:hearts",
+        "stock": 19,
+        "scores": [
+          0,
+          0
+        ],
+        "audit": {
+          "ok": true,
+          "total": 32,
+          "accounted": 32,
+          "unique": 32,
+          "duplicates": 0,
+          "missing": [],
+          "unknown": []
+        },
+        "errors": []
+      }
+    },
+    {
+      "step": 5,
+      "action": "wait AI",
+      "after": {
+        "phase": "turn",
+        "turn": 0,
+        "round": 1,
+        "winner": null,
+        "hand": 2,
+        "top": "10:diamonds",
+        "stock": 19,
+        "scores": [
+          0,
+          0
+        ],
+        "audit": {
+          "ok": true,
+          "total": 32,
+          "accounted": 32,
+          "unique": 32,
+          "duplicates": 0,
+          "missing": [],
+          "unknown": []
+        },
+        "errors": []
+      }
+    },
+    {
+      "step": 6,
+      "action": "select Jdiamonds; wish clubs; call mau; play",
+      "after": {
+        "phase": "turn",
+        "turn": 1,
+        "round": 1,
+        "winner": null,
+        "hand": 1,
+        "top": "J:diamonds",
+        "stock": 19,
+        "scores": [
+          0,
+          0
+        ],
+        "audit": {
+          "ok": true,
+          "total": 32,
+          "accounted": 32,
+          "unique": 32,
+          "duplicates": 0,
+          "missing": [],
+          "unknown": []
+        },
+        "errors": []
+      }
+    },
+    {
+      "step": 7,
+      "action": "wait AI",
+      "after": {
+        "phase": "turn",
+        "turn": 0,
+        "round": 1,
+        "winner": null,
+        "hand": 1,
+        "top": "A:clubs",
+        "stock": 19,
+        "scores": [
+          0,
+          0
+        ],
+        "audit": {
+          "ok": true,
+          "total": 32,
+          "accounted": 32,
+          "unique": 32,
+          "duplicates": 0,
+          "missing": [],
+          "unknown": []
+        },
+        "errors": []
+      }
+    },
+    {
+      "step": 8,
+      "action": "select 9clubs; call mau-mau; play",
+      "after": {
+        "phase": "finished",
+        "turn": null,
+        "round": 1,
+        "winner": 0,
+        "hand": 0,
+        "top": "9:clubs",
+        "stock": 19,
+        "scores": [
+          1,
+          0
+        ],
+        "audit": {
+          "ok": true,
+          "total": 32,
+          "accounted": 32,
+          "unique": 32,
+          "duplicates": 0,
+          "missing": [],
+          "unknown": []
+        },
+        "errors": []
+      }
+    }
+  ],
+  "failure": null,
+  "final": {
+    "phase": "finished",
+    "round": 1,
+    "winner": 0,
+    "roundWinner": 0,
+    "scores": [
+      1,
+      0
+    ],
+    "hands": [
+      0,
+      1
+    ],
+    "stock": 19,
+    "audit": {
+      "ok": true,
+      "total": 32,
+      "accounted": 32,
+      "unique": 32,
+      "duplicates": 0,
+      "missing": [],
+      "unknown": []
+    },
+    "payout": {
+      "wager": 10,
+      "players": 2,
+      "returned": 20,
+      "net": 10
+    },
+    "balance": 260,
+    "progression": 1,
+    "errors": [],
+    "resultText": "Match complete\nRound 1\nSeats 2\nDeck 32\nStock 19\nHand 0\nPLAYER 2\nMAU!\n1 card\n9\n♣\n♣\n9\n♣\nWish ♣ clubs\nTop discard\nDraw pile\n19 cards left\nYOUR HAND\n0 cards\nEmpty hand\nCURRENT RULE SET\n\nA Seven makes the next seat draw two. Eights skip the next seat. Aces are ordinary. Call Mau at one card and Mau-Mau on the last.\n\nClockwise · round wins\n\nMATCH SCORE\nYou\n1 win\nPlayer 2\n0 wins\nMATCH COMPLETE\nMau-Mau!\nYou won the 2-seat match and collect the table pot.\n+$10\n$20 returned\nNext bet\n$10\n$20\n$50\n$100\nNew Mau-Mau match · $10\nChoose another table"
+  },
+  "method": "Visible Home tile, setup toggle, deal, visible card selection, suit/call selection, play/draw, and AI turns."
+}

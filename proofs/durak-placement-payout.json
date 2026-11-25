@@ -1,0 +1,48 @@
+{
+  "task": "Durak multiplayer placement payout regression",
+  "runtime_version": "0.2.6.7 (release candidate; unpublished)",
+  "viewport": {
+    "live_test": [390, 844],
+    "result_layouts": [
+      {"size": [320, 800], "document": [320, 800], "action_buttons_inside_viewport": true},
+      {"size": [390, 844], "document": [390, 844], "action_buttons_inside_viewport": true},
+      {"size": [1024, 768], "document": [1024, 768], "action_buttons_inside_viewport": true}
+    ]
+  },
+  "scenario": {
+    "players": 3,
+    "deck_size": 36,
+    "ante": 10,
+    "flow": "Opened Durak from Home, selected three seats, dealt, AI attacked, human selected a physical defense card and used the rendered Beat action.",
+    "finish_order_zero_based_seats": [2, 0, 1],
+    "durak_seat_zero_based": 1,
+    "human_place": 2,
+    "hands_at_end": [0, 1, 0]
+  },
+  "settlement": {
+    "human_result": "2nd place",
+    "stake_before_deal": 250,
+    "balance_after_debit": 240,
+    "returned": 10,
+    "net": 0,
+    "balance_after_settlement": 250,
+    "transaction_label": "Durak place stake return",
+    "durak_wins_added": 0
+  },
+  "audit": {
+    "ok": true,
+    "total": 36,
+    "accounted": 36,
+    "unique": 36,
+    "duplicates": 0,
+    "missing": [],
+    "unknown": []
+  },
+  "rendered_copy": "You escaped the Durak but did not finish first. Your stake is returned.",
+  "browser_errors": [],
+  "toast_count_after_settlement": 0,
+  "rematch_buttons_fully_visible": true,
+  "in_app_self_tests": {"passed": 121, "failed": 0, "total": 121},
+  "visual_review": "390x844 release screenshot inspected: 2nd-place/refund copy is legible, no toast covers actions, 1 card/No cards labels are correct, and both rematch buttons are unobstructed.",
+  "screenshot": "proofs/durak-placement-payout-390x844.png"
+}

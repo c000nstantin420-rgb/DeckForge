@@ -31,6 +31,8 @@ jobs:
           mkdir -p _site
           cp deckforge.html _site/deckforge.html
           cp README.md _site/README.md
+          mkdir -p _site/references
+          cp references/mau-mau-rules.md _site/references/mau-mau-rules.md
           cat > _site/index.html <<'EOF'
           <!doctype html>
           <meta charset="utf-8">

@@ -2,9 +2,9 @@
 
 > **For Hermes:** Execute task-by-task, keep the HTML self-contained, and do not report completion before the browser and engine proofs are green.
 
-**Goal:** Build an offline, single-file iPhone/iPad card-game app with a physically simulated deck/shoe, a real playable Blackjack mode, a real playable 2–4-seat Durak mode, persistent bankroll/progression, and a $100 bankruptcy grant.
+**Goal:** Build an offline, single-file iPhone/iPad card-game app with a physically simulated deck/shoe, playable Blackjack and 2–4-seat Durak, configurable 2–4-seat Mau-Mau variants, persistent bankroll/progression, and a $100 bankruptcy grant.
 
-**Architecture:** `deckforge.html` is the only runtime artifact and contains all CSS and JavaScript inline. The engine is separated into small classes/functions inside the script (`Deck`, `Shoe`, `BlackjackGame`, `DurakGame`, `Bankroll`, `Progression`, persistence, UI). Every draw removes a concrete card object from a shuffled array; no game asks RNG for a fresh rank/suit during play. `window.DeckForge` exposes the engine and a deterministic self-test suite for browser proofs without adding runtime dependencies.
+**Architecture:** `deckforge.html` is the only runtime artifact and contains all CSS and JavaScript inline. The engine is separated into small classes/functions inside the script (`Deck`, `Shoe`, `BlackjackGame`, `DurakGame`, `MauMauGame`, `Bankroll`, `Progression`, persistence, UI). Every draw removes a concrete card object from a shuffled array; no game asks RNG for a fresh rank/suit during play. `window.DeckForge` exposes the engines and deterministic self-tests for browser proofs without adding runtime dependencies.
 
 **Tech Stack:** HTML5, CSS, vanilla ES modules-style code in one inline script, CSS playing cards, `localStorage`, `crypto.getRandomValues` with injectable seeded RNG for tests. No CDN, fonts, images, build step, or network dependency.
 
@@ -17,10 +17,11 @@
 | One offline single file | `deckforge.html`; inline CSS/JS only | no external `<script>`, `<link>`, image or network request; `node --check` passes |
 | Genuine deck simulation | Fisher–Yates shuffle once; card objects are removed from `cards` by `draw`; discard/talon state is explicit | deck count decreases, drawn IDs never repeat, audit reports every card in exactly one zone |
 | Blackjack | six-deck shoe, hit, stand, double, split, insurance, blackjack 3:2, dealer soft-17 policy, push/bust/payouts | direct engine tests plus a browser hand from deal through settlement |
-| Durak | 36-card deck, trump, six-card deal, first attacker, attack/throw-in, beat, take, draw order, AI, end conditions | legal-move matrix, forced attack/defense/AI round, full browser match to winner |
-| Currency | persistent dollars, wager deductions, payouts, mode stakes, visible transaction log | balance before/after assertions, reload persistence, no negative balance |
+|| Durak | configurable 2–4-seat Podkidnoy match with 24/36/52-card decks, trump, attacks, throw-in/transfer | legal-move matrix, multi-seat stress and full browser match |
+|| Mau-Mau | physical 32/36/52/64-card packs; 2–4 seats; common and regional variants, scoring, calls, Idioten-Mau | deterministic rule tests, bounded AI, rendered play/settlement, physical-card audit |
+|| Currency | persistent dollars, wager deductions, payouts, mode stakes, visible transaction log | balance before/after assertions, reload persistence, no negative balance |
 | Bankruptcy | exactly +$100 when balance reaches zero and user attempts a new wager/match | engine and UI test at `$0` verifies one grant and no repeated grants before spending |
-| Progression | separate unlock tracks for Blackjack and Durak with increasing modes/stakes | locked mode cannot start; wins unlock exact next mode; UI reflects progress |
+|| Progression | separate unlock tracks for Blackjack, Durak, and Mau-Mau with increasing modes/stakes | locked mode cannot start; wins unlock exact next mode; UI reflects progress |
 | iPhone/iPad UX | safe-area layout, large buttons, responsive table, touch-action, CSS cards, no horizontal overflow | 390×844 and 1024×768 geometry/overflow checks; real touch-dispatch on action buttons |
 | Evidence | plan, test report, screenshots and measured browser output kept in project | `proofs/` contains JSON/report and unique screenshots; final response cites measured numbers |
 
@@ -29,8 +30,8 @@
 - Blackjack uses six standard 52-card decks (312 cards) per shoe. Cards have unique `shoeId`/`serial`, even when rank and suit repeat. The shoe reshuffles only at a defined penetration threshold, never between individual draws.
 - Blackjack dealer stands on soft 17. Natural Blackjack pays 3:2; a split 21 is not natural. Double-down is allowed on the first two cards of each hand; split hands may double. Insurance is available only against an Ace up-card and pays 2:1. One split is allowed initially, with aces receiving one card only.
 - Durak uses the 36-card ranks 6 through Ace, 2–4 seats, one trump suit, a maximum of six cards in an attack, and standard Podkidnoy throw-in rules. The defender may beat an attack card or take the complete table. After a successful defense the defender attacks next; after a take, the same attacker attacks again. Drawing after each round is attacker first, then defender, up to six cards.
-- A match stake is deducted when it begins. Blackjack results pay according to hand rules. A Durak winner receives `configured players × stake` (the full pot, including the human's ante); the human loses only their own ante on a loss, and draws return it. A new wager at balance 0 grants exactly $100 first. Balance is never allowed below zero.
-- Modes are intentionally simple and visible: four Blackjack tables and four Durak tables. Each next mode requires wins in that game and has a higher minimum stake. No hidden debug unlock is shipped.
+- A match stake is deducted when it begins. Blackjack results pay according to hand rules. In Durak, the first finisher receives `configured players × stake`; any later finisher before the Durak receives only their own ante back; the last Durak loses their ante; draws/stalemates return the human stake. Mau-Mau match winners collect the table pot. A new wager at balance 0 grants exactly $100 first. Balance is never allowed below zero.
+- Modes are intentionally simple and visible: four Blackjack, four Durak, and four Mau-Mau tables. Each next mode requires wins in that game and has a higher minimum stake. No hidden debug unlock is shipped.
 
 ---
 
@@ -143,7 +144,7 @@ Implement the 36-card deal, trump, lowest-trump opening attacker, table attack o
 
 Connect game selection, mode selection, bet/stake controls, start buttons, bankruptcy grant messaging, progression display, transaction history, save/reset, and game-over return actions. Keep the selected game/mode in URL-free local state and update all visible values after every mutation.
 
-**Acceptance:** a user can start either game from a fresh page, cannot start a locked mode, and can reset a save without stale UI.
+**Acceptance:** a user can start any of the three games from a fresh page, cannot start a locked mode, and can reset a save without stale UI.
 
 ### Task 9: Wire Blackjack controls and table
 
@@ -416,3 +417,14 @@ Record actual counts and measurements only: engine assertion total, browser erro
 - **Browser/Vision:** Mobile setup/deal at `390×844`, and compact Durak lobby at `320×800` (tier headings clear of locks); iPad portrait `834×1194` transfer setup/live 52-card human defense; landscape `1194×834` throw-in setup and 36-card Off deal. The Transfer button was clicked in a rendered human-defense state and passed a physical-card audit. Vision verified the zero-talon/trump display and all setup/action labels. The compact 320px title padding and narrow `DEFEND`/Transfer text were refined. Physical Apple Safari was not available.
 - **Static checks:** `deckforge.html` is 307,131 bytes / 2,289 lines, one inline script, 87 literal DOM refs; no missing/duplicate IDs, external assets/URLs, or inline event attributes. `node --check`, ten proof JSONs/ten PNG signatures, and `git diff --check` pass; details: `proofs/static-audit-0.2.6.6.json`.
 - **Release artifacts:** `VERSION` / `APP_VERSION` `0.2.6.6`; notes `RELEASE_NOTES_0.2.6.6.md`; archive `releases/DeckForge-0.2.6.6.zip`; tag `v0.2.6.6`. Verify release, asset checksum, Pages build, live bytes, and clean worktree.
+
+### DeckForge 0.2.6.7 — Mau-Mau and placement-based Durak settlement
+
+- **Version:** Explicit target `0.2.6.7`, with `v0.2.6.6` preserved as the previous release.
+- **Mau-Mau:** Added a physical-card 2–4-seat game with 32/36/52/64 packs, 5/6/7-card hands, configurable common/house rules, three scoring modes, calls, AI, bankroll/progression, rules help, and fixed-round Idioten-Mau. Rule disagreements and defaults are in `references/mau-mau-rules.md`.
+- **Durak economy:** Track finisher order separately from the final Durak. First place wins the full pot; later finishers return only their own ante; last loses their ante; draws refund it. Only first place records progression. A settlement toast was removed because it obscured rematch buttons; opponent card-count copy is singular when appropriate.
+- **Diagnostics:** `121/121` in-app tests, 0 failures and 0 browser errors. Durak stress: 360 matches / 30 configs / 15,430 audited actions; all terminated in 22–97 steps, including 49 draws. The 311 non-draw matches had complete unique finish orders with the final Durak last; 0 failures.
+- **Manual flows:** Mau-Mau completed a 32-card two-seat UI match with Jack wish, Mau and Mau-Mau calls; human won with 32/32 cards audited. Durak completed a rendered 3-seat second-place result (`finishOrder [2,0,1]`); the `$10` ante returned, net `$0`, no win progression, 36/36 cards audited.
+- **Responsive/Vision:** Active Mau-Mau table checked at 320×800, 390×844 and 1024×768. The real Idioten-Mau setup (18 advanced controls; 3/5/7 rounds) was opened and checked at 320×800, 390×844, 834×1194, 1024×768, 1194×834 and 1366×900; 0 label/button overflows and no document width exceeded its viewport. Durak second-place result checked at 390×844. Chromium emulation only; physical Apple Safari was not tested.
+- **Static:** Runtime 423,139 bytes / 2,833 lines, one inline script, 58 unique IDs, 51 unique literal DOM references, no missing/duplicate IDs, external assets or runtime URLs. JSON/PNG validation, `node --check`, and `git diff --check` pass.
+- **Release files:** `VERSION` / `APP_VERSION` `0.2.6.7`; `RELEASE_NOTES_0.2.6.7.md`; `releases/DeckForge-0.2.6.7.zip`; tag `v0.2.6.7`. Verify release asset, Pages deploy/build, live bytes, and clean worktree before handoff.
