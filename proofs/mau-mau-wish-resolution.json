@@ -1,0 +1,40 @@
+{
+  "feature": "Mau-Mau wished-suit resolution",
+  "version": "0.2.6.7",
+  "release_status": "Unreleased local worktree; VERSION unchanged; no commit, tag, or release created.",
+  "behavior": {
+    "bug": "A wished suit remained active after a player laid a card of that suit, incorrectly blocking normal rank/suit matching on the following turn.",
+    "fix": "A non-Jack Mau-Mau play consumes the previous suit wish. A newly played Jack replaces the current wish.",
+    "jack_on_jack": "Still disabled by default; when enabled, a Jack can be played on a Jack and the newly chosen suit replaces the old wish."
+  },
+  "verification": {
+    "browser_suite": {
+      "passed": 140,
+      "failed": 0,
+      "total": 140,
+      "runtime_errors": [],
+      "viewport_css_px": [390, 844]
+    },
+    "regression_coverage": [
+      "Wished suit is played, old wish clears, and the next seat can match the new top rank in another suit.",
+      "Rendered card selection, wish picker, Play action, and AI turns exercise the same flow.",
+      "Rendered Jack-on-Jack remains available when enabled and replaces the prior wish."
+    ],
+    "static": {
+      "inline_scripts": 1,
+      "javascript_bytes": 410515,
+      "html_bytes": 512061,
+      "html_lines": 3162,
+      "node_check": "passed",
+      "git_diff_check": "passed"
+    }
+  },
+  "files": [
+    "deckforge.html",
+    "references/mau-mau-rules.md",
+    "plan.md"
+  ],
+  "limits": [
+    "Browser verification used Chromium at 390x844; physical iOS Safari was not tested."
+  ]
+}

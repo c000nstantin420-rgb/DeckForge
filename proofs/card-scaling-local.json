@@ -1,0 +1,73 @@
+{
+  "artifact": "deckforge.html",
+  "runtime_version": "0.2.6.7",
+  "release_state": "local only; no version bump, commit, or release",
+  "scope": [
+    "Scale solo Blackjack cards up when table space allows, with a compact-height cap.",
+    "Increase hand-card size across Mau-Mau/UNO and Durak layouts while preserving scroll access.",
+    "Fit all ten UNO hand cards at 1024x768; show a swipe cue where tablet portrait still overflows.",
+    "Keep UNO +2/+4 text inside its center oval and remove the 320px header wordmark collision."
+  ],
+  "self_tests": {
+    "total": 142,
+    "viewports": {
+      "320x700": {"passed": 142, "failed": 0},
+      "320x800": {"passed": 142, "failed": 0},
+      "390x844": {"passed": 142, "failed": 0},
+      "834x1194": {"passed": 142, "failed": 0},
+      "1194x834": {"passed": 142, "failed": 0},
+      "1024x768": {"passed": 142, "failed": 0}
+    },
+    "runtime_errors": []
+  },
+  "blackjack_solo": {
+    "320x700": {"hand_cards": 2, "card_width_css_px": 64, "card_height_css_px": 89.59375, "document": {"width": 320, "height": 700}, "hand_above_action_dock": true, "wordmark_to_utilities_gap_css_px": 4.265625},
+    "390x844": {"hand_cards": 2, "card_width_css_px": 78, "card_height_css_px": 109.1875, "document": {"width": 390, "height": 844}, "hand_above_action_dock": true},
+    "1024x768": {"hand_cards": 2, "card_width_css_px": 92.15625, "card_height_css_px": 129.015625, "document": {"width": 1024, "height": 768}, "hand_above_action_dock": true},
+    "1194x834": {"hand_cards": 2, "card_width_css_px": 104, "card_height_css_px": 145.59375, "document": {"width": 1194, "height": 834}, "hand_above_action_dock": true}
+  },
+  "crowded_uno_round": {
+    "players": 4,
+    "deck_cards": 108,
+    "starting_hand_per_seat": 10,
+    "human_hand_cards": 10,
+    "physical_card_audit": {"ok": true, "accounted": 108, "unique": 108, "duplicates": 0, "missing": 0},
+    "phone_scroll_and_hit_test": {
+      "390x844": {"card_width_css_px": 54.59375, "row_client_width": 324, "row_scroll_width": 609, "max_scroll": 285, "last_card_hit_target": true, "hand_above_action_dock": true, "document": {"width": 390, "height": 844}},
+      "320x800": {"card_width_css_px": 45, "row_client_width": 254, "row_scroll_width": 513, "max_scroll": 259, "last_card_hit_target": true, "swipe_hint_visible": true, "hand_above_action_dock": true, "document": {"width": 320, "height": 800}},
+      "320x700": {"card_width_css_px": 32, "row_client_width": 274, "row_scroll_width": 364, "max_scroll": 90, "last_card_hit_target": true, "swipe_hint_visible": true, "hand_above_action_dock": true, "document": {"width": 320, "height": 700}}
+    },
+    "tablet_and_desktop": {
+      "834x1194": {"card_width_css_px": 52.53125, "row_client_width": 500, "row_scroll_width": 596, "max_scroll": 96, "swipe_hint_visible": true, "hand_above_action_dock": true, "document": {"width": 834, "height": 1194}},
+      "1024x768": {"card_width_css_px": 64.5, "row_client_width": 720, "row_scroll_width": 720, "max_scroll": 0, "all_ten_cards_fit": true, "hand_above_action_dock": true, "document": {"width": 1024, "height": 768}},
+      "1194x834": {"card_width_css_px": 70, "row_client_width": 876, "row_scroll_width": 876, "max_scroll": 0, "all_ten_cards_fit": true, "hand_above_action_dock": true, "document": {"width": 1194, "height": 834}}
+    },
+    "deterministic_action_face_proof": {
+      "viewport": "1024x768",
+      "hand_cards": 10,
+      "row_client_width": 720,
+      "row_scroll_width": 720,
+      "action_faces": [
+        {"label": "Draw Two (+2)", "card_width_css_px": 64.5, "center_oval_client_width_css_px": 46, "glyph_scroll_width_css_px": 36, "font_size_css_px": 25, "contained": true},
+        {"label": "Wild Draw Four (+4)", "card_width_css_px": 64.5, "center_oval_client_width_css_px": 46, "glyph_scroll_width_css_px": 36, "font_size_css_px": 25, "contained": true}
+      ],
+      "physical_card_audit_ok": true
+    },
+    "last_card_tap": {"tapped_last_serial": "uno-1-47", "selected_serial": "uno-1-47", "hand_remained_10": true, "audit_ok": true, "runtime_errors": []}
+  },
+  "screenshots": [
+    "proofs/card-scaling-blackjack-solo-320x700.png",
+    "proofs/card-scaling-blackjack-solo-390x844.png",
+    "proofs/card-scaling-blackjack-solo-1024x768.png",
+    "proofs/card-scaling-blackjack-solo-1194x834.png",
+    "proofs/card-scaling-uno-4p-10card-320x700.png",
+    "proofs/card-scaling-uno-4p-10card-320x800.png",
+    "proofs/card-scaling-uno-4p-10card-390x844.png",
+    "proofs/card-scaling-uno-4p-10card-scroll-end-390x844.png",
+    "proofs/card-scaling-uno-4p-10card-834x1194.png",
+    "proofs/card-scaling-uno-4p-10card-1024x768.png",
+    "proofs/card-scaling-uno-4p-10card-1194x834.png",
+    "proofs/card-scaling-uno-actions-1024x768.png"
+  ],
+  "isolated_test_browser_cleanup": {"screen": "home", "bankroll": 250, "progression_wins": {"blackjack": 0, "durak": 0, "maumau": 0}, "page_errors": []}
+}

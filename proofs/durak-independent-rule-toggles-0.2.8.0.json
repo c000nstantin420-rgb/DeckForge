@@ -1,0 +1,23 @@
+{
+  "schema": "deckforge.durak-rule-qa.v1",
+  "captured_at": "2026-11-25T23:35:59+01:00",
+  "version": "0.2.8.0",
+  "defaults": {"throwInEnabled": true, "transferEnabled": false, "throwInPolicy": "neighbors"},
+  "rendered_button_flow": [
+    {"throwInEnabled": true, "transferEnabled": false, "throwInPolicy": "neighbors"},
+    {"throwInEnabled": true, "transferEnabled": true, "throwInPolicy": "neighbors"},
+    {"throwInEnabled": false, "transferEnabled": true, "throwInPolicy": "neighbors"},
+    {"throwInEnabled": false, "transferEnabled": false, "throwInPolicy": "neighbors"},
+    {"throwInEnabled": true, "transferEnabled": false, "throwInPolicy": "neighbors"},
+    {"throwInEnabled": true, "transferEnabled": true, "throwInPolicy": "neighbors"},
+    {"throwInEnabled": true, "transferEnabled": true, "throwInPolicy": "all"}
+  ],
+  "scope_constraints": {"all_players_enabled_at_four_seats": true, "all_players_disabled_at_two_seats": true, "policy_falls_back_to_neighbors_below_four": true},
+  "persistence_round_trip": {"saved": {"players": 4, "deckSize": 36, "throwInEnabled": true, "transferEnabled": true, "throwInPolicy": "all"}, "reloaded_same": true, "bankroll": 250, "clean_default_storage_restored": true},
+  "screenshots": [
+    "proofs/durak-rules-0.2.8.0-320x700.png",
+    "proofs/durak-rules-0.2.8.0-390x844.png",
+    "proofs/durak-rules-0.2.8.0-1024x768.png"
+  ],
+  "tests": {"self_tests_per_viewport": 144, "failures": 0, "browser_errors": []}
+}

@@ -18,7 +18,7 @@ Pagat's [Eights index](https://www.pagat.com/eights/) is useful for the wider sh
 
 - 32 cards (7–Ace), two seats (user plus one AI), five cards each.
 - Match by suit or rank; draw one if unable or choosing not to play; a playable drawn card may be played immediately.
-- Seven draws two and may be answered by another Seven; Eight skips; Jack wishes a suit and cannot be played on Jack.
+- Seven draws two and may be answered by another Seven; Eight skips; Jack wishes a suit. **DeckForge convention:** a card of the wished suit fulfills the wish, after which normal suit/rank matching resumes. Jack-on-Jack is disabled by default; when enabled, a Jack played on a Jack replaces the current wish.
 - “Mau” is required when playing the penultimate card; “Mau-Mau” on the last. Missed-call penalty defaults to one card, with 0/1/2 available because the checked sources disagree (one vs. two).
 - Default scoring is one round win; first to one round takes the match. Optional score modes are a penalty-point cap (lowest total at the cap wins) and a points race (the round winner receives the other hands' values).
 - German-style point values default to J=20, Q=10, K=10, A=11; the traditional J=2, Q=3, K=4, A=11 values are selectable. Number cards count face value.

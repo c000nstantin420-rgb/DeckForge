@@ -1,0 +1,41 @@
+{
+  "schema": "deckforge.static-audit.v1",
+  "verified_at": "2026-11-25T23:50:08+01:00",
+  "version": "0.2.8.0",
+  "version_file_matches_runtime": true,
+  "runtime": {
+    "file": "deckforge.html",
+    "bytes": 547920,
+    "lines": 3373,
+    "inline_script_blocks": 1,
+    "external_script_sources": 0,
+    "node_check_exit_code": 0,
+    "static_id_count": 58,
+    "duplicate_static_ids": [],
+    "literal_dom_reference_count": 58,
+    "missing_literal_dom_references": [],
+    "external_assets": 0,
+    "external_urls": 0
+  },
+  "project_page": {
+    "file": "index.html",
+    "bytes": 26003,
+    "lines": 231,
+    "static_id_count": 10,
+    "duplicate_static_ids": [],
+    "link_count": 18,
+    "missing_local_targets": [],
+    "external_assets": 0
+  },
+  "release_json_files_valid": [
+    "proofs/self-test-0.2.8.0.json",
+    "proofs/durak-stress-0.2.8.0.json",
+    "proofs/project-page-0.2.8.0.json",
+    "proofs/durak-independent-rule-toggles-0.2.8.0.json",
+    "proofs/table-picker-carousel-0.2.8.0.json",
+    "proofs/uno-flow-0.2.8.0.json",
+    "proofs/card-scaling-0.2.8.0.json"
+  ],
+  "git_diff_check": "passed",
+  "scope_note": "Browser viewport, gameplay, and live-host checks are recorded in their feature-specific proofs and were run separately from this static audit."
+}

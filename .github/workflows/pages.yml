@@ -30,16 +30,12 @@ jobs:
           rm -rf _site
           mkdir -p _site
           cp deckforge.html _site/deckforge.html
+          cp index.html _site/index.html
           cp README.md _site/README.md
+          cp RELEASE_NOTES_0.2.8.0.md _site/RELEASE_NOTES_0.2.8.0.md
           mkdir -p _site/references
           cp references/mau-mau-rules.md _site/references/mau-mau-rules.md
-          cat > _site/index.html <<'EOF'
-          <!doctype html>
-          <meta charset="utf-8">
-          <meta http-equiv="refresh" content="0; url=deckforge.html">
-          <title>DeckForge</title>
-          <p><a href="deckforge.html">Open DeckForge</a></p>
-          EOF
+          cp references/uno-variant-rules.md _site/references/uno-variant-rules.md
           cp _site/index.html _site/404.html
           touch _site/.nojekyll
 

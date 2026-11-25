@@ -1,0 +1,27 @@
+{
+  "schema": "deckforge.uno-ui-qa.v1",
+  "captured_at": "2026-11-25T23:35:59+01:00",
+  "version": "0.2.8.0",
+  "settings_flow": {
+    "deck_type_selected_in_ui": "uno",
+    "classic_deck_size": 108,
+    "optional_custom_wilds": {"on": 112, "off": 108},
+    "uno_starting_hand": 10,
+    "uno_scoring": "roundWins",
+    "uno_match_target": 1,
+    "mau_mau_settings_preserved_when_switching_decks": {"mau_deck_size": 32, "mau_hand_size": 5},
+    "uno_settings_preserved_after_switch_back": {"starting_hand": 10, "deck_size": 108}
+  },
+  "rendered_game_flow": {
+    "lobby_start_button_clicked": true,
+    "round_start": {"players": 2, "deck_size": 108, "hand_sizes": [10,10], "turn": 0, "bankroll_after_wager": 240, "physical_audit": {"ok": true, "accounted": 108, "unique": 108, "duplicates": 0, "missing": 0}},
+    "human_action": {"card": "Blue 4", "matched_top_color": "blue", "hand_after_play": 9, "top_discard": "Blue 4", "next_turn": 1, "audit_ok": true},
+    "match_result": {"phase": "finished", "winner": 0, "score": [1,0], "human_actions_in_final_segment": 6, "ai_actions_in_final_segment": 5, "cards_accounted": 108, "bankroll_before_wager": 250, "bankroll_after_wager": 240, "bankroll_after_win": 260, "stake_returned": 20, "net": 10, "toast_cleared_before_visual_review": true},
+    "browser_errors": []
+  },
+  "screenshots": [
+    "proofs/uno-setup-0.2.8.0-390x844.png",
+    "proofs/uno-live-0.2.8.0-390x844.png",
+    "proofs/uno-settlement-0.2.8.0-390x844.png"
+  ]
+}

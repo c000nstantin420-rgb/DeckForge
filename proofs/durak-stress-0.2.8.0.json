@@ -1,0 +1,24 @@
+{
+  "schema": "deckforge.durak-stress.v1",
+  "captured_at": "2026-11-25T23:35:59+01:00",
+  "version": "0.2.8.0",
+  "method": "Seeded autonomous matches with a physical-card audit after every action.",
+  "matrix": {
+    "deck_sizes": [24,36,52],
+    "seat_counts": [2,3,4],
+    "throw_in_transfer_combinations": [[false,false],[false,true],[true,false],[true,true]],
+    "throw_in_scopes": "neighbors for all seats; neighbors and all players for four-seat Throw-in-enabled tables",
+    "unique_configurations": 42,
+    "matches_per_configuration": 8
+  },
+  "results": {
+    "matches_expected": 336,
+    "matches_completed": 336,
+    "audited_actions": 15019,
+    "draws": 41,
+    "minimum_steps": 22,
+    "maximum_steps": 99,
+    "failures": [],
+    "all_final_audits_passed": true
+  }
+}

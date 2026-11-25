@@ -428,3 +428,34 @@ Record actual counts and measurements only: engine assertion total, browser erro
 - **Responsive/Vision:** Active Mau-Mau table checked at 320×800, 390×844 and 1024×768. The real Idioten-Mau setup (18 advanced controls; 3/5/7 rounds) was opened and checked at 320×800, 390×844, 834×1194, 1024×768, 1194×834 and 1366×900; 0 label/button overflows and no document width exceeded its viewport. Durak second-place result checked at 390×844. Chromium emulation only; physical Apple Safari was not tested.
 - **Static:** Runtime 423,139 bytes / 2,833 lines, one inline script, 58 unique IDs, 51 unique literal DOM references, no missing/duplicate IDs, external assets or runtime URLs. JSON/PNG validation, `node --check`, and `git diff --check` pass.
 - **Release files:** `VERSION` / `APP_VERSION` `0.2.6.7`; `RELEASE_NOTES_0.2.6.7.md`; `releases/DeckForge-0.2.6.7.zip`; tag `v0.2.6.7`. Verify release asset, Pages deploy/build, live bytes, and clean worktree before handoff.
+
+### Mau-Mau suit-wish resolution fix — included in 0.2.8.0
+
+- **Bug:** after a Jack requested a suit, `wishSuit` stayed active even after a card of that suit was played. The next player was still restricted to the old suit and could not match the new top card by rank.
+- **Fix:** a non-Jack Mau-Mau play consumes the old wish; a newly played Jack replaces it. Jack-on-Jack remains off by default, and the enabled UI path chooses the replacement wish.
+- **Verification:** The v0.2.8.0 suite passes `144/144` at each of seven viewports, including engine and rendered UI regressions for wish fulfillment, alternate-suit rank matching, and enabled Jack-on-Jack; browser errors: 0.
+- **Limit:** Physical iOS Safari was not tested.
+
+### Home tile visual — Mau-Mau + UNO (0.2.8.0)
+
+- **Tile:** Replaced the single heart icon with original local CSS art showing a Mau-Mau `J♥` and a four-color UNO-style `+2` card; title is `Mau-Mau + UNO`, and copy explicitly describes the optional 108-card deck. The whole tile remains the single launch button.
+- **Route:** Clicking the tile still opens the Mau-Mau table; the UNO deck option is available in table setup.
+- **Optical QA:** Built-in vision reviewed the current v0.2.8.0 Home rail at `390×844` with `Mau-Mau + UNO` selected and visible, plus responsive layouts at `320×700`, `1024×768`, `834×1194`, and `1194×834`. No clipping or horizontal overflow; screenshots are in `proofs/table-picker-carousel-0.2.8.0.json`.
+- **Tests/static:** `144/144` tests pass at each of seven viewports, 0 browser errors; final runtime is 547,920 bytes / 3,373 lines with one inline script. Static evidence: `proofs/static-audit-0.2.8.0.json`.
+- **Limit:** Chromium emulation only; physical iPhone/iPad Safari was not tested.
+
+### Home game picker + independent Durak rules (0.2.8.0)
+
+- **Home picker:** Added a scroll-snap game rail directly below the top bar for Blackjack, Durak, and Mau-Mau + UNO. It supports horizontal scrolling, keyboard selection, accessible selected state, and a separate Open action.
+- **Spin:** Added a horizontal slot-style decelerating random picker. It never places a wager or starts a round; reduced-motion users get an immediate result. Navigation cancels pending spins.
+- **Durak options:** Replaced the exclusive rule choice with independent Throw-in and Transfer On/Off controls. Existing defaults and saved `attackRule` choices migrate; Throw-in scope remains conditional and limited by seat count.
+- **Verification:** `144/144` in-app tests pass at each of `320×700`, `320×800`, `390×844`, `834×1194`, `1194×834`, `1024×768`, and `1280×720`; no browser errors. UI settings, all four Durak combinations, persistence, no-wager spin/open behavior, reduced motion, cancellation, and card reachability are covered by `proofs/table-picker-carousel-0.2.8.0.json` and `proofs/durak-independent-rule-toggles-0.2.8.0.json`.
+- **Touch limit:** Native scroll/snap selection synchronization is covered by tests. A foreground CUA scroll probe did not visibly move the rail; an earlier CDP touch attempt timed out. Physical iOS/Safari swipe remains unverified.
+
+### DeckForge 0.2.8.0 release — 2026-11-25
+
+- **Base:** `v0.2.6.7`; release tag target: `v0.2.8.0`.
+- **Scope:** UNO deck/variants, Mau-Mau wish fix, Mau-Mau + UNO tile, independent Durak rules, adaptive card sizing, Home picker/Spin, and the redesigned responsive project page.
+- **Verification:** `144/144` tests at each of seven viewports; Durak stress: 336 seeded matches / 42 configurations / 15,019 audited actions / 0 failures. Final static/runtime and page-link proofs are in `proofs/`.
+- **Release files:** `VERSION`, `RELEASE_NOTES_0.2.8.0.md`, `index.html`, and `releases/DeckForge-0.2.8.0.zip` (plus the standalone HTML release asset).
+- **Limit:** Physical iPhone/iPad Safari and a real-device touch swipe were not tested.

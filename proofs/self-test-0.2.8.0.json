@@ -1,0 +1,26 @@
+{
+  "schema": "deckforge.self-test.v1",
+  "verified_at": "2026-11-25T22:45:25.894Z",
+  "version": "0.2.8.0",
+  "tests_per_viewport": 144,
+  "failed_per_viewport": 0,
+  "test_groups": 11,
+  "viewports": [
+    {"css_px": [320,700], "passed": 144, "failed": 0},
+    {"css_px": [320,800], "passed": 144, "failed": 0},
+    {"css_px": [390,844], "passed": 144, "failed": 0},
+    {"css_px": [834,1194], "passed": 144, "failed": 0},
+    {"css_px": [1194,834], "passed": 144, "failed": 0},
+    {"css_px": [1024,768], "passed": 144, "failed": 0},
+    {"css_px": [1280,720], "passed": 144, "failed": 0}
+  ],
+  "runtime_errors": [],
+  "coverage": [
+    "UNO physical deck counts, action rules, call/challenge/stacking and house variants",
+    "Mau-Mau wish resolution and Jack replacement",
+    "Durak Throw-in/Transfer independent normalization, engine gates, UI, and legacy saves",
+    "responsive card sizing and scroll reachability",
+    "Home picker selection, keyboard sync, deterministic spin, open/no-wager behavior",
+    "Mau-Mau + UNO Home-tile rendering and current app-version badge"
+  ]
+}

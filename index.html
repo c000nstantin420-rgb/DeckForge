@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d0d12">
+  <meta name="description" content="DeckForge is a free, offline-first card room with Blackjack, Durak, and Mau-Mau + UNO. Real card identities, local progress, no account, no real money.">
+  <meta property="og:title" content="DeckForge — Real-deck card games">
+  <meta property="og:description" content="Three card games. One local-first card room. Play right in your browser.">
+  <link rel="canonical" href="https://c000nstantin420-rgb.github.io/DeckForge/">
+  <title>DeckForge — Real-deck card games</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0d0d12;--panel:#15171e;--panel-hi:#1b1e27;--line:rgba(229,236,244,.11);--text:#f1f3f5;--muted:#9ba5b2;--green:#47d986;--blue:#62a8ff;--gold:#ffc16b;--red:#f16e7a;--radius:22px;--page:1160px}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--bg)}
+    body{margin:0;min-width:320px;overflow-x:hidden;background:radial-gradient(ellipse at 50% -24%,rgba(71,217,134,.12),transparent 48%),radial-gradient(ellipse at 105% 42%,rgba(98,168,255,.07),transparent 34%),var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+    a{color:inherit;text-decoration:none}
+    a:focus-visible{outline:3px solid rgba(98,168,255,.85);outline-offset:4px;border-radius:8px}
+    .skip-link{position:absolute;z-index:99;left:12px;top:-60px;padding:11px 14px;border-radius:10px;background:var(--blue);color:#06101c;font-weight:800}
+    .skip-link:focus{top:12px}
+    .wrap{width:min(var(--page),100% - 40px);margin-inline:auto}
+    .topbar{position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(229,236,244,.08);background:rgba(13,13,18,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+    .topbar-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:inline-flex;align-items:baseline;font-size:22px;font-weight:950;letter-spacing:-1.3px;white-space:nowrap}
+    .brand span{background:linear-gradient(110deg,#7af0b0,#47d986 55%,#73b6ff);background-clip:text;-webkit-background-clip:text;color:transparent}
+    .nav-links{display:flex;align-items:center;justify-content:center;gap:clamp(18px,3vw,34px);color:var(--muted);font-size:13px;font-weight:650}
+    .nav-links a:hover,.footer-links a:hover{color:var(--text)}
+    .nav-actions{display:flex;align-items:center;gap:10px}
+    .version-pill,.eyebrow-pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:7px 11px;background:rgba(255,255,255,.035);color:#dce5ec;font-size:11px;font-weight:800;letter-spacing:.3px;white-space:nowrap}
+    .version-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 12px rgba(71,217,134,.72)}
+    .button{min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:0 17px;border:1px solid transparent;border-radius:12px;font-size:13px;font-weight:850;transition:transform .16s ease,border-color .16s ease,background .16s ease,box-shadow .16s ease}
+    .button:hover{transform:translateY(-1px)}
+    .button-primary{color:#07120c;background:linear-gradient(135deg,#66e9a0,#42d17d);box-shadow:0 8px 26px rgba(71,217,134,.18)}
+    .button-primary:hover{box-shadow:0 11px 32px rgba(71,217,134,.28)}
+    .button-secondary{border-color:var(--line);background:rgba(255,255,255,.035);color:var(--text)}
+    .button-secondary:hover{border-color:rgba(98,168,255,.45);background:rgba(98,168,255,.07)}
+    main{overflow:hidden}
+    .hero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);align-items:center;gap:clamp(28px,5vw,70px);padding:70px 0 64px}
+    .hero-copy{min-width:0}
+    .eyebrow-pill{margin-bottom:23px;border-color:rgba(71,217,134,.22);background:rgba(71,217,134,.065);color:#a4f0c3;text-transform:uppercase;letter-spacing:1.1px}
+    .hero h1{max-width:720px;margin:0;font-size:clamp(44px,6.5vw,78px);line-height:.98;letter-spacing:-.075em;font-weight:900}
+    .hero h1 em{display:block;margin-top:5px;background:linear-gradient(100deg,#76e6a6 0%,#7ac9ff 85%);background-clip:text;-webkit-background-clip:text;color:transparent;font-style:normal}
+    .hero-copy>p{max-width:590px;margin:22px 0 0;color:#aab3bf;font-size:clamp(15px,1.55vw,18px);line-height:1.7}
+    .hero-buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:27px}
+    .hero-trust{display:flex;flex-wrap:wrap;gap:9px 17px;margin-top:22px;color:#818b98;font-size:11px;font-weight:650}
+    .download-note{margin:12px 0 0;color:#818b98;font-size:11px}.download-note a{display:inline-block;padding:6px 0;color:#a9d4ff;font-weight:800;text-underline-offset:3px}
+    .hero-trust span{display:inline-flex;align-items:center;gap:7px}
+    .hero-trust span::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--green)}
+    .table-art{position:relative;isolation:isolate;min-height:340px;overflow:hidden;border:1px solid rgba(119,245,177,.24);border-radius:28px;background:radial-gradient(ellipse at 50% 42%,rgba(53,177,116,.28),transparent 56%),radial-gradient(circle at 83% 14%,rgba(98,168,255,.17),transparent 33%),linear-gradient(145deg,#123c32,#102821 62%,#101c23);box-shadow:0 30px 80px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.09)}
+    .table-art::before{content:"";position:absolute;z-index:-1;inset:22px 23px 20px;border:1px solid rgba(164,240,195,.30);border-radius:46% 54% 48% 52%;transform:rotate(-8deg);box-shadow:0 0 0 8px rgba(3,24,18,.12),inset 0 0 45px rgba(0,0,0,.16)}
+    .table-art::after{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;background:linear-gradient(110deg,transparent 10%,rgba(255,255,255,.045) 10.2%,transparent 11%,transparent 84%,rgba(255,193,107,.10) 84.3%,transparent 85%)}
+    .art-topline{position:absolute;z-index:5;top:18px;left:20px;right:20px;display:flex;align-items:center;justify-content:space-between;color:rgba(222,255,236,.72);font-size:10px;font-weight:850;letter-spacing:1.2px;text-transform:uppercase}
+    .art-live{display:inline-flex;align-items:center;gap:7px}
+    .art-live i{width:6px;height:6px;border-radius:50%;background:#83f0b0;box-shadow:0 0 12px rgba(131,240,176,.8)}
+    .art-card{position:absolute;z-index:2;width:clamp(76px,8.7vw,104px);aspect-ratio:2.5/3.5;display:flex;flex-direction:column;justify-content:space-between;padding:10px;border:1px solid rgba(0,0,0,.12);border-radius:13px;background:linear-gradient(145deg,#fff 0%,#f2f1ec 68%,#d7d8df);color:#14161a;box-shadow:0 20px 30px rgba(0,0,0,.38),inset 1px 1px 0 rgba(255,255,255,.9),inset -2px -3px 0 rgba(0,0,0,.08);font-family:Georgia,"Times New Roman",serif;font-weight:900;font-size:25px}
+    .art-card small{font-size:16px;line-height:.9}.art-card .corner{position:relative;z-index:1;line-height:.88}.art-card .corner.bottom{align-self:flex-end;transform:rotate(180deg)}.art-card .center{position:absolute;inset:0;display:grid;place-items:center;font-size:43px;line-height:1}
+    .art-card.red{color:#cf344d}.art-card.blue{color:#2468c2}.art-card.one{left:19%;top:28%;transform:rotate(-16deg) translateY(14px)}.art-card.two{left:39%;top:21%;z-index:3;transform:rotate(-1deg) translateY(-4px)}.art-card.three{left:59%;top:29%;transform:rotate(15deg) translateY(10px)}
+    .art-chip{position:absolute;z-index:5;right:15%;bottom:19%;width:54px;height:54px;display:grid;place-items:center;border:1px solid rgba(255,193,107,.42);border-radius:50%;background:radial-gradient(circle at 35% 28%,#fbe2ae,#c88d43 65%,#7d5129);color:#271d12;box-shadow:0 11px 20px rgba(0,0,0,.3),inset 0 0 0 4px rgba(255,255,255,.10);font-size:15px;font-weight:950}
+    .art-caption{position:absolute;z-index:5;left:17px;right:17px;bottom:16px;display:flex;align-items:end;justify-content:space-between;gap:10px;padding-top:42px;background:linear-gradient(0deg,rgba(5,23,18,.80),transparent);pointer-events:none}
+    .art-caption strong{display:block;font-size:13px;letter-spacing:-.2px}.art-caption small{display:block;margin-top:4px;color:rgba(232,255,241,.67);font-size:10px}.art-caption .art-suits{color:#b7f8d0;font-family:Georgia,serif;font-size:20px;letter-spacing:6px}
+    .section{padding:56px 0}
+    .section-heading{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:22px}
+    .section-kicker{display:block;margin-bottom:9px;color:var(--green);font-size:10px;font-weight:900;letter-spacing:1.7px;text-transform:uppercase}
+    .section-heading h2{margin:0;font-size:clamp(27px,4vw,40px);line-height:1.06;letter-spacing:-.06em}
+    .section-heading p{max-width:390px;margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+    .games-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+    .game-card{position:relative;min-width:0;min-height:250px;display:flex;flex-direction:column;overflow:hidden;padding:21px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(150deg,rgba(255,255,255,.045),rgba(255,255,255,.014));transition:transform .18s ease,border-color .18s ease,background .18s ease}
+    .game-card:hover{transform:translateY(-3px);border-color:rgba(98,168,255,.45);background:linear-gradient(150deg,rgba(98,168,255,.08),rgba(255,255,255,.02))}
+    .game-card::after{content:"";position:absolute;width:155px;height:155px;right:-55px;bottom:-80px;border-radius:50%;background:rgba(71,217,134,.075);filter:blur(2px)}
+    .game-top{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .game-icon{width:49px;height:49px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.08);border-radius:15px;background:rgba(255,255,255,.055);font-family:Georgia,serif;font-size:27px}
+    .game-icon.blackjack{color:#c8e3ff}.game-icon.durak{color:#ff7183}.game-icon.uno{font-family:system-ui,sans-serif;font-size:18px;font-weight:1000;color:white;background:conic-gradient(#e3313d 0 25%,#f4c430 25% 50%,#168a4a 50% 75%,#1976d2 75% 100%);box-shadow:inset 0 0 0 5px rgba(13,13,18,.78)}
+    .game-tag{border:1px solid var(--line);border-radius:999px;padding:6px 9px;color:#aeb9c5;font-size:9px;font-weight:850;letter-spacing:.7px;text-transform:uppercase;white-space:nowrap}
+    .game-card h3{position:relative;z-index:1;margin:26px 0 8px;font-size:22px;letter-spacing:-.045em}
+    .game-card p{position:relative;z-index:1;margin:0;color:var(--muted);font-size:12px;line-height:1.65}
+    .game-more{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:20px;color:#dce6ed;font-size:11px;font-weight:800}
+    .game-more span:last-child{color:var(--green);font-size:17px}
+    .picker-band{position:relative;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:34px;overflow:hidden;padding:clamp(23px,4vw,42px);border:1px solid rgba(98,168,255,.19);border-radius:26px;background:radial-gradient(ellipse at 12% 0%,rgba(98,168,255,.12),transparent 42%),linear-gradient(135deg,#161923,#12151c)}
+    .picker-band h2{margin:0;font-size:clamp(27px,4.2vw,41px);line-height:1.06;letter-spacing:-.065em}
+    .picker-band p{max-width:420px;margin:13px 0 0;color:var(--muted);font-size:13px;line-height:1.65}
+    .picker-note{display:inline-flex;align-items:center;gap:7px;margin-top:17px;color:#a9d4ff;font-size:11px;font-weight:800}
+    .picker-note b{color:var(--gold);font-size:15px}
+    .picker-preview{min-width:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;align-items:center}
+    .picker-tile{min-width:0;min-height:114px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(255,255,255,.1);border-radius:15px;background:linear-gradient(145deg,#222630,#171a21);color:#aeb7c2;text-align:center;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+    .picker-tile.selected{border-color:rgba(71,217,134,.72);background:linear-gradient(145deg,rgba(71,217,134,.15),#171c20);color:white;box-shadow:0 0 22px rgba(71,217,134,.08)}
+    .picker-symbol{font-family:Georgia,serif;font-size:27px;color:#d9e7f7}.picker-tile:nth-child(2) .picker-symbol{color:#ff7584}.picker-tile:nth-child(3) .picker-symbol{font-family:system-ui,sans-serif;font-weight:1000;color:#f4c430}
+    .picker-tile strong{font-size:10px;line-height:1.25}.picker-center{position:relative;display:flex;align-items:center;gap:8px;justify-content:center;margin-top:14px;color:#8894a1;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.8px}
+    .picker-center::before,.picker-center::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,transparent,rgba(255,255,255,.14))}.picker-center::after{transform:rotate(180deg)}.picker-center b{color:var(--gold);font-size:16px}
+    .features-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .feature-card{padding:18px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)}
+    .feature-icon{width:34px;height:34px;display:grid;place-items:center;border:1px solid rgba(71,217,134,.19);border-radius:11px;background:rgba(71,217,134,.075);color:var(--green);font-size:16px;font-weight:900}
+    .feature-card h3{margin:14px 0 7px;font-size:14px;letter-spacing:-.25px}.feature-card p{margin:0;color:var(--muted);font-size:11px;line-height:1.65}
+    .local-band{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:25px;padding:clamp(22px,4vw,36px);border:1px solid rgba(255,193,107,.18);border-radius:23px;background:radial-gradient(ellipse at 100% 0%,rgba(255,193,107,.08),transparent 47%),linear-gradient(140deg,#191a20,#15161b)}
+    .local-band h2{margin:0;font-size:clamp(24px,3.7vw,35px);letter-spacing:-.055em}.local-band p{max-width:690px;margin:10px 0 0;color:var(--muted);font-size:12px;line-height:1.65}
+    .local-stamp{width:98px;height:98px;display:grid;place-items:center;border:1px solid rgba(255,193,107,.37);border-radius:50%;background:radial-gradient(circle at 36% 28%,rgba(255,193,107,.21),rgba(255,193,107,.04) 68%);color:var(--gold);font-size:24px;box-shadow:inset 0 0 0 7px rgba(255,193,107,.025)}
+    .release-row{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;border-top:1px solid var(--line)}
+    .release-row h2{margin:0;font-size:17px;letter-spacing:-.5px}.release-row p{margin:5px 0 0;color:var(--muted);font-size:11px;line-height:1.5}
+    footer{border-top:1px solid var(--line);margin-top:62px}
+    .footer-inner{min-height:90px;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 0;color:#7f8995;font-size:10px}
+    .footer-links{display:flex;flex-wrap:wrap;align-items:center;gap:15px;font-weight:700}
+    @media(max-width:900px){.wrap{width:min(var(--page),100% - 32px)}.hero{grid-template-columns:minmax(0,1fr) minmax(0,.88fr);gap:25px;padding:54px 0}.table-art{min-height:300px}.games-grid{gap:10px}.game-card{padding:17px}.picker-band{grid-template-columns:1fr;gap:22px}.picker-preview-wrap{max-width:560px;width:100%;justify-self:center}}
+    @media(max-width:700px){.topbar-inner{min-height:64px;gap:10px}.nav-links{display:none}.version-pill{padding:7px 9px;font-size:10px}.nav-actions{gap:7px}.nav-actions .button{min-height:40px;padding:0 12px;font-size:11px}.hero{grid-template-columns:1fr;gap:27px;padding:42px 0 44px}.hero-copy{padding:0}.hero h1{font-size:clamp(44px,11vw,66px)}.table-art{min-height:300px}.section{padding:40px 0}.section-heading{align-items:start;flex-direction:column}.section-heading p{max-width:520px}.games-grid{grid-template-columns:1fr}.game-card{min-height:205px}.game-card h3{margin-top:20px}.features-grid{grid-template-columns:1fr 1fr}.local-band{grid-template-columns:1fr auto;gap:12px}.local-stamp{width:74px;height:74px;font-size:19px}.release-row{align-items:start;flex-direction:column}.footer-inner{align-items:flex-start;flex-direction:column;justify-content:center;gap:13px;padding:20px 0}}
+    @media(max-width:390px){.wrap{width:calc(100% - 28px)}.topbar-inner{gap:7px}.brand{font-size:19px}.version-pill{font-size:9px;padding:6px 8px}.nav-actions .button{padding:0 10px}.hero{padding-top:34px}.hero h1{font-size:clamp(41px,11.4vw,50px);letter-spacing:-.075em}.hero-copy>p{font-size:14px}.hero-buttons .button{width:100%}.eyebrow-pill{font-size:9px;letter-spacing:.7px;padding-inline:9px}.table-art{min-height:265px;border-radius:22px}.table-art::before{inset:48px 16px 14px}.art-card{width:76px}.art-chip{right:13%;bottom:21%;width:44px;height:44px;font-size:12px}.picker-band{padding:21px 15px}.picker-preview{gap:6px}.picker-tile{min-height:100px;padding:7px 4px}.picker-tile strong{font-size:9px}.features-grid{grid-template-columns:1fr}.local-band{grid-template-columns:minmax(0,1fr) 58px;padding:19px 15px}.local-stamp{width:55px;height:55px;font-size:15px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="./" aria-label="DeckForge project home">Deck<span>Forge</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#games">Games</a>
+        <a href="#picker">Table picker</a>
+        <a href="#local">Local-first</a>
+      </nav>
+      <div class="nav-actions">
+        <span class="version-pill"><i class="version-dot" aria-hidden="true"></i> v0.2.8.0</span>
+        <a class="button button-primary" href="deckforge.html">Play now <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow-pill"><i class="version-dot" aria-hidden="true"></i> Offline · Real-deck card room</span>
+        <h1 id="hero-title">Play the cards.<em>Not a random number.</em></h1>
+        <p>Three familiar games, built around a real shuffled shoe, clear table rules, and choices that actually matter. Open it in your browser or download the one-file game.</p>
+        <div class="hero-buttons">
+          <a class="button button-primary" href="deckforge.html">Enter the card room <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="RELEASE_NOTES_0.2.8.0.md">What’s new in 0.2.8.0</a>
+        </div>
+        <p class="download-note">Prefer offline? <a href="deckforge.html" download="DeckForge-0.2.8.0.html">Download the standalone HTML</a>.</p>
+        <div class="hero-trust" aria-label="Product properties">
+          <span>One HTML file</span><span>No account</span><span>Fictional currency only</span>
+        </div>
+      </div>
+      <div class="table-art" role="img" aria-label="Illustration of playing cards on a dark green card table">
+        <div class="art-topline"><span>DeckForge</span><span class="art-live"><i aria-hidden="true"></i> Ready to play</span></div>
+        <div class="art-card one"><span class="corner">A<small>♠</small></span><span class="center">♠</span><span class="corner bottom">A<small>♠</small></span></div>
+        <div class="art-card red two"><span class="corner">J<small>♥</small></span><span class="center">♥</span><span class="corner bottom">J<small>♥</small></span></div>
+        <div class="art-card blue three"><span class="corner">+2</span><span class="center">↻</span><span class="corner bottom">+2</span></div>
+        <div class="art-chip" aria-hidden="true">$10</div>
+        <div class="art-caption"><div><strong>A full table, in one file</strong><small>Shuffled shoes · local progress · no install</small></div><span class="art-suits" aria-hidden="true">♠ ♥ ♦ ♣</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="games" aria-labelledby="games-title">
+      <div class="section-heading">
+        <div><span class="section-kicker">Three tables</span><h2 id="games-title">Choose your game.</h2></div>
+        <p>Each table keeps its own rules and settings. Switch games without losing your local progress.</p>
+      </div>
+      <div class="games-grid">
+        <a class="game-card" href="deckforge.html" aria-label="Play Blackjack in DeckForge">
+          <div class="game-top"><span class="game-icon blackjack" aria-hidden="true">A♠</span><span class="game-tag">Blackjack</span></div>
+          <h3>Read the shoe.</h3>
+          <p>Hit, stand, double, split, or insure. Play with a six-deck physical shoe and a clean 3:2 natural payout.</p>
+          <div class="game-more"><span>One to four seats · dealer AI</span><span aria-hidden="true">↗</span></div>
+        </a>
+        <a class="game-card" href="deckforge.html" aria-label="Play Durak in DeckForge">
+          <div class="game-top"><span class="game-icon durak" aria-hidden="true">♦</span><span class="game-tag">Durak</span></div>
+          <h3>Attack. Defend. Pass.</h3>
+          <p>Play a full 2–4 seat Podkidnoy match. Choose 24, 36, or 52 cards, with independent Throw-in and Transfer rules.</p>
+          <div class="game-more"><span>Neighbors or all-seat throw-in</span><span aria-hidden="true">↗</span></div>
+        </a>
+        <a class="game-card" href="deckforge.html" aria-label="Play Mau-Mau or UNO in DeckForge">
+          <div class="game-top"><span class="game-icon uno" aria-hidden="true">+2</span><span class="game-tag">Mau-Mau + UNO</span></div>
+          <h3>Call it. Change color.</h3>
+          <p>Play configurable Mau-Mau or switch to the separate classic 108-card UNO deck, with optional house rules.</p>
+          <div class="game-more"><span>Two to four seats · AI opponents</span><span aria-hidden="true">↗</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="picker" aria-labelledby="picker-title">
+      <div class="picker-band">
+        <div>
+          <span class="section-kicker">New · Home game picker</span>
+          <h2 id="picker-title">Swipe, spin, then sit down.</h2>
+          <p>Browse the three tables in a horizontal rail, or spin for a random pick. The roll only chooses a table; opening the lobby is always your call.</p>
+          <span class="picker-note"><b aria-hidden="true">↻</b> No wager. No round starts by itself.</span>
+        </div>
+        <div class="picker-preview-wrap" aria-hidden="true">
+          <div class="picker-preview">
+            <div class="picker-tile"><span class="picker-symbol">♠</span><strong>Blackjack</strong></div>
+            <div class="picker-tile selected"><span class="picker-symbol">♦</span><strong>Durak</strong></div>
+            <div class="picker-tile"><span class="picker-symbol">+2</span><strong>Mau-Mau + UNO</strong></div>
+          </div>
+          <div class="picker-center"><span>Lucky pick</span><b>◆</b><span>Selected · Durak</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="features-title">
+      <div class="section-heading">
+        <div><span class="section-kicker">Made for the table</span><h2 id="features-title">Cards you can account for.</h2></div>
+        <p>DeckForge models physical cards and keeps each move auditable—from the shoe to the discard pile.</p>
+      </div>
+      <div class="features-grid">
+        <article class="feature-card"><span class="feature-icon" aria-hidden="true">⧉</span><h3>Real card identities</h3><p>Every card has a physical identity. Deals, draws, discards, and game audits all use the same cards.</p></article>
+        <article class="feature-card"><span class="feature-icon" aria-hidden="true">⚙</span><h3>Your table, your rules</h3><p>Choose seats, deck variants, scoring, Throw-in, and Transfer. Mau-Mau and UNO settings stay separate.</p></article>
+        <article class="feature-card"><span class="feature-icon" aria-hidden="true">↗</span><h3>Made for small screens</h3><p>Responsive card sizing and scrollable hands keep a full table usable on phones, tablets, and desktop.</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="local" aria-labelledby="local-title">
+      <div class="local-band">
+        <div><span class="section-kicker">Local-first play</span><h2 id="local-title">A bankroll, not a payment system.</h2><p>All currency is fictional. Balance, wins, settings, and transaction history stay in this browser’s local storage. There are no deposits, accounts, multiplayer servers, or real-money wagers. Download the standalone HTML and play without a network connection.</p></div>
+        <div class="local-stamp" aria-label="Fictional local currency">$<span>10</span></div>
+      </div>
+    </section>
+
+    <section class="release-row" aria-labelledby="release-title">
+      <div><h2 id="release-title">DeckForge 0.2.8.0</h2><p>UNO, independent Durak rules, the Home spin picker, and a refreshed project page.</p></div>
+      <div class="hero-buttons" style="margin:0">
+        <a class="button button-secondary" href="RELEASE_NOTES_0.2.8.0.md">Release notes</a>
+        <a class="button button-primary" href="https://github.com/c000nstantin420-rgb/DeckForge/releases/tag/v0.2.8.0">Get the release <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <a class="brand" href="./" aria-label="DeckForge project home">Deck<span>Forge</span></a>
+      <span>Real-deck games. Fictional money. Your device.</span>
+      <nav class="footer-links" aria-label="Project links"><a href="README.md">About</a><a href="RELEASE_NOTES_0.2.8.0.md">Release notes</a><a href="https://github.com/c000nstantin420-rgb/DeckForge">Source on GitHub</a></nav>
+    </div>
+  </footer>
+</body>
+</html>

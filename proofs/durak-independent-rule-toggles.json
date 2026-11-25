@@ -1,0 +1,53 @@
+{
+  "schema": "deckforge.feature-qa.v1",
+  "captured_at": "2026-11-25T20:10:30+01:00",
+  "artifact": "deckforge.html",
+  "app_version": "0.2.6.7",
+  "release_status": "local_unreleased_worktree",
+  "configuration": {
+    "canonical_independent_fields": ["throwInEnabled", "transferEnabled"],
+    "defaults": {"throwInEnabled": true, "transferEnabled": false},
+    "throw_in_scope": {"field": "throwInPolicy", "values": ["neighbors", "all"], "visible_only_when_throw_in_enabled": true, "all_players_requires_four_seats": true},
+    "legacy_migration": {
+      "attackRule_throwIn": {"throwInEnabled": true, "transferEnabled": false},
+      "attackRule_transfer": {"throwInEnabled": false, "transferEnabled": true},
+      "attackRule_off": {"throwInEnabled": false, "transferEnabled": false}
+    }
+  },
+  "independence_matrix": [
+    {"throwInEnabled": false, "transferEnabled": false, "throw_in_allowed": false, "transfer_allowed": false},
+    {"throwInEnabled": true, "transferEnabled": false, "throw_in_allowed": true, "transfer_allowed": false},
+    {"throwInEnabled": false, "transferEnabled": true, "throw_in_allowed": false, "transfer_allowed": true},
+    {"throwInEnabled": true, "transferEnabled": true, "throw_in_allowed": true, "transfer_allowed": true}
+  ],
+  "ui_and_persistence": {
+    "separate_on_off_controls": true,
+    "actual_toggle_clicks_preserved_other_rule": true,
+    "scope_hidden_when_throw_in_off": true,
+    "all_players_disabled_below_four_seats": true,
+    "both_on_with_all_players_saved_and_reloaded": true,
+    "preexisting_browser_storage_restored_after_test": true,
+    "bankroll_changed": false,
+    "bankroll": 250
+  },
+  "visual_and_layout_qa": {
+    "viewports_reviewed": ["320x700", "390x844", "1024x768"],
+    "document_horizontal_overflow": false,
+    "320x700": {"document_width": 320, "client_width": 320, "throw_in_toggle_visible": true, "transfer_toggle_visible": true, "scope_controls_visible": true, "start_button_reachable": true},
+    "1024x768_bottom_scroll": {"scope_controls_reachable": true, "start_button_visible": true}
+  },
+  "tests": {
+    "in_app_tests_per_viewport": 144,
+    "viewports": ["320x700", "320x800", "390x844", "834x1194", "1194x834", "1024x768", "1280x720"],
+    "failed_per_viewport": 0,
+    "browser_runtime_errors": [],
+    "inline_script_node_check": "passed",
+    "git_diff_check": "passed"
+  },
+  "screenshots": [
+    "proofs/durak-rules-setup-320x700.png",
+    "proofs/durak-rules-setup-390x844.png",
+    "proofs/durak-rules-setup-1024x768.png",
+    "proofs/durak-rules-setup-bottom-1024x768.png"
+  ]
+}

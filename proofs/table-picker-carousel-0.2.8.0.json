@@ -1,0 +1,35 @@
+{
+  "schema": "deckforge.table-picker-qa.v1",
+  "captured_at": "2026-11-25T23:35:59+01:00",
+  "version": "0.2.8.0",
+  "games": ["blackjack", "durak", "maumau"],
+  "picker_location": "Home, directly under the top bar",
+  "selection": {"programmatic_scroll_left": 146, "selected_game": "durak", "status": "Selected · Durak"},
+  "mobile_end_scroll": {"viewport": [390,844], "scroll_left": 292, "selected_game": "maumau", "status": "Selected · Mau-Mau + UNO", "visible_tiles": ["durak","maumau"], "browser_errors": []},
+  "actual_spin_button": {
+    "deterministic_random_value": 0.5,
+    "result": "durak",
+    "mid_spin_status": "Spinning…",
+    "spin_and_open_buttons_disabled_mid_spin": true,
+    "settled_status": "Lucky pick · Durak",
+    "screen_after_spin": "home",
+    "bankroll_before_and_after": 250,
+    "opened_lobby_only": true,
+    "round_started": false
+  },
+  "layout": {
+    "320x700": {"document_width": 320, "rail_client_width": 276, "rail_scroll_width": 552, "horizontal_page_overflow": false},
+    "390x844": {"document_width": 390, "rail_client_width": 340, "rail_scroll_width": 632, "horizontal_page_overflow": false},
+    "1024x768": {"all_three_tiles_visible": true, "horizontal_page_overflow": false}
+  },
+  "limits": ["Native scroll/snap selection synchronization is covered; physical iOS/Safari swipe was not tested."],
+  "browser_errors": [],
+  "screenshots": [
+    "proofs/table-picker-home-0.2.8.0-320x700.png",
+    "proofs/table-picker-home-0.2.8.0-390x844.png",
+    "proofs/table-picker-home-0.2.8.0-1024x768.png",
+    "proofs/table-picker-home-end-0.2.8.0-390x844.png",
+    "proofs/table-picker-spin-mid-0.2.8.0-390x844.png",
+    "proofs/table-picker-spin-result-0.2.8.0-390x844.png"
+  ]
+}

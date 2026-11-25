@@ -1,0 +1,25 @@
+{
+  "schema": "deckforge.card-scaling-qa.v1",
+  "captured_at": "2026-11-25T23:35:59+01:00",
+  "version": "0.2.8.0",
+  "blackjack_solo": {
+    "320x700": {"card_width_css_px": 64, "hand_cards_rendered": 4, "document_width": 320, "client_width": 320, "action_dock_present": true, "browser_errors": []},
+    "390x844": {"card_width_css_px": 78, "hand_cards_rendered": 4, "document_width": 390, "client_width": 390, "action_dock_present": true, "browser_errors": []},
+    "1024x768": {"card_width_css_px": 92.16, "hand_cards_rendered": 4, "document_width": 1024, "client_width": 1024, "action_dock_present": true, "browser_errors": []}
+  },
+  "uno_four_seats_ten_cards": {
+    "deck_audit": {"ok": true, "total": 108, "accounted": 108, "unique": 108, "duplicates": 0, "missing": [], "unknown": []},
+    "390x844": {"hand_cards": 10, "card_width_css_px": 54.59375, "row_client_width": 324, "row_scroll_width": 609, "max_scroll": 285, "last_card_fully_visible_at_end": true, "last_card_hit_target_at_end": true, "document_width": 390, "client_width": 390},
+    "1024x768": {"hand_cards": 10, "card_width_css_px": 64.5, "row_client_width": 720, "row_scroll_width": 720, "all_ten_fit_without_scroll": true, "document_width": 1024, "client_width": 1024},
+    "browser_errors": []
+  },
+  "self_test": {"tests_per_viewport": 144, "failures": 0, "viewports_css_px": [[320,700],[320,800],[390,844],[834,1194],[1194,834],[1024,768],[1280,720]]},
+  "screenshots": [
+    "proofs/card-scaling-0.2.8.0-blackjack-320x700.png",
+    "proofs/card-scaling-0.2.8.0-blackjack-390x844.png",
+    "proofs/card-scaling-0.2.8.0-blackjack-1024x768.png",
+    "proofs/card-scaling-0.2.8.0-uno-4p-390x844.png",
+    "proofs/card-scaling-0.2.8.0-uno-4p-1024x768.png"
+  ],
+  "visual_review": "Built-in vision reviewed the current-version screenshots. The solo Blackjack cards and action dock are readable at 320x700 and 390x844. The ten-card UNO hand fits at 1024x768 and the final card is visible and hit-testable after the 390x844 hand strip scrolls to its end. DOM Range geometry confirms the opponent card-count text does not overlap the mini-card icon."
+}

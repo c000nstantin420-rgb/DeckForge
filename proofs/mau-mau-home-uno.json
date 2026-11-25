@@ -1,0 +1,45 @@
+{
+  "feature": "Mau-Mau + UNO home tile",
+  "version": "0.2.6.7",
+  "release_status": "Unreleased local worktree; no version bump, commit, tag, or release created.",
+  "design": {
+    "title": "Mau-Mau + UNO",
+    "copy": "Call Mau, wish a suit, or switch to the optional 108-card UNO deck.",
+    "art": "Original local CSS/HTML mini-cards: Jack of Hearts plus a four-color UNO-style +2 card.",
+    "navigation": "The full tile still opens the shared Mau-Mau table; the optional UNO deck remains in table setup."
+  },
+  "verification": {
+    "browser_suite": {
+      "passed": 141,
+      "failed": 0,
+      "total": 141,
+      "runtime_errors": [],
+      "viewport_css_px": [390, 844]
+    },
+    "visual_review": {
+      "viewports": [[320, 800], [390, 844], [834, 1194], [1024, 768], [1194, 834]],
+      "horizontal_overflow": false,
+      "tile_route": {"screen": "game", "game": "maumau", "title": "Mau-Mau", "uno_deck_control_present": true},
+      "notes": [
+        "No clipping, collision, or control overlap was reported by built-in vision at the reviewed sizes.",
+        "At 834x1194, the longer tile title wraps to two lines; it remains legible and unclipped."
+      ]
+    },
+    "static": {
+      "inline_scripts": 1,
+      "javascript_bytes": 411229,
+      "html_bytes": 514140,
+      "html_lines": 3170,
+      "node_check": "passed",
+      "git_diff_check": "passed"
+    }
+  },
+  "screenshots": [
+    "proofs/home-mau-uno-320x800.png",
+    "proofs/home-mau-uno-390x844.png",
+    "proofs/home-mau-uno-834x1194.png",
+    "proofs/home-mau-uno-1024x768.png",
+    "proofs/home-mau-uno-1194x834.png"
+  ],
+  "limitations": ["Chromium emulation only; physical iPhone/iPad Safari was not tested."]
+}

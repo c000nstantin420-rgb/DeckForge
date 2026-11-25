@@ -1,0 +1,56 @@
+{
+  "schema": "deckforge.feature-qa.v1",
+  "captured_at": "2026-11-25T22:34:33+01:00",
+  "artifact": "deckforge.html",
+  "app_version": "0.2.6.7",
+  "release_status": "local_unreleased_worktree",
+  "picker": {
+    "placement": "Home, directly below the top bar",
+    "games": ["blackjack", "durak", "maumau"],
+    "interaction": {
+      "horizontal_scroll_snap": true,
+      "native_touch_scrolling_css": true,
+      "selection_sync_test": "At 390x844, setting rail scrollLeft to 146 selected Durak after the scroll debounce.",
+      "keyboard": "ArrowLeft/ArrowRight and Home/End selection are covered by in-app tests.",
+      "open_is_separate": true
+    },
+    "responsive_measurements": {
+      "320x700": {"document_width": 320, "viewport_width": 320, "rail_client_width": 276, "rail_scroll_width": 552, "horizontal_page_overflow": false},
+      "390x844": {"document_width": 390, "viewport_width": 390, "rail_client_width": 340, "rail_scroll_width": 632, "horizontal_page_overflow": false},
+      "1024x768": {"all_three_games_visible": true, "horizontal_page_overflow": false}
+    },
+    "desktop_input_probe": {
+      "viewport": "390x630 Chromium app window",
+      "method": "Foreground CUA horizontal scroll right, amount 3, over the game tab list",
+      "delivery": "AT-SPI acknowledged three scroll actions",
+      "observed_after": "Selected · Blackjack; tab bounds unchanged from the fresh pre-input capture",
+      "result": "No visible rail movement; this did not verify a physical touch swipe."
+    },
+    "touch_test_limit": "Native overflow/scroll-snap and selection synchronization were checked; the foreground CUA probe produced no visible movement, and an earlier CDP touch injection timed out. Physical iOS/Safari swiping remains unverified."
+  },
+  "spin": {
+    "behavior": "Horizontal slot-style roll that decelerates to a random selection; does not start a round or charge a wager.",
+    "deterministic_rng": {"0.5": {"game": "durak", "index": 1}, "0.999": {"game": "maumau", "index": 2}},
+    "actual_button_click": {"rng_override": 0.5, "settled_game": "durak", "final_status": "Lucky pick · Durak", "bankroll_before": 250, "bankroll_after": 250, "screen_after": "home", "round_started": false},
+    "mid_spin": {"active": true, "status": "Spinning…", "spin_button_disabled": true, "open_button_disabled": true},
+    "reduced_motion": {"rng_override": 0.999, "settled_game": "maumau", "animated": false, "buttons_reenabled": true},
+    "navigation_cancellation": {"pending_spin_cancelled": true, "destination": "durak", "buttons_reenabled": true, "bankroll": 250},
+    "open_after_selection": {"game": "durak", "opened_lobby_only": true, "round_started": false, "bankroll": 250}
+  },
+  "tests": {
+    "in_app_tests_per_viewport": 144,
+    "viewports": ["320x700", "320x800", "390x844", "834x1194", "1194x834", "1024x768", "1280x720"],
+    "failed_per_viewport": 0,
+    "browser_runtime_errors": [],
+    "inline_script_node_check": "passed",
+    "git_diff_check": "passed"
+  },
+  "visual_review": "Built-in vision reviewed the 320x700, 390x844, and 1024x768 Home states, plus 390x844 mid-spin and settled-spin states. The selected game, controls, fade edges, and roll state were legible without horizontal page overflow.",
+  "screenshots": [
+    "proofs/table-picker-home-320x700.png",
+    "proofs/table-picker-home-390x844.png",
+    "proofs/table-picker-home-1024x768.png",
+    "proofs/table-picker-spin-mid-390x844.png",
+    "proofs/table-picker-spin-result-390x844.png"
+  ]
+}

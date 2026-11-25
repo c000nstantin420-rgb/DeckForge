@@ -1,0 +1,29 @@
+{
+  "schema": "deckforge.project-page-qa.v1",
+  "verified_at": "2026-11-25T23:42:34+01:00",
+  "version": "0.2.8.0",
+  "page": "index.html",
+  "runtime_link": "deckforge.html",
+  "hosted_root": "https://c000nstantin420-rgb.github.io/DeckForge/",
+  "viewports": {
+    "320x700": {"document_width": 320, "client_width": 320, "external_assets": 0, "link_count": 18, "primary_cta_visible": true, "standalone_download_target_height": 35.796875, "horizontal_overflow": false},
+    "390x844": {"document_width": 390, "client_width": 390, "external_assets": 0, "link_count": 18, "primary_cta_visible": true, "standalone_download_target_height": 35.796875, "horizontal_overflow": false},
+    "1024x768": {"document_width": 1009, "client_width": 1009, "external_assets": 0, "link_count": 18, "primary_cta_visible": true, "standalone_download_target_height": 38.984375, "horizontal_overflow": false}
+  },
+  "navigation": {
+    "play_cta_clicked_after_final_style_change": true,
+    "destination": "file:///home/constantin/Documents/DeckForge/deckforge.html",
+    "runtime_version_seen": "v0.2.8.0",
+    "local_links_missing": [],
+    "standalone_download_href": "deckforge.html",
+    "download_filename": "DeckForge-0.2.8.0.html"
+  },
+  "browser_errors": [],
+  "visual_review": "Built-in vision reviewed the final 320x700, 390x844, and 1024x768 screenshots after the download-link hit-area adjustment. The link wraps cleanly at 320px, CTAs remain readable, and no horizontal overflow was observed.",
+  "screenshots": [
+    "proofs/project-page-0.2.8.0-320x700.png",
+    "proofs/project-page-0.2.8.0-390x844.png",
+    "proofs/project-page-0.2.8.0-1024x768.png"
+  ],
+  "deployment_status_at_capture": "local candidate; remote release/deploy read-back still required"
+}
