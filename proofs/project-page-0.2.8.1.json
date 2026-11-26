@@ -1,0 +1,31 @@
+{
+  "schema": "deckforge.project-page.v1",
+  "verified_at": "2026-11-26T23:01:17Z",
+  "version": "0.2.8.1",
+  "file": "index.html",
+  "checks": {
+    "visible_version_badge": "v0.2.8.1",
+    "release_title": "DeckForge 0.2.8.1",
+    "release_notes_href": "RELEASE_NOTES_0.2.8.1.md",
+    "release_href": "https://github.com/c000nstantin420-rgb/DeckForge/releases/tag/v0.2.8.1",
+    "download_filename": "DeckForge-0.2.8.1.html",
+    "game_href": "deckforge.html",
+    "play_cta_opened_standalone": true,
+    "opened_game_version_badge": "v0.2.8.1",
+    "opened_game_home_visible": true,
+    "infinite_wheel_copy_visible": true,
+    "sticky_anchor_offset_px": 90,
+    "sticky_header_bottom_px": 65,
+    "anchor_clearance_px": 25
+  },
+  "viewports": [
+    {"css_px": [320,700], "scroll_width": 320, "client_width": 320, "horizontal_overflow": false, "browser_errors": []},
+    {"css_px": [390,844], "scroll_width": 390, "client_width": 390, "horizontal_overflow": false, "browser_errors": []},
+    {"css_px": [1024,768], "scroll_width": 1009, "client_width": 1009, "horizontal_overflow": false, "browser_errors": []}
+  ],
+  "screenshots": [
+    "proofs/project-page-0.2.8.1-390x844.png",
+    "proofs/project-page-wheel-0.2.8.1-390x844.png"
+  ],
+  "vision_review": "passed"
+}

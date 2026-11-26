@@ -58,7 +58,7 @@
     .art-chip{position:absolute;z-index:5;right:15%;bottom:19%;width:54px;height:54px;display:grid;place-items:center;border:1px solid rgba(255,193,107,.42);border-radius:50%;background:radial-gradient(circle at 35% 28%,#fbe2ae,#c88d43 65%,#7d5129);color:#271d12;box-shadow:0 11px 20px rgba(0,0,0,.3),inset 0 0 0 4px rgba(255,255,255,.10);font-size:15px;font-weight:950}
     .art-caption{position:absolute;z-index:5;left:17px;right:17px;bottom:16px;display:flex;align-items:end;justify-content:space-between;gap:10px;padding-top:42px;background:linear-gradient(0deg,rgba(5,23,18,.80),transparent);pointer-events:none}
     .art-caption strong{display:block;font-size:13px;letter-spacing:-.2px}.art-caption small{display:block;margin-top:4px;color:rgba(232,255,241,.67);font-size:10px}.art-caption .art-suits{color:#b7f8d0;font-family:Georgia,serif;font-size:20px;letter-spacing:6px}
-    .section{padding:56px 0}
+    .section{padding:56px 0;scroll-margin-top:90px}
     .section-heading{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:22px}
     .section-kicker{display:block;margin-bottom:9px;color:var(--green);font-size:10px;font-weight:900;letter-spacing:1.7px;text-transform:uppercase}
     .section-heading h2{margin:0;font-size:clamp(27px,4vw,40px);line-height:1.06;letter-spacing:-.06em}
@@ -115,7 +115,7 @@
         <a href="#local">Local-first</a>
       </nav>
       <div class="nav-actions">
-        <span class="version-pill"><i class="version-dot" aria-hidden="true"></i> v0.2.8.0</span>
+        <span class="version-pill"><i class="version-dot" aria-hidden="true"></i> v0.2.8.1</span>
         <a class="button button-primary" href="deckforge.html">Play now <span aria-hidden="true">↗</span></a>
       </div>
     </div>
@@ -129,9 +129,9 @@
         <p>Three familiar games, built around a real shuffled shoe, clear table rules, and choices that actually matter. Open it in your browser or download the one-file game.</p>
         <div class="hero-buttons">
           <a class="button button-primary" href="deckforge.html">Enter the card room <span aria-hidden="true">→</span></a>
-          <a class="button button-secondary" href="RELEASE_NOTES_0.2.8.0.md">What’s new in 0.2.8.0</a>
+          <a class="button button-secondary" href="RELEASE_NOTES_0.2.8.1.md">What’s new in 0.2.8.1</a>
         </div>
-        <p class="download-note">Prefer offline? <a href="deckforge.html" download="DeckForge-0.2.8.0.html">Download the standalone HTML</a>.</p>
+        <p class="download-note">Prefer offline? <a href="deckforge.html" download="DeckForge-0.2.8.1.html">Download the standalone HTML</a>.</p>
         <div class="hero-trust" aria-label="Product properties">
           <span>One HTML file</span><span>No account</span><span>Fictional currency only</span>
         </div>
@@ -176,9 +176,9 @@
     <section class="section" id="picker" aria-labelledby="picker-title">
       <div class="picker-band">
         <div>
-          <span class="section-kicker">New · Home game picker</span>
+          <span class="section-kicker">Updated · Infinite Home wheel</span>
           <h2 id="picker-title">Swipe, spin, then sit down.</h2>
-          <p>Browse the three tables in a horizontal rail, or spin for a random pick. The roll only chooses a table; opening the lobby is always your call.</p>
+          <p>The Home rail loops through all three tables. Swipe, wheel, or drag to send it coasting; the reel slows and randomly snaps to a centered game. The Spin button and keyboard still work, and opening the lobby stays separate.</p>
           <span class="picker-note"><b aria-hidden="true">↻</b> No wager. No round starts by itself.</span>
         </div>
         <div class="picker-preview-wrap" aria-hidden="true">
@@ -212,10 +212,10 @@
     </section>
 
     <section class="release-row" aria-labelledby="release-title">
-      <div><h2 id="release-title">DeckForge 0.2.8.0</h2><p>UNO, independent Durak rules, the Home spin picker, and a refreshed project page.</p></div>
+      <div><h2 id="release-title">DeckForge 0.2.8.1</h2><p>Infinite Home wheel with horizontal momentum, randomized snap, and a separate no-wager Open action.</p></div>
       <div class="hero-buttons" style="margin:0">
-        <a class="button button-secondary" href="RELEASE_NOTES_0.2.8.0.md">Release notes</a>
-        <a class="button button-primary" href="https://github.com/c000nstantin420-rgb/DeckForge/releases/tag/v0.2.8.0">Get the release <span aria-hidden="true">↗</span></a>
+        <a class="button button-secondary" href="RELEASE_NOTES_0.2.8.1.md">Release notes</a>
+        <a class="button button-primary" href="https://github.com/c000nstantin420-rgb/DeckForge/releases/tag/v0.2.8.1">Get the release <span aria-hidden="true">↗</span></a>
       </div>
     </section>
   </main>
@@ -224,7 +224,7 @@
     <div class="wrap footer-inner">
       <a class="brand" href="./" aria-label="DeckForge project home">Deck<span>Forge</span></a>
       <span>Real-deck games. Fictional money. Your device.</span>
-      <nav class="footer-links" aria-label="Project links"><a href="README.md">About</a><a href="RELEASE_NOTES_0.2.8.0.md">Release notes</a><a href="https://github.com/c000nstantin420-rgb/DeckForge">Source on GitHub</a></nav>
+      <nav class="footer-links" aria-label="Project links"><a href="README.md">About</a><a href="RELEASE_NOTES_0.2.8.1.md">Release notes</a><a href="https://github.com/c000nstantin420-rgb/DeckForge">Source on GitHub</a></nav>
     </div>
   </footer>
 </body>

@@ -1,0 +1,50 @@
+{
+  "schema": "deckforge.infinite-picker-qa.v1",
+  "verified_on": "2026-11-26",
+  "version": "0.2.8.1",
+  "picker": {
+    "games": ["blackjack", "durak", "maumau"],
+    "visual_cycles": 21,
+    "visual_slots": 63,
+    "accessible_tabs": 3,
+    "center_cycle": 10,
+    "recenter_continuity": [
+      {"approach_slot": 8, "recentered_slot": 32, "visible_games": ["durak", "maumau", "blackjack"], "max_center_shift_css_px": 0},
+      {"approach_slot": 54, "recentered_slot": 30, "visible_games": ["maumau", "blackjack", "durak"], "max_center_shift_css_px": 0}
+    ]
+  },
+  "self_tests": {"passed_each_viewport": 148, "failed_each_viewport": 0, "browser_errors": 0},
+  "viewports": [
+    {"css_px": [320,700], "document_width": 320, "client_width": 320, "center_delta_css_px": 0},
+    {"css_px": [320,800], "document_width": 320, "client_width": 320, "center_delta_css_px": 0},
+    {"css_px": [390,844], "document_width": 390, "client_width": 390, "center_delta_css_px": 0},
+    {"css_px": [834,1194], "document_width": 834, "client_width": 834, "center_delta_css_px": 0},
+    {"css_px": [1194,834], "document_width": 1194, "client_width": 1194, "center_delta_css_px": 0},
+    {"css_px": [1024,768], "document_width": 1009, "client_width": 1009, "center_delta_css_px": 0},
+    {"css_px": [1280,720], "document_width": 1265, "client_width": 1265, "center_delta_css_px": 0}
+  ],
+  "interaction_checks": {
+    "spin_button": {"input": "coordinate click", "mid_spin_busy": true, "both_picker_controls_disabled": true, "result": "maumau", "center_slot": 32, "status": "Lucky pick · Mau-Mau + UNO", "bankroll_before_after": [250,250]},
+    "mouse_drag": {"input": "constructed mouse PointerEvents", "drag_px": -110, "no_spin_while_held": true, "spin_after_release": true, "scroll_at_spin_start": 4526, "scroll_mid": 4729, "scroll_direction_positive": true, "settled_game": "maumau", "center_delta_css_px": 0, "bankroll_before_after": [250,250]},
+    "touch_pointer": {"input": "constructed touch PointerEvents with emulated horizontal scroll", "scroll_left_before_after": [4380,4526], "no_spin_while_held": true, "spin_after_release": true, "settled_game": "durak", "center_slot": 31, "center_delta_css_px": 0, "bankroll_before_after": [250,250]},
+    "horizontal_wheel": {"input": "synthetic WheelEvent deltaX=130 with emulated scroll movement", "scroll_left_before_after": [4380,4526], "spin_after_idle": true, "settled_game": "maumau", "center_slot": 32, "center_delta_css_px": 0, "bankroll_before_after": [250,250]},
+    "reverse_coast": {"direction": -1, "scroll_left_start_mid": [4526,3759], "moved_left": true, "result": {"game": "blackjack", "laps": 3}, "center_slot": 30, "center_delta_css_px": 0},
+    "vertical_wheel": {"spinning": false, "open_disabled": false},
+    "keyboard_and_tap": {"arrow_right_game": "durak", "direct_tap_game": "durak", "spinning": false, "selected_accessible_tabs": 1},
+    "reduced_motion": {"preference": "reduce", "animated": false, "result": "maumau", "centered": true},
+    "cancellation": {"direct_cancel_resolves_cancelled": true, "controls_restored": true, "navigation_cancel_resolves_cancelled": true},
+    "open_action": {"lobby_visible": true, "active_round": false, "bankroll_unchanged": true},
+    "blackjack_primary_flow": {"viewport": [320,700], "home_opened_lobby": true, "deal_clicked": true, "legal_action": "stand", "settled": true, "result": "CLEAN FINISH / You win", "bankroll_before_after": [250,260], "version_badge": "v0.2.8.1", "badge_visible": true, "horizontal_overflow": false, "browser_errors": 0}
+  },
+  "screenshots": [
+    "proofs/table-picker-infinite-spin-0.2.8.1-home-390x844.png",
+    "proofs/table-picker-infinite-spin-0.2.8.1-home-1194x834.png",
+    "proofs/table-picker-infinite-spin-0.2.8.1-spin-button-mid-390x844.png",
+    "proofs/table-picker-infinite-spin-0.2.8.1-spin-result-390x844.png",
+    "proofs/table-picker-infinite-spin-0.2.8.1-gesture-mid-390x844.png",
+    "proofs/blackjack-settlement-0.2.8.1-320x700.png",
+    "proofs/blackjack-settlement-0.2.8.1-390x844.png"
+  ],
+  "limitations": ["Chromium emulation only. Touch and wheel paths use constructed browser events and emulated scroll movement; physical iPhone/iPad Safari and trackpad hardware were not tested."],
+  "browser_errors": []
+}

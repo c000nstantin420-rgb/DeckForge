@@ -1,14 +1,14 @@
 # DeckForge
 
-**DeckForge 0.2.8.0** is a local-first card room for Blackjack, Durak, Mau-Mau, and an optional UNO deck. The game runs as one self-contained HTML file; no install, account, server, fonts, images, or network connection are needed to play from a downloaded copy.
+**DeckForge 0.2.8.1** is a local-first card room for Blackjack, Durak, Mau-Mau, and an optional UNO deck. The game runs as one self-contained HTML file; no install, account, server, fonts, images, or network connection are needed to play from a downloaded copy.
 
 ## Play
 
 - **Project page:** <https://c000nstantin420-rgb.github.io/DeckForge/>
 - **Play directly:** <https://c000nstantin420-rgb.github.io/DeckForge/deckforge.html>
 - **Standalone game:** open [`deckforge.html`](deckforge.html) in a browser.
-- **Download:** [Standalone HTML](https://github.com/c000nstantin420-rgb/DeckForge/releases/download/v0.2.8.0/DeckForge-0.2.8.0.html) · [ZIP archive](https://github.com/c000nstantin420-rgb/DeckForge/releases/download/v0.2.8.0/DeckForge-0.2.8.0.zip) · [Release notes](https://github.com/c000nstantin420-rgb/DeckForge/releases/tag/v0.2.8.0)
-- **Release notes:** [`RELEASE_NOTES_0.2.8.0.md`](RELEASE_NOTES_0.2.8.0.md)
+- **Download:** [Standalone HTML](https://github.com/c000nstantin420-rgb/DeckForge/releases/download/v0.2.8.1/DeckForge-0.2.8.1.html) · [ZIP archive](https://github.com/c000nstantin420-rgb/DeckForge/releases/download/v0.2.8.1/DeckForge-0.2.8.1.zip) · [Release notes](https://github.com/c000nstantin420-rgb/DeckForge/releases/tag/v0.2.8.1)
+- **Release notes:** [`RELEASE_NOTES_0.2.8.1.md`](RELEASE_NOTES_0.2.8.1.md)
 
 ## Games
 
@@ -19,7 +19,7 @@
 
 ## Home game picker
 
-Select Blackjack, Durak, or Mau-Mau + UNO from the horizontal Home rail. Scroll-snap and keyboard selection update the chosen table; **Spin** makes a decelerating random pick. Spin only selects a lobby—it never starts a round or places a wager. Open the chosen table separately.
+The Home rail loops through Blackjack, Durak, and Mau-Mau + UNO. Swipe, wheel, or drag horizontally to coast in that direction; the reel slows and randomly snaps to a game. The **Spin** button uses the same reel, while keyboard and direct tile selection remain available. A spin only chooses a table—it never starts a round or places a wager. Open the selected lobby separately.
 
 ## Local-first economy
 
@@ -27,7 +27,8 @@ The bankroll, wins, table settings, and transaction history stay in browser `loc
 
 ## Verification
 
-- In-app suite: **144/144 passed** at `320×700`, `320×800`, `390×844`, `834×1194`, `1194×834`, `1024×768`, and `1280×720`; zero browser errors.
+- In-app suite: **148/148 passed** at `320×700`, `320×800`, `390×844`, `834×1194`, `1194×834`, `1024×768`, and `1280×720`; zero browser errors.
+- Infinite Home reel: 63 visual slots, exactly three accessible tabs, and 0 px visible-card shift at both recenter thresholds. Button, pointer drag, touch-pointer, horizontal wheel, reverse coast, keyboard, reduced motion, cancellation/navigation, no-wager, and separate Open flows were checked.
 - Durak stress matrix: **336 seeded matches**, 42 deck/seat/rule configurations, 15,019 audited actions; zero failures. Every action preserved physical-card accounting.
 - Inline JavaScript syntax and release-archive integrity are checked; project-page browser/layout/link QA and the tag-based Pages workflow are documented in `proofs/` and `.github/workflows/pages.yml`.
 - Chromium emulation was used for visual and responsive checks. Physical iPhone/iPad Safari was not tested.

@@ -459,3 +459,11 @@ Record actual counts and measurements only: engine assertion total, browser erro
 - **Verification:** `144/144` tests at each of seven viewports; Durak stress: 336 seeded matches / 42 configurations / 15,019 audited actions / 0 failures. Final static/runtime and page-link proofs are in `proofs/`.
 - **Release files:** `VERSION`, `RELEASE_NOTES_0.2.8.0.md`, `index.html`, and `releases/DeckForge-0.2.8.0.zip` (plus the standalone HTML release asset).
 - **Limit:** Physical iPhone/iPad Safari and a real-device touch swipe were not tested.
+
+### DeckForge 0.2.8.1 release — 2026-11-26
+
+- **Base:** `v0.2.8.0`; release target: `v0.2.8.1`.
+- **Scope:** Infinite repeated Home wheel; horizontal drag/touch/wheel coast with randomized stopping and a separate Open action; responsive project-page and README update.
+- **Verification:** `148/148` in-app tests at seven viewports, 0 browser errors, 63 visual slots/3 accessible tabs, 0 px recenter shift at both buffer thresholds; reduced-motion, cancellation/navigation, direction, and no-wager flows verified. See the `0.2.8.1` proofs.
+- **Release files:** `VERSION`, `RELEASE_NOTES_0.2.8.1.md`, `README.md`, `index.html`, Pages workflow, `deckforge.html`, versioned proof JSON/screenshots, and `releases/DeckForge-0.2.8.1.zip` (plus the standalone HTML release asset).
+- **Limit:** Chromium emulation only; physical iOS Safari and trackpad hardware were not tested.

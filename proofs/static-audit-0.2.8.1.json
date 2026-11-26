@@ -1,0 +1,41 @@
+{
+  "schema": "deckforge.static-audit.v1",
+  "verified_at": "2026-11-26T23:01:17Z",
+  "version": "0.2.8.1",
+  "version_file_matches_runtime": true,
+  "visible_home_badge": "v0.2.8.1",
+  "visible_game_badge": "v0.2.8.1",
+  "runtime": {
+    "file": "deckforge.html",
+    "bytes": 567040,
+    "lines": 3548,
+    "inline_script_blocks": 1,
+    "external_script_sources": 0,
+    "node_check_exit_code": 0,
+    "static_id_count": 58,
+    "literal_id_tokens_in_html_and_templates": 65,
+    "duplicate_static_ids": [],
+    "literal_dom_reference_count": 58,
+    "missing_literal_dom_references": [],
+    "dynamic_template_ids": ["resetSaveBtn"],
+    "external_assets": 0,
+    "external_urls": 0
+  },
+  "project_page": {
+    "file": "index.html",
+    "bytes": 26130,
+    "lines": 231,
+    "static_id_count": 10,
+    "duplicate_static_ids": [],
+    "link_count": 18,
+    "missing_local_targets": [],
+    "external_assets": 0
+  },
+  "release_json_files_valid": [
+    "proofs/self-test-0.2.8.1.json",
+    "proofs/project-page-0.2.8.1.json",
+    "proofs/table-picker-infinite-spin-0.2.8.1.json"
+  ],
+  "git_diff_check": "passed",
+  "scope_note": "Static validation is separate from the browser, gameplay, project-page, screenshot, and ZIP read-back proofs."
+}

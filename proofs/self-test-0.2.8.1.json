@@ -1,0 +1,37 @@
+{
+  "schema": "deckforge.self-test.v1",
+  "verified_at": "2026-11-26T22:39:03.161Z",
+  "version": "0.2.8.1",
+  "tests_per_viewport": 148,
+  "failed_per_viewport": 0,
+  "test_groups": 11,
+  "group_results": [
+    {"name": "Physical deck and shoe", "passed": 5, "failed": 0},
+    {"name": "Bankroll and progression", "passed": 4, "failed": 0},
+    {"name": "Bankroll analytics", "passed": 5, "failed": 0},
+    {"name": "Blackjack engine", "passed": 13, "failed": 0},
+    {"name": "Durak engine", "passed": 13, "failed": 0},
+    {"name": "Persistence and UI helpers", "passed": 12, "failed": 0},
+    {"name": "Table configuration and variants", "passed": 15, "failed": 0},
+    {"name": "Mau-Mau engine", "passed": 37, "failed": 0},
+    {"name": "Mau-Mau UI integration", "passed": 9, "failed": 0},
+    {"name": "Table feel and touch helpers", "passed": 8, "failed": 0},
+    {"name": "Multiplayer correctness and presentation", "passed": 27, "failed": 0}
+  ],
+  "viewports": [
+    {"css_px": [320,700], "passed": 148, "failed": 0, "version_badge": "v0.2.8.1", "horizontal_page_overflow": false, "browser_errors": 0},
+    {"css_px": [320,800], "passed": 148, "failed": 0, "version_badge": "v0.2.8.1", "horizontal_page_overflow": false, "browser_errors": 0},
+    {"css_px": [390,844], "passed": 148, "failed": 0, "version_badge": "v0.2.8.1", "horizontal_page_overflow": false, "browser_errors": 0},
+    {"css_px": [834,1194], "passed": 148, "failed": 0, "version_badge": "v0.2.8.1", "horizontal_page_overflow": false, "browser_errors": 0},
+    {"css_px": [1194,834], "passed": 148, "failed": 0, "version_badge": "v0.2.8.1", "horizontal_page_overflow": false, "browser_errors": 0},
+    {"css_px": [1024,768], "passed": 148, "failed": 0, "version_badge": "v0.2.8.1", "horizontal_page_overflow": false, "browser_errors": 0},
+    {"css_px": [1280,720], "passed": 148, "failed": 0, "version_badge": "v0.2.8.1", "horizontal_page_overflow": false, "browser_errors": 0}
+  ],
+  "runtime_errors": [],
+  "coverage": [
+    "physical deck counts, engine rules, no-wager picker selection, and accessibility",
+    "infinite 21-cycle reel with exactly three accessible tabs",
+    "left/right safe-buffer recenter, coast-plan bounds, and gesture-momentum bounds",
+    "version badge matches APP_VERSION"
+  ]
+}

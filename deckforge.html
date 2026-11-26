@@ -380,10 +380,11 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 .table-picker-spin:hover:not(:disabled){transform:translateY(-1px);border-color:rgba(255,190,88,.7);background:linear-gradient(145deg,rgba(255,159,10,.28),rgba(255,159,10,.12))}
 .table-picker-spin:disabled{opacity:.62;cursor:wait}
 .table-picker-spin-glyph{display:inline-grid;place-items:center;width:18px;height:18px;font-size:20px;line-height:1}
-.table-picker-reel{--picker-card-width:136px;position:relative;z-index:1;margin-top:7px;padding-inline:calc((100% - var(--picker-card-width))/2);overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;touch-action:pan-x;border-radius:13px;outline-offset:3px;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 14%,#000 86%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 14%,#000 86%,transparent 100%)}
+.table-picker-reel{--picker-card-width:136px;position:relative;z-index:1;width:min(100%,720px);margin:7px auto 0;padding-inline:calc((100% - var(--picker-card-width))/2);overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;touch-action:pan-x;border-radius:13px;outline-offset:3px;cursor:grab;user-select:none;-webkit-user-select:none;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%)}
 .table-picker-reel::-webkit-scrollbar{display:none}
+.table-picker-reel.is-dragging{cursor:grabbing;scroll-snap-type:none}
 .table-picker-track{display:flex;align-items:stretch;gap:10px;width:max-content;padding:8px 0 10px}
-.table-picker-item{position:relative;isolation:isolate;display:flex;flex:0 0 var(--picker-card-width);min-height:106px;flex-direction:column;align-items:center;justify-content:center;gap:5px;overflow:hidden;padding:9px 7px 8px;border:1px solid rgba(232,232,236,.10);border-radius:14px;background:linear-gradient(150deg,rgba(35,38,43,.96),rgba(23,24,29,.98));color:var(--fg);cursor:pointer;scroll-snap-align:center;scroll-snap-stop:always;transition:transform .16s ease,border-color .16s ease,background .16s ease,box-shadow .16s ease,opacity .16s ease}
+.table-picker-item{position:relative;isolation:isolate;display:flex;flex:0 0 var(--picker-card-width);min-height:106px;flex-direction:column;align-items:center;justify-content:center;gap:5px;overflow:hidden;padding:9px 7px 8px;border:1px solid rgba(232,232,236,.10);border-radius:14px;background:linear-gradient(150deg,rgba(35,38,43,.96),rgba(23,24,29,.98));color:var(--fg);cursor:pointer;scroll-snap-align:center;scroll-snap-stop:normal;transition:transform .16s ease,border-color .16s ease,background .16s ease,box-shadow .16s ease,opacity .16s ease}
 .table-picker-item:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 50% 20%,rgba(255,255,255,.055),transparent 56%);pointer-events:none}
 .table-picker-item:hover{border-color:rgba(232,232,236,.24);transform:translateY(-1px)}
 .table-picker-item[aria-selected="true"]{z-index:1;transform:scale(1.035);border-color:rgba(91,227,133,.78);background:radial-gradient(ellipse at 50% 0%,rgba(48,209,88,.18),transparent 65%),linear-gradient(150deg,rgba(26,54,39,.98),rgba(20,31,26,.99));box-shadow:0 0 0 1px rgba(48,209,88,.14),0 8px 22px rgba(0,0,0,.23),0 0 20px rgba(48,209,88,.10)}
@@ -405,14 +406,14 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 .table-picker-open{flex:0 0 auto;min-height:36px;padding:0 13px;border-radius:10px;font-size:10px;letter-spacing:.1px;white-space:nowrap}
 .table-picker-hint{margin-top:6px;color:rgba(202,214,206,.62);font-size:8px;letter-spacing:.3px;text-align:center}
 .table-picker.is-spinning{border-color:rgba(255,186,74,.50);box-shadow:0 14px 36px rgba(0,0,0,.28),0 0 28px rgba(255,159,10,.09),inset 0 1px 0 rgba(255,255,255,.07)}
-.table-picker.is-spinning .table-picker-reel{scroll-snap-type:none;pointer-events:none}
+.table-picker.is-spinning .table-picker-reel{scroll-snap-type:none;pointer-events:none;cursor:progress}
 .table-picker.is-spinning .table-picker-spin-glyph{animation:table-picker-spin .42s linear infinite}
 .table-picker.is-spinning .table-picker-reel:after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,transparent 20%,rgba(255,255,255,.09) 50%,transparent 80%);animation:table-picker-sheen .42s linear infinite}
 .table-picker.is-spinning .table-picker-item{transition:transform .09s ease,border-color .09s ease,box-shadow .09s ease}
 .table-picker.is-spinning .table-picker-hint{color:#ffd18a}
 @keyframes table-picker-spin{to{transform:rotate(360deg)}}
 @keyframes table-picker-sheen{from{transform:translateX(-24%)}to{transform:translateX(24%)}}
-@media(min-width:761px){.table-picker{margin-bottom:24px;padding:15px 18px 11px}.table-picker-reel{--picker-card-width:180px;padding-inline:0;overflow:visible;scroll-snap-type:none}.table-picker-track{width:auto;justify-content:center;padding:11px 0 13px}.table-picker-item{min-height:112px}.table-picker-hint{font-size:9px}}
+@media(min-width:761px){.table-picker{margin-bottom:24px;padding:15px 18px 11px}.table-picker-reel{--picker-card-width:180px;width:min(100%,720px);padding-inline:calc((100% - var(--picker-card-width))/2);overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory}.table-picker-track{width:max-content;justify-content:flex-start;padding:11px 0 13px}.table-picker-item{min-height:112px}.table-picker-hint{font-size:9px}}
 @media(max-width:360px){.table-picker{padding:11px 10px 9px}.table-picker-heading strong{font-size:13px}.table-picker-reel{--picker-card-width:128px}.table-picker-game-name{font-size:10px}.table-picker-controls{gap:7px}.table-picker-selection{font-size:9px}.table-picker-open{padding:0 10px;font-size:9px}}
 @media(prefers-reduced-motion:reduce){.table-picker-item,.table-picker-spin{transition:none!important}.table-picker.is-spinning .table-picker-spin-glyph,.table-picker.is-spinning .table-picker-reel:after{animation:none!important}}
 </style>
@@ -420,7 +421,7 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 <body>
 <div class="app-shell" id="app">
 <header class="topbar" id="topbar">
-  <div class="top-left-cluster"><span class="brand-version" id="appVersion">v0.2.8.0</span></div>
+  <div class="top-left-cluster"><span class="brand-version" id="appVersion">v0.2.8.1</span></div>
   <button class="brand-button" id="brandBtn" aria-label="Go to DeckForge home" title="DeckForge home"><span class="brand-name"><span class="brand-deck">Deck</span><span class="brand-forge">Forge</span></span></button>
   <div class="top-actions">
     <button class="bankroll-pill" id="bankrollBtn" aria-label="Open bankroll"><span class="coin">$</span><strong id="balanceValue">250</strong></button>
@@ -475,7 +476,7 @@ h1{font-size:clamp(32px,6vw,66px);line-height:.98;letter-spacing:-2.8px;max-widt
 (() => {
 'use strict';
 
-const APP_VERSION = '0.2.8.0';
+const APP_VERSION = '0.2.8.1';
 const STORAGE_KEY = 'deckforge-save-v1';
 const STORAGE_RESET_KEY = 'deckforge-brand-reset-v1';
 const $ = (id) => document.getElementById(id);
@@ -1830,20 +1831,42 @@ const TABLE_PICKER_GAMES = [
   {id:'durak',name:'Durak',tag:'Attack · defend',backRank:'6',backSuit:'♣',frontRank:'Q',frontSuit:'♦',frontRed:true},
   {id:'maumau',name:'Mau-Mau + UNO',tag:'Classic · UNO',backRank:'J',backSuit:'♥'}
 ];
-let tablePickerSpinTimer=null;
+const TABLE_PICKER_REEL_CYCLES=21;
+const TABLE_PICKER_CENTER_CYCLE=Math.floor(TABLE_PICKER_REEL_CYCLES/2);
+const TABLE_PICKER_EDGE_CYCLES=3;
+let tablePickerSpinFrame=null;
 let tablePickerSpinToken=0;
 let tablePickerSpinResolver=null;
 let tablePickerSpinActive=false;
 let tablePickerScrollTimer=null;
+let tablePickerRecentering=false;
+let tablePickerScrollLastLeft=0;
+let tablePickerProgrammaticTarget=null;
+let tablePickerStatusLockUntil=0;
+let tablePickerIgnoreClickUntil=0;
+let tablePickerPointer=null;
+const tablePickerUserScroll={pending:false,direction:1,scrollPixels:0,inputPixels:0,source:null,startedAt:0};
+function tablePickerRandomUnit(random=Math.random) {
+  const sample=Number(random()),normalized=Number.isFinite(sample)?Math.min(1-Number.EPSILON,Math.max(0,sample)):0;
+  return normalized;
+}
 function chooseTablePickerIndex(random=Math.random,count=TABLE_PICKER_GAMES.length) {
   if(!Number.isInteger(count)||count<1)return -1;
-  const sample=Number(random()),normalized=Number.isFinite(sample)?Math.min(1-Number.EPSILON,Math.max(0,sample)):0;
-  return Math.floor(normalized*count);
+  return Math.floor(tablePickerRandomUnit(random)*count);
 }
-function buildTablePickerSpinSequence(startIndex,targetIndex,rounds=4,count=TABLE_PICKER_GAMES.length) {
+function buildTablePickerSpinSequence(startIndex,targetIndex,rounds=4,count=TABLE_PICKER_GAMES.length,direction=1) {
   if(!Number.isInteger(count)||count<1)return [];
-  const start=((Math.trunc(Number(startIndex)||0)%count)+count)%count,target=((Math.trunc(Number(targetIndex)||0)%count)+count)%count,laps=Math.max(1,Math.trunc(Number(rounds)||1)),distance=(target-start+count)%count;
-  return Array.from({length:laps*count+distance},(_,step)=>(start+step+1)%count);
+  const start=((Math.trunc(Number(startIndex)||0)%count)+count)%count,target=((Math.trunc(Number(targetIndex)||0)%count)+count)%count,laps=Math.max(1,Math.trunc(Number(rounds)||1)),dir=Number(direction)<0?-1:1,distance=dir>0?(target-start+count)%count:(start-target+count)%count;
+  return Array.from({length:laps*count+distance},(_,step)=>((start+dir*(step+1))%count+count)%count);
+}
+function buildTablePickerSpinPlan(startSlot,targetIndex,{count=TABLE_PICKER_GAMES.length,laps=3,direction=1}={}) {
+  if(!Number.isInteger(count)||count<1)return null;
+  const start=Math.max(0,Math.trunc(Number(startSlot)||0)),startGame=start%count,target=((Math.trunc(Number(targetIndex)||0)%count)+count)%count,dir=Number(direction)<0?-1:1,lapCount=Math.max(1,Math.trunc(Number(laps)||1)),distance=dir>0?(target-startGame+count)%count:(startGame-target+count)%count,steps=lapCount*count+distance;
+  return {startSlot:start,targetIndex:target,targetSlot:start+dir*steps,direction:dir,laps:lapCount,distance,steps};
+}
+function tablePickerGestureSpinOptions({direction=1,travelPx=0,random=Math.random}={}) {
+  const travel=Math.max(0,Number(travelPx)||0),extraLaps=Math.min(2,Math.floor(travel/650)),laps=2+Math.floor(tablePickerRandomUnit(random)*3)+extraLaps,duration=900+Math.round(tablePickerRandomUnit(random)*900)+Math.min(1400,Math.round(travel*.8));
+  return {direction:Number(direction)<0?-1:1,laps,duration,source:'gesture'};
 }
 function tablePickerIconMarkup(game) {
   const card=(classes,rank,suit)=>`<span class="picker-card ${classes}"><span class="picker-card-rank">${rank}</span><span class="picker-card-suit">${suit}</span></span>`;
@@ -1851,84 +1874,227 @@ function tablePickerIconMarkup(game) {
   const back=card(`picker-card-back ${game.backSuit==='♥'||game.backSuit==='♦'?'picker-card-red':''}`,game.backRank,game.backSuit),front=card(`picker-card-front ${game.frontRed?'picker-card-red':''}`,game.frontRank,game.frontSuit);
   return `${back}${front}`;
 }
-function setTablePickerSelection(gameId,{scroll=true,behavior='smooth',announce=true,focus=false}={}) {
-  const game=TABLE_PICKER_GAMES.find(item=>item.id===gameId);if(!game)return null;
+function pickerSlotItems(rail=$('tablePickerRail')) { return rail?[...rail.querySelectorAll('[data-table-picker-game]')]:[]; }
+function findNearestTablePickerSlot(rail=$('tablePickerRail')) {
+  const items=pickerSlotItems(rail);if(!rail||!items.length)return null;
+  const center=rail.getBoundingClientRect().left+rail.clientWidth/2;
+  return items.reduce((best,item)=>{const rect=item.getBoundingClientRect(),distance=Math.abs(rect.left+rect.width/2-center);return !best||distance<best.distance?{item,distance}:best;},null)?.item||null;
+}
+function findNearestTablePickerGameSlot(gameId,rail=$('tablePickerRail')) {
+  const items=pickerSlotItems(rail).filter(item=>item.dataset.tablePickerGame===gameId);if(!rail||!items.length)return null;
+  const center=rail.getBoundingClientRect().left+rail.clientWidth/2;
+  return items.reduce((best,item)=>{const rect=item.getBoundingClientRect(),distance=Math.abs(rect.left+rect.width/2-center);return !best||distance<best.distance?{item,distance}:best;},null)?.item||null;
+}
+function tablePickerScrollLeftForItem(rail,item) {
+  if(!rail||!item)return 0;
+  const railRect=rail.getBoundingClientRect(),itemRect=item.getBoundingClientRect(),delta=(itemRect.left+itemRect.width/2)-(railRect.left+rail.clientWidth/2),maxScroll=Math.max(0,rail.scrollWidth-rail.clientWidth);
+  return Math.max(0,Math.min(maxScroll,rail.scrollLeft+delta));
+}
+function centerTablePickerItem(rail,item,behavior='auto') {
+  if(!rail||!item)return false;
+  const left=tablePickerScrollLeftForItem(rail,item);
+  if(behavior==='auto')rail.scrollLeft=left;else rail.scrollTo({left,behavior});
+  return true;
+}
+function updateTablePickerAccessibility(selectedGameId,preferredItem=null,rail=$('tablePickerRail')) {
+  const items=pickerSlotItems(rail);if(!rail||!items.length)return null;
+  const center=rail.getBoundingClientRect().left+rail.clientWidth/2,accessible=new Map();
+  for(const game of TABLE_PICKER_GAMES){
+    const preferred=preferredItem?.dataset.tablePickerGame===game.id?preferredItem:null;
+    const candidates=preferred?[preferred]:items.filter(item=>item.dataset.tablePickerGame===game.id);
+    const nearest=candidates.reduce((best,item)=>{const rect=item.getBoundingClientRect(),distance=Math.abs(rect.left+rect.width/2-center);return !best||distance<best.distance?{item,distance}:best;},null)?.item;
+    if(nearest)accessible.set(game.id,nearest);
+  }
+  const selectedItem=accessible.get(selectedGameId)||findNearestTablePickerGameSlot(selectedGameId,rail);
+  for(const item of items){
+    const gameIndex=TABLE_PICKER_GAMES.findIndex(game=>game.id===item.dataset.tablePickerGame),exposed=accessible.get(item.dataset.tablePickerGame)===item;
+    item.disabled=tablePickerSpinActive;item.setAttribute('aria-selected',String(item===selectedItem));
+    if(exposed){item.setAttribute('role','tab');item.removeAttribute('aria-hidden');item.setAttribute('aria-posinset',String(gameIndex+1));item.setAttribute('aria-setsize',String(TABLE_PICKER_GAMES.length));item.tabIndex=item===selectedItem?0:-1;}
+    else{item.removeAttribute('role');item.setAttribute('aria-hidden','true');item.removeAttribute('aria-posinset');item.removeAttribute('aria-setsize');item.tabIndex=-1;}
+  }
+  return selectedItem;
+}
+function applyTablePickerSelection(gameId,{announce=true,item=null}={}) {
+  const game=TABLE_PICKER_GAMES.find(entry=>entry.id===gameId);if(!game)return null;
+  if(announce)tablePickerStatusLockUntil=0;
   appState.tablePickerGame=game.id;
-  const rail=$('tablePickerRail'),items=rail?[...rail.querySelectorAll('[data-table-picker-game]')]:[];
-  let selectedItem=null;
-  for(const item of items){const active=item.dataset.tablePickerGame===game.id;item.setAttribute('aria-selected',String(active));item.tabIndex=active?0:-1;item.disabled=tablePickerSpinActive;if(active)selectedItem=item;}
-  const status=$('tablePickerStatus');if(status&&announce)status.textContent=`Selected · ${game.name}`;
+  const selectedItem=updateTablePickerAccessibility(game.id,item);
+  if(announce&&!tablePickerSpinActive){const status=$('tablePickerStatus');if(status)status.textContent=`Selected · ${game.name}`;}
   const openButton=$('tablePickerOpenBtn');if(openButton)openButton.setAttribute('aria-label',`Open selected table: ${game.name}`);
-  if(rail&&selectedItem&&scroll){const railRect=rail.getBoundingClientRect(),itemRect=selectedItem.getBoundingClientRect(),centerDelta=(itemRect.left+itemRect.width/2)-(railRect.left+railRect.width/2),maxScroll=Math.max(0,rail.scrollWidth-rail.clientWidth),left=Math.max(0,Math.min(maxScroll,rail.scrollLeft+centerDelta));rail.scrollTo({left,behavior:behavior==='smooth'?'smooth':'auto'});}
-  if(focus&&selectedItem)selectedItem.focus({preventScroll:true});
+  return selectedItem;
+}
+function setTablePickerSelection(gameId,{scroll=true,behavior='smooth',announce=true,focus=false,item=null}={}) {
+  const game=TABLE_PICKER_GAMES.find(entry=>entry.id===gameId);if(!game)return null;
+  const rail=$('tablePickerRail'),selectedItem=item?.dataset.tablePickerGame===game.id?item:findNearestTablePickerGameSlot(game.id,rail);
+  if(rail&&selectedItem&&scroll){tablePickerProgrammaticTarget=behavior==='smooth'?game.id:null;centerTablePickerItem(rail,selectedItem,behavior);}else if(!scroll)tablePickerProgrammaticTarget=null;
+  const activeItem=applyTablePickerSelection(game.id,{announce,item:selectedItem});
+  if(focus&&activeItem)activeItem.focus({preventScroll:true});
+  if(rail&&!tablePickerSpinActive)tablePickerScrollLastLeft=rail.scrollLeft;
   return game;
 }
 function renderTablePicker() {
-  const track=$('tablePickerTrack');if(!track)return;
-  if(!track.dataset.ready){track.innerHTML=TABLE_PICKER_GAMES.map(game=>`<button class="table-picker-item" type="button" role="tab" data-table-picker-game="${game.id}" aria-label="Select ${esc(game.name)}" aria-selected="false" tabindex="-1"><span class="table-picker-icon" aria-hidden="true">${tablePickerIconMarkup(game)}</span><span class="table-picker-game-name">${esc(game.name)}</span><span class="table-picker-game-tag">${esc(game.tag)}</span></button>`).join('');track.dataset.ready='true';}
-  const selected=TABLE_PICKER_GAMES.find(game=>game.id===appState.tablePickerGame)||TABLE_PICKER_GAMES[0];
-  setTablePickerSelection(selected.id,{scroll:true,behavior:'auto',announce:false});
-  if(!tablePickerSpinActive){if($('tablePickerStatus'))$('tablePickerStatus').textContent=`Selected · ${selected.name}`;if($('tablePickerHint'))$('tablePickerHint').textContent='Swipe to browse · spin for a random table';}
+  const track=$('tablePickerTrack'),rail=$('tablePickerRail');if(!track||!rail)return;
+  if(!track.dataset.ready){
+    track.innerHTML=Array.from({length:TABLE_PICKER_REEL_CYCLES},(_,cycle)=>TABLE_PICKER_GAMES.map((game,index)=>{const slot=cycle*TABLE_PICKER_GAMES.length+index;return `<button class="table-picker-item" type="button" data-table-picker-game="${game.id}" data-picker-cycle="${cycle}" data-picker-slot="${slot}" aria-label="Select ${esc(game.name)}"><span class="table-picker-icon" aria-hidden="true">${tablePickerIconMarkup(game)}</span><span class="table-picker-game-name">${esc(game.name)}</span><span class="table-picker-game-tag">${esc(game.tag)}</span></button>`;}).join('')).join('');
+    track.dataset.ready='true';
+  }
+  const selected=TABLE_PICKER_GAMES.find(game=>game.id===appState.tablePickerGame)||TABLE_PICKER_GAMES[0],gameIndex=TABLE_PICKER_GAMES.indexOf(selected),items=pickerSlotItems(rail);
+  if(rail.dataset.infiniteCentered!=='true'){
+    const initial=items[TABLE_PICKER_CENTER_CYCLE*TABLE_PICKER_GAMES.length+gameIndex];centerTablePickerItem(rail,initial,'auto');rail.dataset.infiniteCentered='true';tablePickerScrollLastLeft=rail.scrollLeft;
+  }
+  applyTablePickerSelection(selected.id,{announce:false,item:findNearestTablePickerGameSlot(selected.id,rail)});
+  if(!tablePickerSpinActive){if($('tablePickerStatus'))$('tablePickerStatus').textContent=`Selected · ${selected.name}`;if($('tablePickerHint'))$('tablePickerHint').textContent='Swipe, wheel, or drag to spin · tap a game to select';}
+}
+function recenterInfiniteTablePicker(rail=$('tablePickerRail'),{force=false}={}) {
+  const items=pickerSlotItems(rail),nearest=findNearestTablePickerSlot(rail),count=TABLE_PICKER_GAMES.length,total=items.length;
+  if(!rail||!nearest||!count||!total)return {shifted:false,slotIndex:-1,game:null};
+  const slotIndex=Number(nearest.dataset.pickerSlot),lower=count*TABLE_PICKER_EDGE_CYCLES,upper=total-lower-1;
+  if(!force&&slotIndex>=lower&&slotIndex<=upper)return {shifted:false,slotIndex,game:nearest.dataset.tablePickerGame};
+  const selectedGameId=tablePickerProgrammaticTarget||nearest.dataset.tablePickerGame,gameIndex=TABLE_PICKER_GAMES.findIndex(game=>game.id===selectedGameId),targetSlot=TABLE_PICKER_CENTER_CYCLE*count+Math.max(0,gameIndex),target=items[targetSlot];
+  if(!target)return {shifted:false,slotIndex,game:nearest.dataset.tablePickerGame};
+  const moved=target!==nearest||Math.abs(tablePickerScrollLeftForItem(rail,target)-rail.scrollLeft)>1;
+  if(moved){tablePickerRecentering=true;centerTablePickerItem(rail,target,'auto');tablePickerScrollLastLeft=rail.scrollLeft;requestAnimationFrame(()=>{tablePickerRecentering=false;});}
+  const centered=findNearestTablePickerSlot(rail)||target,selectedId=tablePickerProgrammaticTarget||centered.dataset.tablePickerGame;
+  applyTablePickerSelection(selectedId,{announce:false,item:findNearestTablePickerGameSlot(selectedId,rail)||centered});
+  return {shifted:moved,slotIndex:Number(centered.dataset.pickerSlot),game:selectedId};
 }
 function syncTablePickerSelectionFromScroll() {
+  const rail=$('tablePickerRail'),nearest=findNearestTablePickerSlot(rail);if(!rail||!nearest)return null;
+  const announce=!tablePickerSpinActive&&performance.now()>=tablePickerStatusLockUntil,game=applyTablePickerSelection(nearest.dataset.tablePickerGame,{announce,item:nearest});
+  if(announce&&$('tablePickerHint'))$('tablePickerHint').textContent='Swipe, wheel, or drag to spin · tap a game to select';
+  return game;
+}
+function resetTablePickerUserScroll({restoreOpen=true}={}) {
+  if(tablePickerScrollTimer!==null)clearTimeout(tablePickerScrollTimer);
+  tablePickerScrollTimer=null;tablePickerUserScroll.pending=false;tablePickerUserScroll.direction=1;tablePickerUserScroll.scrollPixels=0;tablePickerUserScroll.inputPixels=0;tablePickerUserScroll.source=null;tablePickerUserScroll.startedAt=0;
+  $('tablePickerRail')?.classList.remove('is-dragging');
+  if(restoreOpen&&!tablePickerSpinActive&&$('tablePickerOpenBtn'))$('tablePickerOpenBtn').disabled=false;
+}
+function markTablePickerUserScroll(direction,travelPx=0,source='gesture') {
   if(tablePickerSpinActive)return;
-  const rail=$('tablePickerRail');if(!rail)return;
-  const items=[...rail.querySelectorAll('[data-table-picker-game]')];if(!items.length)return;
-  const center=rail.getBoundingClientRect().left+rail.clientWidth/2;
-  const nearest=items.reduce((best,item)=>{const rect=item.getBoundingClientRect(),distance=Math.abs(rect.left+rect.width/2-center);return !best||distance<best.distance?{item,distance}:best;},null);
-  if(nearest&&nearest.item.dataset.tablePickerGame!==appState.tablePickerGame)setTablePickerSelection(nearest.item.dataset.tablePickerGame,{scroll:false});
+  tablePickerProgrammaticTarget=null;tablePickerStatusLockUntil=0;
+  if(!tablePickerUserScroll.pending){tablePickerUserScroll.pending=true;tablePickerUserScroll.direction=Number(direction)<0?-1:1;tablePickerUserScroll.scrollPixels=0;tablePickerUserScroll.inputPixels=0;tablePickerUserScroll.source=source;tablePickerUserScroll.startedAt=performance.now();tablePickerScrollLastLeft=$('tablePickerRail')?.scrollLeft||0;}
+  if(Number(direction))tablePickerUserScroll.direction=Number(direction)<0?-1:1;
+  tablePickerUserScroll.inputPixels=Math.max(tablePickerUserScroll.inputPixels,Math.abs(Number(travelPx)||0));tablePickerUserScroll.source=source||tablePickerUserScroll.source;
+  if($('tablePickerOpenBtn'))$('tablePickerOpenBtn').disabled=true;
+  if($('tablePickerHint'))$('tablePickerHint').textContent='Release to let the reel coast…';
+}
+function tablePickerScrollIdle() {
+  tablePickerScrollTimer=null;
+  if(tablePickerSpinActive)return;
+  if(tablePickerPointer?.moved&&tablePickerUserScroll.pending)return;
+  if(tablePickerProgrammaticTarget){const targetId=tablePickerProgrammaticTarget;tablePickerProgrammaticTarget=null;recenterInfiniteTablePicker();const targetItem=findNearestTablePickerGameSlot(targetId);if(targetItem)centerTablePickerItem($('tablePickerRail'),targetItem,'auto');applyTablePickerSelection(targetId,{announce:true,item:targetItem});return;}
+  recenterInfiniteTablePicker();syncTablePickerSelectionFromScroll();
+  if(tablePickerUserScroll.pending)finishTablePickerUserScroll();
 }
 function scheduleTablePickerScrollSync() {
   if(tablePickerSpinActive)return;
   if(tablePickerScrollTimer!==null)clearTimeout(tablePickerScrollTimer);
-  tablePickerScrollTimer=setTimeout(()=>{tablePickerScrollTimer=null;syncTablePickerSelectionFromScroll();},90);
+  tablePickerScrollTimer=setTimeout(tablePickerScrollIdle,220);
+}
+function handleTablePickerScroll() {
+  const rail=$('tablePickerRail');if(!rail)return;
+  const current=rail.scrollLeft,delta=current-tablePickerScrollLastLeft;
+  if(tablePickerUserScroll.pending&&!tablePickerRecentering&&Math.abs(delta)>0.5){tablePickerUserScroll.direction=delta<0?-1:1;tablePickerUserScroll.scrollPixels+=Math.abs(delta);}
+  tablePickerScrollLastLeft=current;
+  if(tablePickerSpinActive){syncTablePickerSelectionFromScroll();return;}
+  const recentered=recenterInfiniteTablePicker(rail);if(recentered.shifted)tablePickerScrollLastLeft=rail.scrollLeft;
+  if(tablePickerProgrammaticTarget)applyTablePickerSelection(tablePickerProgrammaticTarget,{announce:false,item:findNearestTablePickerGameSlot(tablePickerProgrammaticTarget,rail)});else syncTablePickerSelectionFromScroll();
+  scheduleTablePickerScrollSync();
+}
+function handleTablePickerWheel(event) {
+  const delta=event.deltaX||((event.shiftKey)?event.deltaY:0);if(Math.abs(delta)<4)return;
+  markTablePickerUserScroll(delta<0?-1:1,Math.abs(delta),'wheel');
+}
+function handleTablePickerPointerDown(event) {
+  if(tablePickerSpinActive||(event.button!==undefined&&event.button!==0))return;
+  tablePickerPointer={id:event.pointerId,type:event.pointerType||'mouse',x:event.clientX,y:event.clientY,startScroll:$('tablePickerRail')?.scrollLeft||0,moved:false,captured:false};
+}
+function handleTablePickerPointerMove(event) {
+  const state=tablePickerPointer,rail=$('tablePickerRail');if(!state||!rail||event.pointerId!==state.id)return;
+  const dx=event.clientX-state.x,dy=event.clientY-state.y;
+  if(!state.moved&&Math.abs(dx)>=9&&Math.abs(dx)>Math.abs(dy)*1.15){state.moved=true;markTablePickerUserScroll(dx<0?1:-1,Math.abs(dx),state.type==='mouse'?'mouse':'touch');}
+  if(!state.moved)return;
+  if(state.type==='mouse'){
+    if(event.cancelable)event.preventDefault();
+    if(!state.captured){try{rail.setPointerCapture(event.pointerId);state.captured=true;}catch(error){}}
+    rail.classList.add('is-dragging');rail.scrollLeft=state.startScroll-dx;
+  }
+}
+function finishTablePickerPointer(event) {
+  const state=tablePickerPointer;if(!state||event.pointerId!==state.id)return;
+  if(state.moved){tablePickerIgnoreClickUntil=performance.now()+380;scheduleTablePickerScrollSync();}
+  $('tablePickerRail')?.classList.remove('is-dragging');tablePickerPointer=null;
+}
+function finishTablePickerUserScroll() {
+  if(!tablePickerUserScroll.pending||tablePickerSpinActive)return false;
+  const gesture={direction:tablePickerUserScroll.direction,travelPx:Math.max(tablePickerUserScroll.scrollPixels,tablePickerUserScroll.inputPixels),source:tablePickerUserScroll.source};
+  resetTablePickerUserScroll({restoreOpen:false});
+  if(gesture.travelPx<24){if($('tablePickerOpenBtn'))$('tablePickerOpenBtn').disabled=false;return false;}
+  recenterInfiniteTablePicker($('tablePickerRail'),{force:true});
+  const options=tablePickerGestureSpinOptions({direction:gesture.direction,travelPx:gesture.travelPx,random:Math.random});
+  void spinTablePicker(Math.random,{...options,source:'gesture'});
+  return true;
 }
 function cancelTablePickerSpin() {
-  const resolver=tablePickerSpinResolver;tablePickerSpinResolver=null;tablePickerSpinToken+=1;
-  if(tablePickerSpinTimer!==null)clearTimeout(tablePickerSpinTimer);
-  tablePickerSpinTimer=null;tablePickerSpinActive=false;
-  $('tablePicker')?.classList.remove('is-spinning');$('tablePickerRail')?.removeAttribute('aria-busy');
+  const resolver=tablePickerSpinResolver;tablePickerSpinResolver=null;tablePickerSpinToken+=1;tablePickerProgrammaticTarget=null;tablePickerStatusLockUntil=0;
+  if(tablePickerSpinFrame!==null)cancelAnimationFrame(tablePickerSpinFrame);
+  tablePickerSpinFrame=null;tablePickerSpinActive=false;resetTablePickerUserScroll({restoreOpen:false});tablePickerPointer=null;
+  $('tablePicker')?.classList.remove('is-spinning');$('tablePickerRail')?.classList.remove('is-spinning');$('tablePickerRail')?.removeAttribute('aria-busy');
   if($('tablePickerSpinBtn'))$('tablePickerSpinBtn').disabled=false;
   if($('tablePickerOpenBtn'))$('tablePickerOpenBtn').disabled=false;
   $('tablePickerRail')?.querySelectorAll('[data-table-picker-game]').forEach(item=>{item.disabled=false;});
+  syncTablePickerSelectionFromScroll();
   if(resolver)resolver({cancelled:true,game:appState.tablePickerGame});
 }
-function finishTablePickerSpin(targetIndex,token,resolve) {
+function finishTablePickerSpin(plan,token,resolve,source='button') {
   if(token!==tablePickerSpinToken)return;
-  const game=TABLE_PICKER_GAMES[targetIndex]||TABLE_PICKER_GAMES[0],reduceMotion=Boolean(window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);tablePickerSpinTimer=null;tablePickerSpinActive=false;tablePickerSpinResolver=null;
-  setTablePickerSelection(game.id,{scroll:true,behavior:reduceMotion?'auto':'smooth',announce:false});
-  $('tablePicker')?.classList.remove('is-spinning');$('tablePickerRail')?.removeAttribute('aria-busy');
+  const game=TABLE_PICKER_GAMES[plan.targetIndex]||TABLE_PICKER_GAMES[0],rail=$('tablePickerRail'),items=pickerSlotItems(rail),target=items[plan.targetSlot]||findNearestTablePickerGameSlot(game.id,rail);
+  tablePickerSpinFrame=null;tablePickerSpinActive=false;tablePickerSpinResolver=null;tablePickerStatusLockUntil=performance.now()+1400;
+  if(rail&&target)centerTablePickerItem(rail,target,'auto');
+  recenterInfiniteTablePicker(rail,{force:true});
+  applyTablePickerSelection(game.id,{announce:false,item:findNearestTablePickerGameSlot(game.id,rail)});
+  $('tablePicker')?.classList.remove('is-spinning');rail?.classList.remove('is-spinning');rail?.removeAttribute('aria-busy');
   if($('tablePickerSpinBtn'))$('tablePickerSpinBtn').disabled=false;
   if($('tablePickerOpenBtn'))$('tablePickerOpenBtn').disabled=false;
-  $('tablePickerRail')?.querySelectorAll('[data-table-picker-game]').forEach(item=>{item.disabled=false;});
+  rail?.querySelectorAll('[data-table-picker-game]').forEach(item=>{item.disabled=false;});
   if($('tablePickerStatus'))$('tablePickerStatus').textContent=`Lucky pick · ${game.name}`;
   if($('tablePickerHint'))$('tablePickerHint').textContent=`${game.name} selected · open the table or spin again`;
-  resolve({cancelled:false,game:game.id,index:targetIndex});
+  tablePickerScrollLastLeft=rail?.scrollLeft||0;
+  resolve({cancelled:false,game:game.id,index:plan.targetIndex,slot:plan.targetSlot,direction:plan.direction,laps:plan.laps,source});
 }
-function spinTablePicker(random=Math.random,{duration=1500}={}) {
+function spinTablePicker(random=Math.random,{duration=null,direction=null,laps=null,targetIndex=null,source='button',travelPx=0}={}) {
   if(tablePickerSpinActive)return Promise.resolve({busy:true,game:appState.tablePickerGame});
-  const targetIndex=chooseTablePickerIndex(random),currentIndex=Math.max(0,TABLE_PICKER_GAMES.findIndex(game=>game.id===appState.tablePickerGame)),sequence=buildTablePickerSpinSequence(currentIndex,targetIndex,4,TABLE_PICKER_GAMES.length),token=++tablePickerSpinToken;
+  const rail=$('tablePickerRail');if(!rail)return Promise.resolve({unavailable:true,game:appState.tablePickerGame});
+  if(tablePickerUserScroll.pending)resetTablePickerUserScroll({restoreOpen:false});
+  if(tablePickerProgrammaticTarget){const selectedId=tablePickerProgrammaticTarget,selectedItem=findNearestTablePickerGameSlot(selectedId,rail);if(selectedItem)centerTablePickerItem(rail,selectedItem,'auto');applyTablePickerSelection(selectedId,{announce:false,item:selectedItem});tablePickerProgrammaticTarget=null;}
+  tablePickerStatusLockUntil=0;
+  recenterInfiniteTablePicker(rail,{force:true});
+  const startItem=findNearestTablePickerSlot(rail)||pickerSlotItems(rail)[TABLE_PICKER_CENTER_CYCLE*TABLE_PICKER_GAMES.length],startSlot=Number(startItem?.dataset.pickerSlot)||TABLE_PICKER_CENTER_CYCLE*TABLE_PICKER_GAMES.length,target=Number.isInteger(targetIndex)?((targetIndex%TABLE_PICKER_GAMES.length)+TABLE_PICKER_GAMES.length)%TABLE_PICKER_GAMES.length:chooseTablePickerIndex(random),reduceMotion=Boolean(window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches),dir=direction===-1||direction===1?direction:(tablePickerRandomUnit(random)<.5?-1:1);
+  const gestureOptions=source==='gesture'?tablePickerGestureSpinOptions({direction:dir,travelPx,random}):null,lapCount=Number.isInteger(laps)?Math.max(1,Math.min(7,laps)):gestureOptions?.laps||3+Math.floor(tablePickerRandomUnit(random)*3),durationMs=duration===null?(gestureOptions?.duration||1300+Math.round(tablePickerRandomUnit(random)*1200)):Math.max(0,Number(duration)||0),plan=buildTablePickerSpinPlan(startSlot,target,{count:TABLE_PICKER_GAMES.length,laps:lapCount,direction:dir}),items=pickerSlotItems(rail),targetItem=items[plan.targetSlot];
+  if(!plan||!targetItem)return Promise.resolve({unavailable:true,game:appState.tablePickerGame});
+  const token=++tablePickerSpinToken,startX=rail.scrollLeft,targetX=tablePickerScrollLeftForItem(rail,targetItem),startTime=performance.now();
   return new Promise(resolve=>{
-    tablePickerSpinResolver=resolve;tablePickerSpinActive=true;
-    $('tablePicker')?.classList.add('is-spinning');$('tablePickerRail')?.setAttribute('aria-busy','true');
+    tablePickerSpinResolver=resolve;tablePickerSpinActive=true;$('tablePicker')?.classList.add('is-spinning');rail.setAttribute('aria-busy','true');
     if($('tablePickerSpinBtn'))$('tablePickerSpinBtn').disabled=true;
     if($('tablePickerOpenBtn'))$('tablePickerOpenBtn').disabled=true;
-    $('tablePickerRail')?.querySelectorAll('[data-table-picker-game]').forEach(item=>{item.disabled=true;});
+    rail.querySelectorAll('[data-table-picker-game]').forEach(item=>{item.disabled=true;});
     if($('tablePickerStatus'))$('tablePickerStatus').textContent='Spinning…';
-    if($('tablePickerHint'))$('tablePickerHint').textContent='Rolling for a random table…';
-    const finish=()=>finishTablePickerSpin(targetIndex,token,resolve),reducedMotion=Boolean(window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches),durationMs=Math.max(0,Number(duration)||0);
-    if(reducedMotion||durationMs===0||!sequence.length){finish();return;}
-    let step=0;
-    const tick=()=>{
+    if($('tablePickerHint'))$('tablePickerHint').textContent=source==='gesture'?'Coasting to a random table…':'Rolling for a random table…';
+    if(reduceMotion||durationMs===0){rail.scrollLeft=targetX;finishTablePickerSpin(plan,token,resolve,source);return;}
+    const tick=now=>{
       if(token!==tablePickerSpinToken)return;
-      if(step>=sequence.length){finish();return;}
-      const index=sequence[step++];setTablePickerSelection(TABLE_PICKER_GAMES[index].id,{scroll:true,behavior:'auto',announce:false});
-      const progress=step/sequence.length;if(progress>=.72&&$('tablePickerHint'))$('tablePickerHint').textContent='The reel is slowing down…';const base=durationMs/sequence.length,delay=Math.max(34,Math.round(base*(.34+1.45*progress*progress)));
-      tablePickerSpinTimer=setTimeout(tick,delay);
+      const progress=Math.max(0,Math.min(1,(now-startTime)/durationMs)),eased=1-Math.pow(1-progress,4);
+      rail.scrollLeft=startX+(targetX-startX)*eased;
+      const centered=findNearestTablePickerSlot(rail);
+      if(centered&&Number(centered.dataset.pickerSlot)!==Number(rail.dataset.lastSpinSlot)){rail.dataset.lastSpinSlot=centered.dataset.pickerSlot;applyTablePickerSelection(centered.dataset.tablePickerGame,{announce:false,item:centered});}
+      if(progress>=1){rail.scrollLeft=targetX;finishTablePickerSpin(plan,token,resolve,source);return;}
+      tablePickerSpinFrame=requestAnimationFrame(tick);
     };
-    tick();
+    tablePickerSpinFrame=requestAnimationFrame(tick);
   });
 }
+
 const durakDrag = {active:false, serial:null, pointerId:null, source:null, ghost:null, target:null, startX:0, startY:0, moved:false, ignoreClick:false};
 let audioContext = null;
 
@@ -3037,7 +3203,11 @@ function runSelfTests() {
     t('save schema round-trips without active game data', () => { const sample = {version:1, bankroll:{balance:77,transactions:[],bankruptcyGrants:1}, progression:{wins:{blackjack:3,durak:2}}, settings:{sound:false}}; const b = new Bankroll(sample.bankroll); const p = new Progression(sample.progression); assertEqual(b.balance,77,'balance'); assertEqual(p.wins.blackjack,3,'BJ wins'); assertEqual(p.wins.durak,2,'Durak wins'); assert(sample.version === 1 && sample.settings.sound === false,'schema'); });
     t('card markup contains accessible physical labels', () => { const shoe = new PhysicalShoe({rng:RandomSource.seeded(25)}); const card = shoe.allCards[0]; const markup = cardMarkup(card); assert(markup.includes('aria-label='),'aria label'); assert(markup.includes(card.serial),'serial'); });
     t('DeckForge wordmark is the only top-bar home control', () => { const brand=$('brandBtn'); assert(brand,'brand button exists'); assertEqual(brand.textContent,'DeckForge','wordmark contains only DeckForge'); assert(!brand.querySelector('.brand-mark,.brand-version'),'wordmark has no icon or version'); assert(brand.getAttribute('aria-label').includes('home'),'wordmark is labeled as Home navigation'); assert($('appVersion')&&$('homeBlackjack')&&$('homeDurak'),'version and Home game cards exist'); assert(!document.querySelector('#topbar .top-tabs')&&!document.querySelector('#topbar [data-game]'),'top bar has no mode selector'); if(innerWidth<=340){const name=brand.querySelector('.brand-name').getBoundingClientRect(),actions=$('topbar').querySelector('.top-actions').getBoundingClientRect();assert(name.right<=actions.left+1,'320px wordmark clears the utility controls');} });
-    t('home table picker lists every game and builds deterministic spin sequences',()=>{const rail=$('tablePickerRail');assert(rail,'horizontal table picker exists below the top bar');const items=[...rail.querySelectorAll('[data-table-picker-game]')];assertEqual(items.length,TABLE_PICKER_GAMES.length,'one picker icon per game');assertEqual(items.map(item=>item.dataset.tablePickerGame).join(','),TABLE_PICKER_GAMES.map(game=>game.id).join(','),'picker order matches the game registry');assertEqual(chooseTablePickerIndex(()=>0),0,'random lower bound selects the first game');assertEqual(chooseTablePickerIndex(()=>.5),1,'midpoint selects the middle game');assertEqual(chooseTablePickerIndex(()=>.999999),2,'upper bound selects the last game');for(let target=0;target<TABLE_PICKER_GAMES.length;target++){const sequence=buildTablePickerSpinSequence(1,target,4,TABLE_PICKER_GAMES.length);assert(sequence.length>=TABLE_PICKER_GAMES.length*4,'spin has several visible cycles');assertEqual(sequence.at(-1),target,'spin sequence lands on its selected game');for(let index=1;index<sequence.length;index++)assertEqual(sequence[index],(sequence[index-1]+1)%TABLE_PICKER_GAMES.length,'reel advances horizontally one game at a time');}const previous=appState.tablePickerGame,previousScroll=rail.scrollLeft;try{setTablePickerSelection('durak',{scroll:false});assertEqual(appState.tablePickerGame,'durak','manual picker selection updates transient state');assertEqual(rail.querySelector('[data-table-picker-game="durak"]')?.getAttribute('aria-selected'),'true','selected game is exposed accessibly');assert($('tablePickerStatus').textContent.includes('Durak'),'selection status names the chosen table');assert($('tablePickerOpenBtn').getAttribute('aria-label').includes('Durak'),'open action names the selected table accessibly');if(!$('homeScreen').hidden){setTablePickerSelection('blackjack',{scroll:false});const durak=rail.querySelector('[data-table-picker-game="durak"]'),railCenter=rail.getBoundingClientRect().left+rail.clientWidth/2,durakCenter=durak.getBoundingClientRect().left+durak.getBoundingClientRect().width/2,maxScroll=Math.max(0,rail.scrollWidth-rail.clientWidth);rail.scrollLeft=Math.max(0,Math.min(maxScroll,rail.scrollLeft+durakCenter-railCenter));syncTablePickerSelectionFromScroll();assertEqual(appState.tablePickerGame,'durak','horizontal scroll selects the centered game');}}finally{setTablePickerSelection(previous||'blackjack',{scroll:false});rail.scrollLeft=previousScroll;}});
+    t('home table picker lists every game and builds deterministic spin sequences',()=>{const rail=$('tablePickerRail');assert(rail,'horizontal table picker exists below the top bar');const items=[...rail.querySelectorAll('[data-table-picker-game]')].filter(item=>Number(item.dataset.pickerCycle)===TABLE_PICKER_CENTER_CYCLE);assertEqual(items.length,TABLE_PICKER_GAMES.length,'one accessible central picker instance per game');assertEqual(items.map(item=>item.dataset.tablePickerGame).join(','),TABLE_PICKER_GAMES.map(game=>game.id).join(','),'central cycle matches the game registry');assertEqual(chooseTablePickerIndex(()=>0),0,'random lower bound selects the first game');assertEqual(chooseTablePickerIndex(()=>.5),1,'midpoint selects the middle game');assertEqual(chooseTablePickerIndex(()=>.999999),2,'upper bound selects the last game');for(let target=0;target<TABLE_PICKER_GAMES.length;target++){const sequence=buildTablePickerSpinSequence(1,target,4,TABLE_PICKER_GAMES.length);assert(sequence.length>=TABLE_PICKER_GAMES.length*4,'spin has several visible cycles');assertEqual(sequence.at(-1),target,'spin sequence lands on its selected game');for(let index=1;index<sequence.length;index++)assertEqual(sequence[index],(sequence[index-1]+1)%TABLE_PICKER_GAMES.length,'reel advances horizontally one game at a time');}const previous=appState.tablePickerGame,previousScroll=rail.scrollLeft;try{setTablePickerSelection('durak',{scroll:false});assertEqual(appState.tablePickerGame,'durak','manual picker selection updates transient state');assertEqual(items.find(item=>item.dataset.tablePickerGame==='durak')?.getAttribute('aria-selected'),'true','selected game is exposed accessibly');assert($('tablePickerStatus').textContent.includes('Durak'),'selection status names the chosen table');assert($('tablePickerOpenBtn').getAttribute('aria-label').includes('Durak'),'open action names the selected table accessibly');if(!$('homeScreen').hidden){setTablePickerSelection('blackjack',{scroll:false});const durak=items.find(item=>item.dataset.tablePickerGame==='durak'),railCenter=rail.getBoundingClientRect().left+rail.clientWidth/2,durakCenter=durak.getBoundingClientRect().left+durak.getBoundingClientRect().width/2,maxScroll=Math.max(0,rail.scrollWidth-rail.clientWidth);rail.scrollLeft=Math.max(0,Math.min(maxScroll,rail.scrollLeft+durakCenter-railCenter));syncTablePickerSelectionFromScroll();assertEqual(appState.tablePickerGame,'durak','horizontal scroll selects the centered game');}}finally{setTablePickerSelection(previous||'blackjack',{scroll:false});rail.scrollLeft=previousScroll;}});
+    t('infinite table-picker track repeats its games but exposes only three accessible tabs',()=>{const rail=$('tablePickerRail'),items=[...rail.querySelectorAll('[data-table-picker-game]')];assertEqual(items.length,TABLE_PICKER_REEL_CYCLES*TABLE_PICKER_GAMES.length,'repeated visual slots');for(const game of TABLE_PICKER_GAMES)assertEqual(items.filter(item=>item.dataset.tablePickerGame===game.id).length,TABLE_PICKER_REEL_CYCLES,`${game.id} repeats across the reel`);const accessible=items.filter(item=>item.getAttribute('role')==='tab'&&!item.hasAttribute('aria-hidden'));assertEqual(accessible.length,TABLE_PICKER_GAMES.length,'one accessible tab per unique game');assertEqual(new Set(accessible.map(item=>item.dataset.tablePickerGame)).size,TABLE_PICKER_GAMES.length,'accessible tabs contain each game once');});
+    t('infinite table-picker recenters at both edges without changing the centered game',()=>{const rail=$('tablePickerRail'),previousGame=appState.tablePickerGame,previousScroll=rail.scrollLeft,count=TABLE_PICKER_GAMES.length;try{rail.scrollLeft=0;let before=findNearestTablePickerSlot(rail);assert(before,'slot exists at left edge');let result=recenterInfiniteTablePicker(rail,{force:true});assert(result.shifted,'left edge recenters');assertEqual(findNearestTablePickerSlot(rail).dataset.tablePickerGame,before.dataset.tablePickerGame,'left recenter preserves the centered game');assert(result.slotIndex>=count*3&&result.slotIndex<=count*17,'left recenter lands in the safe middle buffer');rail.scrollLeft=rail.scrollWidth-rail.clientWidth;before=findNearestTablePickerSlot(rail);result=recenterInfiniteTablePicker(rail,{force:true});assert(result.shifted,'right edge recenters');assertEqual(findNearestTablePickerSlot(rail).dataset.tablePickerGame,before.dataset.tablePickerGame,'right recenter preserves the centered game');assert(result.slotIndex>=count*3&&result.slotIndex<=count*17,'right recenter lands in the safe middle buffer');}finally{rail.scrollLeft=previousScroll;setTablePickerSelection(previousGame||'blackjack',{scroll:false});}});
+    t('table-picker spin plans coast in either direction and land on the randomized game',()=>{const count=TABLE_PICKER_GAMES.length,start=TABLE_PICKER_CENTER_CYCLE*count+1;for(const direction of [-1,1])for(let target=0;target<count;target++){const plan=buildTablePickerSpinPlan(start,target,{count,laps:4,direction});assertEqual(plan.direction,direction,'spin direction follows input');assert(plan.steps>=count*4,'spin includes the requested repeated laps');assertEqual(((plan.targetSlot%count)+count)%count,target,'spin lands on the chosen game');assertEqual(Math.sign(plan.targetSlot-start),direction,'spin coasts in the requested direction');}});
+    t('horizontal gesture spin adds bounded randomized momentum without wagering',()=>{for(const direction of [-1,1]){const options=tablePickerGestureSpinOptions({direction,travelPx:720,random:()=>.5});assertEqual(options.direction,direction,'gesture keeps its direction');assert(options.laps>=2&&options.laps<=7,'gesture lap count stays bounded with randomized extra coast');assert(options.duration>=900&&options.duration<=3600,'gesture duration is bounded');assertEqual(chooseTablePickerIndex(()=>.5),1,'random stop remains a valid game index');}const before=bankroll.balance;assertEqual(before,bankroll.balance,'planning a coast does not touch the bankroll');});
     t('in-game next-round stake controls stay within the selected table bounds', () => { const previous={game:appState.game,modeIndex:appState.modeIndex,stake:appState.stake}; try { appState.game='blackjack'; appState.modeIndex=0; appState.stake=20; assertEqual(nextRoundStakeOptions().map(option=>option.value).join(','),'10,20,50,100','rookie wager presets'); assert(nextRoundStakeControlMarkup().includes('data-next-round-stake'),'wager control is rendered'); appState.game='durak'; appState.modeIndex=3; appState.stake=100; assertEqual(nextRoundStakeOptions().map(option=>option.value).join(','),'100,200,500,1000','iron-table wager presets'); } finally { appState.game=previous.game; appState.modeIndex=previous.modeIndex; appState.stake=previous.stake; } });
     t('Durak settlement distinguishes first, second, last, and draw placements',()=>{const first=durakOutcomeValues({winner:0,wager:10,config:{players:3},finishOrder:[0,2,1],durakLoserIndex:1}),second=durakOutcomeValues({winner:0,wager:10,config:{players:3},finishOrder:[2,0,1],durakLoserIndex:1}),last=durakOutcomeValues({winner:1,wager:10,config:{players:3},finishOrder:[1,2,0],durakLoserIndex:0}),fourSeatSecond=durakOutcomeValues({winner:0,wager:10,config:{players:4},finishOrder:[3,0,2,1],durakLoserIndex:1}),draw=durakOutcomeValues({winner:'draw',wager:10,config:{players:3},finishOrder:[]});assertEqual(first.place,1,'first place');assert(first.won,'first place wins progression');assertEqual(first.returned,30,'first receives the three-seat pot');assertEqual(second.place,2,'human second place');assert(!second.won,'second place is not a match win');assertEqual(second.net,0,'second place breaks even');assertEqual(second.returned,10,'second receives own stake only');assertEqual(fourSeatSecond.returned,10,'second place does not collect a four-seat pot');assertEqual(last.place,3,'Durak finishes last');assert(!last.won,'last place is not a win');assertEqual(last.net,-10,'last loses own stake');assertEqual(last.returned,0,'last receives nothing');assert(draw.draw,'stalemate is a draw');assertEqual(draw.returned,10,'draw returns stake');});
     t('changing next-round wager preserves the settled Durak payout amount', () => { const previous=appState.stake; try { appState.stake=20; const result=durakOutcomeValues({winner:0,wager:10,config:{players:4},finishOrder:[0,1,2,3]}); assertEqual(result.wager,10,'completed duel stake is retained'); assertEqual(result.net,30,'winner nets the stakes from all four seats'); assertEqual(result.returned,40,'winner receives the full four-seat pot'); for(const players of [2,3,4]){const pot=durakOutcomeValues({winner:0,wager:10,config:{players},finishOrder:Array.from({length:players},(_,seat)=>seat)});assertEqual(pot.returned,players*10,`${players}-seat winner receives every ante`);assertEqual(pot.net,(players-1)*10,`${players}-seat net profit excludes the returned own ante`)} const loss=durakOutcomeValues({winner:1,wager:10,config:{players:4}}); assertEqual(loss.net,-10,'human loss is limited to the human stake'); assertEqual(loss.returned,0,'losing human receives no pot'); const draw=durakOutcomeValues({winner:'draw',wager:10,config:{players:4}}); assertEqual(draw.net,0,'draw breaks even'); assertEqual(draw.returned,10,'draw returns the human stake'); } finally { appState.stake=previous; } });
@@ -3331,12 +3501,17 @@ function bindEvents() {
   $('brandBtn').addEventListener('click', goHome);
   $('heroEnterBtn').addEventListener('click', () => openGame(appState.tablePickerGame||'blackjack'));
   const tablePickerRail=$('tablePickerRail');
-  tablePickerRail.addEventListener('click',event=>{const button=event.target.closest('[data-table-picker-game]');if(!button||button.disabled)return;setTablePickerSelection(button.dataset.tablePickerGame,{scroll:true,behavior:'smooth'});beep('tap');});
-  tablePickerRail.addEventListener('scroll',scheduleTablePickerScrollSync,{passive:true});
-  tablePickerRail.addEventListener('scrollend',syncTablePickerSelectionFromScroll,{passive:true});
-  tablePickerRail.addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;event.preventDefault();const current=Math.max(0,TABLE_PICKER_GAMES.findIndex(game=>game.id===appState.tablePickerGame)),next=event.key==='Home'?0:event.key==='End'?TABLE_PICKER_GAMES.length-1:(current+(event.key==='ArrowRight'?1:-1)+TABLE_PICKER_GAMES.length)%TABLE_PICKER_GAMES.length;setTablePickerSelection(TABLE_PICKER_GAMES[next].id,{scroll:true,behavior:'smooth',focus:true});});
+  tablePickerRail.addEventListener('click',event=>{if(performance.now()<tablePickerIgnoreClickUntil){event.preventDefault();event.stopPropagation();tablePickerIgnoreClickUntil=0;return;}const button=event.target.closest('[data-table-picker-game]');if(!button||button.disabled)return;resetTablePickerUserScroll({restoreOpen:true});setTablePickerSelection(button.dataset.tablePickerGame,{scroll:true,behavior:'smooth',item:button});beep('tap');});
+  tablePickerRail.addEventListener('scroll',handleTablePickerScroll,{passive:true});
+  tablePickerRail.addEventListener('scrollend',scheduleTablePickerScrollSync,{passive:true});
+  tablePickerRail.addEventListener('wheel',handleTablePickerWheel,{passive:true});
+  tablePickerRail.addEventListener('pointerdown',handleTablePickerPointerDown,{passive:true});
+  tablePickerRail.addEventListener('pointermove',handleTablePickerPointerMove,{passive:false});
+  tablePickerRail.addEventListener('pointerup',finishTablePickerPointer,{passive:true});
+  tablePickerRail.addEventListener('pointercancel',finishTablePickerPointer,{passive:true});
+  tablePickerRail.addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(event.key))return;event.preventDefault();resetTablePickerUserScroll({restoreOpen:true});const current=Math.max(0,TABLE_PICKER_GAMES.findIndex(game=>game.id===appState.tablePickerGame)),next=event.key==='Home'?0:event.key==='End'?TABLE_PICKER_GAMES.length-1:(current+(event.key==='ArrowRight'?1:-1)+TABLE_PICKER_GAMES.length)%TABLE_PICKER_GAMES.length;setTablePickerSelection(TABLE_PICKER_GAMES[next].id,{scroll:true,behavior:'smooth',focus:true});});
   $('tablePickerSpinBtn').addEventListener('click',()=>{void spinTablePicker();});
-  $('tablePickerOpenBtn').addEventListener('click',()=>openGame(appState.tablePickerGame||'blackjack'));
+  $('tablePickerOpenBtn').addEventListener('click',()=>{if(!tablePickerSpinActive&&!tablePickerUserScroll.pending)openGame(appState.tablePickerGame||'blackjack');});
   $('homeBlackjack').addEventListener('click', () => openGame('blackjack'));$('homeDurak').addEventListener('click',()=>openGame('durak'));$('homeMauMau').addEventListener('click',()=>openGame('maumau'));$('backHomeBtn').addEventListener('click',goHome);
   $('diagnosticsBtn').addEventListener('click', showDiagnostics); $('modalClose').addEventListener('click', closeModal); $('modalBackdrop').addEventListener('click', (event) => { if (event.target === $('modalBackdrop')) closeModal(); });
   $('soundBtn').addEventListener('click', () => { settings.sound = !settings.sound; saveState(); renderTop(); if (settings.sound) { ensureAudio(); beep('tap'); } }); $('bankrollBtn').addEventListener('click', showBankroll); $('historyBtn').addEventListener('click', showBankroll); $('gameHelpBtn').addEventListener('click', showRules);
@@ -3356,7 +3531,7 @@ function bindEvents() {
   $('durakContent').addEventListener('lostpointercapture', cancelDurakDrag, {passive:false});
 }
 
-const testApi={runSelfTests,TABLE_PICKER_GAMES,chooseTablePickerIndex,buildTablePickerSpinSequence,setTablePickerSelection,spinTablePicker,cancelTablePickerSpin,RandomSource,shuffle,Card,PhysicalShoe,Bankroll,Progression,BlackjackGame,BlackjackHand,DurakGame,MauMauGame,totalForCards,canBeat,BJ_MODES,DURAK_MODES,MAUMAU_MODES,normalizeBlackjackConfig,normalizeDurakConfig,normalizeMauMauConfig,tableConfigSummary,blackjackOutcomeCopy,canPlanDurakThrowIn,durakAIReactionDelayRange,chooseHumanPushCard,nextRoundStakeOptions,canStartAnotherRound,durakAttackSelectionResult,isDurakPushDropTarget,makeDurakTargetTestFixture,makeDurakBatchTestFixture,makeMauMauTestFixture,mauMauOutcomeValues,scheduleDurakAI:scheduleAI,scheduleMauMauAI,renderGame,renderMauMau,startAnotherRound,startSelectedGame,goBackToLobby,mauMauAction,selectMauMauCard,runMauMauAIImmediately,get appState(){return appState;},get settings(){return settings;},get bankroll(){return bankroll;},get progression(){return progression;},get activeBlackjack(){return appState.bj;},get activeDurak(){return appState.durak;},get activeMauMau(){return appState.maumau;},forceAIMove:runAIImmediately,forceMauMauAIMove:runMauMauAIImmediately};
+const testApi={runSelfTests,TABLE_PICKER_GAMES,TABLE_PICKER_REEL_CYCLES,TABLE_PICKER_CENTER_CYCLE,chooseTablePickerIndex,buildTablePickerSpinSequence,buildTablePickerSpinPlan,tablePickerGestureSpinOptions,findNearestTablePickerSlot,findNearestTablePickerGameSlot,recenterInfiniteTablePicker,syncTablePickerSelectionFromScroll,setTablePickerSelection,spinTablePicker,cancelTablePickerSpin,RandomSource,shuffle,Card,PhysicalShoe,Bankroll,Progression,BlackjackGame,BlackjackHand,DurakGame,MauMauGame,totalForCards,canBeat,BJ_MODES,DURAK_MODES,MAUMAU_MODES,normalizeBlackjackConfig,normalizeDurakConfig,normalizeMauMauConfig,tableConfigSummary,blackjackOutcomeCopy,canPlanDurakThrowIn,durakAIReactionDelayRange,chooseHumanPushCard,nextRoundStakeOptions,canStartAnotherRound,durakAttackSelectionResult,isDurakPushDropTarget,makeDurakTargetTestFixture,makeDurakBatchTestFixture,makeMauMauTestFixture,mauMauOutcomeValues,scheduleDurakAI:scheduleAI,scheduleMauMauAI,renderGame,renderMauMau,startAnotherRound,startSelectedGame,goBackToLobby,mauMauAction,selectMauMauCard,runMauMauAIImmediately,get appState(){return appState;},get settings(){return settings;},get bankroll(){return bankroll;},get progression(){return progression;},get activeBlackjack(){return appState.bj;},get activeDurak(){return appState.durak;},get activeMauMau(){return appState.maumau;},forceAIMove:runAIImmediately,forceMauMauAIMove:runMauMauAIImmediately};
 window.DeckForge = testApi;
 window.__deckForgeErrors = [];
 window.addEventListener('error', (event) => window.__deckForgeErrors.push(String(event.message || event.error || 'error')));

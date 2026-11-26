@@ -33,6 +33,7 @@ jobs:
           cp index.html _site/index.html
           cp README.md _site/README.md
           cp RELEASE_NOTES_0.2.8.0.md _site/RELEASE_NOTES_0.2.8.0.md
+          cp RELEASE_NOTES_0.2.8.1.md _site/RELEASE_NOTES_0.2.8.1.md
           mkdir -p _site/references
           cp references/mau-mau-rules.md _site/references/mau-mau-rules.md
           cp references/uno-variant-rules.md _site/references/uno-variant-rules.md
